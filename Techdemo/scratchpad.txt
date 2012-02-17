@@ -1,0 +1,24 @@
+Inner HTML scratchpad
+
+<textbox style="background-color:yellow;border-style:solid;border-width:2px;border-color:red;"></textbox>
+
+
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/C9nq886mOjA?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+TODO list:
+
+scrolling on the navbuttons
+content for myInputs, myEssay, Reference and Help
+themes in the XML
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Praesent placerat elit vel purus viverra in vestibulum elit varius.
+Nunc ut lectus justo, vel condimentum nisl.
+Maecenas tristique placerat leo ut molestie.
+Nulla tempus justo a enim volutpat rhoncus. 
+
+Quisque bibendum ullamcorper leo, eleifend pretium diam volutpat ut. Aliquam lobortis magna sit amet justo ultrices sed ornare lacus pharetra. Nulla eu lacus facilisis libero commodo dapibus. Duis ac risus odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
+
+Sed tellus justo, pellentesque sed fringilla non, gravida non dui. Vestibulum lacinia lectus ut libero pretium eget molestie diam fringilla. Aenean sed urna nec nibh pulvinar commodo. Proin ut egestas eros. In a est sapien, placerat ornare purus.
