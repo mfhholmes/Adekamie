@@ -1,0 +1,685 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+	<name>Essay Writing</name>
+	<image>
+		<width>5500</width>
+		<height>3000</height>
+		<path>http://www.marcusholmes.biz/adekamie/techdemo/content/Essay_writing_content.png</path>
+		<background>
+			<width>1280</width>
+			<height>960</height>
+			<parallax>true</parallax>
+			<path>http://www.marcusholmes.biz/adekamie/techdemo/content/classroom.jpg</path>
+		</background>
+	</image>
+	<topnode>
+		<name>Task</name>
+		<left>183</left>
+		<top>168</top>
+		<width>451</width>
+		<height>249</height>
+		<controls>
+			<control>
+				<name>btnSkip</name>
+				<type>button</type>
+				<left>662</left>
+				<top>285</top>
+				<width>140</width>
+				<height>40</height>
+				<attribute name="onclick">moveNode(2)</attribute>
+				<innerHTML>Skip</innerHTML>
+			</control>
+			<control>
+				<name>btnNext</name>
+				<type>button</type>
+				<left>662</left>
+				<top>355</top>
+				<width>140</width>
+				<height>40</height>
+				<attribute name="onclick">moveNode(1)</attribute>
+				<innerHTML>Next</innerHTML>
+			</control>
+		</controls>
+		<subNodes>
+			<node>
+				<name>Topic</name>
+				<left>1165</left>
+				<top>144</top>
+				<width>530</width>
+				<height>200</height>
+				<controls>
+				</controls>
+				<subNodes>
+				</subNodes>
+			</node>
+			<node>
+				<name>Question</name>
+				<left>175</left>
+				<top>832</top>
+				<width>530</width>
+				<height>300</height>
+				<controls>
+					<control>
+						<name>taEssayQ</name>
+						<type>textarea</type>
+						<left>205</left>
+						<top>900</top>
+						<width>462</width>
+						<height>200</height>
+						<innerHTML></innerHTML>
+						<attribute name="resizable">false</attribute>
+						<style name="resize">none</style>
+					</control>
+				</controls>
+				<subNodes>
+					<node>
+						<name>Decoding 1</name>
+						<left>325</left>
+						<top>1250</top>
+						<width>520</width>
+						<height>300</height>
+						<controls>
+						</controls>
+						<subNodes>
+							<node>
+								<name>Keywords</name>
+								<left>920</left>
+								<top>1250</top>
+								<width>530</width>
+								<height>300</height>
+								<controls>
+									<control>
+										<name>taKeywords</name>
+										<type>textarea</type>
+										<left>950</left>
+										<top>1310</top>
+										<width>460</width>
+										<height>210</height>
+										<innerHTML></innerHTML>
+										<attribute name="resizable">false</attribute>
+										<style name="resize">none</style>
+									</control>
+								</controls>
+								<subNodes>
+								</subNodes>
+							</node>
+						</subNodes>
+					</node>
+					<node>
+						<name>Decoding 2</name>
+						<left>325</left>
+						<top>1600</top>
+						<width>530</width>
+						<height>300</height>
+						<controls>
+						</controls>
+						<subNodes>
+							<node>
+								<name>Tasks</name>
+								<left>920</left>
+								<top>1600</top>
+								<width>530</width>
+								<height>300</height>
+								<controls>
+									<control>
+										<name>taTasks</name>
+										<type>textarea</type>
+										<left>950</left>
+										<top>1670</top>
+										<width>460</width>
+										<height>205</height>
+										<innerHTML></innerHTML>
+										<attribute name="resizable">false</attribute>
+										<style name="resize">none</style>
+									</control>
+								</controls>
+								<subNodes>
+								</subNodes>
+							</node>		
+						</subNodes>
+					</node>
+				</subNodes>
+			</node>
+			<node>
+				<name>Brainstorm</name>
+				<left>925</left>
+				<top>825</top>
+				<width>530</width>
+				<height>300</height>
+				<controls>
+				</controls>
+				<subNodes>
+					<node>
+						<name>Definites</name>
+						<left>1500</left>
+						<top>830</top>
+						<width>530</width>
+						<height>300</height>
+						<controls>
+							<control>
+								<name>taDefinites</name>
+								<type>textarea</type>
+								<left>1530</left>
+								<top>890</top>
+								<width>460</width>
+								<height>200</height>
+								<innerHTML></innerHTML>
+								<attribute name="resizable">false</attribute>
+								<style name="resize">none</style>
+							</control>
+						</controls>
+						<subNodes>
+						</subNodes>
+					</node>
+					<node>
+						<name>Maybes</name>
+						<left>1500</left>
+						<top>1140</top>
+						<width>530</width>
+						<height>300</height>
+						<controls>
+							<control>
+								<name>taMaybes</name>
+								<type>textarea</type>
+								<left>1530</left>
+								<top>1200</top>
+								<width>460</width>
+								<height>200</height>
+								<innerHTML></innerHTML>
+								<attribute name="resizable">false</attribute>
+								<style name="resize">none</style>
+							</control>
+						</controls>
+						<subNodes>
+						</subNodes>
+					</node>
+					<node>
+						<name>Unknowns</name>
+						<left>1500</left>
+						<top>1460</top>
+						<width>530</width>
+						<height>300</height>
+						<controls>
+							<control>
+								<name>taUnknowns</name>
+								<type>textarea</type>
+								<left>1530</left>
+								<top>1525</top>
+								<width>460</width>
+								<height>200</height>
+								<innerHTML></innerHTML>
+								<attribute name="resizable">false</attribute>
+								<style name="resize">none</style>
+							</control>
+						</controls>
+						<subNodes>
+						</subNodes>
+					</node>
+					<node>
+						<name>Public</name>
+						<left>1500</left>
+						<top>1780</top>
+						<width>530</width>
+						<height>300</height>
+						<controls>
+							<control>
+								<name>taPublic</name>
+								<type>textarea</type>
+								<left>1531</left>
+								<top>1845</top>
+								<width>460</width>
+								<height>200</height>
+								<innerHTML></innerHTML>
+								<attribute name="resizable">false</attribute>
+								<style name="resize">none</style>
+							</control>
+						</controls>
+						<subNodes>
+						</subNodes>
+					</node>
+					<node>
+						<name>Opinion</name>
+						<left>1500</left>
+						<top>2100</top>
+						<width>530</width>
+						<height>300</height>
+						<controls>
+							<control>
+								<name>taOpinion</name>
+								<type>textarea</type>
+								<left>1533</left>
+								<top>2165</top>
+								<width>460</width>
+								<height>200</height>
+								<innerHTML></innerHTML>
+								<attribute name="resizable">false</attribute>
+								<style name="resize">none</style>
+							</control>
+						</controls>
+						<subNodes>
+						</subNodes>
+					</node>
+				</subNodes>
+			</node>
+			<node>
+				<name>Thesis</name>
+				<left>2220</left>
+				<top>175</top>
+				<width>530</width>
+				<height>300</height>
+				<controls>
+				</controls>
+				<subNodes>
+					<node>
+						<name>Stated</name>
+						<left>3000</left>
+						<top>175</top>
+						<width>530</width>
+						<height>300</height>
+						<controls>
+							<control>
+								<name>taThesis</name>
+								<type>textarea</type>
+								<left>3035</left>
+								<top>240</top>
+								<width>460</width>
+								<height>200</height>
+								<innerHTML></innerHTML>
+								<attribute name="resizable">false</attribute>
+								<style name="resize">none</style>
+							</control>
+						</controls>
+						<subNodes>
+						</subNodes>
+					</node>
+					<node>
+						<name>Opinion</name>
+						<left>2320</left>
+						<top>500</top>
+						<width>560</width>
+						<height>655</height>
+						<controls>
+						</controls>
+						<subNodes>
+						</subNodes>
+					</node>
+					<node>
+						<name>Points</name>
+						<left>2330</left>
+						<top>1180</top>
+						<width>560</width>
+						<height>550</height>
+						<controls>
+							<control>
+								<name>taPoints</name>
+								<type>textarea</type>
+								<left>2360</left>
+								<top>1240</top>
+								<width>490</width>
+								<height>458</height>
+								<innerHTML></innerHTML>
+								<attribute name="resizable">false</attribute>
+								<style name="resize">none</style>
+							</control>
+						</controls>
+						<subNodes>
+							<node>
+								<name>Point 1</name>
+								<left>2915</left>
+								<top>495</top>
+								<width>530</width>
+								<height>300</height>
+								<controls>
+									<control>
+										<name>taPoint1</name>
+										<type>textarea</type>
+										<left>3035</left>
+										<top>555</top>
+										<width>460</width>
+										<height>210</height>
+										<innerHTML></innerHTML>
+										<attribute name="resizable">false</attribute>
+										<style name="resize">none</style>
+									</control>
+								</controls>
+								<subNodes>
+								</subNodes>
+							</node>
+							<node>
+								<name>Point 2</name>
+								<left>2915</left>
+								<top>825</top>
+								<width>530</width>
+								<height>300</height>
+								<controls>
+									<control>
+										<name>taPoint2</name>
+										<type>textarea</type>
+										<left>3035</left>
+										<top>885</top>
+										<width>460</width>
+										<height>210</height>
+										<innerHTML></innerHTML>
+										<attribute name="resizable">false</attribute>
+										<style name="resize">none</style>
+									</control>
+								</controls>
+								<subNodes>
+								</subNodes>
+							</node>
+							<node>
+								<name>Point 3</name>
+								<left>2915</left>
+								<top>1145</top>
+								<width>530</width>
+								<height>300</height>
+								<controls>
+									<control>
+										<name>taPoint1</name>
+										<type>textarea</type>
+										<left>3035</left>
+										<top>1205</top>
+										<width>460</width>
+										<height>210</height>
+										<innerHTML></innerHTML>
+										<attribute name="resizable">false</attribute>
+										<style name="resize">none</style>
+									</control>
+								</controls>
+								<subNodes>
+								</subNodes>
+							</node>
+						</subNodes>
+					</node>
+				</subNodes>
+			</node>
+		
+			<node>
+				<name>Arguments</name>
+				<left>2190</left>
+				<top>1830</top>
+				<width>560</width>
+				<height>315</height>
+				<controls>
+				</controls>
+				<subNodes>
+					<node>
+						<name>Disagree</name>
+						<left>2835</left>
+						<top>1830</top>
+						<width>650</width>
+						<height>315</height>
+						<controls>
+							<control>
+								<name>taArguments</name>
+								<type>textarea</type>
+								<left>2865</left>
+								<top>1885</top>
+								<width>595</width>
+								<height>230</height>
+								<innerHTML></innerHTML>
+								<attribute name="resizable">false</attribute>
+								<style name="resize">none</style>
+							</control>
+						</controls>
+						<subNodes>
+						</subNodes>
+					</node>
+					<node>
+						<name>Strongest</name>
+						<left>2190</left>
+						<top>2150</top>
+						<width>560</width>
+						<height>340</height>
+						<controls>
+						</controls>
+						<subNodes>
+						</subNodes>
+					</node>
+					<node>
+						<name>Good Reason</name>
+						<left>2835</left>
+						<top>2150</top>
+						<width>650</width>
+						<height>340</height>
+						<controls>
+							<control>
+								<name>taGoodReason</name>
+								<type>textarea</type>
+								<left>2865</left>
+								<top>2195</top>
+								<width>595</width>
+								<height>260</height>
+								<innerHTML></innerHTML>
+								<attribute name="resizable">false</attribute>
+								<style name="resize">none</style>
+							</control>
+						</controls>
+						<subNodes>
+						</subNodes>
+					</node>
+					<node>
+						<name>Present</name>
+						<left>2190</left>
+						<top>2490</top>
+						<width>705</width>
+						<height>255</height>
+						<controls>
+						</controls>
+						<subNodes>
+						</subNodes>
+					</node>
+					<node>
+						<name>Presentation</name>
+						<left>2985</left>
+						<top>2490</top>
+						<width>500</width>
+						<height>255</height>
+						<controls>
+							<control>
+								<name>taPresent</name>
+								<type>textarea</type>
+								<left>3010</left>
+								<top>2545</top>
+								<width>440</width>
+								<height>175</height>
+								<innerHTML></innerHTML>
+								<attribute name="resizable">false</attribute>
+								<style name="resize">none</style>
+							</control>
+						</controls>
+						<subNodes>
+						</subNodes>
+					</node>
+				</subNodes>
+			</node>
+			<node>
+				<name>Organisation</name>
+				<left>3600</left>
+				<top>170</top>
+				<width>560</width>
+				<height>380</height>
+				<controls>
+				</controls>
+				<subNodes>
+					<node>
+						<name>Introduction</name>
+						<left>3730</left>
+						<top>530</top>
+						<width>520</width>
+						<height>260</height>
+						<controls>
+						</controls>
+						<subNodes>
+							<node>
+								<name>Intro Text</name>
+								<left>4305</left>
+								<top>530</top>
+								<width>990</width>
+								<height>260</height>
+								<controls>
+									<control>
+										<name>taGoodReason</name>
+										<type>textarea</type>
+										<left>4330</left>
+										<top>550</top>
+										<width>935</width>
+										<height>220</height>
+										<innerHTML>In this essay I will say that...</innerHTML>
+										<attribute name="resizable">false</attribute>
+										<style name="resize">none</style>
+									</control>
+								</controls>
+								<subNodes>
+								</subNodes>
+							</node>
+						</subNodes>
+					</node>
+					<node>
+						<name>Reasons</name>
+						<left>3730</left>
+						<top>790</top>
+						<width>520</width>
+						<height>260</height>
+						<controls>
+						</controls>
+						<subNodes>
+							<node>
+								<name>Reason 1</name>
+								<left>4305</left>
+								<top>790</top>
+								<width>990</width>
+								<height>260</height>
+								<controls>
+									<control>
+										<name>taReason1</name>
+										<type>textarea</type>
+										<left>4330</left>
+										<top>810</top>
+										<width>935</width>
+										<height>220</height>
+										<innerHTML>I think this because...</innerHTML>
+										<attribute name="resizable">false</attribute>
+										<style name="resize">none</style>
+									</control>
+								</controls>
+								<subNodes>
+								</subNodes>
+							</node>
+							<node>
+								<name>Reason 2</name>
+								<left>4305</left>
+								<top>1050</top>
+								<width>990</width>
+								<height>260</height>
+								<controls>
+									<control>
+										<name>taReason2</name>
+										<type>textarea</type>
+										<left>4330</left>
+										<top>1070</top>
+										<width>935</width>
+										<height>220</height>
+										<innerHTML>Also because...</innerHTML>
+										<attribute name="resizable">false</attribute>
+										<style name="resize">none</style>
+									</control>
+								</controls>
+								<subNodes>
+								</subNodes>
+							</node>
+							<node>
+								<name>Reason 3</name>
+								<left>4305</left>
+								<top>1310</top>
+								<width>990</width>
+								<height>260</height>
+								<controls>
+									<control>
+										<name>taReason1</name>
+										<type>textarea</type>
+										<left>4330</left>
+										<top>1330</top>
+										<width>935</width>
+										<height>220</height>
+										<innerHTML>Another reason for thinking this is that...</innerHTML>
+										<attribute name="resizable">false</attribute>
+										<style name="resize">none</style>
+									</control>
+								</controls>
+								<subNodes>
+								</subNodes>
+							</node>
+						</subNodes>
+					</node>
+					<node>
+						<name>Argument</name>
+						<left>3730</left>
+						<top>1570</top>
+						<width>520</width>
+						<height>260</height>
+						<controls>
+						</controls>
+						<subNodes>
+							<node>
+								<name>Argument Text</name>
+								<left>4305</left>
+								<top>1570</top>
+								<width>990</width>
+								<height>260</height>
+								<controls>
+									<control>
+										<name>taArgText</name>
+										<type>textarea</type>
+										<left>4335</left>
+										<top>1590</top>
+										<width>930</width>
+										<height>220</height>
+										<innerHTML>Other people have said that this is not so because they think that...</innerHTML>
+										<attribute name="resizable">false</attribute>
+										<style name="resize">none</style>
+									</control>
+								</controls>
+								<subNodes>
+								</subNodes>
+							</node>
+						</subNodes>
+					</node>
+					<node>
+						<name>Conclusion</name>
+						<left>3730</left>
+						<top>1835</top>
+						<width>520</width>
+						<height>260</height>
+						<controls>
+						</controls>
+						<subNodes>
+							<node>
+								<name>Conclusion Text</name>
+								<left>4305</left>
+								<top>1835</top>
+								<width>990</width>
+								<height>260</height>
+								<controls>
+									<control>
+										<name>taConcText</name>
+										<type>textarea</type>
+										<left>4335</left>
+										<top>1855</top>
+										<width>935</width>
+										<height>220</height>
+										<innerHTML>I disagree with this line of reasoning because...</innerHTML>
+										<attribute name="resizable">false</attribute>
+										<style name="resize">none</style>
+									</control>
+								</controls>
+								<subNodes>
+								</subNodes>
+							</node>
+						</subNodes>
+					</node>
+				</subNodes>
+			</node>
+		</subNodes>
+	</topnode>
+</page>

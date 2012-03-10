@@ -2,8 +2,8 @@ pages = new Array();
 
 // set up the array of XML tab files
 var tablist = 	[
-					"http://www.marcusholmes.biz/adekamie/techdemo/content/create.xml",
-					"http://www.marcusholmes.biz/adekamie/techdemo/content/about.xml"
+					"http://www.marcusholmes.biz/adekamie/techdemo/content/essay_writing.xml",
+					"http://www.marcusholmes.biz/adekamie/techdemo/content/create.xml"
 				];
 var responseCount = 0;
 var currentPage;

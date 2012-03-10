@@ -10,3 +10,10 @@ user levels and content framework scaffolding - prune nodes according to level
 facebook links and 'published' folder
 
 chatting and 'essay lobby' functionality - sharing answers
+
+- rename tabs on right - done
+- content for essay writing
+- icons on right side instead of tabs
+- minimap at the bottom of the right-side
+- click and drag navigation in main frame
+- splitter bar for content/right-side

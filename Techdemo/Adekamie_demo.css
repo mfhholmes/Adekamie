@@ -125,6 +125,10 @@ body
 	width:25%;
 	height:100%;
 	left:75%;
+	overflow:scroll;
+	border-width:1px;
+	border-color:white;
+	border-style:solid;
 }
 
 .infoPage
@@ -134,13 +138,35 @@ body
 	left:0px;
 	top:35px;
 	bottom:0px;
-	border-style:solid;
-	border-color:white;
-	border-width:1px;
 	margin:1px;
 	color:white;
 	background-color:black;
 }
+.TabTitle1
+{
+	font-size:1.2em;
+	font-weight:bold;
+	font-family:Arial, Sans-serif;
+}
+
+.TabTitle2
+{
+	font-size:1em;
+	font-weight:bold;
+	font-family:Arial, Sans-serif;
+}
+
+.TabBodyText
+{
+	font-size:0.8em;
+	font-weight:normal;
+	font-family:Arial, Sans-serif;
+}
+.TabBodyText ul li
+{
+	font-family:Arial, Sans-serif;
+}
+
 
 #infoTabs
 {
