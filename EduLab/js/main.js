@@ -15,7 +15,13 @@ function start(){
 	parseData(lesson_data);
 	addSamples();
 	addReferenceText();
-	ko.applyBindings(lesson);
+	try{
+	   ko.applyBindings(lesson);
+	}
+	catch(err){
+	    //catch any knockout errors so we can continue binding event handlers and jquery ui properties
+	    console.debug(err.message);
+	}
 	addEventHandlers();
 	$(".draggable").draggable();
 	$(".resizable").resizable();
@@ -34,6 +40,8 @@ function addEventHandlers()
     $("#Samples").on("click",clickSamples);
     $("#Save").on("click",clickSave);
     $("#Exit").on("click",clickExit);
+    $("#search").on("click",doSearch);
+    $("#searchValue").on("click",searchClick);
 }
 
 function getTaskByRef(ref){
@@ -69,7 +77,7 @@ function clickRef()
         if($("#samples").data("status") == "open")
             closeSamples(openRef(function(){$("#samples").hide();$("#reference").addClass("reference-open").css("width","");$("#refContainer").width("100%");;}));
         else
-            openRef(function(){$("#reference").addClass("reference-open").width("");$("#refContainer").width("100%");;});
+            openRef(function(){$("#reference").addClass("reference-open").width("");$("#refContainer").width("100%");});
     }
 }
 function openRef(afterwards)

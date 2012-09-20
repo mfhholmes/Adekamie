@@ -76,8 +76,20 @@
 			<input type="image" id="Exit" class="menuIcon" src="img/exit.jpg"/>
 		</div>
 		<div id="reference">
-			<div id="refContainer">
+			<div id="refHeader">
+				<h2>Reference</h2>
+				<input type="text" id="searchValue" class="searchBox" value="Search..."/>
+				<img class="searchIcon" id="search" src="./img/search.png" />
 			</div>
+			<!-- ko foreach: RefItems-->
+				<div class="refItem" data-bind="attr:{id:Name}, visible:found, click:clickopen">
+					<p class='refLabel' data-bind="text:Label"></p>
+					<div class="refIconContainer" data-bind="foreach:Icons">
+						<img class="refIcon" data-bind="attr:{src:$data}"/>
+					</div>
+					<div class="refContent" data-bind="html:Content,visible:open"></div>
+				</div>
+			<!-- /ko -->
 		</div>
 		<div id="samples">
 			<div id="samplesContainer">

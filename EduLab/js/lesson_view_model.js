@@ -14,8 +14,8 @@ var taskPanelPrefix = "taskPanel";
 function lesson_view_model() {
     var self = this;
 	// properties
-	self.tasks = ko.observableArray();
-	self.lessonVisible = ko.observable(true);
+	self.tasks = new ko.observableArray();
+	self.lessonVisible = new ko.observable(true);
 	self.currentTask = new ko.observable(null);
 	self.skillLevels = new ko.observableArray();
 	self.selectedSkillLevel = new ko.observable(0);

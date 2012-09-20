@@ -391,15 +391,63 @@ textarea {
 	z-index:300;
 	background-color:AntiqueWhite;
 }
+#reference h2{
+	text-align:center;
+}
 .reference-open{
 	width:35%;
 }
 #refContainer{
 	
 }
-#reference p{
+.refItem{
+	position:relative;
+	width:100%;
+	border:solid 1px LightBlue;
+	
+}
+.searchBox{
+	position:relative;
+	height:25px;
+	vertical-align:middle;
+	text-align: left;
+	border-radius:12px;
 	font-family:Arial, Helvetica, sans-serif;
-	font-size:0.6em;
+	font-size:20px;
+	left:5%;
+	width:85%;
+	margin-bottom:5px;
+}
+.searchIcon{
+	position:absolute;
+	height:25px;
+	width:25px;
+	right:5%;
+}
+.refLabel{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.2em;
+	line-height:1.2em;
+	font-weight:bolder;
+	margin-left:5%;
+}
+.refIconContainer{
+	height:25px;
+	position:absolute;
+	top:50%;
+	right:5%;
+	margin-top:-12px;
+	padding:0;
+}
+.refIcon{
+	height:25px;
+	width:25px;
+	margin:0;
+	padding:0;
+}
+.refContent{
+	width:80%;
+	margin-left:5%;
 }
 /***********Samples**********/
 #samples{
