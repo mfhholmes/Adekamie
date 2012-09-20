@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="Adekamie_demo.css" />
+		<script type="text/javascript" src="library/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="Adekamie_demo.js"></script>
+		<title>Adekamie</title>
+	</head>
+	<body onload="loadContent();">
+		<div id="container">
+			<div id="logo">
+				<img class="img_to_size" src='./Theme/Adekamie-Icon.png'><img>
+			</div>
+			<div id="mainTabs">
+				<div class="pagetab pagetabtext">Default
+					<img class="pagetableft" src="./theme/page-tab-left.png"/>
+					<img class="pagetabmiddle" src="./theme/page-tab-middle.png"/>
+					<img class="pagetabright" src="./theme/page-tab-right.png"/>
+					<text class="pagetabtext pagetabtextposition"><p>Default</p></text>
+				</div>
+				<div class="pagetab pagetabtext">Another
+					<img class="pagetableft" src="./theme/page-tab-left.png"/>
+					<img class="pagetabmiddle" src="./theme/page-tab-middle.png"/>
+					<img class="pagetabright" src="./theme/page-tab-right.png"/>
+					<text class="pagetabtext pagetabtextposition"><p>Another</p></text>
+				</div>
+			</div>
+			<div id="info">
+				<div id="infoTabs">
+					<div id="myEssayTab" class="infoTab infoTabText noselect" onclick="infoTabClick('essayPage');">My Essay
+						<img class="pagetableft" src="./theme/page-tab-left.png"/>
+						<img class="pagetabmiddle" src="./theme/page-tab-middle.png"/>
+						<img class="pagetabright" src="./theme/page-tab-right.png"/>
+						<text class="infoTabText infoTabTextPosition"><p>My Essay</p></text>
+					</div>
+					<div id="myInputTab" class="infoTab infoTabText noselect" onclick="infoTabClick('inputPage');">My Input
+						<img class="pagetableft" src="./theme/page-tab-left.png"/>
+						<img class="pagetabmiddle" src="./theme/page-tab-middle.png"/>
+						<img class="pagetabright" src="./theme/page-tab-right.png"/>
+						<text class="infoTabText infoTabTextPosition"><p>My Input</p></text>
+					</div>
+					<div id="referenceTab" class="infoTab infoTabText noselect" onclick="infoTabClick('refPage');">Hints
+						<img class="pagetableft" src="./theme/page-tab-left.png"/>
+						<img class="pagetabmiddle" src="./theme/page-tab-middle.png"/>
+						<img class="pagetabright" src="./theme/page-tab-right.png"/>
+						<text class="infoTabText infoTabTextPosition"><p>Hints</p></text>
+					</div>
+					<div id="helpTab" class="infoTab infoTabText noselect" onclick="infoTabClick('helpPage');">Help						<img class="pagetableft" src="./theme/page-tab-left.png"/>
+						<img class="pagetabmiddle" src="./theme/page-tab-middle.png"/>
+						<img class="pagetabright" src="./theme/page-tab-right.png"/>
+						<text class="infoTabText infoTabTextPosition"><p>Help</p></text>
+					</div>
+				</div>
+				<div id="essayPage" class="infoPage">Essay</div>
+				<div id="inputPage" class="infoPage">Input</div>
+				<div id="refPage" class="infoPage">
+					<p class="TabTitle1">Hints</p>
+					<p class="TabTitle2">Essay Questions/topics</p>
+					<ul class="TabBodyText">
+						<li>Should people use their cars less than they do now?</li>
+						<li>Should people make better use of public transport?</li>
+						<li>Should all homework be banned? </li>
+						<li>Children should not have computers in their bedrooms.</li>
+						<li>Why are Year 9s the naughtiest group in school?</li>
+						<li>Should magazines be banned from having unrealistic models in them?</li>
+						<li>Science will save the world.</li>
+						<li>Parents should be strict with their children.</li>
+						<li>Young people do not understand older people.</li>
+						<li>Why do so many people want to be famous?</li>
+						<li>Older people do not understand young people.</li>
+						<li>Fame is bad.</li>
+						<li>The goal of equality is no longer valued. </li>
+						<li>People shouldn’t be bullied because they are different.</li>
+						<li>Why do people feel the need to bully others?</li>
+						<li>Life is wonderful.</li>
+						<li>Essay writing is a good skill to have. </li>
+					</ul>
+					<p class="TabTitle2">Essay question keywords</p>
+					<ul class="TabBodyText">
+						<li>Compare: look for and describe the similarities and differences between two things.</li>
+						<li>Describe: give a detailed description or account of something.</li>
+						<li>Discuss: describe and examine something by argument or debate, and give your reasons for and against it.</li>
+						<li>Argue: Make a powerful case for, or an argument for, a belief or idea using supporting ideas or facts.</li>
+						<li>Evaluate: assess the worth, value or rightfulness of something.</li>
+						<li>Explain: describe plainly and them interpret it.</li>
+						<li>Interpret: explain the meaning of something</li>
+						<li>Justify: explain the reasons for ideas, decisions and conclusions.</li>
+						<li>Outline: describe the main features of a subject, object or process.</li>
+						<li>Review: provide an overview or survey and examination of a subject or topic.</li>
+						<li>Summarize: give a concise description of the main points or ideas.</li>
+						<li>Trace: describe the development of a topic; ‘tracing its history’.</li>
+					</ul>
+				</div>
+				<div id="helpPage" class="infoPage">Help</div>
+			</div>
+			<div id="nodeNav" >
+				<button id="backNode" class="navButton" onclick="lastNode();">Back
+					<img src="./theme/back-button-up.png" class="navButtonImage"/>
+				</button>
+				<div id="navBar">
+					<div id="navSlider">
+						<button id="nodebutton0" onclick="moveNode(0);" class="nodebutton nodebuttontextstyle" onmousemove="setButtonHover(0);" onmouseout="setButtonUp(0);" onmousedown="setButtonDown(0);" onmouseup="setButtonUp(0);">
+							<img id="nodebuttonleft0" class="nodebuttonleft" src="./theme/button-up-left.png" />
+							<img id="nodebuttonright0" class="nodebuttonright" src="./theme/button-up-right.png" />
+							<img id="nodebuttonmiddle0" class="nodebuttonmiddle" src="./theme/button-up-middle.png" />
+							<text id="nodebuttontext0" class="nodebuttontextposition nodebuttontextstyle"><p>first button</p></text>
+							first button
+						</button>
+						<button id="nodebutton1" onclick="moveNode(1);" class="nodebutton nodebuttontextstyle" onmousemove="setButtonHover(1);" onmouseout="setButtonUp(1);" onmousedown="setButtonDown(1);" onmouseup="setButtonUp(1);">
+							<img id="nodebuttonleft1" class="nodebuttonleft" src="./theme/button-up-left.png" />
+							<img id="nodebuttonright1" class="nodebuttonright" src="./theme/button-up-right.png" />
+							<img id="nodebuttonmiddle1" class="nodebuttonmiddle" src="./theme/button-up-middle.png" />
+							<text id="nodebuttontext1" class="nodebuttontextposition nodebuttontextstyle"><p>second button</p></text>
+							second button
+						</button>
+						<button id="nodebutton2" onclick="moveNode(2);" class="nodebutton nodebuttontextstyle" onmousemove="setButtonHover(2);" onmouseout="setButtonUp(2);" onmousedown="setButtonDown(2);" onmouseup="setButtonUp(2);">
+							<img id="nodebuttonleft2" class="nodebuttonleft" src="./theme/button-up-left.png" />
+							<img id="nodebuttonright2" class="nodebuttonright" src="./theme/button-up-right.png" />
+							<img id="nodebuttonmiddle2" class="nodebuttonmiddle" src="./theme/button-up-middle.png" />
+							<text id="nodebuttontext2" class="nodebuttontextposition "><p>third button</p></text>
+							third button
+						</button>
+					</div>
+				</div>
+				<button id="nextNode" class="navButton" onclick="nextNode();">Next
+					<img src="./theme/next-button-up.png" class="navButtonImage"/>
+				</button>
+			</div>
+			<div id="viewport">
+				<div id="workspace">
+					<img id="background" class="background"/>
+					<img id="foreground" class="foreground"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

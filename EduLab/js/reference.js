@@ -1,0 +1,18 @@
+function addReferenceText()
+{
+	reference = $("#refContainer");
+	$("#reference").width(0).hide().data("status","closed");
+	reference.append("<h2>Reference</h2>");
+	reference.append("<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum eros, eu feugiat turpis. In sit amet rutrum metus. Nam purus mauris, pretium id vehicula non, euismod id massa.</p>");
+	reference.append("<p>Vivamus eleifend pharetra purus, nec volutpat magna facilisis vel. Nam nec ipsum in purus interdum auctor. Donec at convallis purus. Sed ac massa sit amet ipsum consectetur pretium non eu nulla.</p>");
+	reference.append("<p>Nam vel velit massa, pretium ultrices sem. Donec dignissim nisl nec nunc luctus in mollis justo cursus. Nulla convallis felis at quam tempor facilisis. Donec nec purus libero, eget viverra lacus.</p>");
+	reference.append("<p>Nulla ut sapien rhoncus lacus semper molestie. Donec id nisl sed enim facilisis tristique. Mauris velit nibh, fermentum ut iaculis vestibulum, consequat ac lorem. Suspendisse venenatis luctus est, et rutrum arcu aliquet eget.</p>");
+	reference.append("<p>In gravida tortor sit amet arcu hendrerit vel scelerisque ligula lacinia.Nulla facilisi. Etiam elementum ornare nisi quis eleifend. In at elit in est vehicula suscipit. Fusce cursus viverra augue, sit amet semper dolor dignissim a. Donec ut urna leo.</p>");
+	reference.append("<p>Quisque tortor turpis, dapibus nec mollis scelerisque, vulputate quis libero. Duis quis quam in lectus commodo tempor non at justo. Nulla ac ligula lorem, vitae malesuada nibh. Fusce vitae velit eu justo euismod egestas. Integer a magna lorem, ac placerat arcu.</p>");
+	reference.append("<p>Morbi bibendum dolor ac ante sollicitudin a egestas ligula tempor. Etiam id nisl suscipit felis congue ornare. Aliquam erat volutpat. Vivamus blandit elit ac est accumsan vel euismod tortor bibendum. Aliquam lacus diam, fermentum quis condimentum sit amet, euismod in massa.</p>");
+	reference.append("<p>Quisque adipiscing, erat sit amet suscipit tincidunt, leo orci porttitor libero, at facilisis orci nisl sit amet nulla. Praesent et luctus lectus. Curabitur mollis ornare ullamcorper. Aliquam sit amet augue massa. Donec semper volutpat eros, sit amet consequat turpis tristique ut.</p>");
+	reference.append("<p>Duis et erat ut nisi faucibus viverra. Praesent consequat auctor odio. Donec rhoncus lorem sit amet lectus malesuada ac ultrices mauris pellentesque. Suspendisse sapien mi, malesuada ac tempor eu, mattis ultricies nulla. Morbi dignissim pellentesque lobortis. Praesent faucibus nunc id sem adipiscing tempus.</p>");
+	reference.append("<p>Cras a enim a libero tincidunt aliquet id vitae orci. Pellentesque ut erat diam. Ut blandit, massa ac consectetur rhoncus, libero sapien posuere risus, in bibendum turpis leo quis odio. Maecenas vitae enim leo, non rhoncus lectus. Donec ante augue, mollis sed pulvinar et, aliquet quis felis.Fusce ornare elementum nibh id dictum.</p>");
+	reference.append("<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vitae ligula tristique nulla lobortis varius id vel diam. Duis feugiat magna non odio tempus non vulputate leo tempor. Cras sodales suscipit sem, id auctor augue scelerisque at. Morbi leo orci, pulvinar aliquam accumsan ut, pellentesque vel dolor.</p>");
+	reference.append("<p>Praesent sed est ac lorem convallis cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>");
+}

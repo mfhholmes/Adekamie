@@ -1,0 +1,124 @@
+body
+{
+	background:black;
+	overflow:hidden;
+	margin:0px;
+}
+.editviewport
+{
+	position:absolute;
+	width:75%;
+	height:100%;
+	margin:0px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+.editpane
+{
+	position:relative;
+	width:90%;
+	left:5%;
+	height:auto;
+	top:20px
+}
+
+.commandpane
+{
+	position:absolute;
+	width:23%;
+	left:76%;
+	height:100%;
+	top:20px;
+	margin:0px;
+}
+.usertext
+{
+	font-family:arial;
+	font-size:12px;
+	color:white;
+	display:inline;
+}
+.systemtext
+{
+	font-family:arial;
+	font-size:12px;
+	color:gray;
+	display:inline;
+}
+input.usertext
+{
+	background:black;
+	border:2px solid white;
+	border-radius:10px;
+	width:50%;
+	padding-left:5px;
+	padding-right:5px;
+	outline:0;
+}
+.inset
+{
+	left:10%;
+}
+.sectionheader
+{
+	font-size:16px;
+	font-weight:bold;
+	font-family:arial;
+	color:lightgray;
+	display:inline;
+}
+#commandpane button
+{
+	background:white;
+	border-radius:10px;
+	font-family:arial;
+	font-size:12px;
+	padding-left:10px;
+	padding-right:10px;
+	width:50%;
+	display:inline;
+}
+#commandpane button.enabled
+{
+	color:black;
+	background:white;
+}
+#commandpane button.disabled
+{
+	color:darkgray;
+	background:gray;
+}
+#commandpane select.pageList
+{
+	background:black;
+	border:2px solid white;
+	border-radius:10px;
+	font-family:arial;
+	font-size:12px;
+	color:white;
+	padding-left:5px;
+	padding-right:5px;
+	width:50%;
+	outline:0;
+	-webkit-appearance:button;
+	-moz-appearance:menulist-text;
+	display:inline;
+}
+#commandpane .commandGroupName
+{
+	margin-right:50px;
+	font-family:arial;
+	font-size:24px;
+	color:white;
+	text-align:center;
+	vertical-align:bottom;
+	text-decoration:underline;
+}
+#commandpane .logo
+{
+	position:absolute;
+	height:50px;
+	width:50px;
+	top:0;
+	right:0;
+}

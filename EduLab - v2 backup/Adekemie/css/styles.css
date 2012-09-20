@@ -1,0 +1,187 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+
+body{
+	padding:0px;
+	margin:0px;	
+	position:relative;
+}
+
+/* ---------- general ----------- */
+
+#footer{
+	position:absolute;
+	bottom:30px;
+	width:100%;
+	background:#eee;
+	border-top:1px solid #999;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:22px;
+}
+
+#header{
+	width:100%;
+}
+
+
+/* ---------- home page ---------- */
+
+.logo{
+	font-size:2.2em;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#039;
+	text-align:center;
+	padding:24px;	
+}
+
+.lessons{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.4em;
+	font-weight:bold;
+	width:40%;
+	border:1px solid #999;
+	background:#eee;
+	text-align:center;
+	padding:22px;
+	border-radius:4px;
+	color:#333;
+	margin:0px auto;
+}
+
+.lesson{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1em;
+	font-weight:bold;
+	border-left:1px solid #999;
+	border-top:1px solid #999;
+	border-right:1px solid #666;
+	border-bottom:1px solid #666;
+	background:#CCC;
+	text-align:center;
+	padding:12px;
+	margin:12px;
+	border-radius:4px;
+	color:#666;
+}
+
+.lesson:hover{
+	border-left:1px solid #999;
+	border-top:1px solid #999;
+	border-right:1px solid #666;
+	border-bottom:1px solid #666;
+	background:#999;
+	text-align:center;
+	padding:12px;
+	margin:12px;
+	border-radius:4px;
+	color:#EEE;
+	cursor:pointer;
+}
+
+/* ------------- lesson page ------------- */
+.headerLogo{
+	float:right;
+	font-size:1.2.em;
+	width:100%;
+}
+
+.lessonHeader{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.5em;
+	position:absolute;
+	left:0;
+	top:0;
+}
+#container{
+	position:absolute;
+	margin:0;
+	padding:0;
+	border:1px solid black;
+	left:25%;
+	width:75%;
+	top:30px;
+}
+/**********Task list *********/
+#tasklist{
+	position:fixed;
+	margin:0;
+	padding:0;
+	border:1px solid red;
+	left:0;
+	width:25%;
+	top:30px;
+}
+.taskListItem{
+	border:2px solid blue;
+	background-color:black;
+	padding:2px;
+	margin:2px;
+	corner-radius:2px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1em;
+	font-weight:bold;
+	color:white;
+}
+/***********Task Boxes*******/
+.taskTitle{
+	width:100%;
+	background-color:white;
+	padding:2px;
+	text-align:center;
+	font-size:1.2em;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+.task {
+	font-family:Arial, Helvetica, sans-serif;
+	margin: 10px;
+	float: left;
+	border:1px solid gray;
+	overflow:hidden;
+	font-size:0.5em;
+}
+.task:hover{
+	cursor:pointer;	
+}
+
+.bigTask {
+	width: 90%;
+	margin: 10px;
+	float: left;
+	border:1px solid gray;
+	height:440px;
+	font-size:1.5em;
+}
+
+.bigTask:hover{
+	cursor:pointer;	
+}
+
+.stdWidth{
+	width:240px;
+}
+.writingTaskInstruction{
+}
+.selectionTaskInstruction{
+}
+.selectionTaskChoice{
+}
+.researchTaskInstruction{
+}
+.resarchTaskContent{
+}
+.reviewTaskInstruction{
+}
+.reviewTaskBody{
+}
+.submitTaskMessage{
+}
+.unknownTask{
+	font-size:2.5em;
+	color:red;
+	background:yellow;
+	font-weight:bold;
+	font-family:comic sans;
+}
+

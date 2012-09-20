@@ -1,0 +1,21 @@
+body
+{
+	position:relative;
+	overflow:hidden;
+	margin:0;
+}
+.background
+{
+	position:absolute;
+	z-index:0;
+}
+.middleground
+{
+	position:absolute;
+	z-index:50;
+}
+.foreground
+{
+	position:absolute;
+	z-index:100;
+}

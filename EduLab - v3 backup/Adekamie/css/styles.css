@@ -1,0 +1,470 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+
+body{
+	padding:0px;
+	margin:0px;	
+	position:relative;
+}
+
+/* ---------- general ----------- */
+
+#footer{
+	position:absolute;
+	bottom:30px;
+	width:100%;
+	background:#eee;
+	border-top:1px solid #999;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:22px;
+}
+
+#header{
+	width:100%;
+	height:50px;
+}
+
+
+/* ---------- home page ---------- */
+
+.logo{
+	font-size:2.2em;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#039;
+	text-align:center;
+	padding:0px;	
+}
+
+.lessons{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.4em;
+	font-weight:bold;
+	width:40%;
+	border:1px solid #999;
+	background:#eee;
+	text-align:center;
+	padding:22px;
+	border-radius:4px;
+	color:#333;
+	margin:0px auto;
+}
+
+.lesson{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1em;
+	font-weight:bold;
+	border-left:1px solid #999;
+	border-top:1px solid #999;
+	border-right:1px solid #666;
+	border-bottom:1px solid #666;
+	background:#CCC;
+	text-align:center;
+	padding:12px;
+	margin:12px;
+	border-radius:4px;
+	color:#666;
+}
+
+.lesson:hover{
+	border-left:1px solid #999;
+	border-top:1px solid #999;
+	border-right:1px solid #666;
+	border-bottom:1px solid #666;
+	background:#999;
+	text-align:center;
+	padding:12px;
+	margin:12px;
+	border-radius:4px;
+	color:#EEE;
+	cursor:pointer;
+}
+
+/* ------------- lesson page ------------- */
+.headerLogo{
+	position:absolute;
+	font-size:1.2.em;
+	right:0px;
+	top:0px;
+	height:50px;
+}
+
+.lessonHeader{
+	font-family:'Numans',Arial, Helvetica, sans-serif;
+	font-size:2.1em;
+	position:absolute;
+	left:0;
+	top:0;
+	height:50px;
+	vertical-align:middle;
+}
+#container{
+	position:absolute;
+	margin-left:32px;
+	margin-right:32px;
+	padding:0;
+	border:0;
+	left:25%;
+	width:75%;
+	top:50px;
+	z-index:100;
+	background-color:AntiqueWhite;
+}
+/*********menu*********/
+.menuIcon{
+	width:32px;
+	height:32px;
+}
+#mainMenu{
+	position:absolute;
+	top:50px;
+	width:32px;
+	right:0px;
+	z-index:200;
+}
+#leftmenu{
+	position:absolute;
+	top:50px;
+	left:0px;
+	z-index:200;
+	width:32px;
+}
+/**********Task list *********/
+#tasklist{
+	position:absolute;
+	margin-left:32px;
+	border:1px solid red;
+	left:0;
+	width:25%;
+	top:50px;
+	z-index:200;
+}
+.taskListItem{
+	border:2px solid blue;
+	background-color:black;
+	padding:0px;
+	margin:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1em;
+	font-weight:bold;
+	color:white;
+	list-style-type:none;
+	cursor:pointer;
+}
+.taskListComplete{
+	height:1em;
+	width:1em;
+	display:inline;
+}
+.indent0{
+	padding-left:0px;
+}
+.indent1{
+	padding-left:25px;
+}
+.indent2{
+	padding-left:50px;
+}
+.indent3{
+	padding-left:75px;
+}
+.indent4{
+	padding-left:80px;
+}
+/***********Review Box*******/
+#reviewPanel{
+	position:absolute;
+	top:50px;
+	left:15%;
+	width:70%;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:20px;
+	border:solid 2px black;
+	background-color:AntiqueWhite;
+	z-index:500;
+}
+.reviewTaskInstruction{
+	font-weight:bold;
+}
+#reviewPanel h2{
+	text-align:center;
+	width:100%;
+}
+.reviewEdit{
+	display:block;
+	width:90%;
+	margin-top:1em;
+	margin-bottom:1em;
+	min-height:5em;
+}
+.editAccept{
+	float:right;
+}
+.reviewTaskBody{
+	width:90%;
+}
+/***********Reference********/
+#reference{
+	position:absolute;
+	right:0px;
+	margin-right:32px;
+	top:50px;
+	border:solid 1px black;
+	border-bottom-left-radius:10px;
+	border-top-left-radius:10px;
+	z-index:175;
+	background-color:AntiqueWhite;
+}
+.reference-open{
+	width:35%;
+}
+#refContainer{
+	
+}
+#reference p{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:0.6em;
+}
+
+/***********Samples**********/
+#samples{
+	position:absolute;
+	right:32px;
+	top:50px;
+	border:solid 1px black;
+	border-bottom-left-radius:10px;
+	border-top-left-radius:10px;
+	z-index:150;
+	background-color:LightBlue;
+	padding-bottom:10px;
+	padding-left:15px;
+	padding-right:15px;
+}
+.samples-open{
+	width:35%;
+}
+#samplesContainer{
+}
+.samplebody{
+	position:relative;
+}
+.sampleText{
+	position:absolute;
+	width:70%;
+	left:10%;
+	border:solid 1px black;
+}
+.sampleText2{
+	position:absolute;
+	width:90%;
+	left:5%;
+	border:solid 1px black;
+}
+
+#noteZone{
+	position:absolute;
+	width:20%;
+	right:0;
+	top:0;
+	height:100%;
+}
+.comment{
+	position:relative;
+	left:-8%;
+	float:left;
+	font-size:1em;
+	color:red;
+	border:solid 2px blue;
+	padding:5px;
+	border-radius:10px;
+}
+.commentText{
+	position:relative;
+	float:right;
+	background-color:white;
+	border:solid 2px blue;
+	border-radius:5px;
+	padding:5px;
+	left:1%;
+	max-width:98%;
+	background-color:lightBlue;
+}
+.annotated{
+	color:blue;
+	cursor:pointer;
+}
+.note{
+	position:absolute;
+	display:block;
+	border-radius:5px;
+	padding:5px;
+	background-color:lightBlue;
+	color:black;
+	border:solid 1px black;
+	font-family:Arial, Helvetica, sans-serif;
+}
+/***********Task Boxes*******/
+.taskboxTitle{
+	width:100%;
+	background-color:black;
+	padding:0px;
+	text-align:center;
+	font-size:1.5em;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:white;
+	margin:0px;
+}
+.task {
+	font-family:Arial, Helvetica, sans-serif;
+	margin: 10px;
+	padding:0px;
+	float: left;
+	border:1px solid gray;
+	border-radius:5px;
+	font-size:0.75em;
+	min-width:70px;
+	min-height:40px;
+	z-index:300;
+	background-color:white;
+	width:25%;
+	overflow:hidden;
+}
+.taskboxContent{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.2em;
+	margin:10px;
+}
+.taskBoxExitIcon{
+	position:absolute;
+	right:2px;
+	top:2px;
+	width:1em;
+	height:1em;
+}
+/***********task panel*********/
+#taskpanel{
+	left:25%;
+	margin-left:32px;
+	position:absolute;
+	border:2px solid black;
+	border-bottom-right-radius:10px;
+	border-top-right-radius:10px;
+	overflow-x:hidden;
+	z-index:200;
+	background-color:white;
+}
+.taskpanel-open{
+	width:35%;
+}
+.exitIcon{
+	position:absolute;
+	height:16px;
+	width:16px;
+	top:5px;
+	right:5px;
+	border:solid 1px black;
+}
+#taskpanelContainer{
+	
+	padding:0px;
+	margin:0px;
+	border:none;
+}
+.taskPanelTitle{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.2em;
+	font-weight:bold;
+	text-align:center;
+	
+}
+.acceptButton{
+	float:right;
+	margin:5px;
+	width:100px;
+	height:60px;
+}
+.writingTaskInstruction{
+}
+.writingTaskInput{
+	position:relative;
+	display:block;
+	width:90%;
+	height:100px;
+	margin:5%;
+	
+}
+.writingTaskAccept{
+}
+.selectionTaskInstruction{
+}
+.selectionTaskChoice{
+}
+.selectionTaskAccept{
+}
+.listSelectionTaskList{
+	width:40%;
+	float:right;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+.listSelectionInstruction{
+	width:40%;
+	float:left;
+}
+.listSelection{
+	width:40%;
+	float:left;
+	height:5em;
+}
+.researchTaskInstruction{
+}
+.resarchTaskContent{
+}
+.reviewTaskInstruction{
+}
+.reviewTaskBody{
+}
+.submitTaskMessage{
+}
+.unknownTask{
+	font-size:2.5em;
+	color:red;
+	background:yellow;
+	font-weight:bold;
+	font-family:comic sans;
+}
+.taskNavigationButton{
+	float:right;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.1em;
+	padding:15px;
+	background-color:black;
+	color:white;
+	
+}
+/**********task type panels**********/
+.doublewritingInstruction1{
+	top:10%;
+	left:5%;
+	right:5%;
+	height:20%;
+}
+.doublewritingInstruction2{
+	top:50%;
+	left:5%;
+	right:5%;
+	height:20%;
+}
+.doublewritingTaskInput1{
+	top:35%;
+	left:5%;
+	right:5%;
+	height:10%;
+}
+.doublewritingTaskInput2{
+	top:75%;
+	left:5%;
+	right:5%;
+	height:10%;
+}

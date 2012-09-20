@@ -1,0 +1,408 @@
+body
+{
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+#container
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0%;
+	left:0%;
+	background-color:black;
+}
+
+#mainTabs
+{
+	position:absolute;
+	width:70%;
+	height:35px;
+	top:0;
+	left:35px;
+	margin:0;
+	padding:0;
+}
+
+#logo
+{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:35px;
+	height:35px;
+}
+
+.img_to_size
+{
+	position:absolute;
+	left:0px;
+	right:0px;
+	border:0;
+	padding:0;
+	height:100%;
+}
+
+.pagetab
+{
+	position:relative;
+	height:30px;
+	top:5px;
+	float:left;
+	left:5px;
+	margin-left:5px;
+	margin-right:5px;
+	cursor:pointer;
+	vertical-align:center;
+	border-style:none;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+.pagetableft
+{
+	position:absolute;
+	width:5px;
+	height:100%;
+	left:0px;
+	top:0px;
+	margin-left:-5px;
+	padding:0px;
+}
+
+.pagetabmiddle
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+	margin-left:0px;
+	margin-right:0px;
+	top:0px;
+	left:0px;
+}
+
+.pagetabright
+{
+	position:absolute;
+	width:5px;
+	height:100%;
+	right:0px;
+	top:0px;
+	margin-right:-5px;
+	padding:0px;
+}
+
+.pagetabtext
+{
+	font-size:1.1em;
+	font-family:arial;
+	color:white;
+}
+
+.pagetabtextposition
+{
+	position:absolute;
+	width:100%;
+	top:0px;
+	left:0px;
+	height:100%;
+	vertical-align:middle;
+}
+
+.pagetabtextposition p
+{
+	margin:0;
+	padding:0;
+	text-align:center;
+	vertical-align:middle;
+}
+
+#info
+{
+	position:absolute;
+	width:25%;
+	height:100%;
+	left:75%;
+	overflow:scroll;
+	border-width:1px;
+	border-color:white;
+	border-style:solid;
+}
+
+.infoPage
+{
+	position:absolute;
+	width:100%;
+	left:0px;
+	top:35px;
+	bottom:0px;
+	margin:1px;
+	color:white;
+	background-color:black;
+}
+.TabTitle1
+{
+	font-size:1.2em;
+	font-weight:bold;
+	font-family:Arial, Sans-serif;
+}
+
+.TabTitle2
+{
+	font-size:1em;
+	font-weight:bold;
+	font-family:Arial, Sans-serif;
+}
+
+.TabBodyText
+{
+	font-size:0.8em;
+	font-weight:normal;
+	font-family:Arial, Sans-serif;
+}
+.TabBodyText ul li
+{
+	font-family:Arial, Sans-serif;
+}
+
+
+#infoTabs
+{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:35px;
+}
+
+.infoTab
+{
+	float:left;
+	position:relative;
+	width:24%;
+	height:30px;
+	text-align:center;
+	left:5px;
+	top:5px;
+}
+
+.infoTabText
+{
+	color:white;
+	font-family:Arial;
+}
+
+.infoTabTextPosition
+{
+	position:absolute;
+	width:100%;
+	top:0px;
+	left:0px;
+	height:100%;
+	vertical-align:middle;
+}
+
+.infoTabTextPosition p
+{
+	margin:0;
+	padding:0;
+	text-align:center;
+	vertical-align:middle;
+}
+
+#nodeNav
+{
+	position:absolute;
+	width:75%;
+	left:0%;
+	height:60px;
+	top:100%;
+	margin-top:-60px;
+	padding:0;
+	background-color:black;
+}
+
+.navButton
+{
+	position:absolute;
+	width:50px;
+	height:50px;
+	top:10px;
+	border:none;
+}
+
+.navButtonImage
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+}
+
+#nextNode
+{
+	right:10px;
+}
+
+#backNode
+{
+	left:10px;;
+}
+
+#navBar
+{
+	display:block;
+	position:absolute;
+	left:65px;
+	right:65px;
+	height:60px;
+	top:0px;
+	background-color:black;
+	overflow:hidden;
+}
+
+#navSlider
+{
+	position:absolute;
+	height:100%;
+	top:0;
+	left:0;
+	width:auto;
+}
+
+.nodebutton
+{
+	position:relative;
+	float:left;
+	height:100%;
+	width:auto;
+	top:0px;
+	margin-left:15px;
+	margin-right:15px;
+	border-style:none;
+}
+
+.nodebuttonleft
+{
+	position:absolute;
+	left:-12px;
+	height:100%;
+	width:12px;
+	top:0px;
+}
+
+.nodebuttonright
+{
+	position:absolute;
+	right:-12px;
+	width:12px;
+	height:100%;
+	top:0px;
+}
+
+.nodebuttonmiddle
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+}
+
+.nodebuttontextposition
+{
+	position:absolute;
+	width:100%;
+	left:0px;
+	top:0px;
+	height:auto;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.nodebuttontextposition p
+{
+	vertical-align:middle;
+}
+
+.nodebuttontextstyle
+{
+	font-family:Arial;
+	font-size:1em;
+	color:white;
+}
+
+.noselect
+{
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+#complete
+{
+	position:absolute;
+	width:96%;
+	left:2%;
+	top:45%;
+	height:55%;
+	font-size:16px;
+}
+
+#viewport
+{
+	position:absolute;
+	width:75%;
+	bottom:60px;
+	left:0%;
+	top:35px;
+	overflow:hidden;
+}
+
+#workspace
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+}
+
+#workspace img.background
+{
+	position:absolute;
+	z-index:10;
+	border:0;
+}
+#workspace img.foreground
+{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:50;
+	border:0;
+}
+
+#nodeMap
+{
+	width:100%;
+	height:100%;
+}
+
+.lessonButton
+{
+	float:left;
+	width:12%;
+	height:85%;
+	margin-top:1%;
+	margin-left:2%;
+	
+}
