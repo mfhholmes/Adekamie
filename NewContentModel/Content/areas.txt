@@ -1,2 +1,0 @@
-intro area 150 155 230 x 215
-textarea 370 800 215 x 215
