@@ -359,26 +359,30 @@ textarea {
 }
 .taskPanelEntry{
 	position:relative;
-	top:1em;
-	left:5%;
+	display:block;
 	width:90%;
+	height:5em;
+	margin-left:5%;
+	margin-right:5%;
 }
 .taskPanelAccept{
 	float:right;
+	display:block;
+	
 	margin:5px;
 	width:100px;
 	height:60px;
 }
 .writingTaskInstruction{
 }
-.writingTaskInput{
+/*.writingTaskInput{
 	position:relative;
 	display:block;
 	width:90%;
 	height:5em;
 	margin:5%;
 	
-}
+}*/
 /***********Reference********/
 #reference{
 	position:absolute;
@@ -390,6 +394,7 @@ textarea {
 	border-top-left-radius:10px;
 	z-index:300;
 	background-color:AntiqueWhite;
+	overflow:hidden;
 }
 #reference h2{
 	text-align:center;
@@ -398,7 +403,8 @@ textarea {
 	width:35%;
 }
 #refContainer{
-	
+	position:relative;
+	overflow:hidden;
 }
 .refItem{
 	position:relative;

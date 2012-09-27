@@ -107,11 +107,16 @@ function classifyTask(task, taskArray, indent){
 		}
 	}
 	newtask.indent = indent;
-	newtask.parent = null;
+	newtask.parentTask = null;
 	newtask.taskListVisible((indent <2))
 	newtask.taskBoxVisible(false);
 	newtask.editing = new ko.observable(false);
-	newkotask = new ko.observable(newtask)
+	newtask.editing.subscribe(function(newvalue){
+       if(!newvalue){
+           newtask.accept();
+       } 
+    });
+	var newkotask = new ko.observable(newtask)
 	taskArray().push( newkotask);
 
 	// check for child tasks
@@ -121,15 +126,15 @@ function classifyTask(task, taskArray, indent){
 		for(var i=0;i<task.Tasks.length;i++){
 			var child = classifyTask(task.Tasks[i],taskArray,newindent);
 			newtask.tasks().push(child);
-			child().parent = newtask;
+			child().parentTask = newtask;
 		}
 	}
 	else{
 		newtask.hasKids = false;
 	}
 	newtask.taskBoxClose = function(){
-	    this.taskBoxVisible(false);
-	    this.editing(false);
+	    newtask.taskBoxVisible(false);
+	    newtask.editing(false);
 	    };
 	    
     return newkotask;
@@ -181,7 +186,7 @@ function task_reading(ind,ref,ttl,instr,nav){
 	self.accept = function(){
 		// always completes
 		self.complete(true);
-		if(self.parent != null) self.parent.accept();
+		if(self.parentTask != null) self.parentTask.accept();
 		lesson.clearCurrentTask();
 	};
 	self.taskListClick = function(){
@@ -259,8 +264,9 @@ function task_writing(ind, ref, ttl, instr, resp, nav){
         {
             self.oldresponse = self.response();
             self.complete(true);
+            self.complete.valueHasMutated();
         }
-        if(self.parent != null) self.parent.accept();
+        if(self.parentTask != null) self.parentTask.accept();
         self.taskBoxVisible(true);
         lesson.clearCurrentTask();
     };
@@ -328,15 +334,19 @@ function task_container(ind,ref,ttl){
 	self.accept = function(){
 	    if(self.hasKids){
 	        var allcomplete = true;
+	        //console.debug("-------");
 	        for(var i=0;i<self.tasks().length;i++){
+	            //console.debug(self.tasks()[i]().title + " : " + self.tasks()[i]().complete());
 	            if(!self.tasks()[i]().complete()){
 	                allcomplete= false;
 	                break;
 	            }
 	        }
 	        self.complete(allcomplete);
+	        self.complete.valueHasMutated();
+	        //console.debug(self.complete());
 	    }
-	    if(self.parent != null) self.parent.accept();
+	    if(self.parentTask != null) self.parentTask.accept();
 		lesson.clearCurrentTask();
 		
 	};
@@ -345,7 +355,9 @@ function task_container(ind,ref,ttl){
 			var tasks = self.tasks();
 			var subtask = tasks[i]();
             slideMenuList(subtask.index);
+            //console.debug(subtask.title, subtask, subtask.parentTask);
         }
+        
 			
 	};
 	self.taskPanelOpen = function(){
@@ -407,7 +419,7 @@ function task_review(ind,ref,ttl, revlist, nav){
     };
     self.accept = function(){
         self.complete(true);
-        if(self.parent != null) self.parent.accept();
+        if(self.parentTask != null) self.parentTask.accept();
         lesson.clearCurrentTask();
     };
     self.taskListClick = function(){
@@ -466,7 +478,7 @@ function task_unknown(ind,ref,ttl){
 	self.accept = function (){
 		// always completes
 		self.isComplete(true);
-		if(self.parent != null) self.parent.accept();
+		if(self.parentTask != null) self.parentTask.accept();
 		self.taskPanelClose();
 		self.taskBoxVisible(true);
 	};

@@ -75,16 +75,16 @@ function clickRef()
     else
     {
         if($("#samples").data("status") == "open")
-            closeSamples(openRef(function(){$("#samples").hide();$("#reference").addClass("reference-open").css("width","");$("#refContainer").width("100%");;}));
+            closeSamples(openRef(function(){$("#samples").hide();$("#reference").addClass("reference-open").css("width","");}));
         else
-            openRef(function(){$("#reference").addClass("reference-open").width("");$("#refContainer").width("100%");});
+            openRef(function(){$("#reference").addClass("reference-open").width("");});
     }
 }
 function openRef(afterwards)
 {
     reference = $("#reference");
     targetWidth = $("body").innerWidth() *0.35;
-    $("#refContainer").width(targetWidth);
+    $("#refContainer").width(targetWidth).show();
     reference.show();
     if(typeof(afterwards) == "undefined")
         reference.animate({width:targetWidth + "px"},250,"linear");
@@ -95,10 +95,16 @@ function openRef(afterwards)
 function closeRef(afterwards)
 {
     reference = $("#reference");
+    
+    //$("#refContainer").width(0).hide();
     if(typeof(afterwards) == "undefined")
         reference.animate({width:"0"},250,"linear",function(){$("#reference").removeClass("reference-open").hide();});
     else
         reference.animate({width:"0"},250,"linear",afterwards);
+/*    if(typeof(afterwards)=="undefined")
+        reference.hide("slide",{"direction":"left"},250,function(){$("#reference").removeClass("reference-open");});
+    else
+        reference.hide("slide",{"direction":"right"},250);*/
     reference.data("status","closed");
     
 }
