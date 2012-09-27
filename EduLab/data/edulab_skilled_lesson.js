@@ -62,7 +62,35 @@ lesson_data={
 					"Response":"",
 					"Navigation":[
 						{"Ref":"Decode1","Label":"Decode the question"}]
- 				}
+ 				},
+                {
+                    "Reference":"Topic3",
+                    "Type":"flyOutSelection",
+                    "Title":"More Sample Topics",
+                    "Instruction": {
+                    "Newbie":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>",
+                    "Developing":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>",
+                    "Flying":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>"
+                    },
+                    "Choices":[
+                        "Is killing people wrong?",
+                        "What is normal anyway?",
+                        "Should Human Rights come with Human Responsibilites?",
+                        "How many angels can dance on the head of a pin?",
+                        "If you could, should you, and why?",
+                        "Is legislating for morality ineffective?",
+                        "Do aliens exist? If so, why aren't they here?",
+                        "Are religious texts literal or metaphorical?",
+                        "In a hundred years, will any of it matter?",
+                        "Do we actually have a responsibility to ensure extremely small minorities can take an equal place in society?",
+                        "Do we need to Believe in order to Reason, or Reason in order to Believe?",
+                        "What is the purpose of human life, assuming it has a reason greater than reproduction?",
+                        "Are lotteries nothing but a tax on bad maths education? If so, should they be outlawed?"
+                        ],
+                    "Response":"",
+                    "Navigation":[
+                        {"Ref":"Decode1","Label":"Decode the question"}]
+                }
  			]
  		},
 		{

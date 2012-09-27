@@ -96,6 +96,14 @@ function classifyTask(task, taskArray, indent){
 				newtask = new task_container(taskArray().length,task.Reference,task.Title);
 				break;
 			}
+			case "selection":{
+			    newtask =new task_selection(taskArray().length, task.Reference, task.Title, task.Instruction, task.Response, task.Choices, task.Navigation);
+			    break;
+			}
+			case "flyoutselection":{
+                newtask =new task_flyOutSelection(taskArray().length, task.Reference, task.Title, task.Instruction, task.Response, task.Choices, task.Navigation);
+                break;			    
+			}
 			case "review":{
 			    newtask = new task_review(taskArray().length,task.Reference, task.Title, task.ReviewList, task.Navigation);
 			    break;
@@ -305,6 +313,207 @@ function task_writing(ind, ref, ttl, instr, resp, nav){
         editbox.height(content.height());
         self.editing(true);
         
+    };
+}
+function task_selection(ind, ref, ttl, instr, resp, choices, nav){
+    //data
+    var self = this;
+    self.index = ind;
+    self.reference = ref;
+    self.title = ttl;
+    self.choices = new ko.observableArray(choices);
+    self.response = new ko.observable(resp);
+    self.navigation = new ko.observableArray(nav);
+    self.complete = new ko.observable(false);
+    self.taskBoxVisible = new ko.observable(false);
+    self.taskListVisible= new ko.observable(true);
+    self.oldresponse= resp;
+    self.skillText = instr;
+    self.instruction = ko.computed(function(){
+        var curLevel = lesson.selectedSkillLevel();
+        var name = lesson.skillLevels()[curLevel].Name;
+        var text = self.skillText[name];
+        if((text == null ) || (typeof(text) == 'undefined')){
+            return self.skillText[0];
+        } else {
+            return text;
+        }
+    });
+
+    
+    //behaviour
+    self.setupNav = function(){
+        newnav = ko.observableArray();
+        for(var i=0;i<self.navigation().length;i++){
+            var task = lesson.getTaskByRef(self.navigation()[i].Ref)
+            newnav.push(task);
+        }
+        self.navigation = newnav;
+        if(self.hasKids){
+            for(var i=0;i < self.tasks().length;i++){
+                self.tasks()[i]().setupNav();
+            }
+        }
+    };
+
+    self.accept = function(){
+        if(self.response() != self.oldresponse)
+        {
+            self.oldresponse = self.response();
+            self.complete(true);
+            self.complete.valueHasMutated();
+        }
+        if(self.parentTask != null) self.parentTask.accept();
+        self.taskBoxVisible(true);
+        lesson.clearCurrentTask();
+    };
+    self.taskListClick = function(){
+        lesson.setCurrentTask(self.index);
+    };
+    self.taskPanelOpen = function(){
+        //find the task panel
+        var panel = $("#taskPanel");
+        var container = $("#taskPanelContainer").empty();
+        self.oldresponse = self.response();
+        //add elements
+        container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
+        container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+        container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
+        container.append("<!-- ko foreach: choices-->");
+        container.append("<p class='selectChoice'><input type='radio' name='selectChoices' data-bind='value:$data,checked:$parent.response'/><span data-bind='text:$data'/></p>");
+        container.append("<!-- /ko -->");
+        container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+        container.css("width:"+panel.css("width"));
+        //set the bindings to this task
+        ko.applyBindings(self,panel.get(0));
+        panel.show("slide",250);
+    };
+    self.taskPanelClose = function(){
+        self.response(self.oldresponse);
+        panel = $("#taskPanel");
+        panel.hide("slide",250);
+    };  
+    self.taskBoxClick = function(){
+        /*
+        content = $('#taskBox'+self.index);
+        if(content.length != 1){
+            // problem: not a single taskBox
+            console.debug('taskBox selector returned ' + content.length + ' items');
+            return;
+        }
+        editbox = $('#taskBoxEdit' + self.index);
+        editbox.height(content.height());
+        self.editing(true);
+        */
+       // no editing from the task box
+    };
+}
+function task_flyOutSelection(ind, ref, ttl, instr, resp, choices, nav){
+    //data
+    var self = this;
+    self.index = ind;
+    self.reference = ref;
+    self.title = ttl;
+    self.choices = new ko.observableArray(choices);
+    self.response = new ko.observable(resp);
+    self.navigation = new ko.observableArray(nav);
+    self.complete = new ko.observable(false);
+    self.taskBoxVisible = new ko.observable(false);
+    self.taskListVisible= new ko.observable(true);
+    self.oldresponse= resp;
+    self.skillText = instr;
+    self.instruction = ko.computed(function(){
+        var curLevel = lesson.selectedSkillLevel();
+        var name = lesson.skillLevels()[curLevel].Name;
+        var text = self.skillText[name];
+        if((text == null ) || (typeof(text) == 'undefined')){
+            return self.skillText[0];
+        } else {
+            return text;
+        }
+    });
+
+    
+    //behaviour
+    self.setupNav = function(){
+        newnav = ko.observableArray();
+        for(var i=0;i<self.navigation().length;i++){
+            var task = lesson.getTaskByRef(self.navigation()[i].Ref)
+            newnav.push(task);
+        }
+        self.navigation = newnav;
+        if(self.hasKids){
+            for(var i=0;i < self.tasks().length;i++){
+                self.tasks()[i]().setupNav();
+            }
+        }
+    };
+
+    self.accept = function(){
+        if(self.response() != self.oldresponse)
+        {
+            self.oldresponse = self.response();
+            self.complete(true);
+            self.complete.valueHasMutated();
+        }
+        if(self.parentTask != null) self.parentTask.accept();
+        self.taskBoxVisible(true);
+        lesson.clearCurrentTask();
+    };
+    self.taskListClick = function(){
+        lesson.setCurrentTask(self.index);
+    };
+    self.taskPanelOpen = function(){
+        //find the task panel
+        var panel = $("#taskPanel");
+        // add the special class for this task
+        panel.attr("class","flyOutPanel");
+        var container = $("#taskPanelContainer").empty();
+        self.oldresponse = self.response();
+        //add elements
+        container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
+        container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+        container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
+        container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textarea>");
+        container.append("<input type='button' class='flyOutButton' value='See More Options' data-bind='click:flyOut'/>");
+        container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+        flyOutChoices = $("<div id='flyOutChoices' class='flyOutSelectChoicesContainer flyOutClosed' data-bind='foreach:choices'/>").appendTo("body").data("status","closed");
+        flyOutChoices.append("<p class='flyOutChoice'><input type='radio' name='selectChoices' data-bind='value:$data,checked:$parent.response'/><span data-bind='text:$data'/></p>");
+        
+        container.css("width:"+panel.css("width"));
+        //set the bindings to this task
+        ko.applyBindings(self,panel.get(0));
+        ko.applyBindings(self,flyOutChoices.get(0));
+        panel.show("slide",250);
+    };
+    self.flyOut = function(){
+        flyOut = $("#flyOutChoices");
+        if(flyOutChoices.data("status")=="closed"){
+            flyOut.removeClass("flyOutClosed").addClass("flyOutOpen").data("status","open");
+        } else {
+            flyOut.removeClass("flyOutOpen").addClass("flyOutClosed").data("status","closed");
+        }
+    };
+    self.taskPanelClose = function(){
+        self.response(self.oldresponse);
+        $("#flyOutChoices").remove();
+        panel = $("#taskPanel");
+        panel.attr("class","taskPanel");
+        panel.hide("slide",250);
+    };  
+    self.taskBoxClick = function(){
+        /*
+        content = $('#taskBox'+self.index);
+        if(content.length != 1){
+            // problem: not a single taskBox
+            console.debug('taskBox selector returned ' + content.length + ' items');
+            return;
+        }
+        editbox = $('#taskBoxEdit' + self.index);
+        editbox.height(content.height());
+        self.editing(true);
+        */
+       // no editing from the task box
     };
 }
 
