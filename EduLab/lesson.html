@@ -19,7 +19,7 @@
   
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   
-		<link href="css/main.css" rel="stylesheet" type="text/css" />
+		<!--<link href="css/main.css" rel="stylesheet" type="text/css" />-->
 		<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.23.custom.css" rel="stylesheet" />
 		<link href='http://fonts.googleapis.com/css?family=Numans' rel='stylesheet' type='text/css'>
 	
@@ -32,14 +32,32 @@
 		<script src="js/reference.js" type="text/javascript"></script>
 		<script src="js/samples.js" type="text/javascript"></script>
 		<script type="text/javascript">
+			// set up the data and style
+			
 			console.debug("url:" + document.URL);
 			// move this to server side eventually
-			var url = document.URL;
+			var url = decodeURI(document.URL);
 			var src="./data/edulab_skilled_lesson.js";
+			var css="./css/main.css";
 			if(url.indexOf("?") > 0)
-				src = "./data/" + url.substring(url.indexOf("?")+1) + ".js"
+			{	
+				params = 	url.substring(url.indexOf("?")+1);
+				if(params.indexOf("&")>0)
+				{
+					src = "./data/" + params.substring(0,params.indexOf("&")) + ".js";
+					css = "./css/"+ params.substring(params.indexOf("&")+1) + ".css";
+				}
+				else
+				{
+					src = "./data/" + params  + ".js"
+				}
+			}
 			src = "<script src='"+src+"' type='text/javascript'><\/script>"
 			document.write(src);
+			css = "<link href='" + css + "' rel='stylesheet' type='text/css'/>";
+			document.write(css);
+		</script>
+		<script type="text/javascript">
 			// jquery commence
 			$(start);
 		</script>

@@ -26,6 +26,8 @@ function start(){
 	$(".draggable").draggable();
 	$(".resizable").resizable();
 	
+	$(window).on("resize",function(){$(body).height($(window).innerHeight);});
+	
 }
 function parseData(data){
 	lesson.loadData(data);

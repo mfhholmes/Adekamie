@@ -285,5 +285,44 @@ lesson_data={
 			"Title":"Submit your essay",
 			"Destination":"email to teacher@myschool.com.au"
 		}
-	]
+	],
+    "References":
+        [
+            {
+                "Name":"TopicTaskWords",
+                "Label":"Topic And Task Words",
+                "Icons":["./img/video.png"],
+                "SearchWords":["topic","task","words","gobby","brad","analyse","analysis"],
+                "Content":"<iframe class='refVid' src='http://player.vimeo.com/video/49146470' ></iframe>"
+            },
+            {
+                "Name":"Paragraph1",
+                "Label":"Writing a paragraph 1",
+                "Icons":["./img/video.png"],
+                "SearchWords":["paragraph","gobby","brad","words","writing","skills"],
+                "Content":"<iframe src='http://www.youtube.com/embed/72rAfA3hnvU' frameborder='0' allowfullscreen></iframe>"
+            },
+            {
+                "Name":"Paragraph2",
+                "Label":"Writing a paragraph 2",
+                "Icons":["./img/video.png"],
+                "SearchWords":["paragraph","gobby","brad","words","writing","skills"],
+                "Content":"<iframe src='http://www.youtube.com/embed/LO5XONDxK6I' frameborder='0' allowfullscreen></iframe>"
+            },
+            {
+                "Name":"PlanningEssay",
+                "Label":"Planning an Essay",
+                "Icons":["./img/video.png"],
+                "SearchWords":["planning","essay","gobby","brad","writing","skills"],
+                "Content":"<iframe src='http://www.youtube.com/embed/YwgLMCvKJDs' frameborder='0' allowfullscreen></iframe>"
+            },
+            {
+                "Name":"LoremIpsum",
+                "Label":"Lorem Ipsum",
+                "Icons":["./img/text.png"],
+                "SearchWords":["lorem","ipsum","words","sample"],
+                "Content":"<p class='refText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor eros, iaculis sit amet pulvinar id, scelerisque ac lorem. Lorem ipsum dolor sit amet, consectetur.</p>"
+            }
+        ]
+ 
 }

@@ -1,98 +1,69 @@
 lesson_data={
 	"Reference":"Root",
 	"Type":"Container",
-	"Title": "Topic-based Essay Writing",
+	"Title": "Pitch Planning",
 	"SkillLevels":[
-		{"Name":"Newbie","Image":"new.png"},
-		{"Name":"Developing","Image":"dev.png"},
-		{"Name":"Flying","Image":"fly.png"}
+		{"Name":"1-min Pitch","Image":"new.png"},
+		{"Name":"3-min Pitch","Image":"dev.png"},
+		{"Name":"5-min Pitch","Image":"fly.png"}
 		],
 	"Tasks":
 	[
 		{
-			"Reference":"Intro",
+			"Reference":"Brief",
 			"Type":"Reading",
 			"Title": "Introduction",
 			"Instruction" : {
-			"Newbie": "<p> What is an essay? An essay is a short piece of writing. An essay is about a single TOPIC or ISSUE. An essay is made up of more than one PARAGRAPH. Each paragraph has a main idea. Teachers ask students to write essays. Writing essays helps students to improve how they think and write. Writing essays shows a teacher what the student knows about a topic or issue. Think of an essay like the picture below - two people trying got get their point across, but in writing.</p><p>Essays often answer a question set by the teacher. Read the question carefully because the question tells you what to write your essay about and how to write it. Let's look at 2 examples. A question like 'Do you think homework should be banned on weekends?' is telling you to </p><ul><li>>agree or disagree about homework on weekends</li><li>give some ideas to back up why you agree or disagree</li></ul>/p><p>A question like 'Why do some people agree with smacking kids?' is telling you to</p><p>DESCRIBE some points for and against smacking. That sounds easy, doesn't it!</p><p>So, essays are short pieces of writing about a topic or issue. Essays answer a question. Essays have ideas and points in them. Each main idea has a paragraph - have three main ideas and you have an essay!</p><ul><li> Read essay samples (open another side panel)</li></ul><p>You are going to plan and write a short essay on a topic. This will involve you:<ul><li>brainstorming your essay question;</li><li>brainstorming ideas about the essay topic;</li><li>planning and writing your essay</li></ul></p><p>You can use the Activities icon on the left to learn more about essay writing.</p>", 		
-			"Developing":"<p>What is an essay? An essay is usually a short piece of writing about a single TOPIC or ISSUE made up of more than one PARAGRAPH. Why write an essay? Teachers often ask students to write essays in schools and universities. This helps students improve their thinking and writing skills. Students can use essays to show their teacher what they know about a topic or how good they are at writing to ARGUE, INFORM or PERSUADE. Think of an essay like the picture below - two people trying got get their point across, but in writing.</p><p>When you write essays, you usually have a question that you must answer. You should read the question carefully because the question tells you what to write your essay about and how to write it. Let's look at some examples. A question like 'Do you think homework should be banned on weekends?' is telling you to agree or disagree, and then give some ideas or points to back up why you agree or disagree. A question like 'Why do some people agree with smacking children?' is telling you to describe points for smacking and points against smacking. Most essays have a PARAGRAPH for each main point.</p><p>So, essays are short pieces of writing about a topic or issue. Essays seek to answer a question. Essays have ideas and points in them. Each main idea has a paragraph - have three main ideas and you have an essay!</p><ul><li> Read essay samples (open another side panel)</li></ul><p>You must now plan and begin writing a short essay on a topic. This will involve you:<ul><li>brainstorming what your essay question means;</li><li>brainstorming ideas about the essay topic;</li><li>planning and writing your essay</li></ul></p><p>You can use the Activities icon on the left to learn more about essay writing.</p>",			
-			"Flying":"<p>What is an essay? An essay is usually a short piece of writing about a single TOPIC or ISSUE made up of several PARAGRAPHS. Why might people write an essay? Essays are often written in schools and universities by students who try to demonstrate to their teachers or markers what they know about a topic or their ability to ARGUE, INFORM or PERSUADE. When essays are written in schools, there is often a question that students must respond to. It is the question that tells you the purpose of the essay.</p><p>For example, students may be asked by the question to argue for an idea (Q: Argue for why cars should be banned on city streets), to explain why something exists (Q: Explain why carbon pollution exists), to examine many sides of a problem or augment (Q: Compare the ideas of those who support smacking children and those who do not.) or to analyse a story or film (Q: Analyse the main ideas of the novel Waterwings). Each main idea has a paragraph and when the paragraphs are put together you have an essay!.</p><p>So, now we know that essays are short pieces of writing about a topic or issue, that essays can be written for a range of purposes, that essays often seek to answer a question, and that essays are often written by students who need to demonstrate to their teachers what they know about a topic or how to use language to communicate effectively.</p><ul><li> Read essay samples (open another side panel)</li><li>Difference between formal and casual language (open new window - reference)</li></ul><p>Your task is to plan and begin writing a 5 paragraph essay on a topic. This will involve you:<ul><li>choosing and/or brainstorming what your essay question means and what it is asking you to do;</li><li>brainstorming your thoughts and ideas about the essay topic so that you can write a response to it;</li><li>planning and writing your essay by drafting your essay paragraphs, which include an introduction, body paragraphs and a conclusion.</li></ul></p><p>You can use the Activities icon on the left to learn more about essay writing.</p>"
+			"1-min Pitch": "<h2>1-minute pitching</h2><br/><p>A 1-minute pitch is an introduction to you, your idea, your business, whatever. It's very punchy, a minute is not long when you're talking, and it needs to be entertaining.</p>", 		
+			"3-min Pitch":"<h2>3-minute pitching</h2><br/><p>A 3-minute pitch is an overview of your idea or plan, and an explanation of a challenge you're facing in achieving it.</p>",			
+			"5-min Pitch":"<h2>5-minute pitching</h2><br/><p>A51-minute pitch is a concise summary of your idea and plan. It needs to cover the essentials but no more, and you need to be able to dsitill your subject down to the barest bones to communicate it effectively.</p><p>Creating a 5-minute pitch for a complicated subject is hard, but good practice. The essential thing to remember is that you're not trying to educate your audience, but interest them. If they're interested, they'll want to be educated later. Getting your audience interested is difficult, but if you can't interest them in 5 minutes, you won't interest them at all, and your business depends on people being interested"
 			},
 			"Navigation":[
-				{"Ref":"Topic1","Label":"The Question"},
-				{"Ref":"Topic2", "Label":"Your own topic"}
+				{"Ref":"Intro","Label":"The Introduction"}
 			]
 		},
 		{
-			"Reference":"Topic",
-			"Type":"Container",
-			"Title":"Your essay topic",
-			"Tasks":
-			[
-				{
-					"Reference":"Topic1",
-					"Type":"Writing",
-					"Title":"Your question",
-					"Instruction" : {
-					"Newbie":"<p>If you have been given a question, or you have created your own question, write it in the space below. Choose the next tab for a choice of questions<p>",
-					"Developing":"<p>If you have been given a question, or you have created your own question, write it in the space below. Choose the next tab for a choice of questions<p>",
-					"Flying":"<p>If you have been given a question, or you have created your own question, write it in the space below. Choose the next tab for a choice of questions<p>"
-					},
-					"Response":"Write your question here...",
-					"Navigation":[
-						{"Ref":"Decode1","Label":"Decode the question"}
-					]
-						
-				},
-				{
-					"Reference":"Topic2",
-					"Type":"Selection",
-					"Title":"Sample Topics",
-					"Instruction": {
-					"Newbie":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>",
-					"Developing":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>",
-					"Flying":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>"
-					},
-					"Choices":[
-						"Topic1",
-						"Topic2",
-						"Topic3",
-						"Topic4",
-						"Topic5"],
-					"Response":"",
-					"Navigation":[
-						{"Ref":"Decode1","Label":"Decode the question"}]
- 				},
-                {
-                    "Reference":"Topic3",
-                    "Type":"flyOutSelection",
-                    "Title":"More Sample Topics",
-                    "Instruction": {
-                    "Newbie":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>",
-                    "Developing":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>",
-                    "Flying":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>"
-                    },
-                    "Choices":[
-                        "Is killing people wrong?",
-                        "What is normal anyway?",
-                        "Should Human Rights come with Human Responsibilites?",
-                        "How many angels can dance on the head of a pin?",
-                        "If you could, should you, and why?",
-                        "Is legislating for morality ineffective?",
-                        "Do aliens exist? If so, why aren't they here?",
-                        "Are religious texts literal or metaphorical?",
-                        "In a hundred years, will any of it matter?",
-                        "Do we actually have a responsibility to ensure extremely small minorities can take an equal place in society?",
-                        "Do we need to Believe in order to Reason, or Reason in order to Believe?",
-                        "What is the purpose of human life, assuming it has a reason greater than reproduction?",
-                        "Are lotteries nothing but a tax on bad maths education? If so, should they be outlawed?"
-                        ],
-                    "Response":"",
-                    "Navigation":[
-                        {"Ref":"Decode1","Label":"Decode the question"}]
-                }
- 			]
+            "Reference":"Intro",
+            "Type":"Writing",
+            "Title":"The Introduction",
+            "Instruction" : {
+            "1-min Pitch":"<p>You have approximately 10 seconds to get across who you are and what you're talking about.</p><p>The obvious and most direct method is the 'AA Introduction': <q>Hi, my name's Whoever, I'm a Whichever and here to talk to you about Whatever</q></p><p>The less obvious and more risky approach is to start by addressing your problem: <q>So how many of you have a problem with your Whatevers? A few of you, that's good, because my name's Whoever and I'm here to talk about how we solve that for you</q></p>",        
+            "3-min Pitch":"<p>Your introduction needs to mentally prepare your audience for the content you're about to give them. The plan here is to tell them what you're going to tell them, tell them it, then tell them what you told them.</p><p>So your introduction will tell them three things:<ul><li>who you are</li><li>what your background is</li><li>what you're going to talk to them about</li></ul>Your background is a simple, onle-line summary of how you're connected to your subject matter. e.g: <blockquote>My name's Whoever, I've been working in the Whatever industry for the past X years, and I've come up with a new way of doing Whatevers that I think will revolutionalise the Whatever industry and make everyone involved very rich'</blockquote></p>",           
+            "5-min Pitch":"<p>Your introduction needs to mentally prepare your audience for the content you're about to give them. The plan here is to tell them what you're going to tell them, tell them it, then tell them what you told them.</p><p>So your introduction will tell them three things:<ul><li>who you are</li><li>what your background is </li><li>what you're going to talk to them about</li></ul>In a 5-minute pitch you've got time to quickly establish how you're connected to your subject matter and why your audience should be listening to you talk about it. e.g: <blockquote>My name's Whoever, I've been working in the Whatever industry for the past X years, and I've spotted a few problems in the way that the industry currently does Whatevers. I've come up with some solutions for those problems that will really go down well with the customers.</blockquote></p>"            
+            },
+            "Response":"Hi my name's _____ and I'm here today to talk to you about _____",
+            "Navigation":[
+                {"Ref":"Problem","Label":"Next: The Problem"}
+            ]
  		},
+         {
+            "Reference":"Problem",
+            "Type":"Writing",
+            "Title":"The Problem",
+            "Instruction" : {
+            "1-min Pitch":"<p>In a 1-minute pitch you may not need to go over the problem</p><p>But if you do, remember to try and connect the problem to your audience. ",        
+            "3-min Pitch":"<p>Your introduction needs to mentally prepare your audience for the content you're about to give them. The plan here is to tell them what you're going to tell them, tell them it, then tell them what you told them.</p><p>So your introduction will tell them three things:<ul><li>who you are</li><li>what your background is</li><li>what you're going to talk to them about</li></ul>Your background is a simple, onle-line summary of how you're connected to your subject matter. e.g: <blockquote>My name's Whoever, I've been working in the Whatever industry for the past X years, and I've come up with a new way of doing Whatevers that I think will revolutionalise the Whatever industry and make everyone involved very rich'</blockquote></p>",           
+            "5-min Pitch":"<p>Your introduction needs to mentally prepare your audience for the content you're about to give them. The plan here is to tell them what you're going to tell them, tell them it, then tell them what you told them.</p><p>So your introduction will tell them three things:<ul><li>who you are</li><li>what your background is</li><li>what you're going to talk to them about</li></ul>Your background is a simple, onle-line summary of how you're connected to your subject matter. e.g: <blockquote>My name's Whoever, I've been working in the Whatever industry for the past X years, and I've come up with a new way of doing Whatevers that I think will revolutionalise the Whatever industry and make everyone involved very rich'</blockquote></p>"            
+            },
+            "Response":"",
+            "Navigation":[
+                {"Ref":"Solution","Label":"Next: The Solution"}
+            ]
+        },
+        {
+            "Reference":"Solution",
+            "Type":"Writing",
+            "Title":"The Solution",
+            "Instruction" : {
+            "1-min Pitch":"<p>In a 1-minute pitch your solution is the meat of your pitch </p><p>But if you do, remember to try and connect the problem to your audience. ",        
+            "3-min Pitch":"<p>Solution</p>",           
+            "5-min Pitch":"<p>Solution</p>"            
+            },
+            "Response":"Our solution to this  ",
+            "Navigation":[
+                {"Ref":"Problem","Label":"Next: The Problem"}
+            ]
+        },
 		{
 			"Reference":"Decode",
 			"Type":"Container",
@@ -285,5 +256,17 @@ lesson_data={
 			"Title":"Submit your essay",
 			"Destination":"email to teacher@myschool.com.au"
 		}
-	]
+	],
+	"References":
+        [
+            
+            {
+                "Name":"LoremIpsum",
+                "Label":"Lorem Ipsum",
+                "Icons":["./img/text.png"],
+                "SearchWords":["lorem","ipsum","words","sample"],
+                "Content":"<p class='refText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor eros, iaculis sit amet pulvinar id, scelerisque ac lorem. Lorem ipsum dolor sit amet, consectetur.</p>"
+            }
+        ]
+    
 }
