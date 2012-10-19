@@ -288,7 +288,7 @@ function task_writing(ind, ref, ttl, instr, resp, nav){
         self.oldresponse = self.response();
         //add elements
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+        container.append("<input type='image' class='taskPanelExitIcon' onclick='function(){lesson.clearCurrentTask();}'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textarea>");
         container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
@@ -377,7 +377,7 @@ function task_selection(ind, ref, ttl, instr, resp, choices, nav){
         self.oldresponse = self.response();
         //add elements
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+        container.append("<input type='image' class='taskPanelExitIcon' onclick='function(){lesson.clearCurrentTask();}'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<!-- ko foreach: choices-->");
         container.append("<p class='selectChoice'><input type='radio' name='selectChoices' data-bind='value:$data,checked:$parent.response'/><span data-bind='text:$data'/></p>");
@@ -472,7 +472,7 @@ function task_flyOutSelection(ind, ref, ttl, instr, resp, choices, nav){
         self.oldresponse = self.response();
         //add elements
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+        container.append("<input type='image' class='taskPanelExitIcon' onclick='function(){lesson.clearCurrentTask();}'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textarea>");
         container.append("<input type='button' class='flyOutButton' value='See More Options' data-bind='click:flyOut'/>");
@@ -575,7 +575,7 @@ function task_container(ind,ref,ttl){
 	    
 	    //add child task responses
 	    container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-	    container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+	    container.append("<input type='image' class='taskPanelExitIcon' onclick='function(){lesson.clearCurrentTask();}'/>");
 	    taskcontainer = $("<div class='taskPanelReviewContainer' data-bind='foreach:tasks'></div>");
 	    container.append(taskcontainer);
 	    taskcontainer.append("<div class='taskPanelReviewItem' data-bind='text:response'></div>");
@@ -640,7 +640,7 @@ function task_review(ind,ref,ttl, revlist, nav){
         
         //add child task responses
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+        container.append("<input type='image' class='taskPanelExitIcon' onclick='function(){lesson.clearCurrentTask();}'/>");
         taskcontainer = $("<div class='taskPanelReviewContainer' data-bind='foreach:reviewlist'></div>");
         container.append(taskcontainer);
         taskcontainer.append("<p class='taskPanelReviewItem' data-bind='text:response'></p>");
@@ -701,7 +701,7 @@ function task_unknown(ind,ref,ttl){
         self.oldresponse = self.response();
         //add elements
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+        container.append("<input type='image' class='taskPanelExitIcon' onclick='function(){lesson.clearCurrentTask();}'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textare>");
         container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");

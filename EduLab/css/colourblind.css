@@ -183,7 +183,6 @@ body{
 	width:75%;
 	top:50px;
 	z-index:100;
-	opacity:0;
 }
 
 /*********menu*********/
@@ -277,22 +276,27 @@ body{
 /***********Task Boxes*******/
 .taskboxTitle{
 	width:100%;
-	background-color:black;
+	background-image:url('../img/colourblind/gradient_gentle_down.png');
+	background-size:100% 100%;
+	background-repeat:no-repeat;
 	padding:0px;
 	text-align:center;
 	font-size:1.5em;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-weight:bold;
 	color:white;
 	margin:0px;
+	border-top-left-radius: 10px;
+	border-top-right-radius:10px;
 }
 .task {
 	font-family:Arial, Helvetica, sans-serif;
 	margin: 10px;
 	padding:0px;
 	float: left;
-	border:1px solid gray;
-	border-radius:5px;
+	border:2px solid gray;
+	border-radius:10px;
+	box-shadow: 5px 5px 5px lightGray;
 	font-size:0.75em;
 	min-width:70px;
 	min-height:40px;
@@ -321,11 +325,14 @@ body{
 	top:2px;
 	width:1em;
 	height:1em;
+	background-image:url('../img/colourblind/exit.png');
+	background-size:100% 100%;
+	background-repeat:no-repeat;
 }
 .taskBoxMaxIcon{
 	position:absolute;
-	right:25px;
-	top:2px;
+	right:30px;
+	top:5px;
 	width:1em;
 	height:1em;
 }

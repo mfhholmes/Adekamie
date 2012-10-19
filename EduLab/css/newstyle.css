@@ -1,3 +1,5 @@
+@import url('http://fonts.googleapis.com/css?family=PT+Sans');
+
 /*
  * HTML5 Boilerplate
  *
@@ -18,6 +20,9 @@ textarea {
     color: #222;
 }
 
+html{
+	height:100%;
+}
 body {
     font-size: 1em;
     line-height: 1.4;
@@ -149,12 +154,27 @@ textarea {
 }
 
 /* ------------- lesson page ------------- */
+
+
+body{
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+	background-image:url('../img/newstyle/boarder.png');
+	background-size:cover;
+}
 .headerLogo{
 	position:absolute;
-	font-size:1.2.em;
 	right:0px;
 	top:0px;
 	height:50px;
+	width:220px;
+	margin:0;
+	padding:0;
+	background-image:url('../img/newstyle/LogoHeader.png');
+	background-repeat:no-repeat;
+	font-size: 0px;
 }
 
 .lessonHeader{
@@ -165,38 +185,61 @@ textarea {
 	top:0;
 	height:50px;
 	vertical-align:middle;
+	display:none;
 }
 #container{
 	position:absolute;
-	margin-left:32px;
-	margin-right:32px;
+	border:0;
 	padding:0;
 	border:0;
-	left:25%;
-	width:75%;
+	left:0%;
+	width:100%;
 	top:50px;
 	z-index:100;
-	background-color:AntiqueWhite;
+}
+#header{
+	width:100%;
+	height:75px;
+	background-image:url('../img/newstyle/HeaderBackground.png');
+	background-repeat:repeat-x;
+	margin:0;
+	padding:0;
 }
 
 /*********menu*********/
-.menuIcon{
-	width:32px;
-	height:32px;
-}
 #mainMenu{
 	position:absolute;
-	top:50px;
-	width:32px;
-	right:0px;
+	top:0px;
+	margin-top:-1px;
+	height:25px;
+	width:100%;
+	left:0px;
 	z-index:200;
+	padding-right:25px;
 }
+#mainMenu .menuIcon{
+	float:right;
+	margin-left:10px;
+	padding:0px;
+	width:25px;
+	height:25px;
+	border-style:none;
+}
+#Exit{
+	background-image:url('../img/newstyle/Iconexit.png');
+	background-size:contain;
+}
+/********** left menu *******/
 #leftmenu{
 	position:absolute;
-	top:50px;
+	top:74px;
 	left:0px;
 	z-index:200;
 	width:32px;
+	border:0px;
+	margin:0;
+	padding:0;
+	border:0;
 }
 #skillsLevelList{
 	position:relative;
@@ -207,31 +250,60 @@ textarea {
 	position:relative;
 	top:2%;
 	width:100%;
-	margin:0;
+	margin:0px;
 	padding:0;
-	border:solid 1px blue;
+}
+#Lesson{
+	background-image:url('../img/newstyle/SidebarArrow.png');
+	background-size:contain;
+	width:32px;
+	height:25px;
+	border:0px;
+	margin:0px;
+	padding:0px;
 }
 /**********Task list *********/
 #tasklist{
 	position:absolute;
-	margin-left:32px;
-	border:1px solid red;
+	margin-left:0px;
 	left:0;
-	width:25%;
-	top:50px;
+	padding:10px;
+	top:74px;
 	z-index:200;
+	margin:0;
+	padding:0;
+	width:20%;
 }
-.taskListItem{
-	border:2px solid blue;
+.taskListItem+.taskListItem{
+	left:0px;
 	background-color:black;
-	padding:0px;
-	margin:0px;
-	font-family:Arial, Helvetica, sans-serif;
+	margin-left:32px;
+	font-family: 'PT Sans', sans-serif;
 	font-size:1em;
-	font-weight:bold;
 	color:white;
 	list-style-type:none;
 	cursor:pointer;
+}
+.taskListItem+.taskListItem:hover{
+	background-image:url('../img/newstyle/taskfirsthighlight.png');
+	background-position:right;
+	background-repeat:no-repeat;
+}
+.taskListItem:first-child{
+	background-image:url('../img/newstyle/taskfirstbackground.png');
+	left:0px;
+	margin-left:31px;
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.2em;
+	color:white;
+	list-style-type:none;
+	border:0;
+	height:25px;
+}
+.taskListItem{
+	padding-right:25px;
+	padding-top:1px;
+	padding-bottom:2px;
 }
 .taskListMaxIcon{
 	height:90%;
@@ -248,16 +320,16 @@ textarea {
 	padding-left:0px;
 }
 .indent1{
-	padding-left:25px;
+	padding-left:5px;
 }
 .indent2{
-	padding-left:50px;
+	padding-left:25px;
 }
 .indent3{
-	padding-left:75px;
+	padding-left:50px;
 }
 .indent4{
-	padding-left:80px;
+	padding-left:60px;
 }
 
 
@@ -268,13 +340,12 @@ textarea {
 	padding:0px;
 	text-align:center;
 	font-size:1.5em;
-	font-family:Arial, Helvetica, sans-serif;
-	font-weight:bold;
+	font-family: 'PT Sans', sans-serif;
 	color:white;
 	margin:0px;
 }
 .task {
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	margin: 10px;
 	padding:0px;
 	float: left;
@@ -289,7 +360,7 @@ textarea {
 	overflow:hidden;
 }
 .taskboxContent{
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size:1.2em;
 	margin:10px;
 	width:90%;
@@ -322,17 +393,16 @@ textarea {
 
 /***********task panel*********/
 .taskPanel{
-	left:25%;
+	left:20%;
 	top:50px;
-	right:10%;
-	margin-left:32px;
+	width:30%;
 	position:absolute;
-	border:2px solid black;
-	border-bottom-right-radius:10px;
-	border-top-right-radius:10px;
+	box-shadow: 5px 5px 10px #A0A0A0;
 	z-index:200;
-	background-color:white;
 	display:none;
+	font-family: 'PT Sans', sans-serif;
+	background-color:White;
+	opacity:0.90;
 }
 .taskPanelExitIcon{
 	position:absolute;
@@ -340,25 +410,37 @@ textarea {
 	width:16px;
 	top:5px;
 	right:5px;
+	background-image:url('../img/newstyle/taskpanelclose.png');
+	background-size:cover;
+	background-repeat:no-repeat;
 }
 .taskPanelContainer{	
-	padding:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
 	margin:10px;
 	border:none;
 }
 .taskPanelTitle{
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size:1.2em;
-	font-weight:bold;
-	text-align:center;
-	background-color:black;
-	color:white;
+	text-align:left;
+	background-color:White;
+	color:#00A8DC;
+	padding-left:5%;
+	padding-top:10px;
 }
 .taskPanelInstruction{
 	position:relative;
 	width:90%;
 	left:5%;
-	top:1em;
+	top:5px;
+}
+.instructionImage{
+	position:relative;
+	left:25%;
+	width:50%;
+	height:auto;
 }
 .taskPanelEntry{
 	position:relative;
@@ -367,6 +449,11 @@ textarea {
 	height:5em;
 	margin-left:5%;
 	margin-right:5%;
+	font-family: 'PT Sans', sans-serif;
+	color:Gray;
+}
+.taskPanelEntry:focus{
+	color:Black;
 }
 .taskPanelAccept{
 	float:right;
@@ -376,10 +463,17 @@ textarea {
 	width:100px;
 	height:60px;
 }
+.taskPanelReviewItem{
+	position:relative;
+	width:90%;
+	left:5%;
+	top:5px;
+
+}
 .writingTaskInstruction{
 }
 .selectChoice{
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size:1.1em;
 	margin-left:10%;
 }
@@ -408,7 +502,7 @@ textarea {
 	background-color:white;
 }
 .flyOutChoice{
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size:1.1em;
 }
 .flyOutButton{

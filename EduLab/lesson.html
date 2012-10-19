@@ -65,12 +65,12 @@
 
 <body>
 		<div id="header">
-			<div class="headerLogo logo">Adekamie</div>
+			<div class="headerLogo">Adekamie</div>
 			<div class="lessonHeader" data-bind="text:getTask(0).title"></div>
 		</div>
 		<div id="leftmenu">
-			<input type="image" id="Lesson" class="menuIcon" src="./img/lesson.jpg"/>
-			<input type="image" id="Practice" class="menuIcon" src="./img/practice.png"/>
+			<input type="image" id="Lesson" class="menuIcon"/>
+			<input type="image" id="Practice" class="menuIcon"/>
 			<div id="skillsLevelList" data-bind="foreach: skillLevels">
 				<input type='image' class='skillLevelIcon' data-bind="click:switchSkillLevel,attr:{src:'./img/'+Image, alt:Name}"/>
 			</div>	
@@ -87,7 +87,7 @@
 				<p class='taskboxTitle' data-bind="text:title"></p>
 				<p class='taskboxContent' data-bind="text:response,attr:{id:'taskBox'+index},click:taskBoxClick, visible:!editing()"></p>
 				<textarea class='taskboxEdit' data-bind="value:response, attr:{id:'taskBoxEdit'+index}, visible:editing, hasfocus:editing"></textarea>
-				<input type='image' class='taskBoxExitIcon' src='./img/exit.jpg' data-bind="click:taskBoxClose"/>
+				<div class='taskBoxExitIcon' data-bind="click:taskBoxClose"/>
 			</div>
 		</div>
 		<div id='taskPanel' class="taskPanel">
@@ -99,7 +99,7 @@
 			<input type="image" id="Settings" class="menuIcon" src="img/settings.jpg"/>
 			<input type="image" id="Samples" class="menuIcon" src="img/samples.jpg"/>
 			<input type="image" id="Save" class="menuIcon" src="img/save.jpg"/>
-			<input type="image" id="Exit" class="menuIcon" src="img/exit.jpg"/>
+			<input type="image" id="Exit" class="menuIcon" />
 		</div>
 		<div id="reference">
 			<div id="refContainer">
