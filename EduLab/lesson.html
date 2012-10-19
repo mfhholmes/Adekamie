@@ -69,10 +69,10 @@
 			<div class="lessonHeader" data-bind="text:getTask(0).title"></div>
 		</div>
 		<div id="leftmenu">
-			<input type="image" id="Lesson" class="menuIcon"/>
-			<input type="image" id="Practice" class="menuIcon"/>
+			<img id="Lesson" class="menuIcon"/>
+			<img id="Practice" class="menuIcon"/>
 			<div id="skillsLevelList" data-bind="foreach: skillLevels">
-				<input type='image' class='skillLevelIcon' data-bind="click:switchSkillLevel,attr:{src:'./img/'+Image, alt:Name}"/>
+				<img class='skillLevelIcon' data-bind="click:switchSkillLevel,attr:{src:'./img/'+Image, alt:Name}"/>
 			</div>	
 		</div>
 		<div id="tasklist" data-bind="foreach: tasks, visible:lessonVisible" >
@@ -87,7 +87,7 @@
 				<p class='taskboxTitle' data-bind="text:title"></p>
 				<p class='taskboxContent' data-bind="text:response,attr:{id:'taskBox'+index},click:taskBoxClick, visible:!editing()"></p>
 				<textarea class='taskboxEdit' data-bind="value:response, attr:{id:'taskBoxEdit'+index}, visible:editing, hasfocus:editing"></textarea>
-				<div class='taskBoxExitIcon' data-bind="click:taskBoxClose"/>
+				<img class='taskBoxExitIcon' data-bind="click:taskBoxClose"/>
 			</div>
 		</div>
 		<div id='taskPanel' class="taskPanel">
@@ -95,12 +95,12 @@
 			</div>
 		</div>
 		<div id="mainMenu">
-			<input type="image" id="Message" class="menuIcon" />
-			<input type="image" id="Reference" class="menuIcon" />
-			<input type="image" id="Settings" class="menuIcon" />
-			<input type="image" id="Samples" class="menuIcon" />
-			<input type="image" id="Save" class="menuIcon" />
-			<input type="image" id="Exit" class="menuIcon" />
+			<img id="Message" class="menuIcon" />
+			<img id="Reference" class="menuIcon" />
+			<img id="Settings" class="menuIcon" />
+			<img id="Samples" class="menuIcon" />
+			<img id="Save" class="menuIcon" />
+			<img id="Exit" class="menuIcon" />
 			
 		</div>
 		<div id="reference">
