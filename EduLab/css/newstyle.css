@@ -229,6 +229,27 @@ body{
 	background-image:url('../img/newstyle/Iconexit.png');
 	background-size:contain;
 }
+#Save{
+	background-image:url('../img/newstyle/IconSave.png');
+	background-size:contain;
+}
+#Samples{
+	background-image:url('../img/newstyle/samples.png');
+	background-size:contain;
+}
+#Settings{
+	background-image:url('../img/newstyle/IconSetting.png');
+	background-size:contain;
+}
+#Message{
+	background-image:url('../img/newstyle/IconMessage.png');
+	background-size:contain;
+}
+#Reference{
+	background-image:url('../img/newstyle/IconRef.png');
+	background-size:contain;
+}
+
 /********** left menu *******/
 #leftmenu{
 	position:absolute;
@@ -435,6 +456,7 @@ body{
 	width:90%;
 	left:5%;
 	top:5px;
+	padding-bottom:5px;
 }
 .instructionImage{
 	position:relative;
