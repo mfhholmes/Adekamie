@@ -499,32 +499,33 @@ body{
 	margin-left:10%;
 }
 .flyOutPanel{
-	left:25%;
-	top:50px;
-	right:50%;
-	margin-left:32px;
+	left:20%;
+	top:75px;
+	width:30%;
 	position:absolute;
-	border:2px solid black;
-	border-bottom-right-radius:10px;
-	border-top-right-radius:10px;
+	box-shadow: 5px 5px 10px #A0A0A0;
 	z-index:200;
-	background-color:white;
 	display:none;
+	font-family: 'PT Sans', sans-serif;
+	background-color:White;
+	opacity:0.90;
 }
 .flyOutSelectChoicesContainer{
 	position:absolute;
 	left:50%;
-	top:50px;
+	top:75px;
 	width:40%;
-	border:2px solid black;
+	box-shadow: 5px 5px 10px #A0A0A0;
 	border-bottom-right-radius:10px;
 	border-top-right-radius:10px;
 	z-index:200;
 	background-color:white;
+	padding-left:5px;
+	padding-right:10px;
 }
 .flyOutChoice{
 	font-family: 'PT Sans', sans-serif;
-	font-size:1.1em;
+	font-size:0.8em;
 }
 .flyOutButton{
 	
@@ -541,17 +542,18 @@ body{
 #reference{
 	position:absolute;
 	right:0px;
-	margin-right:32px;
-	top:50px;
-	border:solid 1px black;
+	top:75px;
 	border-bottom-left-radius:10px;
 	border-top-left-radius:10px;
 	z-index:300;
-	background-color:AntiqueWhite;
+	background-color:White;
 	overflow:hidden;
+	box-shadow:5px 5px 15px #808080;
+	border:1px solid #808080;
 }
 #reference h2{
 	text-align:center;
+	font-family: 'PT Sans', sans-serif;
 }
 .reference-open{
 	width:35%;
@@ -563,8 +565,6 @@ body{
 .refItem{
 	position:relative;
 	width:100%;
-	border:solid 1px LightBlue;
-	
 }
 .searchBox{
 	position:relative;
@@ -572,7 +572,7 @@ body{
 	vertical-align:middle;
 	text-align: left;
 	border-radius:12px;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size:20px;
 	left:5%;
 	width:85%;
@@ -585,7 +585,7 @@ body{
 	right:5%;
 }
 .refLabel{
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size:1.2em;
 	line-height:1.2em;
 	font-weight:bolder;
@@ -612,16 +612,18 @@ body{
 /***********Samples**********/
 #samples{
 	position:absolute;
-	right:32px;
-	top:50px;
-	border:solid 1px black;
+	right:0px;
+	top:75px;
+	border:solid 1px #808080;
 	border-bottom-left-radius:10px;
 	border-top-left-radius:10px;
 	z-index:300;
-	background-color:LightBlue;
+	background-color:White;
 	padding-bottom:10px;
 	padding-left:15px;
 	padding-right:15px;
+	box-shadow:5px 5px 15px #808080;
+	font-family: 'PT Sans', sans-serif;
 }
 .samples-open{
 	width:35%;
@@ -636,12 +638,14 @@ body{
 	width:70%;
 	left:10%;
 	border:solid 1px black;
+	font-family: 'PT Sans', sans-serif;
 }
 .sampleText2{
 	position:absolute;
 	width:90%;
 	left:5%;
 	border:solid 1px black;
+	font-family: 'PT Sans', sans-serif;
 }
 
 #noteZone{
