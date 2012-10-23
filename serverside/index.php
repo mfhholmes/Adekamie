@@ -1,6 +1,6 @@
 <?php
 
-	require 'Slim/Slim.php';
+	require '/Slim/Slim.php';
 
 	function app()
 	{
@@ -18,7 +18,7 @@
 		app()->response()->body('hello world');
 	}
 
-	app()->get('/', 'test');
+	app()->get('/', test);
 	app()->run();
 
 ?>

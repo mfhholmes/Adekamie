@@ -410,9 +410,10 @@ body{
 	right:2px;
 	top:4px;
 	width:15px;
-	height:auto;
+	height:15px;
 	content:url('../img/newstyle/taskpanelclose.png');
 	background-image:url('../img/newstyle/taskpanelclose.png');
+	display: block;
 	background-size:contain;
 	cursor:pointer;
 }
