@@ -3,9 +3,9 @@ lesson_data={
 	"Type":"Container",
 	"Title": "Topic-based Essay",
 	"SkillLevels":[
-		{"Name":"Newbie","Image":"new.png"},
-		{"Name":"Developing","Image":"dev.png"},
-		{"Name":"Flying","Image":"fly.png"}
+		{"Name":"Newbie","Image":"./data/skilled_newbie.png"},
+		{"Name":"Developing","Image":"./data/skilled_developing.png"},
+		{"Name":"Flying","Image":"./data/skilled_advanced.png"}
 		],
 	"Tasks":
 	[

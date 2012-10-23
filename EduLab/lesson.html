@@ -72,7 +72,7 @@
 			<img id="Lesson" class="menuIcon"/>
 			<img id="Practice" class="menuIcon"/>
 			<div id="skillsLevelList" data-bind="foreach: skillLevels">
-				<img class='skillLevelIcon' data-bind="click:switchSkillLevel,attr:{src:'./img/'+Image, alt:Name}"/>
+				<img class='skillLevelIcon' data-bind="click:switchSkillLevel,attr:{src:Image, alt:Name, title:Name}"/>
 			</div>	
 		</div>
 		<div id="tasklist" data-bind="foreach: tasks, visible:lessonVisible" >
@@ -95,12 +95,12 @@
 			</div>
 		</div>
 		<div id="mainMenu">
-			<img id="Message" class="menuIcon" />
-			<img id="Reference" class="menuIcon" />
-			<img id="Settings" class="menuIcon" />
-			<img id="Samples" class="menuIcon" />
-			<img id="Save" class="menuIcon" />
-			<img id="Exit" class="menuIcon" />
+			<img id="Message" class="menuIcon" title="Message"/>
+			<img id="Reference" class="menuIcon" title="Reference"/>
+			<img id="Settings" class="menuIcon" title="Settings"/>
+			<img id="Samples" class="menuIcon" title="Samples"/>
+			<img id="Save" class="menuIcon" title="Save"/>
+			<img id="Exit" class="menuIcon" title="Exit"/>
 			
 		</div>
 		<div id="reference">

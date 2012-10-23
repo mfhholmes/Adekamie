@@ -208,9 +208,8 @@ function task_reading(ind,ref,ttl,instr,nav){
 	    //add elements
 	    container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
 	    container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
-	    container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
 	    container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
-	    container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+	    container.append("<img class='taskPanelAccept' data-bind='click:accept'/>");
 	    container.css("width:"+panel.css("width"));
 	    //set the bindings to this task
 	    ko.applyBindings(self,panel.get(0));
@@ -292,7 +291,7 @@ function task_writing(ind, ref, ttl, instr, resp, nav){
         container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textarea>");
-        container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+        container.append("<img class='taskPanelAccept' data-bind='click:accept'/>");
         container.css("width:"+panel.css("width"));
         //set the bindings to this task
         ko.applyBindings(self,panel.get(0));
@@ -378,12 +377,12 @@ function task_selection(ind, ref, ttl, instr, resp, choices, nav){
         self.oldresponse = self.response();
         //add elements
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
+        container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<!-- ko foreach: choices-->");
         container.append("<p class='selectChoice'><input type='radio' name='selectChoices' data-bind='value:$data,checked:$parent.response'/><span data-bind='text:$data'/></p>");
         container.append("<!-- /ko -->");
-        container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+        container.append("<img class='taskPanelAccept' data-bind='click:accept'/>");
         container.css("width:"+panel.css("width"));
         //set the bindings to this task
         ko.applyBindings(self,panel.get(0));
@@ -473,11 +472,11 @@ function task_flyOutSelection(ind, ref, ttl, instr, resp, choices, nav){
         self.oldresponse = self.response();
         //add elements
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
+        container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textarea>");
         container.append("<input type='button' class='flyOutButton' value='See More Options' data-bind='click:flyOut'/>");
-        container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+        container.append("<img class='taskPanelAccept' data-bind='click:accept'/>");
         flyOutChoices = $("<div id='flyOutChoices' class='flyOutSelectChoicesContainer flyOutClosed' data-bind='foreach:choices'/>").appendTo("body").data("status","closed");
         flyOutChoices.append("<p class='flyOutChoice'><input type='radio' name='selectChoices' data-bind='value:$data,checked:$parent.response'/><span data-bind='text:$data'/></p>");
         
@@ -641,11 +640,11 @@ function task_review(ind,ref,ttl, revlist, nav){
         
         //add child task responses
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
+        container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
         taskcontainer = $("<div class='taskPanelReviewContainer' data-bind='foreach:reviewlist'></div>");
         container.append(taskcontainer);
         taskcontainer.append("<p class='taskPanelReviewItem' data-bind='text:response'></p>");
-        container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+        container.append("<img class='taskPanelAccept' data-bind='click:accept'/>");
         //set the bindings to this task
         ko.applyBindings(self,panel.get(0));
         panel.show("slide",250);
@@ -702,10 +701,10 @@ function task_unknown(ind,ref,ttl){
         self.oldresponse = self.response();
         //add elements
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' onclick='function(){lesson.clearCurrentTask();}'/>");
+        container.append("<img class='taskPanelExitIcon' onclick='function(){lesson.clearCurrentTask();}'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textare>");
-        container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+        container.append("<img class='taskPanelAccept' data-bind='click:accept'/>");
         container.css("width:"+panel.css("width"));
         //set the bindings to this task
         ko.applyBindings(self,panel.get(0));

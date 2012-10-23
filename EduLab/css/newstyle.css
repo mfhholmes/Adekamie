@@ -219,13 +219,15 @@ body{
 	z-index:200;
 	padding-right:25px;
 }
+.menuIcon{
+	cursor:pointer;
+}
 #mainMenu .menuIcon{
 	float:right;
 	margin-left:10px;
 	padding:0px;
 	width:25px;
 	height:25px;
-	cursor:pointer;
 }
 #Exit{
 	content:url('../img/newstyle/Iconexit.png');
@@ -285,18 +287,17 @@ body{
 #tasklist{
 	position:absolute;
 	margin-left:0px;
-	left:0;
+	left:32px;
 	padding:10px;
 	top:74px;
 	z-index:200;
 	margin:0;
 	padding:0;
-	width:20%;
+	right:80%;
 }
 .taskListItem+.taskListItem{
 	left:0px;
 	background-color:black;
-	margin-left:32px;
 	font-family: 'PT Sans', sans-serif;
 	font-size:1em;
 	color:white;
@@ -311,7 +312,6 @@ body{
 .taskListItem:first-child{
 	background-image:url('../img/newstyle/taskfirstbackground.png');
 	left:0px;
-	margin-left:31px;
 	font-family: 'PT Sans', sans-serif;
 	font-size:1.1em;
 	color:white;
@@ -433,6 +433,7 @@ body{
 	background-image:url('../img/newstyle/taskpanelclose.png');
 	background-size:cover;
 	background-repeat:no-repeat;
+	cursor:pointer;
 }
 .taskPanelContainer{	
 	padding-left:10px;
@@ -479,10 +480,12 @@ body{
 .taskPanelAccept{
 	float:right;
 	display:block;
-	
+	content:url('../img/newstyle/post.png');
 	margin:5px;
 	width:100px;
-	height:60px;
+	height:auto;
+	cursor:pointer;
+	box-shadow:2px 2px 5px #404040;
 }
 .taskPanelReviewItem{
 	position:relative;
