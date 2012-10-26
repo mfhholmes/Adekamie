@@ -114,10 +114,11 @@ function classifyTask(task, taskArray, indent){
 			}
 		}
 	}
+	newtask.Hints = task.Hints;
 	newtask.indent = indent;
 	newtask.parentTask = null;
 	newtask.taskListVisible((indent <2))
-	newtask.taskBoxVisible(false);
+	newtask.taskBoxVisible= new ko.observable(false);
 	newtask.editing = new ko.observable(false);
 	newtask.editing.subscribe(function(newvalue){
        if(!newvalue){
@@ -127,7 +128,18 @@ function classifyTask(task, taskArray, indent){
     newtask.reviewing = new ko.observable(false);
 	var newkotask = new ko.observable(newtask)
 	taskArray().push( newkotask);
-
+	/*
+    newtask.taskBoxVisible.subscribe(function(newvalue){
+        if(newvalue)
+        {
+            box =$("#taskMain" + newtask.index); 
+            box.fadeIn(250);
+        }
+        else
+        {
+            $("#taskMain" + newtask.index).fadeOut(250);
+        }
+    });*/
 	// check for child tasks
 	if(typeof(task.Tasks) != "undefined"){
 		var newindent = indent +1;
@@ -283,6 +295,7 @@ function task_writing(ind, ref, ttl, instr, resp, nav){
         if(self.parentTask != null) self.parentTask.accept();
         self.taskBoxVisible(true);
         lesson.clearCurrentTask();
+        checkForHints(self,"onComplete");
     };
     self.taskListClick = function(){
         lesson.setCurrentTask(self.index);
@@ -303,6 +316,7 @@ function task_writing(ind, ref, ttl, instr, resp, nav){
         //set the bindings to this task
         ko.applyBindings(self,panel.get(0));
         panel.show("slide",250);
+        checkForHints(self,"onEdit");
     };
     self.taskPanelClose = function(){
         self.response(self.oldresponse);
@@ -474,6 +488,7 @@ function task_flyOutSelection(ind, ref, ttl, instr, resp, choices, nav){
         if(self.parentTask != null) self.parentTask.accept();
         self.taskBoxVisible(true);
         lesson.clearCurrentTask();
+        checkForHints(self,"onComplete");
     };
     self.taskListClick = function(){
         lesson.setCurrentTask(self.index);
@@ -500,6 +515,7 @@ function task_flyOutSelection(ind, ref, ttl, instr, resp, choices, nav){
         ko.applyBindings(self,panel.get(0));
         ko.applyBindings(self,flyOutChoices.get(0));
         panel.show("slide",250);
+        checkForHints(self,"onEdit");
     };
     self.flyOut = function(){
         flyOut = $("#flyOutChoices");

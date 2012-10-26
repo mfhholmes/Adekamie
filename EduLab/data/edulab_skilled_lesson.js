@@ -48,6 +48,10 @@ lesson_data={
                 "Are lotteries nothing but a tax on bad maths education? If so, should they be outlawed?"
                 ],
             "Response":"",
+            "Hints":[
+                {"event":"onEdit","text":"Your question controls what your essay is about.","delay":"0"},
+                {"event":"onComplete","text":"Remember to really read your question to ensure you understand it.","delay":"2500"}
+            ],
             "Navigation":[
                 {"Ref":"Decode1","Label":"Decode the question"}]
         },
@@ -154,6 +158,10 @@ lesson_data={
 					"Flying":"<p>Now we need to organise your ideas, opinions and supporting points into an essay for others to read. This is only a draft and you can change and review your writing at any time. Let's draft your essay using the following 6 parts:</p><ul><li>Introduction (introduce your main idea)</li><li>Paragraph 1 (supporting point/evidence)</li><li>Paragraph 2 (supporting point/evidence)</li><li>Paragraph 3 (supporting point/evidence)</li><li>Paragraph 4 (other ideas optional)</li><li>Conclusion (sum up your ideas)</li></ul></p><p>An essay's INTRODUCTION is the opening PARAGRAPH of the essay. Your first paragraph should tell the reader what your essay is about and what your main idea is. It introduces your topic and your opinion in a short paragraph and should be about 4 to 6 sentences long. Try to make your introduction engaging for your reader, although make sure it contains your main point, your big idea - your reader will want to know what your essay is arguing or telling them. After you have written your introduction, read it and ask yourself whether a reader would know what your essay is about and what your main idea is. </p><p>Read some introductions here at the reference page</p>"
 					},
 					"Response":"Write your introduction here...",
+					"Hints":[
+                        {"event":"onEdit","text":"Your question controls what your essay is about.","delay":"1000"},
+                        {"event":"onComplete","text":"Remember to really read your question to ensure you understand it.","delay":"15000"}
+                    ],
 					"Navigation":[
 						{"Ref":"Para1","Label":"Writing the first paragraph"}]
 				},

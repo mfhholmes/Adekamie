@@ -84,7 +84,7 @@
 				</li>
 		</div>
 		<div id="container" data-bind="foreach: tasks">
-			<div class="task draggable resizable" data-bind="visible:taskBoxVisible">
+			<div class="task draggable resizable" data-bind="attr:{id:'taskMain'+ index},visible:taskBoxVisible">
 				<p class='taskboxTitle' data-bind="text:title"></p>
 				<p class='taskboxContent' data-bind="text:response,attr:{id:'taskBox'+index},click:taskBoxClick, visible:!editing()"></p>
 				<textarea class='taskboxEdit' data-bind="value:response, attr:{id:'taskBoxEdit'+index}, visible:editing, hasfocus:editing"></textarea>
@@ -102,9 +102,9 @@
 			<img id="Message" class="menuIcon" src="./img/IconMessage.png" title="Message"/>
 			<img id="Reference" class="menuIcon" src="./img/IconRef.png" title="Reference"/>
 			<img id="Samples" class="menuIcon" src="./img/IconSamples.png" title="Samples"/>
-			
-			
-			
+		</div>
+		<div id="hintList">
+			<h2>Messages</h2>
 		</div>
 		<div id="reference">
 			<div id="refContainer">
@@ -126,6 +126,8 @@
 		</div>
 		<div id="samples">
 			<div id="samplesContainer">
+				<h2>Samples</h2>
+				<p>Click on a button below to open the Samples Magazine.</p>
 			</div>
 		</div>
 	</body>

@@ -44,6 +44,7 @@ function addEventHandlers()
     $("#Exit").on("click",clickExit);
     $("#search").on("click",doSearch);
     $("#searchValue").on("click",searchClick);
+    $("#Message").on("click",clickMessage);
 }
 
 function getTaskByRef(ref){
@@ -85,7 +86,7 @@ function clickRef()
 function openRef(afterwards)
 {
     reference = $("#reference");
-    targetWidth = $("body").innerWidth() *0.35;
+    targetWidth = $("body").innerWidth() *0.25;
     $("#refContainer").width(targetWidth).show();
     reference.show();
     if(typeof(afterwards) == "undefined")
@@ -129,7 +130,7 @@ function clickSamples()
 function openSamples(afterwards)
 {
     samples = $("#samples");
-    targetWidth = $("body").innerWidth() *0.35;
+    targetWidth = $("body").innerWidth() *0.25;
     $("#samplesContainer").width(targetWidth);
     samples.show();
     if(typeof(afterwards) == "undefined")
@@ -142,6 +143,7 @@ function openSamples(afterwards)
 function closeSamples(afterwards)
 {
     samples = $("#samples");
+    $('#samplescontainer').width($('#samples').innerWidth());
     if(typeof(afterwards) == "undefined")
         samples.animate({width:"0"},250,"linear",function(){$("#samples").hide();});
     else
@@ -174,3 +176,35 @@ function clickLesson(){
         $("#container").css("left","25%").width("75%");
     }
 }
+function clickMessage(){
+    hintList = $("#hintList");
+    if(hintList.data("status")=="open")
+    {
+        hintList.data("status","closed");
+        hintList.hide(250);
+    }
+    else
+    {
+        hintList.data("status","open");
+        hintList.show(250);
+        
+    }
+}
+function checkForHints(task,evnt){
+    if(typeof(task.Hints)!='undefined')
+    {
+        for(var i = 0;i<task.Hints.length;i++){
+            if(task.Hints[i].event==evnt)
+            {
+                if(typeof(task.Hints[i].shown)=='undefined'){
+                    delayperiod = parseInt(task.Hints[i].delay);
+                    //$("#hintList").delay(delayperiod).append("<div id='delayhint' class='hint'>"+task.Hints[i].text + "</div>");
+                    hint = $("<div id='delayhint' class='hint'>"+task.Hints[i].text + "</div>").appendTo("#hintList")
+                    hint.hide().delay(delayperiod).show();
+                    task.Hints[i].shown = true;
+                }
+            }
+        }
+    }
+}
+

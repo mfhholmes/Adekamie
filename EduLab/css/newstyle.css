@@ -240,7 +240,7 @@ body{
 }
 #Samples{
 	content:url('../img/newstyle/IconSamples.png');
-	background-image:url('../img/newstyle/IconSample.png');
+	background-image:url('../img/newstyle/IconSamples.png');
 }
 #Settings{
 	content:url('../img/newstyle/IconSetting.png');
@@ -255,6 +255,29 @@ body{
 	background-image:url('../img/newstyle/IconRef.png');
 }
 
+#hintList{
+	position:absolute;
+	z-index:500;
+	top:75;
+	right:0;
+	width:25%;
+	box-shadow: 5px 5px 10px #A0A0A0;
+}
+#hintList h2{
+	
+}
+.hint{
+	font-family: 'PT Sans', sans-serif;
+	font-size:1em;	
+	padding-left:5%;
+	padding-right:5%;
+}
+.hint:nth-child(odd){
+	background-color:#5EFFFF;
+}
+.hint:before{
+	
+}
 /********** left menu *******/
 #leftmenu{
 	position:absolute;
@@ -461,6 +484,7 @@ body{
 	background-repeat:no-repeat;
 	cursor:pointer;
 }
+
 .taskPanelContainer{	
 	padding-left:10px;
 	padding-right:10px;
@@ -483,9 +507,15 @@ body{
 	left:5%;
 	top:5px;
 	padding-bottom:5px;
-	color:#202020;
+	color:#404040;
 	line-height: 1.2em;
 	font-size:0.8em;
+}
+.taskPanelInstruction p{
+	-webkit-margin-before: 0.5em;
+	-webkit-margin-after:0.5em;
+	-moz-margin-before:0.5em;
+	-moz-margin-after:0.5em;
 }
 .instructionImage{
 	position:relative;
@@ -502,6 +532,7 @@ body{
 	margin-right:5%;
 	font-family: 'PT Sans', sans-serif;
 	color:Gray;
+	font-size:1.1em;
 }
 .taskPanelEntry:focus{
 	color:Black;
@@ -595,17 +626,18 @@ body{
 	position:absolute;
 	right:0px;
 	top:75px;
-	border-bottom-left-radius:10px;
-	border-top-left-radius:10px;
 	z-index:300;
 	background-color:White;
 	overflow:hidden;
 	box-shadow:5px 5px 15px #808080;
-	border:1px solid #808080;
 }
 #reference h2{
-	text-align:center;
 	font-family: 'PT Sans', sans-serif;
+	font-size:1.6em;
+	text-align:left;
+	background-color:White;
+	color:#00A8DC;
+	margin-left:10%;
 }
 .reference-open{
 	width:25%;
@@ -626,9 +658,10 @@ body{
 	border-radius:12px;
 	font-family: 'PT Sans', sans-serif;
 	font-size:20px;
-	left:5%;
-	width:85%;
+	right:15%;
+	left:10%;
 	margin-bottom:5px;
+	padding-left:12px;
 }
 .searchIcon{
 	position:absolute;
@@ -638,10 +671,9 @@ body{
 }
 .refLabel{
 	font-family: 'PT Sans', sans-serif;
-	font-size:1.2em;
-	line-height:1.2em;
-	font-weight:bolder;
-	margin-left:5%;
+	font-size:1em;
+	line-height:1.1em;
+	margin-left:10%;
 }
 .refIconContainer{
 	height:25px;
@@ -669,8 +701,6 @@ body{
 	z-index:300;
 	background-color:White;
 	padding-bottom:10px;
-	padding-left:15px;
-	padding-right:15px;
 	box-shadow:5px 5px 15px #808080;
 	font-family: 'PT Sans', sans-serif;
 }
@@ -678,6 +708,7 @@ body{
 	width:25%;
 }
 #samplesContainer{
+	position:relative;
 }
 #samplesContainer h2{
 	font-family: 'PT Sans', sans-serif;
@@ -687,7 +718,16 @@ body{
 	color:#00A8DC;
 	margin-left:10%;
 }
+#samplesContainer p{
+	font-family: 'PT Sans', sans-serif;
+	font-size:1em;
+	text-align:left;
+	background-color:White;
+	color:#00A8DC;
+	margin-left:10%;	
+}
 #samplesContainer input{
+	position:relative;
 	font-family: 'PT Sans', sans-serif;
 	font-size:1.1em;
 	width:70%;
@@ -695,7 +735,10 @@ body{
 	margin-right:20%;
 	margin-top:5px;
 	background-image:url('../img/newstyle/buttonback.png');
-	background-size:cover;
+	background-size:contain;
+	border:1px solid LightGray;
+	color:White;
+	cursor:pointer;
 }
 .sampleSkillIcon{
 	position:relative;
