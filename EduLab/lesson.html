@@ -71,10 +71,11 @@
 		<div id="leftmenu">
 			<img id="Lesson" class="menuIcon"/>
 			<img id="Practice" class="menuIcon"/>
-			<div id="skillsLevelList" data-bind="foreach: skillLevels">
-				<img class='skillLevelIcon' data-bind="click:switchSkillLevel,attr:{src:Image, alt:Name, title:Name}"/>
-			</div>	
 		</div>
+	
+		<div id="skillsLevelList" data-bind="foreach: skillLevels">
+			<img class='skillLevelIcon' data-bind="click:switchSkillLevel,attr:{src:Image, alt:Name, title:Name}"/>
+		</div>	
 		<div id="tasklist" data-bind="foreach: tasks, visible:lessonVisible" >
 			
 				<li class="taskListItem" data-bind="attr:{id:'task'+index}, css:{indent0:indent==0,indent1:indent==1,indent2:indent==2,indent3:indent==3,indent4:indent==4}, click:taskListClick, visible:taskListVisible">
@@ -95,12 +96,14 @@
 			</div>
 		</div>
 		<div id="mainMenu">
+			<img id="Exit" class="menuIcon" src="./img/IconExit.png" title="Exit"/>
+			<img id="Settings" class="menuIcon" src="./img/IconSetting.png" title="Settings"/>
+			<img id="Save" class="menuIcon" src="./img/IconSave.png" title="Save"/>
 			<img id="Message" class="menuIcon" src="./img/IconMessage.png" title="Message"/>
 			<img id="Reference" class="menuIcon" src="./img/IconRef.png" title="Reference"/>
-			<img id="Settings" class="menuIcon" src="./img/IconSetting.png" title="Settings"/>
 			<img id="Samples" class="menuIcon" src="./img/IconSamples.png" title="Samples"/>
-			<img id="Save" class="menuIcon" src="./img/IconSave.png" title="Save"/>
-			<img id="Exit" class="menuIcon" src="./img/IconExit.png" title="Exit"/>
+			
+			
 			
 		</div>
 		<div id="reference">

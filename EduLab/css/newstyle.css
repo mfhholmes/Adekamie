@@ -267,19 +267,6 @@ body{
 	padding:0;
 	border:0;
 }
-#skillsLevelList{
-	position:relative;
-	margin-top:2em;
-	width:100%;
-}
-.skillLevelIcon{
-	position:relative;
-	top:2%;
-	width:100%;
-	margin:0px;
-	padding:0;
-	cursor:pointer;
-}
 #Lesson{
 	content:url('../img/newstyle/SidebarArrow.png');
 	background-image:url('../img/newstyle/SidebarArrow.png');
@@ -294,6 +281,22 @@ body{
 	width:32px;
 	height:32px;
 }
+/**********Skills Menu********/
+#skillsLevelList{
+	position:absolute;
+	top:50px;
+	height:25px;
+	left:20%;
+	z-index:300;
+}
+.skillLevelIcon{
+	position:relative;
+	height:100%;
+	margin:0px;
+	padding:0;
+	cursor:pointer;
+}
+
 /**********Task list *********/
 #tasklist{
 	position:absolute;
@@ -429,7 +432,6 @@ body{
 .taskPanel{
 	left:20%;
 	top:75px;
-	width:30%;
 	position:absolute;
 	box-shadow: 5px 5px 10px #A0A0A0;
 	z-index:200;
@@ -437,6 +439,15 @@ body{
 	font-family: 'PT Sans', sans-serif;
 	background-color:White;
 	opacity:0.90;
+}
+.taskPanelWide{
+	width:60%;
+}
+.taskPanelNormal{
+	width:35%;
+}
+.taskPanelThin{
+	width:20%;
 }
 .taskPanelExitIcon{
 	position:absolute;
@@ -459,7 +470,7 @@ body{
 }
 .taskPanelTitle{
 	font-family: 'PT Sans', sans-serif;
-	font-size:1.2em;
+	font-size:1.6em;
 	text-align:left;
 	background-color:White;
 	color:#00A8DC;
@@ -472,6 +483,9 @@ body{
 	left:5%;
 	top:5px;
 	padding-bottom:5px;
+	color:#202020;
+	line-height: 1.2em;
+	font-size:0.8em;
 }
 .instructionImage{
 	position:relative;
@@ -498,9 +512,11 @@ body{
 	content:url('../img/newstyle/post.png');
 	background-image:url('../img/newstyle/post.png');
 	background-size:contain;
-	margin:5px;
-	width:100px;
-	height:40px;
+	margin-right:20px;
+	margin-bottom:10px;
+	margin-top:10px;
+	width:60px;
+	height:25px;
 	cursor:pointer;
 	box-shadow:2px 2px 5px #404040;
 }
@@ -509,7 +525,14 @@ body{
 	width:90%;
 	left:5%;
 	top:5px;
-
+	font-family: 'PT Sans', sans-serif;
+}
+.taskPanelReviewEdit{
+	position:relative;
+	width:90%;
+	left:5%;
+	top:5px;
+	font-family: 'PT Sans', sans-serif;
 }
 .writingTaskInstruction{
 }
@@ -536,19 +559,28 @@ body{
 	top:75px;
 	width:40%;
 	box-shadow: 5px 5px 10px #A0A0A0;
-	border-bottom-right-radius:10px;
-	border-top-right-radius:10px;
 	z-index:200;
 	background-color:white;
-	padding-left:5px;
+	padding-left:20px;
 	padding-right:10px;
 }
 .flyOutChoice{
 	font-family: 'PT Sans', sans-serif;
 	font-size:0.8em;
+	padding-left:10px;
 }
 .flyOutButton{
-	
+	font-family: 'PT Sans', sans-serif;
+	font-size:1em;
+	margin-left:20px;
+	margin-top:10px;
+	background-color:#00A8DC;
+	color:white;
+	border:0;
+	box-shadow:2px 2px 5px #404040; 
+	height:25px;
+	vertical-align:middle;
+	cursor:pointer;
 }
 .flyOutClosed{
 	width:0;
@@ -576,7 +608,7 @@ body{
 	font-family: 'PT Sans', sans-serif;
 }
 .reference-open{
-	width:35%;
+	width:25%;
 }
 #refContainer{
 	position:relative;
@@ -634,9 +666,6 @@ body{
 	position:absolute;
 	right:0px;
 	top:75px;
-	border:solid 1px #808080;
-	border-bottom-left-radius:10px;
-	border-top-left-radius:10px;
 	z-index:300;
 	background-color:White;
 	padding-bottom:10px;
@@ -646,78 +675,33 @@ body{
 	font-family: 'PT Sans', sans-serif;
 }
 .samples-open{
-	width:35%;
+	width:25%;
 }
 #samplesContainer{
 }
-.samplebody{
-	position:relative;
+#samplesContainer h2{
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.6em;
+	text-align:left;
+	background-color:White;
+	color:#00A8DC;
+	margin-left:10%;
 }
-.sampleText{
-	position:absolute;
+#samplesContainer input{
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.1em;
 	width:70%;
-	left:10%;
-	border:solid 1px black;
-	font-family: 'PT Sans', sans-serif;
+	margin-left:10%;
+	margin-right:20%;
+	margin-top:5px;
+	background-image:url('../img/newstyle/buttonback.png');
+	background-size:cover;
 }
-.sampleText2{
-	position:absolute;
-	width:90%;
-	left:5%;
-	border:solid 1px black;
-	font-family: 'PT Sans', sans-serif;
-}
-
-#noteZone{
-	position:absolute;
-	width:20%;
-	right:0;
-	top:0;
-	height:100%;
-}
-.comment{
+.sampleSkillIcon{
 	position:relative;
-	left:-8%;
-	float:left;
-	font-size:1em;
-	color:red;
-	border:solid 2px blue;
-	padding:5px;
-	border-radius:10px;
+	width:10%;
+	height:auto;	
 }
-.commentText{
-	position:relative;
-	float:right;
-	background-color:white;
-	border:solid 2px blue;
-	border-radius:5px;
-	padding:5px;
-	left:1%;
-	max-width:98%;
-	background-color:lightBlue;
-}
-.annotated{
-	color:blue;
-	cursor:pointer;
-}
-.note{
-	position:absolute;
-	display:block;
-	border-radius:5px;
-	padding:5px;
-	background-color:lightBlue;
-	color:black;
-	border:solid 1px black;
-	font-family:Arial, Helvetica, sans-serif;
-}
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes

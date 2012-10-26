@@ -23,76 +23,35 @@ lesson_data={
 				{"Ref":"Topic2", "Label":"Your own topic"}
 			]
 		},
-		{
-			"Reference":"Topic",
-			"Type":"Container",
-			"Title":"Your essay topic",
-			"Tasks":
-			[
-				{
-					"Reference":"Topic1",
-					"Type":"Writing",
-					"Title":"Your question",
-					"Instruction" : {
-					"Newbie":"<p>If you have been given a question, or you have created your own question, write it in the space below. Choose the next tab for a choice of questions<p>",
-					"Developing":"<p>If you have been given a question, or you have created your own question, write it in the space below. Choose the next tab for a choice of questions<p>",
-					"Flying":"<p>If you have been given a question, or you have created your own question, write it in the space below. Choose the next tab for a choice of questions<p>"
-					},
-					"Response":"Write your question here...",
-					"Navigation":[
-						{"Ref":"Decode1","Label":"Decode the question"}
-					]
-						
-				},
-				{
-					"Reference":"Topic2",
-					"Type":"Selection",
-					"Title":"Sample Topics",
-					"Instruction": {
-					"Newbie":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>",
-					"Developing":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>",
-					"Flying":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>"
-					},
-					"Choices":[
-						"Topic1",
-						"Topic2",
-						"Topic3",
-						"Topic4",
-						"Topic5"],
-					"Response":"",
-					"Navigation":[
-						{"Ref":"Decode1","Label":"Decode the question"}]
- 				},
-                {
-                    "Reference":"Topic3",
-                    "Type":"flyOutSelection",
-                    "Title":"More Sample Topics",
-                    "Instruction": {
-                    "Newbie":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>",
-                    "Developing":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>",
-                    "Flying":"<p>If you do not have a question, you can choose one from the drop down menu here.<p>"
-                    },
-                    "Choices":[
-                        "Is killing people wrong?",
-                        "What is normal anyway?",
-                        "Should Human Rights come with Human Responsibilites?",
-                        "How many angels can dance on the head of a pin?",
-                        "If you could, should you, and why?",
-                        "Is legislating for morality ineffective?",
-                        "Do aliens exist? If so, why aren't they here?",
-                        "Are religious texts literal or metaphorical?",
-                        "In a hundred years, will any of it matter?",
-                        "Do we actually have a responsibility to ensure extremely small minorities can take an equal place in society?",
-                        "Do we need to Believe in order to Reason, or Reason in order to Believe?",
-                        "What is the purpose of human life, assuming it has a reason greater than reproduction?",
-                        "Are lotteries nothing but a tax on bad maths education? If so, should they be outlawed?"
-                        ],
-                    "Response":"",
-                    "Navigation":[
-                        {"Ref":"Decode1","Label":"Decode the question"}]
-                }
- 			]
- 		},
+        {
+            "Reference":"Topic",
+            "Type":"flyOutSelection",
+            "Title":"Your Essay Question",
+            "Instruction": {
+            "Newbie":"<p>If you have been given a question, or you have created your own question, write it in the space below.<p><p>If you need some ideas for questions or can't think of one, open the sample question list using the button below</p>",
+            "Developing":"<p>If you have been given a question, or you have created your own question, write it in the space below.<p><p>If you need some ideas for questions or can't think of one, open the sample question list using the button below</p>",
+            "Flying":"<p>If you have been given a question, or you have created your own question, write it in the space below.<p><p>If you need some ideas for questions or can't think of one, open the sample question list using the button below</p>"
+            },
+            "Choices":[
+                "Is killing people wrong?",
+                "What is normal anyway?",
+                "Should Human Rights come with Human Responsibilites?",
+                "How many angels can dance on the head of a pin?",
+                "If you could, should you, and why?",
+                "Is legislating for morality ineffective?",
+                "Do aliens exist? If so, why aren't they here?",
+                "Are religious texts literal or metaphorical?",
+                "In a hundred years, will any of it matter?",
+                "Do we actually have a responsibility to ensure extremely small minorities can take an equal place in society?",
+                "Do we need to Believe in order to Reason, or Reason in order to Believe?",
+                "What is the purpose of human life, assuming it has a reason greater than reproduction?",
+                "Are lotteries nothing but a tax on bad maths education? If so, should they be outlawed?"
+                ],
+            "Response":"",
+            "Navigation":[
+                {"Ref":"Decode1","Label":"Decode the question"}]
+        },
+
 		{
 			"Reference":"Decode",
 			"Type":"Container",
@@ -190,9 +149,9 @@ lesson_data={
 					"Type":"Writing",
 					"Title":"Writing the introduction",
 					"Instruction" : {
-					"Newbie":"<p>Now we need to put your ideas and points into an essay for others to read. This is your first go, so you can change  it at any time. Let’s DRAFT your essay using these 6 parts:</p><ul><li>Introduction (introduce your main idea)</li><li>Paragraph 1 (supporting point)</li><li>Paragraph 2 (supporting point)</li><li>Paragraph 3 (supporting point)</li><li>Paragraph 4 (other ideas optional)</li><li>Conclusion (sum up your ideas)</li<ul></p><p>An essay's INTRODUCTION is the first PARAGRAPH of the essay. The introduction tells the reader what your essay is about. It tells the reader your big idea. It answers the question. It should be about 4 to 6 sentences. After you have had a go at writing it, read it and ask yourself whether it tells the reader what your essay is about and what your main idea is.</p><p>Read some introduction here at the reference page</p>",
-					"Developing":"<p>Now we need to put your ideas and supporting points into an essay for others to read. This is your first go, sod you can change and review it at any time. Let’s draft your essay using these 6 parts:</p><ul><li>Introduction (introduce your main idea)</li><li>Paragraph 1 (supporting point)</li><li>Paragraph 2 (supporting point)</li><li>Paragraph 3 (supporting point)</li><li>Paragraph 4 (other ideas optional)</li><li>Conclusion (sum up your ideas)</li<ul></p><p>An essay's INTRODUCTION is the opening PARAGRAPH of the essay. Your first paragraph should tell the reader what your essay is about and what your main idea is. It introduces your topic and your opinion in a short paragraph and should be about 4 to 6 sentences long. Try to make your introduction engaging for your reader, although make sure it contains your main point, your big idea - your reader will want to know what your essay is arguing or telling them. After you have written your introduction, read it and ask yourself whether a reader would know what your essay is about and what your main idea is. </p><p>Read some introductions here at the reference page</p>",
-					"Flying":"<p>Now we need to organise your ideas, opinions and supporting points into an essay for others to read. This is only a draft and you can change and review your writing at any time. Let’s draft your essay using the following 6 parts:</p><ul><li>Introduction (introduce your main idea)</li><li>Paragraph 1 (supporting point/evidence)</li><li>Paragraph 2 (supporting point/evidence)</li><li>Paragraph 3 (supporting point/evidence)</li><li>Paragraph 4 (other ideas optional)</li><li>Conclusion (sum up your ideas)</li<ul></p><p>An essay's INTRODUCTION is the opening PARAGRAPH of the essay. Your first paragraph should tell the reader what your essay is about and what your main idea is. It introduces your topic and your opinion in a short paragraph and should be about 4 to 6 sentences long. Try to make your introduction engaging for your reader, although make sure it contains your main point, your big idea - your reader will want to know what your essay is arguing or telling them. After you have written your introduction, read it and ask yourself whether a reader would know what your essay is about and what your main idea is. </p><p>Read some introductions here at the reference page</p>"
+					"Newbie":"<p>Now we need to put your ideas and points into an essay for others to read. This is your first go, so you can change  it at any time. Let's DRAFT your essay using these 6 parts:</p><ul><li>Introduction (introduce your main idea)</li><li>Paragraph 1 (supporting point)</li><li>Paragraph 2 (supporting point)</li><li>Paragraph 3 (supporting point)</li><li>Paragraph 4 (other ideas optional)</li><li>Conclusion (sum up your ideas)</li></ul></p><p>An essay's INTRODUCTION is the first PARAGRAPH of the essay. The introduction tells the reader what your essay is about. It tells the reader your big idea. It answers the question. It should be about 4 to 6 sentences. After you have had a go at writing it, read it and ask yourself whether it tells the reader what your essay is about and what your main idea is.</p><p>Read some introduction here at the reference page</p>",
+					"Developing":"<p>Now we need to put your ideas and supporting points into an essay for others to read. This is your first go, sod you can change and review it at any time. Let's draft your essay using these 6 parts:</p><ul><li>Introduction (introduce your main idea)</li><li>Paragraph 1 (supporting point)</li><li>Paragraph 2 (supporting point)</li><li>Paragraph 3 (supporting point)</li><li>Paragraph 4 (other ideas optional)</li><li>Conclusion (sum up your ideas)</li></ul></p><p>An essay's INTRODUCTION is the opening PARAGRAPH of the essay. Your first paragraph should tell the reader what your essay is about and what your main idea is. It introduces your topic and your opinion in a short paragraph and should be about 4 to 6 sentences long. Try to make your introduction engaging for your reader, although make sure it contains your main point, your big idea - your reader will want to know what your essay is arguing or telling them. After you have written your introduction, read it and ask yourself whether a reader would know what your essay is about and what your main idea is. </p><p>Read some introductions here at the reference page</p>",
+					"Flying":"<p>Now we need to organise your ideas, opinions and supporting points into an essay for others to read. This is only a draft and you can change and review your writing at any time. Let's draft your essay using the following 6 parts:</p><ul><li>Introduction (introduce your main idea)</li><li>Paragraph 1 (supporting point/evidence)</li><li>Paragraph 2 (supporting point/evidence)</li><li>Paragraph 3 (supporting point/evidence)</li><li>Paragraph 4 (other ideas optional)</li><li>Conclusion (sum up your ideas)</li></ul></p><p>An essay's INTRODUCTION is the opening PARAGRAPH of the essay. Your first paragraph should tell the reader what your essay is about and what your main idea is. It introduces your topic and your opinion in a short paragraph and should be about 4 to 6 sentences long. Try to make your introduction engaging for your reader, although make sure it contains your main point, your big idea - your reader will want to know what your essay is arguing or telling them. After you have written your introduction, read it and ask yourself whether a reader would know what your essay is about and what your main idea is. </p><p>Read some introductions here at the reference page</p>"
 					},
 					"Response":"Write your introduction here...",
 					"Navigation":[
@@ -268,7 +227,7 @@ lesson_data={
 		{
 			"Reference":"Review",
 			"Type":"Review",
-			"Title":"Review your completed essay",
+			"Title":"Review your essay",
 			"ReviewList":["Introduction","Para1","Para2","Para3","Para4","Conclusion"],
 			"Navigation":[
 				{"Ref":"Introduction","Label":"Edit the Introduction"},
