@@ -711,15 +711,21 @@ body{
 	width:25%;
 }
 #samplesContainer{
-	position:relative;
+	position:absolute;
+	top:0px;
 }
 #samplesContainer h2{
 	font-family: 'PT Sans', sans-serif;
 	font-size:1.6em;
 	text-align:left;
-	background-color:White;
-	color:#00A8DC;
-	margin-left:10%;
+	background-color:#00A8DC;
+	color:White;
+	width:100%;
+	padding-left:5%;
+	padding-right:10%;
+	border:0;
+	text-transform:uppercase;
+	margin:0;
 }
 #samplesContainer p{
 	font-family: 'PT Sans', sans-serif;
@@ -729,20 +735,39 @@ body{
 	color:#00A8DC;
 	margin-left:10%;	
 }
-#samplesContainer input{
+.sampleDiv{
 	position:relative;
 	font-family: 'PT Sans', sans-serif;
 	font-size:1.1em;
-	width:70%;
-	margin-left:10%;
-	margin-right:20%;
-	margin-top:5px;
+	line-height:2.5em;
+	width:100%;
 	background-image:url('../img/newstyle/buttonback.png');
 	background-size:contain;
-	border:1px solid LightGray;
-	color:White;
+	color:#00A8DC;
 	cursor:pointer;
+	margin:0;
+	padding:0;
+	border:0;
+	box-sizing:border-box;
 }
+.sampleIcon{
+	height:2em;
+	width:auto;
+	margin-left:5%;
+	padding:0;
+	border:0;
+	box-sizing:border-box;
+}
+.sampleText{
+	width:100%;
+	vertical-align:middle;
+	text-align:center;
+	padding-left:5%;
+}
+.sampleText:hover{
+	color:White;
+}
+
 .sampleSkillIcon{
 	position:relative;
 	width:10%;

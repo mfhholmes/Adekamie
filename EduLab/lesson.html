@@ -127,7 +127,12 @@
 		<div id="samples">
 			<div id="samplesContainer">
 				<h2>Samples</h2>
-				<p>Click on a button below to open the Samples Magazine.</p>
+				<!-- ko foreach: samplesList-->
+					<div class="sampleDiv" data-bind="title:title, click:clickButton" >
+						<img class="sampleIcon" data-bind="attr:{src:icon,title:title}"/>
+						<span class="sampleText" data-bind="text:name, attr:{title:title}"></span>
+					</div>
+				<!-- /ko -->
 			</div>
 		</div>
 	</body>
