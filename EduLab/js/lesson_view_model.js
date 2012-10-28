@@ -19,7 +19,7 @@ function lesson_view_model() {
 	self.currentTask = new ko.observable(null);
 	self.skillLevels = new ko.observableArray();
 	self.selectedSkillLevel = new ko.observable(0);
-	
+	self.hintsVisible = new ko.observable(false);
 	//behaviours
 	self.loadData = function(lessonData){
 		// handles loading the data into the model
@@ -222,7 +222,7 @@ function task_reading(ind,ref,ttl,instr,nav){
 	    container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
 	    container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
 	    container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
-	    container.append("<img class='taskPanelAccept' data-bind='click:accept'/>");
+	    container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
 	    panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
 	    container.css("width:"+panel.css("width"));
 	    //set the bindings to this task
@@ -310,7 +310,7 @@ function task_writing(ind, ref, ttl, instr, resp, nav){
         container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textarea>");
-        container.append("<img class='taskPanelAccept' data-bind='click:accept'/>");
+        container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
         panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
         container.css("width:"+panel.css("width"));
         //set the bindings to this task
@@ -404,9 +404,11 @@ function task_selection(ind, ref, ttl, instr, resp, choices, nav){
         container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<!-- ko foreach: choices-->");
-        container.append("<p class='selectChoice'><input type='radio' name='selectChoices' data-bind='value:$data,checked:$parent.response'/><span data-bind='text:$data'/></p>");
+        radioDataBind='value:$data,checked:$parent.response,attr:{"id":"selectChoice"+$index()}';
+        labelDataBind = 'text:$data,attr:{"for":"selectChoice"+$index()}';
+        flyOutChoices.append("<p class='flyOutChoice' ><input type='radio' name='selectChoices' data-bind='"+radioDataBind+"'/><label data-bind='"+labelDataBind+"'/></p>");
         container.append("<!-- /ko -->");
-        container.append("<img class='taskPanelAccept' data-bind='click:accept'/>");
+        container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
         panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
         container.css("width:"+panel.css("width"));
         //set the bindings to this task
@@ -506,9 +508,11 @@ function task_flyOutSelection(ind, ref, ttl, instr, resp, choices, nav){
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textarea>");
         container.append("<input type='button' class='flyOutButton' value='See More Options' data-bind='click:flyOut'/>");
-        container.append("<img class='taskPanelAccept' data-bind='click:accept'/>");
+        container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
         flyOutChoices = $("<div id='flyOutChoices' class='flyOutSelectChoicesContainer flyOutClosed' data-bind='foreach:choices'/>").appendTo("body").data("status","closed");
-        flyOutChoices.append("<p class='flyOutChoice'><input type='radio' name='selectChoices' data-bind='value:$data,checked:$parent.response'/><span data-bind='text:$data'/></p>");
+        radioDataBind='value:$data,checked:$parent.response,attr:{"id":"selectChoice"+$index()}';
+        labelDataBind = 'text:$data,attr:{"for":"selectChoice"+$index()}';
+        flyOutChoices.append("<p class='flyOutChoice' ><input type='radio' name='selectChoices' data-bind='"+radioDataBind+"'/><label data-bind='"+labelDataBind+"'/></p>");
         panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
         container.css("width:"+panel.css("width"));
         //set the bindings to this task
@@ -687,7 +691,7 @@ function task_review(ind,ref,ttl, revlist, nav){
         taskcontainer.append("<p class='taskPanelReviewItem' data-bind='"+databind+"'></p>");
         databind='value:response, attr:{id:"taskBoxEdit"+index}, visible:reviewing, hasfocus:reviewing';
         taskcontainer.append("<textarea class='taskPanelReviewEdit' data-bind='"+databind+"'></textarea>");
-        container.append("<img class='taskPanelAccept' data-bind='click:accept'/>");
+        container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
         panel.addClass("taskPanelWide").removeClass("taskPanelNormal").removeClass("taskPanelThin");
         //set the bindings to this task
         ko.applyBindings(self,panel.get(0));
@@ -752,7 +756,7 @@ function task_unknown(ind,ref,ttl){
         container.append("<img class='taskPanelExitIcon' onclick='function(){lesson.clearCurrentTask();}'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textare>");
-        container.append("<img class='taskPanelAccept' data-bind='click:accept'/>");
+        container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
         panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
         container.css("width:"+panel.css("width"));
         //set the bindings to this task

@@ -255,6 +255,7 @@ body{
 	background-image:url('../img/newstyle/IconRef.png');
 }
 
+/**********Messages / Hints******/
 #hintList{
 	position:absolute;
 	z-index:500;
@@ -262,9 +263,14 @@ body{
 	right:0;
 	width:25%;
 	box-shadow: 5px 5px 10px #A0A0A0;
+	background:White;
+	opacity:0.9;
 }
 #hintList h2{
-	
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.4em;
+	color:#00A8DC;
+	text-align:left;
 }
 .hint{
 	font-family: 'PT Sans', sans-serif;
@@ -295,11 +301,11 @@ body{
 	background-image:url('../img/newstyle/SidebarArrow.png');
 	background-size:contain;
 	width:32px;
-	height:27px;
+	height:28px;
 }
-#Practice{
-	content:url('../img/newstyle/practice.png');
-	background-image:url('../img/newstyle/practice.png');
+#Activity{
+	content:url('../img/newstyle/IconActivity.png');
+	background-image:url('../img/newstyle/IconActivity.png');
 	background-size:contain;
 	width:32px;
 	height:32px;
@@ -483,12 +489,11 @@ body{
 	background-size:cover;
 	background-repeat:no-repeat;
 	cursor:pointer;
+	box-shadow: 3px 3px 4px #A0A0A0;
 }
 
-.taskPanelContainer{	
-	padding-left:10px;
-	padding-right:10px;
-	padding-bottom:10px;
+#taskPanelContainer{	
+	padding:10px;
 	margin:10px;
 	border:none;
 }
@@ -498,13 +503,10 @@ body{
 	text-align:left;
 	background-color:White;
 	color:#00A8DC;
-	padding-left:5%;
-	padding-top:10px;
 }
 .taskPanelInstruction{
 	position:relative;
-	width:90%;
-	left:5%;
+	width:100%;
 	top:5px;
 	padding-bottom:5px;
 	color:#404040;
@@ -512,10 +514,7 @@ body{
 	font-size:0.8em;
 }
 .taskPanelInstruction p{
-	-webkit-margin-before: 0.5em;
-	-webkit-margin-after:0.5em;
-	-moz-margin-before:0.5em;
-	-moz-margin-after:0.5em;
+	margin-bottom:0.5em;
 }
 .instructionImage{
 	position:relative;
@@ -526,13 +525,14 @@ body{
 .taskPanelEntry{
 	position:relative;
 	display:block;
-	width:90%;
+	width:100%;
 	height:5em;
-	margin-left:5%;
-	margin-right:5%;
 	font-family: 'PT Sans', sans-serif;
 	color:Gray;
 	font-size:1.1em;
+	box-sizing:border-box;
+	margin:0px;
+	padding:0px;
 }
 .taskPanelEntry:focus{
 	color:Black;
@@ -540,16 +540,18 @@ body{
 .taskPanelAccept{
 	float:right;
 	display:block;
-	content:url('../img/newstyle/post.png');
-	background-image:url('../img/newstyle/post.png');
-	background-size:contain;
-	margin-right:20px;
-	margin-bottom:10px;
+	font-family: 'PT Sans', sans-serif;
+	font-size:1em;
 	margin-top:10px;
-	width:60px;
+	background-color:#00A8DC;
+	color:white;
+	border:0;
+	box-shadow:2px 2px 5px #404040; 
 	height:25px;
+	vertical-align:middle;
 	cursor:pointer;
-	box-shadow:2px 2px 5px #404040;
+	padding-left:1em;
+	padding-right:1em;
 }
 .taskPanelReviewItem{
 	position:relative;
@@ -603,7 +605,6 @@ body{
 .flyOutButton{
 	font-family: 'PT Sans', sans-serif;
 	font-size:1em;
-	margin-left:20px;
 	margin-top:10px;
 	background-color:#00A8DC;
 	color:white;
@@ -612,6 +613,8 @@ body{
 	height:25px;
 	vertical-align:middle;
 	cursor:pointer;
+	padding-left:1em;
+	padding-right:1em;
 }
 .flyOutClosed{
 	width:0;

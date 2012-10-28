@@ -178,17 +178,7 @@ function clickLesson(){
 }
 function clickMessage(){
     hintList = $("#hintList");
-    if(hintList.data("status")=="open")
-    {
-        hintList.data("status","closed");
-        hintList.hide(250);
-    }
-    else
-    {
-        hintList.data("status","open");
-        hintList.show(250);
-        
-    }
+    lesson.hintsVisible(!lesson.hintsVisible());
 }
 function checkForHints(task,evnt){
     if(typeof(task.Hints)!='undefined')
@@ -202,6 +192,7 @@ function checkForHints(task,evnt){
                     hint = $("<div id='delayhint' class='hint'>"+task.Hints[i].text + "</div>").appendTo("#hintList")
                     hint.hide().delay(delayperiod).show();
                     task.Hints[i].shown = true;
+                    lesson.hintsVisible(true);
                 }
             }
         }

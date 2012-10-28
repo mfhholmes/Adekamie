@@ -70,7 +70,7 @@
 		</div>
 		<div id="leftmenu">
 			<img id="Lesson" class="menuIcon"/>
-			<img id="Practice" class="menuIcon"/>
+			<img id="Activity" class="menuIcon"/>
 		</div>
 	
 		<div id="skillsLevelList" data-bind="foreach: skillLevels">
@@ -103,7 +103,7 @@
 			<img id="Reference" class="menuIcon" src="./img/IconRef.png" title="Reference"/>
 			<img id="Samples" class="menuIcon" src="./img/IconSamples.png" title="Samples"/>
 		</div>
-		<div id="hintList">
+		<div id="hintList" data-bind="visible:hintsVisible">
 			<h2>Messages</h2>
 		</div>
 		<div id="reference">
