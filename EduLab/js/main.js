@@ -94,6 +94,7 @@ function openRef(afterwards)
     else
         reference.animate({width:targetWidth + "px"},250,"linear",afterwards);
     reference.data("status","open");
+    lesson.hintsVisible(false);
 }
 function closeRef(afterwards)
 {
@@ -138,7 +139,7 @@ function openSamples(afterwards)
     else
         samples.animate({width:targetWidth + "px"},250,"linear",afterwards);
     samples.data("status","open");
-
+    lesson.hintsVisible(false);
 }
 function closeSamples(afterwards)
 {
@@ -179,6 +180,8 @@ function clickLesson(){
 function clickMessage(){
     hintList = $("#hintList");
     lesson.hintsVisible(!lesson.hintsVisible());
+    closeRef();
+    closeSamples();
 }
 function checkForHints(task,evnt){
     if(typeof(task.Hints)!='undefined')

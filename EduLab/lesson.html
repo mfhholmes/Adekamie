@@ -114,11 +114,12 @@
 				<img class="searchIcon" id="search" src="./img/search.png" />
 			</div>
 			<!-- ko foreach: RefItems-->
-				<div class="refItem" data-bind="attr:{id:Name}, visible:found, click:clickopen">
-					<p class='refLabel' data-bind="text:Label"></p>
-					<div class="refIconContainer" data-bind="foreach:Icons">
-						<img class="refIcon" data-bind="attr:{src:$data}"/>
-					</div>
+				<div class="refItem" data-bind="attr:{id:Name}, visible:found">
+					<p class='refLabel' data-bind="text:Label, click:clickopen"/>
+						<div class="refIconContainer" data-bind="foreach:Icons">
+							<img class="refIcon" data-bind="attr:{src:$data}"/>
+						</div>
+					
 					<div class="refContent" data-bind="html:Content,visible:open"></div>
 				</div>
 			<!-- /ko -->
@@ -128,7 +129,7 @@
 			<div id="samplesContainer">
 				<h2>Samples</h2>
 				<!-- ko foreach: samplesList-->
-					<div class="sampleDiv" data-bind="title:title, click:clickButton" >
+					<div class="sampleItem" data-bind="title:title, click:clickButton" >
 						<img class="sampleIcon" data-bind="attr:{src:icon,title:title}"/>
 						<span class="sampleText" data-bind="text:name, attr:{title:title}"></span>
 					</div>
