@@ -19,18 +19,44 @@
   
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   
-		<link href="css/main.css" rel="stylesheet" type="text/css" />
+		<!--<link href="css/main.css" rel="stylesheet" type="text/css" />-->
 		<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.23.custom.css" rel="stylesheet" />
 		<link href='http://fonts.googleapis.com/css?family=Numans' rel='stylesheet' type='text/css'>
 	
 		<script src="js/vendor/jquery-1.8.1.min.js"  type="text/javascript"></script>
 		<script src="js/vendor/jquery-ui-1.8.23.custom.min.js" type="text/javascript"></script>
 		<script src="js/vendor/knockout-2.1.0.js" type="text/javascript"></script>
-		<script src="data/edulab_skilled_lesson.js" type="text/javascript"></script>
+		
 		<script src="js/main.js" type="text/javascript"></script>
 		<script src="js/lesson_view_model.js" type="text/javascript"></script>
 		<script src="js/reference.js" type="text/javascript"></script>
 		<script src="js/samples.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			// set up the data and style
+			
+			console.debug("url:" + document.URL);
+			// move this to server side eventually
+			var url = decodeURI(document.URL);
+			var src="./data/edulab_skilled_lesson.js";
+			var css="./css/main.css";
+			if(url.indexOf("?") > 0)
+			{	
+				params = 	url.substring(url.indexOf("?")+1);
+				if(params.indexOf("&")>0)
+				{
+					src = "./data/" + params.substring(0,params.indexOf("&")) + ".js";
+					css = "./css/"+ params.substring(params.indexOf("&")+1) + ".css";
+				}
+				else
+				{
+					src = "./data/" + params  + ".js"
+				}
+			}
+			src = "<script src='"+src+"' type='text/javascript'><\/script>"
+			document.write(src);
+			css = "<link href='" + css + "' rel='stylesheet' type='text/css'/>";
+			document.write(css);
+		</script>
 		<script type="text/javascript">
 			// jquery commence
 			$(start);
@@ -39,16 +65,17 @@
 
 <body>
 		<div id="header">
-			<div class="headerLogo logo">Adekamie</div>
+			<div class="headerLogo">Adekamie</div>
 			<div class="lessonHeader" data-bind="text:getTask(0).title"></div>
 		</div>
 		<div id="leftmenu">
-			<input type="image" id="Lesson" class="menuIcon" src="./img/lesson.jpg"/>
-			<input type="image" id="Practice" class="menuIcon" src="./img/practice.png"/>
-			<div id="skillsLevelList" data-bind="foreach: skillLevels">
-				<input type='image' class='skillLevelIcon' data-bind="click:switchSkillLevel,attr:{src:'./img/'+Image, alt:Name}"/>
-			</div>	
+			<img id="Lesson" class="menuIcon"/>
+			<img id="Activity" class="menuIcon"/>
 		</div>
+	
+		<div id="skillsLevelList" data-bind="foreach: skillLevels">
+			<img class='skillLevelIcon' data-bind="click:switchSkillLevel,attr:{src:Image, alt:Name, title:Name}"/>
+		</div>	
 		<div id="tasklist" data-bind="foreach: tasks, visible:lessonVisible" >
 			
 				<li class="taskListItem" data-bind="attr:{id:'task'+index}, css:{indent0:indent==0,indent1:indent==1,indent2:indent==2,indent3:indent==3,indent4:indent==4}, click:taskListClick, visible:taskListVisible">
@@ -57,11 +84,11 @@
 				</li>
 		</div>
 		<div id="container" data-bind="foreach: tasks">
-			<div class="task draggable resizable" data-bind="visible:taskBoxVisible">
+			<div class="task draggable resizable" data-bind="attr:{id:'taskMain'+ index},visible:taskBoxVisible">
 				<p class='taskboxTitle' data-bind="text:title"></p>
 				<p class='taskboxContent' data-bind="text:response,attr:{id:'taskBox'+index},click:taskBoxClick, visible:!editing()"></p>
 				<textarea class='taskboxEdit' data-bind="value:response, attr:{id:'taskBoxEdit'+index}, visible:editing, hasfocus:editing"></textarea>
-				<input type='image' class='taskBoxExitIcon' src='./img/exit.jpg' data-bind="click:taskBoxClose"/>
+				<img class='taskBoxExitIcon' data-bind="click:taskBoxClose"/>
 			</div>
 		</div>
 		<div id='taskPanel' class="taskPanel">
@@ -69,11 +96,15 @@
 			</div>
 		</div>
 		<div id="mainMenu">
-			<input type="image" id="Reference" class="menuIcon" src="img/reference.jpg" />
-			<input type="image" id="Settings" class="menuIcon" src="img/settings.jpg"/>
-			<input type="image" id="Samples" class="menuIcon" src="img/samples.jpg"/>
-			<input type="image" id="Save" class="menuIcon" src="img/save.jpg"/>
-			<input type="image" id="Exit" class="menuIcon" src="img/exit.jpg"/>
+			<img id="Exit" class="menuIcon" src="./img/IconExit.png" title="Exit"/>
+			<img id="Settings" class="menuIcon" src="./img/IconSetting.png" title="Settings"/>
+			<img id="Save" class="menuIcon" src="./img/IconSave.png" title="Save"/>
+			<img id="Message" class="menuIcon" src="./img/IconMessage.png" title="Message"/>
+			<img id="Reference" class="menuIcon" src="./img/IconRef.png" title="Reference"/>
+			<img id="Samples" class="menuIcon" src="./img/IconSamples.png" title="Samples"/>
+		</div>
+		<div id="hintList" data-bind="visible:hintsVisible">
+			<h2>Messages</h2>
 		</div>
 		<div id="reference">
 			<div id="refContainer">
@@ -95,6 +126,13 @@
 		</div>
 		<div id="samples">
 			<div id="samplesContainer">
+				<h2>Samples</h2>
+				<!-- ko foreach: samplesList-->
+					<div class="sampleDiv" data-bind="title:title, click:clickButton" >
+						<img class="sampleIcon" data-bind="attr:{src:icon,title:title}"/>
+						<span class="sampleText" data-bind="text:name, attr:{title:title}"></span>
+					</div>
+				<!-- /ko -->
 			</div>
 		</div>
 	</body>
