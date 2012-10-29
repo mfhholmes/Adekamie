@@ -19,7 +19,7 @@ function lesson_view_model() {
 	self.currentTask = new ko.observable(null);
 	self.skillLevels = new ko.observableArray();
 	self.selectedSkillLevel = new ko.observable(0);
-	
+	self.hintsVisible = new ko.observable(false);
 	//behaviours
 	self.loadData = function(lessonData){
 		// handles loading the data into the model
@@ -114,19 +114,32 @@ function classifyTask(task, taskArray, indent){
 			}
 		}
 	}
+	newtask.Hints = task.Hints;
 	newtask.indent = indent;
 	newtask.parentTask = null;
 	newtask.taskListVisible((indent <2))
-	newtask.taskBoxVisible(false);
+	newtask.taskBoxVisible= new ko.observable(false);
 	newtask.editing = new ko.observable(false);
 	newtask.editing.subscribe(function(newvalue){
        if(!newvalue){
            newtask.accept();
        } 
     });
+    newtask.reviewing = new ko.observable(false);
 	var newkotask = new ko.observable(newtask)
 	taskArray().push( newkotask);
-
+	/*
+    newtask.taskBoxVisible.subscribe(function(newvalue){
+        if(newvalue)
+        {
+            box =$("#taskMain" + newtask.index); 
+            box.fadeIn(250);
+        }
+        else
+        {
+            $("#taskMain" + newtask.index).fadeOut(250);
+        }
+    });*/
 	// check for child tasks
 	if(typeof(task.Tasks) != "undefined"){
 		var newindent = indent +1;
@@ -207,9 +220,10 @@ function task_reading(ind,ref,ttl,instr,nav){
 	    
 	    //add elements
 	    container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-	    container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+	    container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
 	    container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
-	    container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+	    container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
+	    panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
 	    container.css("width:"+panel.css("width"));
 	    //set the bindings to this task
 	    ko.applyBindings(self,panel.get(0));
@@ -222,6 +236,10 @@ function task_reading(ind,ref,ttl,instr,nav){
 	self.taskBoxClick = function(){
 	    // noop: reading tasks shouldn't actually have a taskBox
 	};
+    self.reviewClick = function(){
+    //    self.reviewing(true);
+    }
+	
 }
 
 function task_writing(ind, ref, ttl, instr, resp, nav){
@@ -277,6 +295,7 @@ function task_writing(ind, ref, ttl, instr, resp, nav){
         if(self.parentTask != null) self.parentTask.accept();
         self.taskBoxVisible(true);
         lesson.clearCurrentTask();
+        checkForHints(self,"onComplete");
     };
     self.taskListClick = function(){
         lesson.setCurrentTask(self.index);
@@ -288,14 +307,16 @@ function task_writing(ind, ref, ttl, instr, resp, nav){
         self.oldresponse = self.response();
         //add elements
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+        container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textarea>");
-        container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+        container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
+        panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
         container.css("width:"+panel.css("width"));
         //set the bindings to this task
         ko.applyBindings(self,panel.get(0));
         panel.show("slide",250);
+        checkForHints(self,"onEdit");
     };
     self.taskPanelClose = function(){
         self.response(self.oldresponse);
@@ -314,6 +335,9 @@ function task_writing(ind, ref, ttl, instr, resp, nav){
         self.editing(true);
         
     };
+    self.reviewClick = function(){
+        self.reviewing(true);
+    }
 }
 function task_selection(ind, ref, ttl, instr, resp, choices, nav){
     //data
@@ -377,12 +401,15 @@ function task_selection(ind, ref, ttl, instr, resp, choices, nav){
         self.oldresponse = self.response();
         //add elements
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+        container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<!-- ko foreach: choices-->");
-        container.append("<p class='selectChoice'><input type='radio' name='selectChoices' data-bind='value:$data,checked:$parent.response'/><span data-bind='text:$data'/></p>");
+        radioDataBind='value:$data,checked:$parent.response,attr:{"id":"selectChoice"+$index()}';
+        labelDataBind = 'text:$data,attr:{"for":"selectChoice"+$index()}';
+        flyOutChoices.append("<p class='flyOutChoice' ><input type='radio' name='selectChoices' data-bind='"+radioDataBind+"'/><label data-bind='"+labelDataBind+"'/></p>");
         container.append("<!-- /ko -->");
-        container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+        container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
+        panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
         container.css("width:"+panel.css("width"));
         //set the bindings to this task
         ko.applyBindings(self,panel.get(0));
@@ -407,6 +434,10 @@ function task_selection(ind, ref, ttl, instr, resp, choices, nav){
         */
        // no editing from the task box
     };
+    self.reviewClick = function(){
+        //self.reviewing(true);
+    }
+
 }
 function task_flyOutSelection(ind, ref, ttl, instr, resp, choices, nav){
     //data
@@ -459,6 +490,7 @@ function task_flyOutSelection(ind, ref, ttl, instr, resp, choices, nav){
         if(self.parentTask != null) self.parentTask.accept();
         self.taskBoxVisible(true);
         lesson.clearCurrentTask();
+        checkForHints(self,"onComplete");
     };
     self.taskListClick = function(){
         lesson.setCurrentTask(self.index);
@@ -472,19 +504,22 @@ function task_flyOutSelection(ind, ref, ttl, instr, resp, choices, nav){
         self.oldresponse = self.response();
         //add elements
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+        container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textarea>");
         container.append("<input type='button' class='flyOutButton' value='See More Options' data-bind='click:flyOut'/>");
-        container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+        container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
         flyOutChoices = $("<div id='flyOutChoices' class='flyOutSelectChoicesContainer flyOutClosed' data-bind='foreach:choices'/>").appendTo("body").data("status","closed");
-        flyOutChoices.append("<p class='flyOutChoice'><input type='radio' name='selectChoices' data-bind='value:$data,checked:$parent.response'/><span data-bind='text:$data'/></p>");
-        
+        radioDataBind='value:$data,checked:$parent.response,attr:{"id":"selectChoice"+$index()}';
+        labelDataBind = 'text:$data,attr:{"for":"selectChoice"+$index()}';
+        flyOutChoices.append("<p class='flyOutChoice' ><input type='radio' name='selectChoices' data-bind='"+radioDataBind+"'/><label data-bind='"+labelDataBind+"'/></p>");
+        panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
         container.css("width:"+panel.css("width"));
         //set the bindings to this task
         ko.applyBindings(self,panel.get(0));
         ko.applyBindings(self,flyOutChoices.get(0));
         panel.show("slide",250);
+        checkForHints(self,"onEdit");
     };
     self.flyOut = function(){
         flyOut = $("#flyOutChoices");
@@ -515,6 +550,10 @@ function task_flyOutSelection(ind, ref, ttl, instr, resp, choices, nav){
         */
        // no editing from the task box
     };
+    self.reviewClick = function(){
+//        self.reviewing(true);
+    }
+
 }
 
 function task_container(ind,ref,ttl){
@@ -575,10 +614,11 @@ function task_container(ind,ref,ttl){
 	    
 	    //add child task responses
 	    container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-	    container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+	    container.append("<input type='image' class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
 	    taskcontainer = $("<div class='taskPanelReviewContainer' data-bind='foreach:tasks'></div>");
 	    container.append(taskcontainer);
 	    taskcontainer.append("<div class='taskPanelReviewItem' data-bind='text:response'></div>");
+	    panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
 	    //set the bindings to this task
 	    ko.applyBindings(self,panel.get(0));
 	}
@@ -589,6 +629,10 @@ function task_container(ind,ref,ttl){
     self.taskBoxClick = function(){
         
     };
+    self.reviewClick = function(){
+        //self.reviewing(true);
+    }
+
 }
 
 function task_review(ind,ref,ttl, revlist, nav){
@@ -640,11 +684,15 @@ function task_review(ind,ref,ttl, revlist, nav){
         
         //add child task responses
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+        container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
         taskcontainer = $("<div class='taskPanelReviewContainer' data-bind='foreach:reviewlist'></div>");
         container.append(taskcontainer);
-        taskcontainer.append("<p class='taskPanelReviewItem' data-bind='text:response'></p>");
-        container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+        databind='text:response,attr:{id:"taskBox"+index},click:reviewClick, visible:!reviewing()';
+        taskcontainer.append("<p class='taskPanelReviewItem' data-bind='"+databind+"'></p>");
+        databind='value:response, attr:{id:"taskBoxEdit"+index}, visible:reviewing, hasfocus:reviewing';
+        taskcontainer.append("<textarea class='taskPanelReviewEdit' data-bind='"+databind+"'></textarea>");
+        container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
+        panel.addClass("taskPanelWide").removeClass("taskPanelNormal").removeClass("taskPanelThin");
         //set the bindings to this task
         ko.applyBindings(self,panel.get(0));
         panel.show("slide",250);
@@ -656,6 +704,10 @@ function task_review(ind,ref,ttl, revlist, nav){
     self.taskBoxClick = function(){
         
     };
+    self.reviewClick = function(){
+        // no reviewing the reviewer!
+    }
+
 };
 
 function task_unknown(ind,ref,ttl){
@@ -701,10 +753,11 @@ function task_unknown(ind,ref,ttl){
         self.oldresponse = self.response();
         //add elements
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
-        container.append("<input type='image' class='taskPanelExitIcon' src='./img/exit.jpg' onclick='function(){lesson.clearCurrentTask();}'/>");
+        container.append("<img class='taskPanelExitIcon' onclick='function(){lesson.clearCurrentTask();}'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
         container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textare>");
-        container.append("<input type='image' class='taskPanelAccept' src='./img/accept.png' data-bind='click:accept'/>");
+        container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
+        panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
         container.css("width:"+panel.css("width"));
         //set the bindings to this task
         ko.applyBindings(self,panel.get(0));
@@ -718,4 +771,8 @@ function task_unknown(ind,ref,ttl){
     self.taskBoxClick = function(){
         
     };
+    self.reviewClick = function(){
+        //self.reviewing(true);
+    }
+
 }
