@@ -180,6 +180,7 @@ function clickLesson(){
 function clickMessage(){
     hintList = $("#hintList");
     lesson.hintsVisible(!lesson.hintsVisible());
+    $(".MessageLit").removeClass("MessageLit").addClass("MessageNotLit");
     closeRef();
     closeSamples();
 }
@@ -195,7 +196,7 @@ function checkForHints(task,evnt){
                     hint = $("<div id='delayhint' class='hint'>"+task.Hints[i].text + "</div>").appendTo("#hintList")
                     hint.hide().delay(delayperiod).show();
                     task.Hints[i].shown = true;
-                    lesson.hintsVisible(true);
+                    $(".MessageNotLit").removeClass("MessageNotLit").addClass("MessageLit");
                 }
             }
         }

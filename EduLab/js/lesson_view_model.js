@@ -20,6 +20,7 @@ function lesson_view_model() {
 	self.skillLevels = new ko.observableArray();
 	self.selectedSkillLevel = new ko.observable(0);
 	self.hintsVisible = new ko.observable(false);
+	self.lightHints = new ko.observable(false);
 	//behaviours
 	self.loadData = function(lessonData){
 		// handles loading the data into the model

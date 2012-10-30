@@ -246,9 +246,13 @@ body{
 	content:url('../img/newstyle/IconSetting.png');
 	background-image:url('../img/newstyle/IconSetting.png');
 }
-#Message{
+.MessageNotLit{
 	content:url('../img/newstyle/IconMessage.png');
 	background-image:url('../img/newstyle/IconMessage.png');
+}
+.MessageLit{
+	content:url('../img/newstyle/IconMessageLit.png');
+	background-image:url('../img/newstyle/IconMessageLit.png');	
 }
 #Reference{
 	content:url('../img/newstyle/IconRef.png');
@@ -625,7 +629,7 @@ body{
 	padding-left:5%;
 	padding-right:10%;
 	border:0;
-	text-transform:uppercase;
+	text-transform:capitalize;
 	margin:0;
 }
 .reference-open{
@@ -699,12 +703,11 @@ body{
 }
 .refContent{
 	width:100%;
-	padding-right:5%;
+	padding-right:10%;
 	padding-left:5%;
-	line-height:1.1em;
-	font-size:1em;
+	font-size:0.9em;
 	color:White;
-	background-color:#404040;
+	background-color:#505050;
 	box-sizing:border-box;
 }
 .refText{
@@ -746,7 +749,7 @@ body{
 	padding-left:5%;
 	padding-right:10%;
 	border:0;
-	text-transform:uppercase;
+	text-transform:capitalize;
 	margin:0;
 }
 .sampleItem{
@@ -810,7 +813,7 @@ body{
 	padding-left:5%;
 	padding-right:10%;
 	border:0;
-	text-transform:uppercase;
+	text-transform:capitalize;
 	margin:0;
 }
 .hint{
@@ -820,6 +823,7 @@ body{
 	padding-right:5%;
 	background-color:#404040;
 	color:#00A8DC;
+	border-top:1px #505050 solid;
 }
 .hint:nth-child(odd){
 	color:White;

@@ -311,21 +311,21 @@ lesson_data={
             {
                 "Name":"TopicWords",
                 "Label":"Topic Words",
-                "Icons":["./img/video.png"],
+                "Icons":["./img/text.png"],
                 "SearchWords":["topic","task","words","essay","question","analyse","analysis"],
                 "Content":"These keywords in a question tell the reader the topic or issue they are to write about. For example, the topic words in the question 'Explain how clouds form' are 'how clouds form'. These topic words tell you that you must write about clouds and how the form."
             },
             {
                 "Name":"TaskWords",
                 "Label":"Task Words",
-                "Icons":["./img/video.png"],
+                "Icons":["./img/text.png"],
                 "SearchWords":["topic","task","words","essay","question","analyse","analysis"],
                 "Content":"These keywords in a question tell the reader how the topic of the question should be written about. For example, the task word in the question 'Explain why Facebook is so popular with teenagers', is explain. This task words tells you to explain the reasons Facebook is popular."
 			},
 			{
                 "Name":"Paragraph1",
-                "Label":"Writing a paragraph 1",
-                "Icons":["./img/video.png"],
+                "Label":"Writing a paragraph",
+                "Icons":["./img/text.png"],
                 "SearchWords":["paragraph","gobby","brad","words","writing","skills"],
                 "Content":"A paragraph is one or more sentences that form a section of writing and that express a main idea. A paragraph usually begins after a blank line, or with an indent. Stories, novels, essays and articles are all made up of many paragraphs.</p><p>Paragraphs in essays can be organised using TIEE - a Topic sentence, sentences that explains your topic sentence or Introduces your example, your Example or evidence, and an Explanation of your example or evidence, like how it relates to your topic.</p><p>Here is an example of a paragraph: 'Year nines are the naughtiest group of students because they are not near the end of their schooling. When students in year 11 and 12 are at school they are starting to think about and plan their future. For many of these students, they want to get the best grades they can because this will help them get good jobs or help them get into TAFE or university. Year nines do not have that pressure on them yet, so many of them muck about.'</p><p>This video<a href='http://youtu.be/72rAfA3hnvU'>video</a> explains how to write paragraphs for essays."
             },

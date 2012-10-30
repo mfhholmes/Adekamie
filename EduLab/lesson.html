@@ -96,12 +96,12 @@
 			</div>
 		</div>
 		<div id="mainMenu">
-			<img id="Exit" class="menuIcon" src="./img/IconExit.png" title="Exit"/>
-			<img id="Settings" class="menuIcon" src="./img/IconSetting.png" title="Settings"/>
-			<img id="Save" class="menuIcon" src="./img/IconSave.png" title="Save"/>
-			<img id="Message" class="menuIcon" src="./img/IconMessage.png" title="Message"/>
-			<img id="Reference" class="menuIcon" src="./img/IconRef.png" title="Reference"/>
-			<img id="Samples" class="menuIcon" src="./img/IconSamples.png" title="Samples"/>
+			<img id="Exit" class="menuIcon" title="Exit"/>
+			<img id="Settings" class="menuIcon" title="Settings"/>
+			<img id="Save" class="menuIcon" title="Save"/>
+			<img id="Message" class="menuIcon MessageNotLit" title="Message"/>
+			<img id="Reference" class="menuIcon" title="Reference"/>
+			<img id="Samples" class="menuIcon" title="Samples"/>
 		</div>
 		<div id="hintList" data-bind="visible:hintsVisible">
 			<h2>Messages</h2>
@@ -129,7 +129,7 @@
 			<div id="samplesContainer">
 				<h2>Samples</h2>
 				<!-- ko foreach: samplesList-->
-					<div class="sampleItem" data-bind="title:title, click:clickButton" >
+					<div class="sampleItem" data-bind="title:title, click:function(){window.open(link,'Adekamie samples magazine','width=960,height=640,location=no,menubar=no,toolbar=no,status=no');}" >
 						<img class="sampleIcon" data-bind="attr:{src:icon,title:title}"/>
 						<span class="sampleText" data-bind="text:name, attr:{title:title}"></span>
 					</div>
