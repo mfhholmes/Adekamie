@@ -37,23 +37,21 @@
 			console.debug("url:" + document.URL);
 			// move this to server side eventually
 			var url = decodeURI(document.URL);
-			var src="./data/edulab_skilled_lesson.js";
+			var src="./data/edulab_skilled_lesson.json";
 			var css="./css/main.css";
 			if(url.indexOf("?") > 0)
 			{	
 				params = 	url.substring(url.indexOf("?")+1);
 				if(params.indexOf("&")>0)
 				{
-					src = "./data/" + params.substring(0,params.indexOf("&")) + ".js";
+					src = "./data/" + params.substring(0,params.indexOf("&")) + ".json";
 					css = "./css/"+ params.substring(params.indexOf("&")+1) + ".css";
 				}
 				else
 				{
-					src = "./data/" + params  + ".js"
+					src = "./data/" + params  + ".json"
 				}
 			}
-			src = "<script src='"+src+"' type='text/javascript'><\/script>"
-			document.write(src);
 			css = "<link href='" + css + "' rel='stylesheet' type='text/css'/>";
 			document.write(css);
 		</script>

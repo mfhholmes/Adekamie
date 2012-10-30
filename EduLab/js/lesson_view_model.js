@@ -21,10 +21,11 @@ function lesson_view_model() {
 	self.selectedSkillLevel = new ko.observable(0);
 	self.hintsVisible = new ko.observable(false);
 	self.lightHints = new ko.observable(false);
+	self.rawData = {};
 	//behaviours
 	self.loadData = function(lessonData){
 		// handles loading the data into the model
-		
+		self.rawData = lessonData;
         // skill levels
         for(var i=0;i< lessonData.SkillLevels.length;i++){
             var skill = lessonData.SkillLevels[i];
