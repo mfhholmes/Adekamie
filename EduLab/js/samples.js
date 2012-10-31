@@ -3,13 +3,13 @@ samplesModel={
         {
             "name":"Full magazine",
             "title":"Opens the full Samples magazine",
-            "link":"http://gobrad.wix.com/samplesmag-edition1#!sbowboarding/cvh5",
+            "link":"http://gobrad.wix.com/samplesmag-edition1#!home/mainPage",
             "icon":"data/Samples.png"
         },
         {
             "name":"Snowboarding",
             "title":"Are you a thrillseeker? Read all about Snowboarding here!",
-            "link":"http://gobrad.wix.com/samplesmag-edition1#!social-media/c1va9",
+            "link":"http://gobrad.wix.com/samplesmag-edition1#!sbowboarding/cvh5",
             "icon":"data/Samples.png"
         },
         {
@@ -44,14 +44,6 @@ function addSamples()
     
 	samples = $("#samplesContainer");
 	$("#samples").width(0).hide().data("status","closed");
-	// add in the open event
-	
-	for(var i = 0; i<samplesModel.samplesList.length;i++){
-	    sample=samplesModel.samplesList[i];
-	    sample.clickButton = function(){
-	        window.open(sample.link,"Adekamie samples magazine","width=960,height=640,location=no,menubar=no,toolbar=no,status=no");
-	    }
-	}
 	ko.applyBindings(samplesModel,samples.get(0));
 }
 

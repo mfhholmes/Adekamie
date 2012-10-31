@@ -6,7 +6,7 @@ function addReferenceText()
 	$("#reference").width(0).hide().data("status","closed");
 	
 	//todo: this all needs to be loaded from the server via AJAX
-	rawContent = lesson_data;
+	rawContent = lesson.rawData;
 	refContent = new processContent(rawContent);
 	ko.applyBindings(refContent,refContainer.get(0));
 	

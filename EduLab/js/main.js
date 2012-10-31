@@ -11,26 +11,27 @@ function start(){
 	//load the lesson data and pass it to the viewmodel
 	lesson = new lesson_view_model();
 	// need a switch to work out if we're local or server-based
-	//$.getJSON("data/persuasive_essay_lesson.json",function(data){lesson.loadData(data);}).error(function(jq,status,errorThrown){alert("bad thing happened to the JSON: " + status + " : " + errorThrown);});
-	parseData(lesson_data);
-	addSamples();
-	addReferenceText();
-	try{
-	   ko.applyBindings(lesson);
-	}
-	catch(err){
-	    //catch any knockout errors so we can continue binding event handlers and jquery ui properties
-	    console.debug(err.message);
-	}
-	addEventHandlers();
-	$(".draggable").draggable();
-	$(".resizable").resizable();
-	
-	$(window).on("resize",function(){$('body').height($(window).innerHeight);});
+	$.getJSON(src,function(data){parseData(data);}).error(function(jq,status,errorThrown){alert("bad thing happened to the JSON from file: "+src+" reported as " + status + " : " + errorThrown);});
+	//parseData(lesson_data);
 	
 }
 function parseData(data){
 	lesson.loadData(data);
+    addSamples();
+    addReferenceText();
+    try{
+       ko.applyBindings(lesson);
+    }
+    catch(err){
+        //catch any knockout errors so we can continue binding event handlers and jquery ui properties
+        console.debug(err.message);
+    }
+    addEventHandlers();
+    $(".draggable").draggable();
+    $(".resizable").resizable();
+    
+    $(window).on("resize",function(){$('body').height($(window).innerHeight);});
+
 }
 
 function addEventHandlers()
@@ -94,6 +95,7 @@ function openRef(afterwards)
     else
         reference.animate({width:targetWidth + "px"},250,"linear",afterwards);
     reference.data("status","open");
+    lesson.hintsVisible(false);
 }
 function closeRef(afterwards)
 {
@@ -138,7 +140,7 @@ function openSamples(afterwards)
     else
         samples.animate({width:targetWidth + "px"},250,"linear",afterwards);
     samples.data("status","open");
-
+    lesson.hintsVisible(false);
 }
 function closeSamples(afterwards)
 {
@@ -179,6 +181,9 @@ function clickLesson(){
 function clickMessage(){
     hintList = $("#hintList");
     lesson.hintsVisible(!lesson.hintsVisible());
+    $(".MessageLit").removeClass("MessageLit").addClass("MessageNotLit");
+    closeRef();
+    closeSamples();
 }
 function checkForHints(task,evnt){
     if(typeof(task.Hints)!='undefined')
@@ -192,7 +197,7 @@ function checkForHints(task,evnt){
                     hint = $("<div id='delayhint' class='hint'>"+task.Hints[i].text + "</div>").appendTo("#hintList")
                     hint.hide().delay(delayperiod).show();
                     task.Hints[i].shown = true;
-                    lesson.hintsVisible(true);
+                    $(".MessageNotLit").removeClass("MessageNotLit").addClass("MessageLit");
                 }
             }
         }
