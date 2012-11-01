@@ -98,6 +98,10 @@ function classifyTask(task, taskArray, indent){
 				newtask = new task_container(taskArray().length,task.Reference,task.Title);
 				break;
 			}
+			case "flexcontainer":{
+                newtask = new task_flex_container(taskArray().length,task.Reference,task.Title, task.Instruction, task.TaskTypes);
+                break;			   
+			}
 			case "selection":{
 			    newtask =new task_selection(taskArray().length, task.Reference, task.Title, task.Instruction, task.Response, task.Choices, task.Navigation);
 			    break;
@@ -628,6 +632,85 @@ function task_container(ind,ref,ttl){
         panel = $("#taskPanel");
         panel.hide("slide",250);	    
 	};
+    self.taskBoxClick = function(){
+        
+    };
+    self.reviewClick = function(){
+        //self.reviewing(true);
+    }
+
+}
+function task_flex_container(ind,ref,ttl, instr, taskTypes){
+    //data
+    var self=this;
+    self.index = ind;
+    self.reference = ref;
+    self.title = ttl;
+    self.tasks = new ko.observableArray();
+    self.response = "";
+    self.taskBoxVisible = ko.observable(false);
+    self.taskListVisible= ko.observable(true);
+    self.complete = ko.observable(false);
+    self.navigation = ko.observableArray();
+    self.complete = ko.observable(false);
+    self.instruction = instr;
+    self.TaskTypes= taskTypes;
+    
+    //behaviour
+    self.setupNav = function(){
+        if(self.hasKids){
+            for(var i=0;i < self.tasks().length;i++){
+                self.tasks()[i]().setupNav();
+            }
+        }
+    };
+    self.accept = function(){
+        if(self.hasKids){
+            var allcomplete = true;
+            //console.debug("-------");
+            for(var i=0;i<self.tasks().length;i++){
+                //console.debug(self.tasks()[i]().title + " : " + self.tasks()[i]().complete());
+                if(!self.tasks()[i]().complete()){
+                    allcomplete= false;
+                    break;
+                }
+            }
+            self.complete(allcomplete);
+            self.complete.valueHasMutated();
+            //console.debug(self.complete());
+        }
+        if(self.parentTask != null) self.parentTask.accept();
+        lesson.clearCurrentTask();
+        
+    };
+    self.taskListClick = function(){
+        for(var i=0;i<self.tasks().length;i++){
+            var tasks = self.tasks();
+            var subtask = tasks[i]();
+            slideMenuList(subtask.index);
+            lesson.setCurrentTask(self.index);
+        }
+        
+            
+    };
+    self.taskPanelOpen = function(){
+        panel = $("#taskPanel");
+        container = $("#taskPanelContainer").empty();
+        
+        //add child task list
+        container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
+        container.append("<input type='image' class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
+        taskcontainer = $("<div class='taskPanelFlexContainer' data-bind='foreach:tasks'></div>").appendTo(container);
+        taskcontainer.append("<div class='taskPanelFlexItem' data-bind='text:title'></div>");
+        container.append("<div id='newFlexItem'><input type='text' id='newFlexTitle' value='enter new task title here'/> <select id='newFlexTaskType' data-bind='options:TaskTypes'></select> </div>")
+        panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
+        //set the bindings to this task
+        ko.applyBindings(self,panel.get(0));
+    }
+    self.taskPanelClose = function(){
+        panel = $("#taskPanel");
+        panel.hide("slide",250);        
+    };
     self.taskBoxClick = function(){
         
     };
