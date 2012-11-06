@@ -655,6 +655,7 @@ function task_flex_container(ind,ref,ttl, instr, taskTypes){
     self.complete = ko.observable(false);
     self.instruction = instr;
     self.TaskTypes= taskTypes;
+    self.selectedType = new ko.observable();
     
     //behaviour
     self.setupNav = function(){
@@ -702,7 +703,7 @@ function task_flex_container(ind,ref,ttl, instr, taskTypes){
         container.append("<input type='image' class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
         taskcontainer = $("<div class='taskPanelFlexContainer' data-bind='foreach:tasks'></div>").appendTo(container);
         taskcontainer.append("<div class='taskPanelFlexItem' data-bind='text:title'></div>");
-        container.append("<div id='newFlexItem'><input type='text' id='newFlexTitle' value='enter new task title here'/> <select id='newFlexTaskType' data-bind='options:TaskTypes'></select> </div>")
+        container.append("<div id='newFlexItem'><input type='text' id='newFlexTitle' value='enter new task title here'/> <select id='newFlexTaskType' data-bind='options:TaskTypes'></select> <input type='button' id='newFlxAccept' class='flexAccept' value='Create' data-bind='click:createNew' /></div>")
         panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
         //set the bindings to this task
         ko.applyBindings(self,panel.get(0));
@@ -717,7 +718,13 @@ function task_flex_container(ind,ref,ttl, instr, taskTypes){
     self.reviewClick = function(){
         //self.reviewing(true);
     }
-
+    self.createNew = function(){
+        var taskTitle = $('#newFlexTitle').val();
+        var taskType = $('#newFlexTaskType').val();
+        if((taskTitle == null) || (taskType == null))
+            return;
+        // create a new task here, using the factory methods refactored from the current mess
+    }
 }
 
 function task_review(ind,ref,ttl, revlist, nav){
