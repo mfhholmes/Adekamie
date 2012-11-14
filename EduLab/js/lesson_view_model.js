@@ -10,6 +10,7 @@ function first(arr){
     }
 };
 
+
 var taskPanelPrefix = "taskPanel";
 function lesson_view_model() {
     var self = this;
@@ -33,7 +34,7 @@ function lesson_view_model() {
             skill.self = skill;
             skill.switchSkillLevel = function(){
                 lesson.setSelectedSkillLevel(this.index);
-                };
+            };
             self.skillLevels.push(skill);
         }
         self.selectedSkillLevel(0);
@@ -75,6 +76,19 @@ function lesson_view_model() {
 	       self.currentTask().taskPanelClose();
 		self.currentTask(null);
 	};
+	self.toJSON = function(){
+        var json = "";
+        json += "{";
+        json += '"Lesson":"Skilled Lesson",';
+        if(typeof(self.skillLevels) != 'undefined'){
+            json+=',"SkillLevels":[';
+            $.each(self.skillLevels(),function(key,value){json += '{"Name":"' + value.Name + '","Image":"' + value.Image + '"},';});
+            json = json.substring(0,json.length-1) + ']';
+        }
+        $.each(self.tasks(),function(key,value){json = value().toJSON(json)+",";});
+        json=json.substring(0,json.length-1)+ "}";
+        return json;  
+	}
 };
 
 function classifyTask(task, taskArray, indent){
@@ -245,7 +259,19 @@ function task_reading(ind,ref,ttl,instr,nav){
     self.reviewClick = function(){
     //    self.reviewing(true);
     }
-	
+	self.toJSON = function(jsonValues){
+	    var json = jsonValues;
+	    json += "{";
+	    json += '"Reference":"' + self.reference + '",';
+        json += '"Type":"Reading",';
+        json += '"Title": "'+ self.title + '",';
+        json +='"Instruction":' + JSON.stringify(self.skillText)+'';
+        if(typeof(self.Hints)!='undefined')
+            json +=',"Hints":' + JSON.stringify(self.Hints)+ '';
+        //json +='"Navigation":' + JSON.stringify(self.navigation());
+	    json += "}";
+	    return json;
+	}
 }
 
 function task_writing(ind, ref, ttl, instr, resp, nav){
@@ -343,6 +369,20 @@ function task_writing(ind, ref, ttl, instr, resp, nav){
     };
     self.reviewClick = function(){
         self.reviewing(true);
+    }
+    self.toJSON = function(jsonValues){
+        var json = jsonValues;
+        json += "{";
+        json += '"Reference":"' + self.reference + '",';
+        json += '"Type":"Writing",';
+        json += '"Title": "'+ self.title + '",';
+        json += '"Response":"' + self.response() + '",';
+        json +='"Instruction":' + JSON.stringify(self.skillText)+'';
+        if(typeof(self.Hints)!='undefined')
+            json +=',"Hints":' + JSON.stringify(self.Hints)+ '';
+        //json +='"Navigation":' + JSON.stringify(self.navigation());
+        json += "}";
+        return json;
     }
 }
 function task_selection(ind, ref, ttl, instr, resp, choices, nav){
@@ -443,7 +483,22 @@ function task_selection(ind, ref, ttl, instr, resp, choices, nav){
     self.reviewClick = function(){
         //self.reviewing(true);
     }
+    self.toJSON = function(jsonValues){
+        var json = jsonValues;
+        json += "{";
+        json += '"Reference":"' + self.reference + '",';
+        json += '"Type":"Selection",';
+        json += '"Title": "'+ self.title + '",';
+        json += '"Response":"' + self.response() + '",';
+        json += '"Choices":'+ JSON.stringify(self.choices()) + ",";
+        json +='"Instruction":' + JSON.stringify(self.skillText)+'';
+        if(typeof(self.Hints)!='undefined')
+            json +=',"Hints":' + JSON.stringify(self.Hints)+ '';
 
+        //json +='"Navigation":' + JSON.stringify(self.navigation());
+        json += "}";
+        return json;
+    }
 }
 function task_flyOutSelection(ind, ref, ttl, instr, resp, choices, nav){
     //data
@@ -560,6 +615,22 @@ function task_flyOutSelection(ind, ref, ttl, instr, resp, choices, nav){
 //        self.reviewing(true);
     }
 
+    self.toJSON = function(jsonValues){
+        var json = jsonValues;
+        json += "{";
+        json += '"Reference":"' + self.reference + '",';
+        json += '"Type":"flyOutSelection",';
+        json += '"Title": "'+ self.title + '",';
+        json += '"Response":"' + self.response() + '",';
+        json += '"Choices":'+ JSON.stringify(self.choices()) + ",";
+        json +='"Instruction":' + JSON.stringify(self.skillText)+'';
+        if(typeof(self.Hints)!='undefined')
+            json +=',"Hints":' + JSON.stringify(self.Hints)+ '';
+
+        //json +='"Navigation":' + JSON.stringify(self.navigation());
+        json += "}";
+        return json;
+    }
 }
 
 function task_container(ind,ref,ttl){
@@ -639,6 +710,23 @@ function task_container(ind,ref,ttl){
         //self.reviewing(true);
     }
 
+    self.toJSON = function(jsonValues){
+        var json = jsonValues;
+        json += "{";
+        json += '"Reference":"' + self.reference + '",';
+        json += '"Type":"Container",';
+        json += '"Title": "'+ self.title + '"';
+        if(typeof(self.skillLevels) != 'undefined'){
+            json+=',"SkillLevels":' + JSON.stringify(self.skillLevels());
+        }
+        json += ',"Tasks":[';
+        $.each(self.tasks(),function(key,value){json = value().toJSON(json)+",";});
+        /*for(var i=0;i<self.tasks().length;i++){
+            json = self.tasks()[i]().toJSON(json);
+        }*/
+        json=json.substring(0,json.length-1)+ "]}";
+        return json;
+    }
 }
 function task_flex_container(ind,ref,ttl, instr, taskTypes){
     //data
@@ -739,6 +827,7 @@ function task_review(ind,ref,ttl, revlist, nav){
     self.taskListVisible= ko.observable(true);
     self.complete = ko.observable(false);
     self.reviewlist = ko.observableArray(revlist);
+    self.originalList = revlist;
     self.navigation = ko.observableArray(nav);
     self.instruction = "***bad instruction***";
     
@@ -800,6 +889,20 @@ function task_review(ind,ref,ttl, revlist, nav){
         // no reviewing the reviewer!
     }
 
+    self.toJSON = function(jsonValues){
+        var json = jsonValues;
+        json += "{";
+        json += '"Reference":"' + self.reference + '",';
+        json += '"Type":"Review",';
+        json += '"Title": "'+ self.title + '",';
+        json += '"ReviewList":'+ JSON.stringify(self.originalList) + "";
+        if(typeof(self.Hints)!='undefined')
+            json +=',"Hints":' + JSON.stringify(self.Hints)+ '';
+
+        //json +='"Navigation":' + JSON.stringify(self.navigation());
+        json += "}";
+        return json;
+    }
 };
 
 function task_unknown(ind,ref,ttl){
@@ -867,4 +970,18 @@ function task_unknown(ind,ref,ttl){
         //self.reviewing(true);
     }
 
+    self.toJSON = function(jsonValues){
+        var json = jsonValues;
+        json += "{";
+        json += '"Reference":"' + self.reference + '",';
+        json += '"Type":"Unknown",';
+        json += '"Title": "'+ self.title + '",';
+        //json += '"Response":"' + self.response() + '",';
+        json +='"Instruction":"Unknown Task"';
+        if(typeof(self.Hints)!='undefined')
+            json +=',"Hints":' + JSON.stringify(self.Hints)+ '';
+        //json +='"Navigation":' + JSON.stringify(self.navigation());
+        json += "}";
+        return json;
+    }
 }
