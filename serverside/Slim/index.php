@@ -36,7 +36,7 @@ $app->get('/lesson/nouser/:name', function ($name) {
 });
 
 $app->get('/lesson/:user/:name', function ($user,$name) {
-}
+});
 
 // POST route
 $app->post('/post', function () {
