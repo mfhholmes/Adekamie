@@ -19,14 +19,24 @@ $app->get('/hello/:name', function ($name) {
     echo "Hello, $name";
 });
 
-//
+// get the file route
 $app->get('/lesson/nouser/:name', function ($name) {
 	//find the appropriate lesson file in the file system
-	file_get_contents(
-	//parse it to JSON
-	//bung it in the response
-}
+	//let's make this safe
+	if(strpos($name,".") === false){
+		$contents = file_get_contents('../Data/Json/'.$name.'.json');
+		//no need to parse it to json, we assume it's already valid json
+		//bung it in the response
+		if($contents === false){
+		  echo '{"Error":"File Not Found"}';  
+		}else{
+		  echo $contents;
+		}
+	}
+});
+
 $app->get('/lesson/:user/:name', function ($user,$name) {
+});
 
 // POST route
 $app->post('/post', function () {

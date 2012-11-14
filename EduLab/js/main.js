@@ -34,6 +34,14 @@ function parseData(data){
 
 }
 
+function testJSON(){
+    var json = lesson.toJSON();
+    $('body').append("<div id='jsondisplay' style='position:absolute;width:90%;height:90%;top:5%;left:5%;z-index:900;background-color:White;'></div>");
+    $('#jsondisplay').text(json);
+    //lesson = new lesson_view_model();
+    //parseData(json);
+}
+
 function addEventHandlers()
 {
     $("#Lesson").on("click",clickLesson);
