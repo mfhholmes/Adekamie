@@ -71,7 +71,6 @@
 			"Reference":"TestFlex",
 			"Type":"FlexContainer",
 			"Title":"Flex Container Test",
-			"TaskTypes":["Writing","Research"],
 			"Tasks":
 			[
 				{
@@ -81,7 +80,7 @@
 					"Instruction" : {
 					"Newbie":"<p>task1 instruction noob</p>",						
 					"Developing":"<p>task 1 instruction middie</p>",							
-					"Flying":"<p>task 1 instruction </p>"
+					"Flying":"<p>task 1 instruction expert</p>"
 					},
 					"Response":"response goes here",
 					"Navigation":[
@@ -94,11 +93,43 @@
                     "Instruction" : {
                     "Newbie":"<p>task2 instruction noob</p>",                       
                     "Developing":"<p>task 2 instruction middie</p>",                            
-                    "Flying":"<p>task 2 instruction </p>"
+                    "Flying":"<p>task 2 instruction expert</p>"
                     },
 					"Navigation":[
 						{"Ref":"RestateQuestion","Label":"Restating the Question"}]
 				}
+			],
+			"TaskTemplates":[
+			 {
+			     "Type":"Writing",
+			     "Instruction" : {
+                    "Newbie":"<p>new task instruction noob</p>",                       
+                    "Developing":"<p>new task instruction middie</p>",                            
+                    "Flying":"<p>new task instruction expert </p>"
+                    },
+                 "Response":"response goes here"
+			 },
+			 {
+			     "Type":"Reading",
+			     "Instruction" : {
+                    "Newbie":"<p>reading instruction for newbies</p>",                       
+                    "Developing":"<p>reading instruction for middies</p>",                            
+                    "Flying":"<p>reading instruction for experts</p>"
+                    }
+			 },
+			 {
+			     "Type":"Selection",
+			     "Instruction" : {
+                    "Newbie":"<p>task1 instruction noob</p>",                       
+                    "Developing":"<p>task 1 instruction middie</p>",                            
+                    "Flying":"<p>task 1 instruction </p>"
+                    },
+                    "Choices":[
+                        "Choice 1",
+                        "Choice 2",
+                        "Choice 3"
+                    ]
+			 }
 			]
 		},
 		{
