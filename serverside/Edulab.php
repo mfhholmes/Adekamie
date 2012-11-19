@@ -7,7 +7,8 @@
  *
  * If you are using Composer, you can skip this step.
  */
-require 'Slim/Slim.php';
+require '/Slim/Slim/Slim.php';
+require '/Adekamie_general.php';
 
 \Slim\Slim::registerAutoloader();
 
@@ -31,7 +32,8 @@ $app = new \Slim\Slim();
  */
 
 // GET route
-$app->get('/', function () {
+
+$app->get('/testpage', function () {
     $template = <<<EOT
 <!DOCTYPE html>
     <html>
@@ -132,6 +134,29 @@ $app->get('/hello/:name', function ($name) {
     echo "Hello, $name";
 });
 
+$app->get('/lesson/:name', function ($name) use ($app) {
+    $filename= "./Data/Json/".cleanFileRef($name).".json";
+    if(file_exists($filename))
+    {
+        $content = file_get_contents($filename);
+    }
+    else
+    {
+        $content= '{"error":"file '.$filename.' not found"}';
+    }
+    try
+    {
+        $answr = $app->response();
+        $answr['Content-Type'] = 'application/json';
+        $answr['X-Powered-By'] = 'BrightSparksLabs';
+        $answr->body($content);
+    }
+    catch(Exception $e)
+    {
+        echo $e->getMessage();
+    }
+    
+});
 // POST route
 $app->post('/post', function () {
     echo 'This is a POST route';
@@ -147,6 +172,9 @@ $app->delete('/delete', function () {
     echo 'This is a DELETE route';
 });
 
+$app->notFound(function ()  {
+    echo 'your route is not found! rar!';
+});
 /**
  * Step 4: Run the Slim application
  *
@@ -154,3 +182,4 @@ $app->delete('/delete', function () {
  * and returns the HTTP response to the HTTP client.
  */
 $app->run();
+?>
