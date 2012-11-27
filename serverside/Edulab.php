@@ -1,4 +1,5 @@
 <?php
+namespace BrightSparksLabs\Adekamie;
 /**
  * Step 1: Require the Slim Framework
  *
@@ -9,6 +10,7 @@
  */
 require '/Slim/Slim/Slim.php';
 require '/Adekamie_general.php';
+
 
 \Slim\Slim::registerAutoloader();
 
@@ -135,6 +137,8 @@ $app->get('/hello/:name', function ($name) {
 });
 
 $app->get('/lesson/:name', function ($name) use ($app) {
+    //TODO: confirm that the user is authorised for this lesson
+    //TODO: don't return the default file, but return the user's existing file (or make one)
     $filename= "./Data/Json/".cleanFileRef($name).".json";
     if(file_exists($filename))
     {
@@ -158,8 +162,10 @@ $app->get('/lesson/:name', function ($name) use ($app) {
     
 });
 // POST route
-$app->post('/post', function () {
-    echo 'This is a POST route';
+$app->post('/lesson/:name', function ($name) use ($app) {
+    //TODO: determine the user id and authorisation
+    //TODO: check if the user already has a file for this lesson
+    //TODO: move the existing file to history and add this one
 });
 
 // PUT route
