@@ -2,6 +2,7 @@
     "Reference": "Root",
     "Type": "Container",
     "Title": "Topic-based Essay",
+    "SamplesFile":"essay_samples",
     "SkillLevels": [
         {
             "Name": "Newbie",

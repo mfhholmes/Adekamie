@@ -1,0 +1,10 @@
+{
+    "samplesList":[
+        {
+            "name":"Science magazine",
+            "title":"Opens the Science samples magazine",
+            "link":"http://gobrad.wix.com/samples-science",
+            "icon":"data/Samples.png"
+        }
+    ]
+}

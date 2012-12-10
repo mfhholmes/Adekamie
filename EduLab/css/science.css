@@ -1,0 +1,986 @@
+@import url('http://fonts.googleapis.com/css?family=PT+Sans');
+
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html{
+	height:100%;
+	width:100%;
+}
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ---------- home page ---------- */
+
+.logo{
+	font-size:2.2em;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#039;
+	text-align:center;
+	padding:0px;	
+}
+
+.lessons{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.4em;
+	font-weight:bold;
+	width:40%;
+	border:1px solid #999;
+	background:#eee;
+	text-align:center;
+	padding:22px;
+	border-radius:4px;
+	color:#333;
+	margin:0px auto;
+}
+
+.lesson{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1em;
+	font-weight:bold;
+	border-left:1px solid #999;
+	border-top:1px solid #999;
+	border-right:1px solid #666;
+	border-bottom:1px solid #666;
+	background:#CCC;
+	text-align:center;
+	padding:12px;
+	margin:12px;
+	border-radius:4px;
+	color:#666;
+}
+
+.lesson:hover{
+	border-left:1px solid #999;
+	border-top:1px solid #999;
+	border-right:1px solid #666;
+	border-bottom:1px solid #666;
+	background:#999;
+	text-align:center;
+	padding:12px;
+	margin:12px;
+	border-radius:4px;
+	color:#EEE;
+	cursor:pointer;
+}
+
+/* ------------- lesson page ------------- */
+
+
+body{
+	position:relative;
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+	background-image:url('../img/science/science_background.png');
+	background-size:cover;
+}
+.headerLogo{
+	position:absolute;
+	right:0px;
+	top:0px;
+	height:50px;
+	width:220px;
+	margin:0;
+	padding:0;
+	background-image:url('../img/science/LogoHeader.png');
+	background-repeat:no-repeat;
+	font-size: 0px;
+}
+
+.lessonHeader{
+	font-family:'Numans',Arial, Helvetica, sans-serif;
+	font-size:2.1em;
+	position:absolute;
+	left:0;
+	top:0;
+	height:50px;
+	vertical-align:middle;
+	display:none;
+}
+#container{
+	position:absolute;
+	border:0;
+	padding:0;
+	border:0;
+	left:0%;
+	width:100%;
+	top:75px;
+	z-index:100;
+}
+#header{
+	width:100%;
+	height:75px;
+	background-image:url('../img/science/HeaderBackground.png');
+	background-repeat:repeat-x;
+	margin:0;
+	padding:0;
+}
+
+/*********menu*********/
+#mainMenu{
+	position:absolute;
+	top:50px;
+	margin-top:-1px;
+	height:25px;
+	width:100%;
+	left:0px;
+	z-index:200;
+}
+.menuIcon{
+	cursor:pointer;
+	display:block;
+}
+#mainMenu .menuIcon{
+	float:right;
+	margin-left:10px;
+	padding:0px;
+	width:25px;
+	height:25px;
+	background-size:contain;
+}
+#Exit{
+	content:url('../img/science/IconExit.png');
+	background-image:url('../img/science/IconExit.png');
+}
+#Save{
+	content:url('../img/science/IconSave.png');
+	background-image:url('../img/science/IconSave.png');
+}
+#Samples{
+	content:url('../img/science/IconSamples.png');
+	background-image:url('../img/science/IconSamples.png');
+}
+#Settings{
+	content:url('../img/science/IconSetting.png');
+	background-image:url('../img/science/IconSetting.png');
+}
+.MessageNotLit{
+	content:url('../img/science/IconMessage.png');
+	background-image:url('../img/science/IconMessage.png');
+}
+.MessageLit{
+	content:url('../img/science/IconMessageLit.png');
+	background-image:url('../img/science/IconMessageLit.png');	
+}
+#Reference{
+	content:url('../img/science/IconRef.png');
+	background-image:url('../img/science/IconRef.png');
+}
+
+/********** left menu *******/
+#leftmenu{
+	position:absolute;
+	top:75px;
+	left:0px;
+	z-index:200;
+	width:32px;
+	border:0px;
+	margin:0;
+	padding:0;
+	border:0;
+}
+#Lesson{
+	content:url('../img/science/SidebarArrow.png');
+	background-image:url('../img/science/SidebarArrow.png');
+	background-size:contain;
+	width:32px;
+	height:28px;
+	box-sizing:border-box;
+}
+#Activity{
+	content:url('../img/science/IconActivity.png');
+	background-image:url('../img/science/IconActivity.png');
+	background-size:contain;
+	width:32px;
+	height:32px;
+	box-sizing:border-box;
+}
+/**********Skills Menu********/
+#skillsLevelList{
+	position:absolute;
+	top:50px;
+	height:25px;
+	left:20%;
+	z-index:300;
+}
+.skillLevelIcon{
+	position:relative;
+	height:100%;
+	margin:0px;
+	padding:0;
+	cursor:pointer;
+}
+
+/**********Task list *********/
+#tasklist{
+	position:absolute;
+	margin-left:0px;
+	left:32px;
+	padding:10px;
+	top:75px;
+	z-index:200;
+	margin:0;
+	padding:0;
+	right:80%;
+}
+.taskListItem+.taskListItem{
+	left:0px;
+	background-color:black;
+	font-family: 'PT Sans', sans-serif;
+	font-size:1em;
+	color:white;
+	list-style-type:none;
+	cursor:pointer;
+}
+.taskListItem+.taskListItem:hover{
+	background-image:url('../img/science/taskfirsthighlight.png');
+	background-position:right;
+	background-repeat:no-repeat;
+}
+.taskListItem:first-child{
+	background-image:url('../img/science/taskfirstbackground.png');
+	left:0px;
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.1em;
+	color:white;
+	list-style-type:none;
+	border:0;
+	height:25px;
+}
+.taskListItem{
+	padding-right:25px;
+	padding-top:1px;
+	padding-bottom:2px;
+}
+.taskListMaxIcon{
+	height:90%;
+	top:5%;
+	right:5px;
+	width:1em;
+}
+.taskListComplete{
+	height:1em;
+	width:1em;
+	display:inline;
+}
+.indent0{
+	padding-left:0px;
+}
+.indent1{
+	padding-left:5px;
+}
+.indent2{
+	padding-left:25px;
+}
+.indent3{
+	padding-left:50px;
+}
+.indent4{
+	padding-left:60px;
+}
+
+
+/***********Task Boxes*******/
+.taskboxTitle{
+	width:100%;
+	background-color:#B0B0B0;
+	padding:0px;
+	text-align:center;
+	font-size:1.5em;
+	font-family: 'PT Sans', sans-serif;
+	color:White;
+	margin:0px;
+	opacity:1;
+}
+.task {
+	font-family: 'PT Sans', sans-serif;
+	margin: 10px;
+	padding:0px;
+	font-size:0.75em;
+	min-width:70px;
+	min-height:40px;
+	z-index:300;
+	background-color:#F0F0F0;
+	width:25%;
+	overflow:hidden;
+	left:30%;
+	box-shadow: 5px 5px 10px #A0A0A0;
+	opacity:0.90;
+}
+.taskboxContent{
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.2em;
+	margin:10px;
+	width:90%;
+	left:5%;
+}
+.taskboxEdit{
+	font-size:1.2em;
+	font-family: 'PT Sans', sans-serif;
+	margin:10px;
+	width:90%;
+	left:5%;
+	height:100%;
+}
+.taskBoxExitIcon{
+	position:absolute;
+	right:2px;
+	top:4px;
+	width:15px;
+	height:15px;
+	content:url('../img/science/taskpanelclose.png');
+	background-image:url('../img/science/taskpanelclose.png');
+	display: block;
+	background-size:contain;
+	cursor:pointer;
+	box-sizing:border-box;
+}
+.taskBoxMaxIcon{
+	position:absolute;
+	right:25px;
+	top:2px;
+	width:1em;
+	height:1em;
+}
+
+/***********task panel*********/
+.taskPanel{
+	left:20%;
+	top:75px;
+	position:absolute;
+	box-shadow: 5px 5px 10px #A0A0A0;
+	z-index:200;
+	display:none;
+	font-family: 'PT Sans', sans-serif;
+	background-color:White;
+	opacity:0.90;
+}
+.taskPanelWide{
+	width:60%;
+}
+.taskPanelNormal{
+	width:35%;
+}
+.taskPanelThin{
+	width:20%;
+}
+.taskPanelExitIcon{
+	position:absolute;
+	height:16px;
+	width:16px;
+	top:5px;
+	right:5px;
+	content:url('../img/science/taskpanelclose.png');
+	background-image:url('../img/science/taskpanelclose.png');
+	background-size:cover;
+	background-repeat:no-repeat;
+	cursor:pointer;
+	box-shadow: 3px 3px 4px #A0A0A0;
+	box-sizing:border-box;
+}
+
+#taskPanelContainer{	
+	padding:0px 10px 10px 10px;
+	margin:5px 10px 10px 10px;
+	border:none;
+}
+.taskPanelTitle{
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.6em;
+	text-align:left;
+	background-color:White;
+	color:#00A8DC;
+}
+.taskPanelInstruction{
+	position:relative;
+	width:100%;
+	padding-bottom:5px;
+	color:#404040;
+	line-height: 1.2em;
+	font-size:0.9em;
+}
+.taskPanelInstruction p{
+	margin-bottom:0.5em;
+}
+.taskPanelInstruction p:first-child{
+	color:DarkOrange;
+	font-size:1em;
+}
+.instructionImage{
+	position:relative;
+	left:25%;
+	width:50%;
+	height:auto;
+}
+.taskPanelEntry{
+	position:relative;
+	display:block;
+	width:100%;
+	height:5em;
+	font-family: 'PT Sans', sans-serif;
+	color:Gray;
+	font-size:1.1em;
+	box-sizing:border-box;
+	margin:0px;
+	padding:0px;
+}
+.taskPanelEntry:focus{
+	color:Black;
+}
+.taskPanelAccept{
+	float:right;
+	display:block;
+	font-family: 'PT Sans', sans-serif;
+	font-size:1em;
+	margin-top:10px;
+	background-color:#00A8DC;
+	color:white;
+	border:0;
+	box-shadow:2px 2px 5px #404040; 
+	height:25px;
+	vertical-align:middle;
+	cursor:pointer;
+	padding-left:1em;
+	padding-right:1em;
+	margin-bottom:1em;
+}
+.taskPanelReviewItem{
+	position:relative;
+	width:90%;
+	left:5%;
+	top:5px;
+	font-family: 'PT Sans', sans-serif;
+}
+.taskPanelReviewEdit{
+	position:relative;
+	width:90%;
+	left:5%;
+	top:5px;
+	font-family: 'PT Sans', sans-serif;
+}
+.writingTaskInstruction{
+}
+.selectChoice{
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.1em;
+	margin-left:10%;
+}
+.flyOutPanel{
+	left:20%;
+	top:75px;
+	width:30%;
+	position:absolute;
+	box-shadow: 5px 5px 10px #A0A0A0;
+	z-index:200;
+	display:none;
+	font-family: 'PT Sans', sans-serif;
+	background-color:White;
+	opacity:0.90;
+}
+.flyOutSelectChoicesContainer{
+	position:absolute;
+	left:50%;
+	top:75px;
+	width:40%;
+	box-shadow: 5px 5px 10px #A0A0A0;
+	z-index:200;
+	background-color:white;
+	padding-left:20px;
+	padding-right:10px;
+	max-height:85%;
+	overflow-y:scroll;
+}
+.flyOutChoice{
+	font-family: 'PT Sans', sans-serif;
+	font-size:0.8em;
+	padding-left:10px;
+}
+.flyOutButton{
+	font-family: 'PT Sans', sans-serif;
+	font-size:1em;
+	margin-top:10px;
+	background-color:#00A8DC;
+	color:white;
+	border:0;
+	box-shadow:2px 2px 5px #404040; 
+	height:25px;
+	vertical-align:middle;
+	cursor:pointer;
+	padding-left:1em;
+	padding-right:1em;
+}
+.flyOutClosed{
+	width:0;
+	display:none;
+}
+.flyOutOpen{
+	width:25%;
+	display:block;
+}
+/***********Reference********/
+#reference{
+	position:absolute;
+	right:0px;
+	top:75px;
+	z-index:300;
+	background-color:White;
+	box-shadow:5px 5px 15px #808080;
+	font-family: 'PT Sans', sans-serif;
+}
+#reference h2{
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.6em;
+	text-align:left;
+	background-color:#00A8DC;
+	color:White;
+	width:100%;
+	padding-left:5%;
+	padding-right:10%;
+	border:0;
+	text-transform:capitalize;
+	margin:0;
+}
+.reference-open{
+	width:25%;
+}
+#refContainer{
+	position:relative;
+	overflow:hidden;
+}
+.refItem{
+	position:relative;
+	font-family: 'PT Sans', sans-serif;
+	width:100%;
+	color:#00A8DC;
+	margin:0;
+	padding:0;
+	border:0;
+	box-sizing:border-box;
+}
+#refHeader{
+	background-color:#404040;
+}
+.searchBox{
+	position:relative;
+	vertical-align:middle;
+	text-align: left;
+	border-radius:12px;
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.2em;
+	width:75%;
+	left:5%;
+	margin-bottom:10px;
+	margin-top:10px;
+	padding-left:12px;
+}
+.searchIcon{
+	position:relative;
+	height:25px;
+	width:25px;
+	left:25px;
+}
+.refLabel{
+	position:relative;
+	background-image:url('../img/science/buttonback.png');
+	background-size:contain;
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.1em;
+	line-height:2.5em;
+	vertical-align:middle;
+	padding-left:15%;
+	cursor:pointer;
+	border:0;
+	margin:0;
+	box-sizing:border-box;
+}
+.refIconContainer{
+	height:1em;
+	position:absolute;
+	top:0.5em;
+	left:5%;
+	margin:0;
+	box-sizing:border-box;
+	padding:0;
+}
+.refIcon{
+	vertical-align:middle;
+	height:1.5em;
+	width:auto;
+	margin:0;
+	padding:0;
+}
+.refContent{
+	width:100%;
+	padding-right:10%;
+	padding-left:5%;
+	font-size:0.9em;
+	color:White;
+	background-color:#505050;
+	box-sizing:border-box;
+}
+.refText{
+	margin:0;
+	padding:0;
+	border:0;
+	box-sizing:border-box;
+}
+.refContent p{
+	margin:0 0.5em 0 0;
+	padding:0;
+	border:0;
+}
+/***********Samples**********/
+#samples{
+	position:absolute;
+	right:0px;
+	top:75px;
+	z-index:300;
+	background-color:White;
+	padding-bottom:10px;
+	box-shadow:5px 5px 15px #808080;
+	font-family: 'PT Sans', sans-serif;
+}
+.samples-open{
+	width:25%;
+}
+#samplesContainer{
+	position:absolute;
+	top:0px;
+}
+#samplesContainer h2{
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.6em;
+	text-align:left;
+	background-color:#00A8DC;
+	color:White;
+	width:100%;
+	padding-left:5%;
+	padding-right:10%;
+	border:0;
+	text-transform:capitalize;
+	margin:0;
+}
+.sampleItem{
+	position:relative;
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.1em;
+	line-height:2.5em;
+	width:100%;
+	background-image:url('../img/science/buttonback.png');
+	background-size:contain;
+	color:#00A8DC;
+	cursor:pointer;
+	margin:0;
+	padding:0;
+	border:0;
+	box-sizing:border-box;
+}
+.sampleIcon{
+	height:2em;
+	width:auto;
+	margin-left:5%;
+	padding:0;
+	border:0;
+	box-sizing:border-box;
+}
+.sampleText{
+	width:100%;
+	vertical-align:middle;
+	text-align:center;
+	padding-left:5%;
+}
+.sampleText:hover{
+	color:White;
+}
+
+.sampleSkillIcon{
+	position:relative;
+	width:10%;
+	height:auto;	
+}
+
+/**********Messages / Hints******/
+#hintList{
+	position:absolute;
+	z-index:500;
+	top:75px;
+	right:0;
+	width:25%;
+	box-shadow: 5px 5px 10px #A0A0A0;
+	background:White;
+	opacity:0.9;
+	box-sizing:border-box;
+}
+#hintList h2{
+	font-family: 'PT Sans', sans-serif;
+	font-size:1.6em;
+	text-align:left;
+	background-color:#00A8DC;
+	color:White;
+	width:100%;
+	padding-left:5%;
+	padding-right:10%;
+	border:0;
+	text-transform:capitalize;
+	margin:0;
+}
+.hint{
+	font-family: 'PT Sans', sans-serif;
+	font-size:1em;	
+	padding-left:5%;
+	padding-right:5%;
+	background-color:#404040;
+	color:#00A8DC;
+	border-top:1px #505050 solid;
+}
+.hint:nth-child(odd){
+	color:White;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

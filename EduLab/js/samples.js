@@ -1,49 +1,15 @@
-samplesModel={
-    "samplesList":[
-        {
-            "name":"Full magazine",
-            "title":"Opens the full Samples magazine",
-            "link":"http://gobrad.wix.com/samplesmag-edition1#!home/mainPage",
-            "icon":"data/Samples.png"
-        },
-        {
-            "name":"Snowboarding",
-            "title":"Are you a thrillseeker? Read all about Snowboarding here!",
-            "link":"http://gobrad.wix.com/samplesmag-edition1#!sbowboarding/cvh5",
-            "icon":"data/Samples.png"
-        },
-        {
-            "name":"Social Media",
-            "title":"Are you a Facebook junkie? Essays for and against social media here.",
-            "link":"http://gobrad.wix.com/samplesmag-edition1#!social-media/c1va9",
-            "icon":"data/Samples.png"
-        },
-        {
-            "name":"Year 9 naughtiness",
-            "title":"Are year nines the naughtiest year in your school?",
-            "link":"http://gobrad.wix.com/samplesmag-edition1#!naughty-nines/cvrh",
-            "icon":"data/Samples.png"
-        },
-        {
-            "name":"Body Image",
-            "title":"Have you been teased about the way you look?",
-            "link":"http://gobrad.wix.com/samplesmag-edition1#!teenage-girls/c1ka7",
-            "icon":"data/Samples.png"
-        },
-        {
-            "name":"What teachers think",
-            "title":"Advice on how to improve your essay-writing skills.",
-            "link":"http://gobrad.wix.com/samplesmag-edition1#!teachers-thoughts/c1h9d",
-            "icon":"data/Samples.png"
-        },
-    ]
-};
-
-function addSamples()
+function addSamples(samplesFile)
 {
-    
-	samples = $("#samplesContainer");
-	$("#samples").width(0).hide().data("status","closed");
-	ko.applyBindings(samplesModel,samples.get(0));
+        samplesURL = "./data/" + samplesFile + ".json";
+        $.getJSON(samplesURL,function(data){
+            samples = $("#samplesContainer");
+            $("#samples").width(0).hide().data("status","closed");
+            ko.applyBindings(data,samples.get(0));            
+        }).error(function(XMLHttpRequest, textStatus, errorThrown){
+            samples = $("#samplesContainer");
+            samples.append("<p>Samples " + samplesURL + " unable to be fetched</p>");
+            samples.append("<p>Error reported as: " + errorThrown + "</p>");
+            samples.append("<p>Text Status is: " + textStatus + "</p>");
+        });
 }
 

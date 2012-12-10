@@ -17,7 +17,7 @@ function start(){
 }
 function parseData(data){
 	lesson.loadData(data);
-    addSamples();
+    addSamples(lesson.samplesFile);
     addReferenceText();
     try{
        ko.applyBindings(lesson);

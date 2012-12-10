@@ -27,6 +27,7 @@ function lesson_view_model() {
 	self.loadData = function(lessonData){
 		// handles loading the data into the model
 		self.rawData = lessonData;
+                self.samplesFile = lessonData.SamplesFile;
         // skill levels
         for(var i=0;i< lessonData.SkillLevels.length;i++){
             var skill = lessonData.SkillLevels[i];
@@ -242,7 +243,7 @@ function task_reading(ind,ref,ttl,instr,nav){
 	    container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
 	    container.append("<img class='taskPanelExitIcon' onclick='lesson.clearCurrentTask();'/>");
 	    container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
-	    container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
+	    container.append("<input type='button' value='Understood' class='taskPanelAccept' data-bind='click:accept'/>");
 	    panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
 	    container.css("width:"+panel.css("width"));
 	    //set the bindings to this task
@@ -597,22 +598,14 @@ function task_flyOutSelection(ind, ref, ttl, instr, resp, choices, nav){
         panel.attr("class","taskPanel");
         panel.hide("slide",250);
     };  
-    self.taskBoxClick = function(){
-        /*
-        content = $('#taskBox'+self.index);
-        if(content.length != 1){
-            // problem: not a single taskBox
-            console.debug('taskBox selector returned ' + content.length + ' items');
-            return;
-        }
+    self.taskBoxClick = function(){        
+        content = $('#taskBox'+self.index).first();
         editbox = $('#taskBoxEdit' + self.index);
         editbox.height(content.height());
         self.editing(true);
-        */
-       // no editing from the task box
     };
     self.reviewClick = function(){
-//        self.reviewing(true);
+        self.reviewing(true);
     }
 
     self.toJSON = function(jsonValues){
