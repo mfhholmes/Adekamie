@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>database test page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="./jquery-1.8.1.min.js"></script>
+        <script type="text/javascript">
+            function addName(name){
+                codedName = encodeURIComponent(name);
+                $.post("./testhost.php/testpost/"+codedName, function(data){
+                    // notify of success
+                    $("body").append("<div><p>Post Name: success..."+data.toString()+"</p></div>");
+                }).error(function(data, textStatus, errorThrown){
+                    // notify failure
+                    $("body").append("<div><p>Post Name: failed..."+textStatus+" : " + errorThrown + "</p></div>");
+                });
+            };
+            function getNames(name){
+                codedName = encodeURIComponent(name);
+                result = $.get("./testhost.php/testpost/"+codedName, function(data){
+                    $("body").append("<div><p>Get Name:</p>" + data+ "</div>");
+                }).error( function(data, textStatus, errorThrown){
+                    $("body").append("<div><p>Get Name: bad thing happened: "+textStatus+" : " + errorThrown + "</p></div>");
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <div>
+            <input id="nameText" type="text" value="write name here"/>
+            <br/>
+            <input type="button" value="post name" onclick="addName($('#nameText').val());"/>
+            <input type="button" value="get name" onclick="getNames($('#nameText').val());"/>
+        </div>
+    </body>
+</html>

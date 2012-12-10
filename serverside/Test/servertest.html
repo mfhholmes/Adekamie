@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adekamie server-side test page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="./jquery-1.8.1.min.js"></script>
+        <script type="text/javascript">
+            
+            function getLesson(lessonName, outputDivName){
+                var result = $.getJSON("../Index.php/lesson/"+lessonName,function (data){
+                        var title = data.Title;
+                        if(title)
+                            $("#"+outputDivName).text(data.Title + " loaded successfully!");
+                        else
+                            $("#"+outputDivName).text("data doesn't contain a Title field");
+                    })
+                    .error(function(){
+                        $("#"+outputDivName).text("ajax call errored!");
+                    });
+                return result;
+            }
+            
+            function generateId(){
+                var num = Math.random()*100000;
+                
+                return num;
+            }
+            function postLesson(lessonName, userId, outputDivName){
+                // make up some random json for the moment
+                var testdata = {"Title":"Test Post JSON","UserId":userId};
+                encodedUserId = encodeURIComponent(userId)
+                $.post("../Index.php/lesson/"+lessonName + "/" + encodedUserId, testdata, function(data, textStatus, jqXHR){
+                    $("#"+outputDivName).text("success: " + data.toString());
+                }).error(function (data, textStatus, errorThrown){
+                    $("#"+outputDivName).text("failure: " + errorThrown);
+                });
+            }
+            function getPostResult(lessonName, userId, outputDivName){
+                encodedLesson = encodeURIComponent(lessonName);
+                encodedUserId = encodeURIComponent(userId);
+                var result = $.getJSON("../Index.php/lesson/"+encodedLesson + "/" + encodedUserId,function (data){
+                        var title = data.Title +" lesson for user: " + data.UserId;
+                        if(data.Title)
+                            $("#"+outputDivName).text(title + " loaded successfully!");
+                        else
+                            $("#"+outputDivName).text("data doesn't contain a Title field");
+                    })
+                    .error(function(){
+                        $("#"+outputDivName).text("ajax call errored!");
+                    });
+                return result;
+                
+            }
+            function createLessonTemplate(templateName, outputDivName){
+                encodedName = encodeURIComponent(templateName);
+                $.post("../index.php/template/"+encodedName, function(data, textStatus, jqXHR){
+                    $("#"+outputDivName).text("success: " + data.toString());
+                }).error(function(data, textStatus, errorThrown){
+                    $("#"+outputDivName).text("failure: " + errorThrown);
+                });
+            }
+            function getLessonTemplates(outputDivName){
+                $.get("../index.php/templates", function(data, textStatus, jqXHR){
+                    $("#"+outputDivName).Text(data.toString);
+                }).error(function(data, textStatus, errorThrown){
+                    $("#"+outputDivName).text("failure: " + errorThrown);
+                });
+            }
+            function helloWorld(worldName, outputDivName){
+                encodedName = encodeURIComponent(worldName);
+                $.get("../index.php/hello/"+encodedName, function(data, textStatus, jqXHR){
+                    $("#"+outputDivName).text("success: " + data.toString());
+                }).error(function(data, textStatus, errorThrown){
+                    $("#"+outputDivName).text("failure: " + errorThrown);
+                });                
+            }
+        </script>
+    </head>
+    <body>
+        <p><a href="../../Edulab/index.html">Adekamie Client</a></p><br/>
+        <p><a href="dbtest.html">database test page</a></p>
+        <input type="button" value="Test server" onclick="helloWorld('World','testOut');"/>
+        <div id="testOut"></div>
+        <div id="ajax_json_load_test" style="border:2px black solid;margin:20px;">Adekamie server-side test<br/>
+            <input type="button" onclick="getLesson('edulab_skilled_lesson', 'skilledOut');" value="get skilled lesson"/>
+            <div id="skilledOut"></div>
+            <a href="Index.php/lesson/edulab_skilled_lesson">Direct link</a>
+        </div>
+        <div id="templates" style="border:2px black solid;margin:20px;">Templates<br/>
+            <input type="text" value="templateName" id="templateName"/>
+            <input type="button" onclick="createLessonTemplate($('#templateName').val(),'templateId');" value="add template name to database"/>
+            <div id="templateId"></div> <br/>
+            <input type="button" value="get template data" onclick="getLessonTemplates('templateList');"/><br/>
+            <div id="templateList"></div>
+        </div>
+        <div id="ajax_json_post_test" style="border:2px black solid;margin:20px;">Post test<br/>
+            <input type="button" onclick="$('#random_value').text(generateId());" value="1: generate random value as user id"/>
+            <div id="random_value"></div>
+            <input type="button" onclick="$('#post_result').text(postLesson('edulab_skilled_lesson', $('#random_value').text(),'post_result'));" value="2: post json to server"/>
+            <div id="post_result"></div>
+            <input type="button" onclick="$('#get_result').text(getPostResult('edulab_skilled_lesson', $('#random_value').text(),'get_result'));" value="3: get json back from server"/>
+            <div id="get_result"></div>
+            
+        </div>
+    </body>
+</html>

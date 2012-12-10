@@ -1,39 +1,98 @@
 <?php
 namespace BrightSparksLabs\Adekamie;
-/**
- * Step 1: Require the Slim Framework
- *
- * If you are not using Composer, you need to require the
- * Slim Framework and register its PSR-0 autoloader.
- *
- * If you are using Composer, you can skip this step.
- */
-require '/Slim/Slim/Slim.php';
-require '/Adekamie_general.php';
 
+require '../Slim/Slim/Slim.php';
+require '../Edulab/DataConnection.php';
 
 \Slim\Slim::registerAutoloader();
 
-/**
- * Step 2: Instantiate a Slim application
- *
- * This example instantiates a Slim application using
- * its default settings. However, you will usually configure
- * your Slim application now by passing an associative array
- * of setting names and values into the application constructor.
- */
 $app = new \Slim\Slim();
+$app->config('debug', true);
 
-/**
- * Step 3: Define the Slim application routes
- *
- * Here we define several Slim application routes that respond
- * to appropriate HTTP request methods. In this example, the second
- * argument for `Slim::get`, `Slim::post`, `Slim::put`, and `Slim::delete`
- * is an anonymous function.
- */
+$app->get('/hello/:name', function ($name) {
+    echo "Hello, $name";
+});
 
-// GET route
+$app->get('/testpage', function () {
+    phpinfo();
+});
+
+$app->post('/testpost/:name', function($name) {
+    try{
+        $mysqli = DataConnection::getConnection("localhost","test","testuser","testpassword");
+    }
+    catch(Exception $e){
+        $message = $e->getMessage();
+        echo "<p>error opening database connection: $message</p>";
+        return;
+    }
+    try{
+        $query = "CALL test.sp_addNewName('".$name."')";
+        $result = $mysqli->query($query);
+        //$result = $mysqli->query("INSERT INTO testtable (name) values('".$name."')");
+    }
+    catch(Exception $e)
+    {
+        $message = $e->getMessage();
+        echo "<p>error sending database query: $message</p>";
+        return;
+    }
+    try{
+        $answer = "bad thing happened";
+        //check if the query was successful
+        if ($result) {
+            $answer = "'{$name}' stored in database successfully";
+        }
+        else
+        {
+            $answer = "stored procedure failed to execute: ".$mysqli->error;
+        }
+        echo $answer;
+    }
+    catch(Exception $e)
+    {
+        $message = $e->getMessage();
+        echo "<p>error building results: $message</p>";
+        return;
+    }    
+});
+
+$app->get('/testpost/:name', function($name){
+    echo "<p>results for Get: $name";
+    try{
+        $mysqli = DataConnection::getConnection("localhost","test","testuser","testpassword");
+    }
+    catch(Exception $e){
+        $message = $e->getMessage();
+        echo "<p>error opening database connection: $message</p>";
+        return;
+    }
+    try{
+        $result = $mysqli->query("SELECT * FROM testtable WHERE name = '$name'");
+    }
+    catch(Exception $e)
+    {
+        $message = $e->getMessage();
+        echo "<p>error sending database query: $message</p>";
+        return;
+    }
+    try{
+        // send the results back as a html table
+        echo "<table class='resultsTable'>";
+        echo "<tr><th>ID</th><th>Name</th></tr>";
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr><td>".$row["testId"]."</td><td>".$row["name"]."</td></tr>";
+        }
+        echo '</table>';
+        $result->free();
+    }
+    catch(Exception $e)
+    {
+        $message = $e->getMessage();
+        echo "<p>error building results: $message</p>";
+        return;
+    }    
+});
 
 $app->get('/testpage', function () {
     $template = <<<EOT
@@ -132,60 +191,6 @@ EOT;
     echo $template;
 });
 
-$app->get('/hello/:name', function ($name) {
-    echo "Hello, $name";
-});
-
-$app->get('/lesson/:name', function ($name) use ($app) {
-    //TODO: confirm that the user is authorised for this lesson
-    //TODO: don't return the default file, but return the user's existing file (or make one)
-    $filename= "./Data/Json/".cleanFileRef($name).".json";
-    if(file_exists($filename))
-    {
-        $content = file_get_contents($filename);
-    }
-    else
-    {
-        $content= '{"error":"file '.$filename.' not found"}';
-    }
-    try
-    {
-        $answr = $app->response();
-        $answr['Content-Type'] = 'application/json';
-        $answr['X-Powered-By'] = 'BrightSparksLabs';
-        $answr->body($content);
-    }
-    catch(Exception $e)
-    {
-        echo $e->getMessage();
-    }
-    
-});
-// POST route
-$app->post('/lesson/:name', function ($name) use ($app) {
-    //TODO: determine the user id and authorisation
-    //TODO: check if the user already has a file for this lesson
-    //TODO: move the existing file to history and add this one
-});
-
-// PUT route
-$app->put('/put', function () {
-    echo 'This is a PUT route';
-});
-
-// DELETE route
-$app->delete('/delete', function () {
-    echo 'This is a DELETE route';
-});
-
-$app->notFound(function ()  {
-    echo 'your route is not found! rar!';
-});
-/**
- * Step 4: Run the Slim application
- *
- * This method should be called last. This executes the Slim application
- * and returns the HTTP response to the HTTP client.
- */
 $app->run();
+
 ?>
