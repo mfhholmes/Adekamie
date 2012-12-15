@@ -13,9 +13,9 @@ function task_flex_container(lesson, ind,task){
     self.title = task.Title;
     self.tasks = new ko.observableArray();
     self.response = "";
-    self.taskBoxVisible = ko.observable(task.TaskBoxVisible?true:false);
-    self.taskListVisible= ko.observable(task.TaskListVisible?true:false);
-    self.complete = ko.observable(task.Complete?true:false);
+    self.complete = ko.observable((task.Complete=="true")?true:false);
+    self.taskListVisible= ko.observable((task.TaskListVisible=="false")?false:true);
+    self.taskBoxVisible = ko.observable((task.TaskBoxVisible=="true")?true:false);
     self.TaskTypes= task.TaskTypes;
     self.selectedType = new ko.observable();
     self.skillText = task.Instruction;
@@ -91,4 +91,22 @@ function task_flex_container(lesson, ind,task){
             return;
         // create a new task here, using the factory methods refactored from the current mess
     }
+    self.toJSON = function(jsonValues){
+        var json = jsonValues;
+        json += "{";
+        json += '"Reference":"' + self.reference + '",';
+        json += '"Type":"Container",';
+        json += '"Title": "'+ self.title + '",';
+        json += JSON.stringify(self.TaskTypes) + ',';
+        json += '"Complete":"' + self.complete?'true':'false' + '",';
+        json += '"TaskListVisible":"' + self.taskListVisible?'true':'false' + '",';
+        if(typeof(self.skillLevels) != 'undefined'){
+            json+='"SkillLevels":' + JSON.stringify(self.skillLevels())+",";
+        }
+        json += '"Tasks":[';
+        $.each(self.tasks(),function(key,value){json = value().toJSON(json)+",";});
+        json=json.substring(0,json.length-1)+ "]}";
+        return json;
+    }
+
 }

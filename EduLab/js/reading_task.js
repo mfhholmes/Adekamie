@@ -12,9 +12,9 @@ function task_reading(lesson,ind,task){
     self.index = ind;
     self.reference = task.Reference;
     self.title = task.Title;
-    self.complete = ko.observable(task.Complete?true:false);
-    self.taskBoxVisible = ko.observable(task.taskBoxVisible?true:false);
-    self.taskListVisible= ko.observable(task.taskListVisible?true:false);
+    self.complete = ko.observable((task.Complete=="true")?true:false);
+    self.taskListVisible= ko.observable((task.TaskListVisible=="false")?false:true);
+    self.taskBoxVisible = ko.observable((task.TaskBoxVisible=="true")?true:false);
     self.response = "reading task";
     self.postLabel = task.PostLabel?task.PostLabel:"Understood";
     self.skillText = task.Instruction;
@@ -74,7 +74,9 @@ function task_reading(lesson,ind,task){
 	    json += '"Reference":"' + self.reference + '",';
         json += '"Type":"Reading",';
         json += '"Title": "'+ self.title + '",';
-        json +='"Instruction":' + JSON.stringify(self.skillText)+'';
+        json += '"Instruction":' + JSON.stringify(self.skillText)+',';
+        json += '"Complete":"' + (self.complete()?'true':'false') + '",';
+        json += '"TaskListVisible":"' + (self.taskListVisible()?"true":"false'") + '"';
         if(typeof(self.Hints)!='undefined')
             json +=',"Hints":' + JSON.stringify(self.Hints)+ '';
         //json +='"Navigation":' + JSON.stringify(self.navigation());

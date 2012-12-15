@@ -13,9 +13,9 @@ function task_unknown(lesson, ind, task){
     self.title = task.Title; 
     self.instruction = "unknown task";
     self.response=task.Response;
-    self.Complete = ko.observable(task.Complete?true:false);
-    self.taskBoxVisible = ko.observable(task.TaskBoxVisible?true:false);
-    self.taskListVisible= ko.observable(task.TaskListVisible?true:false);
+    self.complete = ko.observable((task.Complete=="true")?true:false);
+    self.taskListVisible= ko.observable((task.TaskListVisible=="false")?false:true);
+    self.taskBoxVisible = ko.observable((task.TaskBoxVisible=="true")?true:false);
 
     // behaviour
     self.accept = function (){

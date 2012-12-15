@@ -85,16 +85,19 @@ function lesson_view_model() {
     self.toJSON = function(){
         var json = "";
         json += "{";
-        json += JSON.stringify(self.metaData);
+        json += '"Lesson":' + JSON.stringify(self.rawData.Lesson)+',';
+        json += '"MetaData":' + JSON.stringify(self.metaData)+',';
         json += '"SamplesFile":"'+self.samplesFile+'",';
         if(self.skillLevels){
-            json+=',"SkillLevels":[';
+            json+='"SkillLevels":[';
             $.each(self.skillLevels(),function(key,value){json += '{"Name":"' + value.Name + '","Image":"' + value.Image + '"},';});
             json = json.substring(0,json.length-1) + '],';
         }
-        json +='"TaskTree":{';
-        $.each(self.tasks(),function(key,value){json = value().toJSON(json)+",";});
-        json=json.substring(0,json.length-1)+ "}";
+        json += '"References":'+JSON.stringify(self.rawData.References)+",";
+        json +='"TaskTree":';
+        taskarray = self.tasks();
+        json = taskarray[0]().toJSON(json);
+        json+= "}";
         return json;  
     }
     self.registerPostLoadFunction = function(funcToCall){
@@ -154,8 +157,6 @@ function classifyTask(lesson, task, taskArray, indent){
     newtask.Hints = task.Hints;
     newtask.indent = indent;
     newtask.parentTask = null;
-    newtask.taskListVisible((indent <2))
-    newtask.taskBoxVisible= new ko.observable(false);
     newtask.editing = new ko.observable(false);
     newtask.editing.subscribe(function(newvalue){
         if(!newvalue){

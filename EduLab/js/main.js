@@ -16,7 +16,8 @@ function start(){
         if(window.Modernizr.localstorage){
             local = localStorage.getItem(src);
             if(local != null){
-                parseData(local);
+                localdata = JSON.parse(local);
+                parseData(localdata);
                 loaded = true;
             }
         }     

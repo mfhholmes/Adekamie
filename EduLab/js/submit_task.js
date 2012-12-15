@@ -13,9 +13,9 @@ function task_submit(lesson, ind, task){
     self.title = task.Title; 
     self.instruction = "submit task";
     self.response=task.Response;
-    self.complete = ko.observable(task.Complete?true:false);
-    self.taskBoxVisible = ko.observable(task.TaskBoxVisible?true:false);
-    self.taskListVisible= ko.observable(task.TaskListVisible?true:false);
+    self.complete = ko.observable((task.Complete=="true")?true:false);
+    self.taskListVisible= ko.observable((task.TaskListVisible=="false")?false:true);
+    self.taskBoxVisible = ko.observable((task.TaskBoxVisible=="true")?true:false);
 
     // behaviour
     self.accept = function (){
@@ -64,7 +64,7 @@ function task_submit(lesson, ind, task){
         json += '"Type":"Submit",';
         json += '"Title": "'+ self.title + '",';
         //json += '"Response":"' + self.response() + '",';
-        json +='"Instruction":"Unknown Task"';
+        json +='"Instruction":"Submit Task"';
         if(typeof(self.Hints)!='undefined')
             json +=',"Hints":' + JSON.stringify(self.Hints)+ '';
         //json +='"Navigation":' + JSON.stringify(self.navigation());

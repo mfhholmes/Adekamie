@@ -13,9 +13,9 @@ function task_flyOutSelection(lesson, ind, task){
     self.title = task.Title;
     self.choices = new ko.observableArray(task.Choices);
     self.response = new ko.observable(task.Response);
-    self.complete = new ko.observable(task.Complete?true:false);
-    self.taskBoxVisible = new ko.observable(task.TaskBoxVisible?true:false);
-    self.taskListVisible= new ko.observable(task.TaskListVisible?true:false);
+    self.complete = ko.observable((task.Complete=="true")?true:false);
+    self.taskListVisible= ko.observable((task.TaskListVisible=="false")?false:true);
+    self.taskBoxVisible = ko.observable((task.TaskBoxVisible=="true")?true:false);
     self.oldresponse= task.Response;
     self.skillText = task.Instruction;
     self.instruction = ko.computed(function(){
@@ -105,11 +105,12 @@ function task_flyOutSelection(lesson, ind, task){
         json += '"Title": "'+ self.title + '",';
         json += '"Response":"' + self.response() + '",';
         json += '"Choices":'+ JSON.stringify(self.choices()) + ",";
+        json += '"Complete":"' + (self.complete()?'true':'false') + '",';
+        json += '"TaskListVisible":"' + (self.taskListVisible()?"true":"false'") + '",';
+        json += '"TaskBoxVisible":"' + (self.taskBoxVisible()?'true':'false') + '",';
         json +='"Instruction":' + JSON.stringify(self.skillText)+'';
         if(typeof(self.Hints)!='undefined')
             json +=',"Hints":' + JSON.stringify(self.Hints)+ '';
-
-        //json +='"Navigation":' + JSON.stringify(self.navigation());
         json += "}";
         return json;
     }

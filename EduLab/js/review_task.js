@@ -12,9 +12,9 @@ function task_review(lesson, ind,task){
     self.title = task.Title;
     self.tasks = new ko.observableArray();
     self.response = "";
-    self.taskBoxVisible = ko.observable(task.TaskBoxVisible?true:false);
-    self.taskListVisible= ko.observable(task.TaskListVisible?true:false);
-    self.complete = ko.observable(task.Complete?true:false);
+    self.complete = ko.observable((task.Complete=="true")?true:false);
+    self.taskListVisible= ko.observable((task.TaskListVisible=="false")?false:true);
+    self.taskBoxVisible = ko.observable((task.TaskBoxVisible=="true")?true:false);
     self.reviewlist = ko.observableArray(task.ReviewList);
     self.originalList = task.ReviewList;
     self.instruction = "***bad instruction***";
@@ -74,11 +74,11 @@ function task_review(lesson, ind,task){
         json += '"Reference":"' + self.reference + '",';
         json += '"Type":"Review",';
         json += '"Title": "'+ self.title + '",';
-        json += '"ReviewList":'+ JSON.stringify(self.originalList) + "";
+        json += '"ReviewList":'+ JSON.stringify(self.originalList) + ",";
+        json += '"Complete":"' + (self.complete()?'true':'false') + '",';
+        json += '"TaskListVisible":"' + (self.taskListVisible()?"true":"false'") + '"';
         if(typeof(self.Hints)!='undefined')
             json +=',"Hints":' + JSON.stringify(self.Hints)+ '';
-
-        //json +='"Navigation":' + JSON.stringify(self.navigation());
         json += "}";
         return json;
     }
