@@ -1,0 +1,174 @@
+{
+    "Lesson":"Warpoetry - analaysis of WWI war poetry",
+    "MetaData":{
+        "Description":"An activity exploring the war poetry of WWI and encouraging students to relate their emotional reactions to it.",
+        "Author":"Brad Gobby",
+        "Author Contact":"email:Brad.Gobby@BrightSparksLabs.com",
+        "Copyright":"Bright Sparks Labs 2012",
+        "Licence":"Open",
+        "Target Audience":"12-15 English students"
+    },
+    "SamplesFile": "warpoem_samples",
+    "SkillLevels": [
+        {
+            "Name": "Newbie",
+            "Description":"Younger or less confident students who will respond better to less text",
+            "Image": "./data/skilled_newbie.png"
+        },
+        {
+            "Name": "Developing",
+            "Description":"Older or more advanced students who will cope with large text volumes",
+            "Image": "./data/skilled_developing.png"
+        },
+        {
+            "Name": "Flying",
+            "Description":"Students who will thrive on the challenge of fully-mature advanced text",
+            "Image": "./data/skilled_advanced.png"
+        }
+    ],
+    "References": [
+        {
+            "Name": "",
+            "Label": "",
+            "Icons": [
+                "./img/video.png"
+            ],
+            "SearchWords": [
+                ""
+            ],
+            "Content": ""
+        },
+        {
+            "Name": "",
+            "Label": "",
+            "Icons": [
+                "./img/text.png"
+            ],
+            "SearchWords": [
+                ""
+            ],
+            "Content": ""
+        }
+    ],
+    "TaskTree":{
+        "Reference": "Root",
+        "Type": "Container",
+        "Title": "War Poetry Activity",
+        "Tasks": [
+            {
+                "Reference": "Intro",
+                "Type": "Reading",
+                "Title": "Introduction",
+                "Instruction": {
+                    "Newbie": "<p>For this task you are a journalist charged with researching and reporting on what it was like to be a soldier during World War 1 (The Great War).</p><p>You have collected a number of artefacts to help you understand the experiences of and build a picture of World War 1. Work your way through each artefact by reading them and responding to the instructions.</p>",
+                    "Developing": "<p>For this task you are a journalist charged with researching and reporting on what it was like to be a soldier during World War 1 (The Great War).</p><p>You have collected a number of artefacts to help you understand the experiences of and build a picture of World War 1. Work your way through each artefact by reading them and responding to the instructions.</p>",
+                    "Flying": "<p>For this task you are a journalist charged with researching and reporting on what it was like to be a soldier during World War 1 (The Great War).</p><p>You have collected a number of artefacts to help you understand the experiences of and build a picture of World War 1. Work your way through each artefact by reading them and responding to the instructions.</p>"
+                },
+                "Hints": [
+                    {
+                        "event": "onEdit",
+                        "text": "Hello, I'm your messages. I will give you hints and msgs as you write. My icon will change when you have a message. Okay, time to get started.",
+                        "delay": "0"
+                    }
+                ]
+            },
+            {
+                "Reference": "The-Game",
+                "Type": "Writing",
+                "Title": "The Game",
+                "Instruction": {
+                    "Newbie": "<p><em>Who's for the Game?</em> was written by Jessie Pope with the purpose of getting men to war. It was published in 1916 in the UK newspaper, <em>The Daily Mail</em>.</p><div class='poem'><p class='poemTitle'>Who's for the Game?</p><p class='poemVerse'><span class='poemLine'>Who's for the game, the biggest that's played,<span><span class='poemLine'>The red crashing game of a fight?<span><span class='poemLine'>Who'll grip and tackle the job unafraid?<span><span class='poemLine'>And who thinks he'd rather sit tight?<span></p><p class='poemVerse'><span class='poemLine'>Who'll toe the line for the signal to 'Go!'?<span><span class='poemLine'>Who'll give his country a hand?<span><span class='poemLine'>Who wants a turn to himself in the show?<span><span class='poemLine'>And who wants a seat in the stand?<span></p><p class='poemVerse'><span class='poemLine'>Who knows it won't be a picnic (not much)<span><span class='poemLine'>Yet eagerly shoulders a gun?<span><span class='poemLine'>Who would much rather come back with a crutch<span><span class='poemLine'>Than lie low and be out of the fun?<span></p><p class='poemVerse'><span class='poemLine'>Come along, lads ( but you'll come on all right)<span><span class='poemLine'>For there's only one course to pursue,<span><span class='poemLine'>Your country is up to her neck in a fight,<span><span class='poemLine'>And she's looking and calling for you.<span></p></div><p>'The game' is war. Writing a poem where war is described as a game may persuade young people to enlist to be soldiers. Do you think this poem could be persuasive? Why?</p>",
+                    "Developing": "<p><em>Who's for the Game?</em> was written by Jessie Pope with the purpose of getting men to war. It was published in 1916 in the UK newspaper, <em>The Daily Mail</em>.</p><div class='poem'><p class='poemTitle'>Who's for the Game?</p><p class='poemVerse'><span class='poemLine'>Who's for the game, the biggest that's played,<span><span class='poemLine'>The red crashing game of a fight?<span><span class='poemLine'>Who'll grip and tackle the job unafraid?<span><span class='poemLine'>And who thinks he'd rather sit tight?<span></p><p class='poemVerse'><span class='poemLine'>Who'll toe the line for the signal to 'Go!'?<span><span class='poemLine'>Who'll give his country a hand?<span><span class='poemLine'>Who wants a turn to himself in the show?<span><span class='poemLine'>And who wants a seat in the stand?<span></p><p class='poemVerse'><span class='poemLine'>Who knows it won't be a picnic (not much)<span><span class='poemLine'>Yet eagerly shoulders a gun?<span><span class='poemLine'>Who would much rather come back with a crutch<span><span class='poemLine'>Than lie low and be out of the fun?<span></p><p class='poemVerse'><span class='poemLine'>Come along, lads ( but you'll come on all right)<span><span class='poemLine'>For there's only one course to pursue,<span><span class='poemLine'>Your country is up to her neck in a fight,<span><span class='poemLine'>And she's looking and calling for you.<span></p></div><p>'The game' is war. Writing a poem where war is described as a game may persuade young people to enlist to be soldiers. Do you think this poem could be persuasive? Why?</p></p>",
+                    "Flying": "<p><em>Who's for the Game?</em> was written by Jessie Pope with the purpose of getting men to war. It was published in 1916 in the UK newspaper, <em>The Daily Mail</em>.</p><div class='poem'><p class='poemTitle'>Who's for the Game?</p><p class='poemVerse'><span class='poemLine'>Who's for the game, the biggest that's played,<span><span class='poemLine'>The red crashing game of a fight?<span><span class='poemLine'>Who'll grip and tackle the job unafraid?<span><span class='poemLine'>And who thinks he'd rather sit tight?<span></p><p class='poemVerse'><span class='poemLine'>Who'll toe the line for the signal to 'Go!'?<span><span class='poemLine'>Who'll give his country a hand?<span><span class='poemLine'>Who wants a turn to himself in the show?<span><span class='poemLine'>And who wants a seat in the stand?<span></p><p class='poemVerse'><span class='poemLine'>Who knows it won't be a picnic (not much)<span><span class='poemLine'>Yet eagerly shoulders a gun?<span><span class='poemLine'>Who would much rather come back with a crutch<span><span class='poemLine'>Than lie low and be out of the fun?<span></p><p class='poemVerse'><span class='poemLine'>Come along, lads ( but you'll come on all right)<span><span class='poemLine'>For there's only one course to pursue,<span><span class='poemLine'>Your country is up to her neck in a fight,<span><span class='poemLine'>And she's looking and calling for you.<span></p></div><p>'The game' is war. Writing a poem where war is described as a game may persuade young people to enlist to be soldiers. Do you think this poem could be persuasive? Why?</p></p>"
+                },
+                "Response": ""
+            },
+            {
+                "Reference": "Propaganda",
+                "Type": "Writing",
+                "Title": "Propaganda",
+                "Instruction": {
+                    "Newbie": "<p>Posters were used to persuade people that it was their <em>duty</em> to fight for their country, to defend their country, and to do what was needed to protect and strengthen their country.</p><p>Look at these posters.</p><p>What do these posters, with their images and words, tell us about World War 1?</p>",
+                    "Developing": "<p>Posters were used to persuade people that it was their <em>duty</em> to fight for their country, to defend their country, and to do what was needed to protect and strengthen their country.</p><p>Look at these posters.</p><p>What do these posters, with their images and words, tell us about World War 1?</p>",
+                    "Flying": "<p>Posters were used to persuade people that it was their <em>duty</em> to fight for their country, to defend their country, and to do what was needed to protect and strengthen their country.</p><p>Look at these posters.</p><p>What do these posters, with their images and words, tell us about World War 1?</p>"
+                },
+                "Response": ""
+            },
+            {
+                "Reference": "Dulce",
+                "Type": "Writing",
+                "Title": "Dulce et Decorum",
+                "Instruction": {
+                    "Newbie": "<p><em>Dulce et Decorum Est</em> is the title of a poem written by Wilfred Owen written in 1917. it was originally drafted  as a personal letter to Jessie Pope.</p><p>The title is Latin and it means 'It is sweet and right'. The last line of the poem, <em>Dulce et decorum set Pro patria mori</em> translates 'It is sweet and right to die for your country'.</p><p>Put another way, it is wonderful and a great honour to fight and die for your country. But is this what the writer is saying?</p><p>Dulce et Decorum Est</p><p>Bent double, like old beggars under sacks,</p>Knock-kneed, coughing like hags, we cursed through sludge,</p>Till on the haunting flares we turned our backs</p>And towards our distant rest began to trudge.</p>Men marched asleep. Many had lost their boots</p>But limped on, blood-shod. All went lame; all blind;</p>Drunk with fatigue; deaf even to the hoots</p>Of tired, outstripped Five-Nines that dropped behind.</p><p></p><p>Gas! Gas! Quick, boys! Ð An ecstasy of fumbling,</p>Fitting the clumsy helmets just in time;</p>But someone still was yelling out and stumbling,</p>And flound'ring like a man in fire or lime. . .</p>Dim, through the misty panes and thick green light,</p>As under a green sea, I saw him drowning.</p><p></p><p>In all my dreams, before my helpless sight,</p>He plunges at me, guttering, choking, drowning.</p><p></p><p>If in some smothering dreams you too could pace</p>Behind the wagon that we flung him in,</p>And watch the white eyes writhing in his face,</p>His hanging face, like a devil's sick of sin;</p>If you could hear, at every jolt, the blood</p>Come gargling from the froth-corrupted lungs,</p>Obscene as cancer, bitter as the cud </p>Of vile, incurable sores on innocent tongues,</p>My friend, you would not tell with such high zest</p>To children ardent for some desperate glory,</p>The old Lie; Dulce et Decorum est</p>Pro patria mori.</p><p></p><p>The poem paints a striking image of a gas attack in the trenches. Choose a line or section of the poem and describe what images, thoughts and feelings it arouses for you.</p>",
+                    "Developing": "<p><em>Dulce et Decorum Est</em> is the title of a poem written by Wilfred Owen written in 1917. it was originally drafted  as a personal letter to Jessie Pope.</p><p>The title is Latin and it means 'It is sweet and right'. The last line of the poem, <em>Dulce et decorum set Pro patria mori</em> translates 'It is sweet and right to die for your country'.</p><p>Put another way, it is wonderful and a great honour to fight and die for your country. But is this what the writer is saying?</p><p>Dulce et Decorum Est</p><p>Bent double, like old beggars under sacks,</p>Knock-kneed, coughing like hags, we cursed through sludge,</p>Till on the haunting flares we turned our backs</p>And towards our distant rest began to trudge.</p>Men marched asleep. Many had lost their boots</p>But limped on, blood-shod. All went lame; all blind;</p>Drunk with fatigue; deaf even to the hoots</p>Of tired, outstripped Five-Nines that dropped behind.</p><p></p><p>Gas! Gas! Quick, boys! Ð An ecstasy of fumbling,</p>Fitting the clumsy helmets just in time;</p>But someone still was yelling out and stumbling,</p>And flound'ring like a man in fire or lime. . .</p>Dim, through the misty panes and thick green light,</p>As under a green sea, I saw him drowning.</p><p></p><p>In all my dreams, before my helpless sight,</p>He plunges at me, guttering, choking, drowning.</p><p></p><p>If in some smothering dreams you too could pace</p>Behind the wagon that we flung him in,</p>And watch the white eyes writhing in his face,</p>His hanging face, like a devil's sick of sin;</p>If you could hear, at every jolt, the blood</p>Come gargling from the froth-corrupted lungs,</p>Obscene as cancer, bitter as the cud </p>Of vile, incurable sores on innocent tongues,</p>My friend, you would not tell with such high zest</p>To children ardent for some desperate glory,</p>The old Lie; Dulce et Decorum est</p>Pro patria mori.</p><p></p><p>The poem paints a striking image of a gas attack in the trenches. Choose a line or section of the poem and describe what images, thoughts and feelings it arouses for you.</p>",
+                    "Flying": "<p><em>Dulce et Decorum Est</em> is the title of a poem written by Wilfred Owen written in 1917. it was originally drafted  as a personal letter to Jessie Pope.</p><p>The title is Latin and it means 'It is sweet and right'. The last line of the poem, <em>Dulce et decorum set Pro patria mori</em> translates 'It is sweet and right to die for your country'.</p><p>Put another way, it is wonderful and a great honour to fight and die for your country. But is this what the writer is saying?</p><p>Dulce et Decorum Est</p><p>Bent double, like old beggars under sacks,</p>Knock-kneed, coughing like hags, we cursed through sludge,</p>Till on the haunting flares we turned our backs</p>And towards our distant rest began to trudge.</p>Men marched asleep. Many had lost their boots</p>But limped on, blood-shod. All went lame; all blind;</p>Drunk with fatigue; deaf even to the hoots</p>Of tired, outstripped Five-Nines that dropped behind.</p><p></p><p>Gas! Gas! Quick, boys! Ð An ecstasy of fumbling,</p>Fitting the clumsy helmets just in time;</p>But someone still was yelling out and stumbling,</p>And flound'ring like a man in fire or lime. . .</p>Dim, through the misty panes and thick green light,</p>As under a green sea, I saw him drowning.</p><p></p><p>In all my dreams, before my helpless sight,</p>He plunges at me, guttering, choking, drowning.</p><p></p><p>If in some smothering dreams you too could pace</p>Behind the wagon that we flung him in,</p>And watch the white eyes writhing in his face,</p>His hanging face, like a devil's sick of sin;</p>If you could hear, at every jolt, the blood</p>Come gargling from the froth-corrupted lungs,</p>Obscene as cancer, bitter as the cud </p>Of vile, incurable sores on innocent tongues,</p>My friend, you would not tell with such high zest</p>To children ardent for some desperate glory,</p>The old Lie; Dulce et Decorum est</p>Pro patria mori.</p><p></p><p>The poem paints a striking image of a gas attack in the trenches. Choose a line or section of the poem and describe what images, thoughts and feelings it arouses for you.</p>"
+                },
+                "Response": "The lines are....This arouses in me.."
+            },
+            {
+                "Reference": "Letter",
+                "Type": "Writing",
+                "Title": "Letter",
+                "Instruction": {
+                    "Newbie": "<p>The following is a letter written to Susan Owen, his mother, on 8th October 1918.</p><p>It is 5 o'clock this Sunday Evening. You will be sitting at tea, I fear you are without news, and a little wonderingÉ</p><p>You will understand I could not write  (- when you think of us for days all but surrounded by the enemy. All one day (after the battle) we could not move from a small trench, though hour by hour the wounded were groaning just outside. Three stretcher-bearers who got up were hit, one after one. I had to order no one to show himself after that, but remembering my own duty, and remembering also my forefathers the agile Welshmen of the Mountains I scrambled out myself & felt an exhilaration in baffling the Machine Guns by quick bounds from cover to cover. After the shells we had been through, and the gas, bullets were like the gentle rain from heaven.</p>",
+                    "Developing": "<p>The following is a letter written to Susan Owen, his mother, on 8th October 1918.</p><p>It is 5 o'clock this Sunday Evening. You will be sitting at tea, I fear you are without news, and a little wonderingÉ</p><p>You will understand I could not write  (- when you think of us for days all but surrounded by the enemy. All one day (after the battle) we could not move from a small trench, though hour by hour the wounded were groaning just outside. Three stretcher-bearers who got up were hit, one after one. I had to order no one to show himself after that, but remembering my own duty, and remembering also my forefathers the agile Welshmen of the Mountains I scrambled out myself & felt an exhilaration in baffling the Machine Guns by quick bounds from cover to cover. After the shells we had been through, and the gas, bullets were like the gentle rain from heaven.</p>",
+                    "Flying": "<p>The following is a letter written to Susan Owen, his mother, on 8th October 1918.</p><p>It is 5 o'clock this Sunday Evening. You will be sitting at tea, I fear you are without news, and a little wonderingÉ</p><p>You will understand I could not write  (- when you think of us for days all but surrounded by the enemy. All one day (after the battle) we could not move from a small trench, though hour by hour the wounded were groaning just outside. Three stretcher-bearers who got up were hit, one after one. I had to order no one to show himself after that, but remembering my own duty, and remembering also my forefathers the agile Welshmen of the Mountains I scrambled out myself & felt an exhilaration in baffling the Machine Guns by quick bounds from cover to cover. After the shells we had been through, and the gas, bullets were like the gentle rain from heaven.</p>"
+                },
+                "Response": "The experiences of young people at the time can be described as:"
+            },
+            {
+                "Reference": "The-Soldier",
+                "Type": "Writing",
+                "Title": "The Soldier",
+                "Instruction": {
+                    "Newbie": "<p><em>The Soldier</em> is a poem written by Rupert Brooke in 1914.</p><p>The Soldier</p><p>If I should die, think only this of me:</p>That there's some corner of a foreign field</p>That is for ever England. There shall be</p>In that rich earth a richer dust concealed;</p>A dust whom England bore, shaped, made aware,</p>Gave, once, her flowers to love, her ways to roam,</p>A body of England's, breathing English air,</p>Washed by the rivers, blest by suns of home.</p><p></p><p>And think, this heart, all evil shed away,</p>A pulse in the eternal mind, no less</p>Gives somewhere back the thoughts by England given;</p>Her sights and sounds; dreams happy as her day;</p>And laughter, learnt of friends; and gentleness,</p>In hearts at peace, under an English heaven.</p><p></p><p>Compare the words and descriptions used in this poem to <em>Dulce et Decorum Est</em>. How does this different language reflect a different view of war?</p>",
+                    "Developing": "<p><em>The Soldier</em> is a poem written by Rupert Brooke in 1914.</p><p>The Soldier</p><p>If I should die, think only this of me:</p>That there's some corner of a foreign field</p>That is for ever England. There shall be</p>In that rich earth a richer dust concealed;</p>A dust whom England bore, shaped, made aware,</p>Gave, once, her flowers to love, her ways to roam,</p>A body of England's, breathing English air,</p>Washed by the rivers, blest by suns of home.</p><p></p><p>And think, this heart, all evil shed away,</p>A pulse in the eternal mind, no less</p>Gives somewhere back the thoughts by England given;</p>Her sights and sounds; dreams happy as her day;</p>And laughter, learnt of friends; and gentleness,</p>In hearts at peace, under an English heaven.</p><p></p><p>Compare the words and descriptions used in this poem to <em>Dulce et Decorum Est</em>. How does this different language reflect a different view of war?</p>",
+                    "Flying": "<p><em>The Soldier</em> is a poem written by Rupert Brooke in 1914.</p><p>The Soldier</p><p>If I should die, think only this of me:</p>That there's some corner of a foreign field</p>That is for ever England. There shall be</p>In that rich earth a richer dust concealed;</p>A dust whom England bore, shaped, made aware,</p>Gave, once, her flowers to love, her ways to roam,</p>A body of England's, breathing English air,</p>Washed by the rivers, blest by suns of home.</p><p></p><p>And think, this heart, all evil shed away,</p>A pulse in the eternal mind, no less</p>Gives somewhere back the thoughts by England given;</p>Her sights and sounds; dreams happy as her day;</p>And laughter, learnt of friends; and gentleness,</p>In hearts at peace, under an English heaven.</p><p></p><p>Compare the words and descriptions used in this poem to <em>Dulce et Decorum Est</em>. How does this different language reflect a different view of war?</p>"
+                },
+                "Response": ""
+            },
+            {
+                "Reference": "InMemoriam",
+                "Type": "Writing",
+                "Title": "In Memoriam",
+                "Instruction": {
+                    "Newbie": "<p>In Memoriam was written by Ewart Alan Mackintosh in response to the death of Private David Sutherland who was killed in action in the German Trench, May 16th 1916.</p><p>In Memoriam</p><p>So you were David's father,</p>And he was your only son,</p>And the new-cut peats are rotting</p>And the work is left undone,</p>Because of an old man weeping,</p>Just an old man in pain,</p>For David, his son David,</p>That will not come again.</p><p></p><p>Oh, the letters he wrote you,</p>And I can see them still,</p>Not a word of the fighting,</p>But just the sheep on the hill</p>And how you should get the crops in</p>Ere the year get stormier,</p>And the Bosches have got his body,</p>And I was his officer.</p><p></p><p>You were only David's father,</p>But I had fifty sons</p>When we went up in the evening</p>Under the arch of the guns,</p>And we came back at twilight -</p>O God! I heard them call</p>To me for help and pity</p>That could not help at all.</p><p></p><p>Oh, never will I forget you,</p>My men that trusted me,</p>More my sons than your fathers',</p>For they could only see</p>The little helpless babies</p>And the young men in their pride.</p>They could not see you dying,</p>And hold you while you died.</p><p></p><p>Happy and young and gallant,</p>They saw their first-born go,</p>But not the strong limbs broken</p>And the beautiful men brought low,</p>The piteous writhing bodies,</p>They screamed 'Don't leave me, sir',</p>For they were only your fathers</p>But I was your officer.</p><p>What are the experiences of war for those at home?</p>",
+                    "Developing": "<p>In Memoriam was written by Ewart Alan Mackintosh in response to the death of Private David Sutherland who was killed in action in the German Trench, May 16th 1916.</p><p>In Memoriam</p><p>So you were David's father,</p>And he was your only son,</p>And the new-cut peats are rotting</p>And the work is left undone,</p>Because of an old man weeping,</p>Just an old man in pain,</p>For David, his son David,</p>That will not come again.</p><p></p><p>Oh, the letters he wrote you,</p>And I can see them still,</p>Not a word of the fighting,</p>But just the sheep on the hill</p>And how you should get the crops in</p>Ere the year get stormier,</p>And the Bosches have got his body,</p>And I was his officer.</p><p></p><p>You were only David's father,</p>But I had fifty sons</p>When we went up in the evening</p>Under the arch of the guns,</p>And we came back at twilight -</p>O God! I heard them call</p>To me for help and pity</p>That could not help at all.</p><p></p><p>Oh, never will I forget you,</p>My men that trusted me,</p>More my sons than your fathers',</p>For they could only see</p>The little helpless babies</p>And the young men in their pride.</p>They could not see you dying,</p>And hold you while you died.</p><p></p><p>Happy and young and gallant,</p>They saw their first-born go,</p>But not the strong limbs broken</p>And the beautiful men brought low,</p>The piteous writhing bodies,</p>They screamed 'Don't leave me, sir',</p>For they were only your fathers</p>But I was your officer.</p><p>What are the experiences of war for those at home?</p>",
+                    "Flying": "<p>In Memoriam was written by Ewart Alan Mackintosh in response to the death of Private David Sutherland who was killed in action in the German Trench, May 16th 1916.</p><p>In Memoriam</p><p>So you were David's father,</p>And he was your only son,</p>And the new-cut peats are rotting</p>And the work is left undone,</p>Because of an old man weeping,</p>Just an old man in pain,</p>For David, his son David,</p>That will not come again.</p><p></p><p>Oh, the letters he wrote you,</p>And I can see them still,</p>Not a word of the fighting,</p>But just the sheep on the hill</p>And how you should get the crops in</p>Ere the year get stormier,</p>And the Bosches have got his body,</p>And I was his officer.</p><p></p><p>You were only David's father,</p>But I had fifty sons</p>When we went up in the evening</p>Under the arch of the guns,</p>And we came back at twilight -</p>O God! I heard them call</p>To me for help and pity</p>That could not help at all.</p><p></p><p>Oh, never will I forget you,</p>My men that trusted me,</p>More my sons than your fathers',</p>For they could only see</p>The little helpless babies</p>And the young men in their pride.</p>They could not see you dying,</p>And hold you while you died.</p><p></p><p>Happy and young and gallant,</p>They saw their first-born go,</p>But not the strong limbs broken</p>And the beautiful men brought low,</p>The piteous writhing bodies,</p>They screamed 'Don't leave me, sir',</p>For they were only your fathers</p>But I was your officer.</p><p>What are the experiences of war for those at home?</p>"
+                },
+                "Response": ""
+            },
+            {
+                "Reference": "Notes",
+                "Type": "Writing",
+                "Title": "Notes",
+                "Instruction": {
+                    "Newbie": "<p>Add any notes you would like to make about The Great War and war in general.</p>",
+                    "Developing": "<p>Add any notes you would like to make about The Great War and war in general.</p>",
+                    "Flying": "<p>Add any notes you would like to make about The Great War and war in general.</p>"
+                },
+                "Response": "Other notes:"
+            },
+            {
+                "Reference": "Review",
+                "Type": "Review",
+                "Title": "Review notes",
+                "ReviewList": [
+                    "The-Game",
+                    "Propaganda",
+                    "Dulce",
+                    "Letter",
+                    "The-Soldier",
+                    "InMemoriam",
+                    "Notes"
+                ]
+            },
+            {
+                "Reference": "Submit",
+                "Type": "Submit",
+                "Title": "Submit your notes",
+                "Destination": "email to teacher@myschool.com.au"
+            }
+        ]
+    }
+}

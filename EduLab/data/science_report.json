@@ -1,432 +1,312 @@
-{
-    "Reference": "Root",
-    "Type": "Container",
-    "Title": "Science Experiment",
-    "SamplesFile":"science_samples",
+{    
+    "Lesson":"Science Report",
+    "MetaData":{
+        "Description":"An assignment to report on a scientific experiment or series of experiments.",
+        "Author":"Brad Gobby",
+        "Author Contact":"email:Brad.Gobby@BrightSparksLabs.com",
+        "Copyright":"Bright Sparks Labs 2012",
+        "Licence":"Open",
+        "Target Audience":"12-15 English students"
+    },
+    "SamplesFile": "science_samples",
     "SkillLevels": [
         {
             "Name": "Newbie",
+            "Description":"Younger or less confident students who will respond better to less text",
             "Image": "./data/skilled_newbie.png"
         },
         {
             "Name": "Developing",
+            "Description":"Older or more advanced students who will cope with large text volumes",
             "Image": "./data/skilled_developing.png"
         },
         {
             "Name": "Flying",
+            "Description":"Students who will thrive on the challenge of fully-mature advanced text",
             "Image": "./data/skilled_advanced.png"
         }
     ],
-    "Tasks": [
-        {
-            "Reference": "Intro",
-            "Type": "Reading",
-            "Title": "Introduction",
-            "Instruction": {
-                "Newbie": "<p>Use the stars above to increase the level of detail of information provided for each step.</p><p>Science experiments help scientists understand the world. Science reports describe the key features of an experiment, including the results of the experiment. A science report should contain a number of key elements:<ul><li>a title;</li><li>sub-headings;</li><li>a hypothesis;</li><li>a description of <em>variables</em>;</li><li>a description of the experiment procedure;</li><li>observations and analysis;</li><li>findings or conclusion.</ul><p>Read example science reports <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>here</a>.</p>",
-                "Developing": "<p>The truth claims of science depend on the strength and rigour of scientific experiments. A science report documents key features of an experiment and reports the results.</p><p>There are a number of principles and practices that guide scientific experiments. A scientist should aim to:</p><ul><li>understand the topic of their experiment so they can know what is already known an what needs to be known;</li><li>use experiments to find out and test the relationship between two factors or variables, such as what happens to water (1) when heat (2) is added to it;</li><li>write a short and specific prediction about what they expect the results of the experiment will show;</li><li>ensure the instruments and procedures of the experiment accurately measure what they are intended to measure;</li><li>remove or control any factors that may influence the results of the experiment;</li><li>replicate their experiment multiple times;</li><li>conduct their experiments carefully;</li><li>write a clear report that reports on the procedures and findings of the experiment. It should be written clearly so that other scientists can replicate the experiment.</ul><p>Read example science reports <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>here</a>.</p>",
-                "Flying": "<p>The truth claims of science depend on the rigour, accuracy and reliability of scientific experiments. A science report documents key features of an experiment and reports the results, which others can use to evaluate your findings or to replicate the experiment.</p><p>A scientist should aim to:</p><ul><li>research the topic of the experiment prior to the experiment to identify what is already known and what needs to be known;</li><li>use experiments to test and determine the relationship between two factors or variables, such as what happens to water (1) when heat (2) is added to it;</li><li>write a short and specific prediction about what they expect the results of the experiment will show, such as <em>'If the temperature of water increases, then the water will vaporise'</em>;</li><li>be clear about what they want to know, observe and measure;</li><li>ensure the instruments and procedures of the experiment accurately measure what they are intended to measure;</li><li>remove or control any factors that may produce spurious or inaccurate results;</li><li>replicate their experiment multiple times;</li><li>write a clear report that reports on the procedures and findings of the experiment. It should be written clearly so that other scientists can replicate the experiment, like following a recipe.</ul><p>Read example science reports <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>here</a>.</p>"
+    "TaskTree":{
+        "Reference": "Root",
+        "Type": "Container",
+        "Title": "Science Experiment",
+        "Tasks": [
+            {
+                "Reference": "Intro",
+                "Type": "Reading",
+                "Title": "Introduction",
+                "Instruction": {
+                    "Newbie": "<p>Use the stars above to increase the level of detail of information provided for each step.</p><p>Science experiments help scientists understand the world. Science reports describe the key features of an experiment, including the results of the experiment. A science report should contain a number of key elements:<ul><li>a title;</li><li>sub-headings;</li><li>a hypothesis;</li><li>a description of <em>variables</em>;</li><li>a description of the experiment procedure;</li><li>observations and analysis;</li><li>findings or conclusion.</ul><p>Read example science reports <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>here</a>.</p>",
+                    "Developing": "<p>The truth claims of science depend on the strength and rigour of scientific experiments. A science report documents key features of an experiment and reports the results.</p><p>There are a number of principles and practices that guide scientific experiments. A scientist should aim to:</p><ul><li>understand the topic of their experiment so they can know what is already known an what needs to be known;</li><li>use experiments to find out and test the relationship between two factors or variables, such as what happens to water (1) when heat (2) is added to it;</li><li>write a short and specific prediction about what they expect the results of the experiment will show;</li><li>ensure the instruments and procedures of the experiment accurately measure what they are intended to measure;</li><li>remove or control any factors that may influence the results of the experiment;</li><li>replicate their experiment multiple times;</li><li>conduct their experiments carefully;</li><li>write a clear report that reports on the procedures and findings of the experiment. It should be written clearly so that other scientists can replicate the experiment.</ul><p>Read example science reports <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>here</a>.</p>",
+                    "Flying": "<p>The truth claims of science depend on the rigour, accuracy and reliability of scientific experiments. A science report documents key features of an experiment and reports the results, which others can use to evaluate your findings or to replicate the experiment.</p><p>A scientist should aim to:</p><ul><li>research the topic of the experiment prior to the experiment to identify what is already known and what needs to be known;</li><li>use experiments to test and determine the relationship between two factors or variables, such as what happens to water (1) when heat (2) is added to it;</li><li>write a short and specific prediction about what they expect the results of the experiment will show, such as <em>'If the temperature of water increases, then the water will vaporise'</em>;</li><li>be clear about what they want to know, observe and measure;</li><li>ensure the instruments and procedures of the experiment accurately measure what they are intended to measure;</li><li>remove or control any factors that may produce spurious or inaccurate results;</li><li>replicate their experiment multiple times;</li><li>write a clear report that reports on the procedures and findings of the experiment. It should be written clearly so that other scientists can replicate the experiment, like following a recipe.</ul><p>Read example science reports <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>here</a>.</p>"
+                },
+                "Hints": [
+                    {
+                        "event": "onEdit",
+                        "text": "Hello, I am your messages. I will give you hints and msgs as you write. My icon will change when you have a message. Also, use the star icons at the top to choose your level of difficulty as you work through each step. Okay, time to get started",
+                        "delay": "0"
+                    }
+                ]
             },
-            "Hints": [
-                {
-                    "event": "onEdit",
-                    "text": "Hello, I am your messages. I will give you hints and msgs as you write. My icon will change when you have a message. Also, use the star icons at the top to choose your level of difficulty as you work through each step. Okay, time to get started",
-                    "delay": "0"
-                }
-            ],
-            "Navigation": [
-                {
-                    "Ref": "Hypothesis",
-                    "Label": "Writing a hypothesis"
-                }
-            ]
-        },
-        {
-            "Reference": "Hypothesis",
-            "Type": "Writing",
-            "Title": "Hypothesis",
-            "Instruction": {
-                "Newbie": "<p>Before an experiment, you must write a <em>hypothesis</em>.</p><p>A <em>hypothesis</em> is a one sentence prediction of how you think one thing will be affected by another thing in your experiment.</p><p>Here is an example: <em>If the temperature of the tap water increases, then the time taken for the sugar to totally dissolve decreases</em>.</p><p>The hypothesis does not have to be correct. Your experiment will test whether the hypothesis is true or false. Here are some <a href='http://gobrad.wix.com/samples-science#!hypothesis/cvh5' target='_blank'>examples</a>.</p><p>Write your hypothesis below.</p>",
-                "Developing": "<p>Before conducting an experiment, you must begin by writing a <em>hypothesis</em>.</p><p>A <em>hypothesis</em> is a one sentence statement or proposition that predicts the relationship between two elements, variables or factors. A <em>hypothesis</em> describes how one thing will be affected by another thing.</p><p>Here is an example: <em>If the temperature of the tap water increases, then the time taken for the sugar to totally dissolve decreases</em>. This experiment tests how the temperature of water affects the time taken for sugar to dissolve.</p><p>The hypothesis is not a question. It should describe what you expect to happen during an experiment. The hypothesis does not have to be correct. Your experiment will test whether the hypothesis is true or false. Here are some <a href='http://gobrad.wix.com/samples-science#!hypothesis/cvh5' target='_blank'>examples</a>.</p><p>Write your hypothesis below.</p>",
-                "Flying": "<p>Before conducting an experiment, you must begin by writing a <em>hypothesis</em>.</p><p>A <em>hypothesis</em> is a one sentence statement or proposition that predicts the relationship between two elements, variables or factors. A <em>hypothesis</em> describes how one thing will be affected by another thing.</p><p>Here is an example: <em>'If the temperature of the tap water increases, then the time taken for the sugar to totally dissolve decreases'</em>. This experiment tests how the temperature of water affects the time taken for sugar to dissolve.</p><p>The hypothesis is not a question. It should describe what you expect to happen during an experiment. The hypothesis does not have to be correct. Your experiment will test whether the hypothesis is true or false. Here are some <a href='http://gobrad.wix.com/samples-science#!hypothesis/cvh5' target='_blank'>examples</a>.</p><p>Write your hypothesis below.</p>"
+            {
+                "Reference": "Hypothesis",
+                "Type": "Writing",
+                "Title": "Hypothesis",
+                "Instruction": {
+                    "Newbie": "<p>Before an experiment, you must write a <em>hypothesis</em>.</p><p>A <em>hypothesis</em> is a one sentence prediction of how you think one thing will be affected by another thing in your experiment.</p><p>Here is an example: <em>If the temperature of the tap water increases, then the time taken for the sugar to totally dissolve decreases</em>.</p><p>The hypothesis does not have to be correct. Your experiment will test whether the hypothesis is true or false. Here are some <a href='http://gobrad.wix.com/samples-science#!hypothesis/cvh5' target='_blank'>examples</a>.</p><p>Write your hypothesis below.</p>",
+                    "Developing": "<p>Before conducting an experiment, you must begin by writing a <em>hypothesis</em>.</p><p>A <em>hypothesis</em> is a one sentence statement or proposition that predicts the relationship between two elements, variables or factors. A <em>hypothesis</em> describes how one thing will be affected by another thing.</p><p>Here is an example: <em>If the temperature of the tap water increases, then the time taken for the sugar to totally dissolve decreases</em>. This experiment tests how the temperature of water affects the time taken for sugar to dissolve.</p><p>The hypothesis is not a question. It should describe what you expect to happen during an experiment. The hypothesis does not have to be correct. Your experiment will test whether the hypothesis is true or false. Here are some <a href='http://gobrad.wix.com/samples-science#!hypothesis/cvh5' target='_blank'>examples</a>.</p><p>Write your hypothesis below.</p>",
+                    "Flying": "<p>Before conducting an experiment, you must begin by writing a <em>hypothesis</em>.</p><p>A <em>hypothesis</em> is a one sentence statement or proposition that predicts the relationship between two elements, variables or factors. A <em>hypothesis</em> describes how one thing will be affected by another thing.</p><p>Here is an example: <em>'If the temperature of the tap water increases, then the time taken for the sugar to totally dissolve decreases'</em>. This experiment tests how the temperature of water affects the time taken for sugar to dissolve.</p><p>The hypothesis is not a question. It should describe what you expect to happen during an experiment. The hypothesis does not have to be correct. Your experiment will test whether the hypothesis is true or false. Here are some <a href='http://gobrad.wix.com/samples-science#!hypothesis/cvh5' target='_blank'>examples</a>.</p><p>Write your hypothesis below.</p>"
+                },
+                "Response": "HYPOTHESIS: If... then..",
+                "Hints": [
+                    {
+                        "event": "onEdit",
+                        "text": "",
+                        "delay": "100000"
+                    }
+                ]
             },
-            "Response": "HYPOTHESIS: If... then..",
-            "Hints": [
-                {
-                    "event": "onEdit",
-                    "text": "",
-                    "delay": "100000"
-                }
-            ],
-            "Navigation": [
-                {
-                    "Ref": "Variables",
-                    "Label": "Write your variables"
-                }
-            ]
-        },
-        {
-            "Reference": "Variables",
-            "Type": "Container",
-            "Title": "Variables",
-            "Tasks": [
-                {
-                    "Reference": "Variable1",
-                    "Type": "Reading",
-                    "Title": "What's a variable?",
-                    "Instruction": {
-                        "Newbie": "<p>What is a <em>variable</em>? According to the Oxford Dictionary, a <em>variable</em> is something that can <em>vary</em> or <em>change</em>.</p><p>For example, there are many <em>variables</em> that influence how well students learn in science. These include: how engaging the learning is; the quality of teaching; and the level of challenge. Changing these <em>variables</em> will change the learning of students.</p><p>In science experiments, <em>variables</em> are those things that can change or be changed. There are three types of variables.</p>",
-                        "Developing": "<p>What is a <em>variable</em>? According to the Oxford Dictionary, a <em>variable</em> is something that can <em>vary</em>, an element or factor that can <em>change</em>, or something that can be <em>modified</em> or <em>affected</em>.</p><p>In science experiments, variables are those things in an experiment that can change or be changed. You should be aware of and note these variables down. Altering these variables will change the results of the experiment.</p><p>For example, if you are testing how <em>the temperature of water affects the time taken for sugar to dissolve</em>, the variables that could affect the results include: <ul><li>the temperature added to the water;</li><li> the rate of stirring of the sugar;</li><li> the volume of water used;</li><li> the size and form of the sugar cube;</li><li> and the size of the container used.</ul></p><p>There are three types of variables.</p>",
-                        "Flying": "<p>What is a <em>variable</em>? According to the Oxford Dictionary, a <em>variable</em> is something that can 'vary', an element or factor that can 'change', or something that can be modified or affected.</p><p>For example, variables that influence students' learning include: how engaging lessons are; the quality of teaching; the extent learning challenges students; and the academic and social background of a student. These are some variables or factors that influence student learning. Altering these variables will change the learning of students.</p><p>In science experiments, variables are those things in an experiment that can change or be changed. You should be aware of and note these variables down.</p><p>For example, if you are testing how <em>the temperature of water affects the time taken for sugar to dissolve</em>, the variables that could affect the results include: <ul><li>the temperature added to the water;</li><li> the rate of stirring of the sugar;</li><li> the volume of water used;</li><li> the size and form of the sugar cube;</li><li> and the size of the container used.</ul></p><p>There are three types of variables.</p>"
-                    },
-                    "Response": "",
-                    "Navigation": [
-                        {
-                            "Ref": "IndependVariable",
-                            "Label": "Independent variable"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "IndependVariable",
-                    "Type": "Writing",
-                    "Title": "Independent",
-                    "Instruction": {
-                        "Newbie": "<p>Most experiments have an independent variable, a dependent variable, and controlled variables.<p></p>An <em>independent variable</em> is the element or factor that a scientist deliberately changes or controls. So, if a scientist wanted to test <em>how water temperature affects how fast sugar dissolves or disappears</em>, then the independent variable is the temperature (heat) because this is what the scientist deliberately changes to see the effects of temperature of sugar dissolving.</p><p>What is the independent variable you will be changing in your experiment? Explain how you plan to change this variable.</p>",
-                        "Developing": "<p>Most experiments have three types of variables: an independent variable, a dependent variable, and controlled variables</p><p>An <em>independent variable</em> is the element, thing or factor that a scientist deliberately changes or controls to see its effect. So, if your experiment is to test how water temperature affects how fast sugar dissolves, then the <em>independent variable</em> or the thing deliberately changed by the scientist is the temperature (heat).</p><p>In your experiment and science report, you need to identify the independent variable, and clearly describe how you will change this variable.</p><p>What is the independent variable you will be changing in your experiment? Explain how you plan to change this variable.</p>",
-                        "Flying": "<p>Most experiments have three types of variables: an independent variable, a dependent variable, and controlled variables</p><p>An <em>independent variable</em> is the element, thing or factor that a scientist deliberately changes or controls to see its effect. So, if your experiment is to test how water temperature affects how fast sugar dissolves, then the <em>independent variable</em> or the thing deliberately changed by the scientist is the temperature (heat).</p><p>In your experiment and science report, you need to identify the independent variable, and clearly describe how you will change this variable.</p><p>What is the independent variable you will be changing in your experiment? Explain how you plan to change this variable.</p>"
-                    },
-                    "Response": "INDEPENDENT VARIABLE: The independent variable is... This variable will be changed by..",
-                    "Navigation": [
-                        {
-                            "Ref": "DependentVariable",
-                            "Label": "Dependent variable"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "DependentVariable",
-                    "Type": "Writing",
-                    "Title": "Dependent",
-                    "Instruction": {
-                        "Newbie": "<p>The <em>dependent variable</em> is the element or thing a scientist expects to change when the independent variable is changed.</p><p>So, if you are testing <em>how water temperature affects how fast sugar dissolves</em>, the dependent variable is the time taken for the sugar to dissolve. The <em>dependent variable</em> is the thing you observe or monitor as the independent variable is changed.</p><p>For your experiment, what is the dependent variable you are observing? Explain how you plan to measure and record this variable.</p>",
-                        "Developing": "<p>While an independent variable is the element or thing that a scientist manipulates, the dependent variable is the element or thing a scientist expects to be affected when the independent variable is changed.</p><p>It is called a dependent variable because what it does <em>depends</em> on how the independent variable is manipulated.</p><p>So, if you are testing how water temperature affects how fast sugar dissolves, the dependent variable is the time taken for the sugar to dissolve. The dependent variable is the thing you measure or observe as the independent variable is changed. In this case, you will be observing and measuring the time it takes the sugar to dissolve.</p><p>For your experiment, what is the dependent variable you are observing? Explain how you plan to measure and record this variable.</p>",
-                        "Flying": "<p>While an independent variable is the element or thing that a scientist manipulates, the dependent variable is the element or thing a scientist expects to be affected when the independent variable is changed.</p><p>So, if you are testing how water temperature affects how fast sugar dissolves, the dependent variable is the time taken for the sugar to dissolve. The dependent variable is the thing you measure or observe as the independent variable is changed. In this case, you will be observing and measuring the time it takes the sugar to dissolve.</p><p>It is called a dependent variable because what it does <em>depends</em> on how the independent variable is manipulated.</p><p>For your experiment, what is the dependent variable you are observing? Explain how you plan to measure and record this variable.</p>"
-                    },
-                    "Response": "DEPENDENT VARIABLES: The dependent variable is... This variable is measured by..",
-                    "Navigation": [
-                        {
-                            "Ref": "ControlVariables",
-                            "Label": "What are the control variables?"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "ControlVariables",
-                    "Type": "Writing",
-                    "Title": "Controlled",
-                    "Instruction": {
-                        "Newbie": "<p>The <em>control variables</em> are other elements in the experiment that could change. If these changed, then so might the results of the experiment.</p>Let's look at one example. If you are testing how water temperature affects how fast sugar dissolves, you would need to control such variables as:<ul><li>the amount of water you use;</li><li> the type of container you use;</li><li> and the size and shape of the sugar cubes.</ul>If any of these changed between your experiments or trials, then your results may be change too.</p>List the variables you need to <em>control</em> (or keep the same across your trials and experiments) to make your experiment is a fair test.</p>",
-                        "Developing": "<p>The third kind of variable is the <em>controlled variables</em>.</p><p>The <em>control variables</em> are those other factors or elements in the experiment that could change or vary, and therefore could affect the result of your experiments. Scientists need to be aware of these variables and to <em>control</em> them.</p>Let's have a look at some control variables. If you are testing how water temperature affects how fast sugar dissolves, you would need to control such variables as:<ul><li>the amount of water you use;</li><li> the type of container you use;</li><li> and the size and shape of the sugar cubes you use.</ul> If any of these changed between your experiments or trials, then your results may be affected.</p><p>For example, if you put a small cube of sugar in low temperature water, and then a large cube of sugar in high temperature water, then the time taken for the sugar to dissolve would probably be less in the low water temperature because it's a smaller cube of sugar. To accurately compare how sugar dissolves in cold and hot water, you should use the same sized sugar cubes.</p><p>List the variables you need to control (or keep the same) to make your experiment a fair test.</p>",
-                        "Flying": "<p>The third kind of variable is the <em>controlled variables</em>.</p><p>The <em>control variables</em> are those other factors or elements in the experiment that could change or vary, and therefore could affect the result of your experiments. Scientists need to be aware of these variables and to <em>control</em> them.</p>Let's have a look at some control variables. If you are testing how water temperature affects how fast sugar dissolves, you would need to control such variables as:<ul><li>the amount of water you use;</li><li> the type of container you use;</li><li> and the size and shape of the sugar cubes you use.</ul>If any of these changed between your experiments or trials, then your results may be affected.</p><p>For example, if you put a small cube of sugar in low temperature water, and then a large cube of sugar in high temperature water, then the time taken for the sugar to dissolve would probably be less in the low water temperature because it's a smaller cube of sugar. To accurately compare how sugar dissolves in cold and hot water, you should use the same sized sugar cubes.</p><p>List the variables you need to control (or keep the same) to make your experiment a fair test.</p>"
-                    },
-                    "Response": "CONTROLLED VARIABLE: The controlled variables are:",
-                    "Navigation": [
-                        {
-                            "Ref": "Conducting",
-                            "Label": "Conducting the experiment"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "Reference": "Conducting",
-            "Type": "Container",
-            "Title": "Conducting",
-            "Tasks": [
-                {
-                    "Reference": "Materials1",
-                    "Type": "Writing",
-                    "Title": "Materials",
-                    "Instruction": {
-                        "Newbie": "<p>Scientists use equipment to conduct their experiments, and to observe and measure the effects of their experiment.</p><p>Like the instructions of a <em>recipe</em>, you must clearly document what equipment you have used in your experiment. You can read example science reports <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>here</a>.</p><p>List the equipment you will use, and add a diagram of these if possible.</p>",
-                        "Developing": "<p>Scientists use instruments to conduct their experiments, and to observe and measure the effects of their experiment.</p><p>Like the instructions of a <em>recipe</em>, you must clearly document what equipment you have used to conduct your experiment. This will enable other scientists to <em>evaluate</em> your experiment and replicate it to verify your results.</p><p>Read example science reports <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>here</a>.</p><p>List the equipment you will use, and add a diagram of these if possible.</p>",
-                        "Flying": "<p>Every experiment requires equipment. Scientists use instruments to conduct their experiments, and to observe and measure the effects of their experiment.</p><p>Like the instructions of a <em>recipe</em>, you must clearly document what equipment you have used to conduct your experiment. This will enable other scientists to <em>evaluate</em> your experiment and replicate it to verify your results.</p><p>Read example science reports <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>here</a>.</p><p>List the equipment you will use, and add a diagram of these if possible.</p>"
-                    },
-                    "Response": "MATERIALS:",
-                    "Hints": [
-                        {
-                            "event": "onEdit",
-                            "text": "",
-                            "delay": "100000"
-                        }
-                    ],
-                    "Navigation": [
-                        {
-                            "Ref": "Procedure1",
-                            "Label": "Writing your procedure"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "Procedure1",
-                    "Type": "Writing",
-                    "Title": "Procedure",
-                    "Instruction": {
-                        "Newbie": "<p>The <em>procedure</em> describes each step of your experiment, explaining how the scientist uses the equipment to carry out their investigation.</p><p>It is like that part of a recipe that describes the steps that a cook should follow. Here are some <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>examples</a>.</p>Click on the blue or yellow star for some tips for writing your procedure.</p>Write your procedure and then have someone review it.</p>",
-                        "Developing": "<p>In your report, the procedure is a description of the steps you followed to do your experiment.</p>It is like that part of a recipe that precisely describes the steps that a cook should follow. It explains how the scientist uses the equipment to carry out their investigation. Here are some <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>examples</a>.</p>Some tips for writing your procedure include:<ul><li>use numbers for each step of the procedure;</li><li>do not use 'I' in your descriptions. You should keep it <em>impersonal</em>;</li><li>write in present tense</li><li>try to have the first word of each step a verb, like: place, boil, stop, stir, record, etc.</li><li>use words that indicate time, such as then, next, after, finally, repeat;</li><li>use the scientific names for what you are describing;</li><li>provide enough detail for someone to copy your experiment;</li><li>evaluate whether your procedure is fair or whether parts of the procedure negatively affect the result?</ul>Write your procedure and then have someone review it.</p>",
-                        "Flying": "<p>In a science report, the procedure is a description of the steps used by the scientist to conduct their experiment.</p>The procedure is like that part of a recipe that precisely describes the steps that a cook should follow. The procedure explains how the scientist uses the equipment to carry out their investigation. Here are some <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>examples</a>.</p>Some tips for writing your procedure include:<ul><li>use numbers for each step of the procedure;</li><li>do not use 'I' in your descriptions. You should keep it <em>impersonal</em>;</li><li>write in present tense</li><li>try to have a verb for the first word of each step, like: place, boil, stop, stir, record, etc.</li><li>use words that indicate time, such as then, next, after, finally, repeat;</li><li>use the scientific names for what you are describing;</li><li>provide enough detail for someone to duplicate your experiment;</li><li>evaluate whether your procedure is fair or whether parts of the procedure negatively affect the result?</ul>Write your procedure and then have someone review it.</p>"
-                    },
-                    "Response": "PROCEDURE: 1.",
-                    "Hints": [
-                        {
-                            "event": "onEdit",
-                            "text": "'Shoot for the moon. Even if you miss it you will land among the stars' - Les Brown",
-                            "delay": "5000"
-                        }
-                    ],
-                    "Navigation": [
-                        {
-                            "Ref": "RecordData",
-                            "Label": "Recording data"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "RecordData",
-                    "Type": "Reading",
-                    "Title": "Recording data",
-                    "Instruction": {
-                        "Newbie": "<p>When you do an experiment, you need to record your observations. You should create a table or some sort of format to record the information. A table or chart will help focus your observations.</p>Create a table or use some format to record your data. Once you have done this, begin your experiment and record the data.</p>",
-                        "Developing": "<p>When you conduct an experiment, you need to document what you observe and measure.</p>Rather than just jotting these down on a spare piece of paper, you should prepare a table or some sort of format for recording the information.</p><p>For example, if you were testing how water temperature affects how fast sugar dissolves, you could create a table that documents the <em>dependent variable</em> (time taken for sugar to dissolve) against the <em>independent variable</em> (temperature of water). But, you should repeat your experiment multiple times, so you may need columns or rows for each trial, and even have a space for the average times for each temperature. See these <a href='http://gobrad.wix.com/samples-science#!hypothesis/cvh5' target='_blank'>examples</a>.</p>Create a table or use some format to record your data. Once you have done this, conduct your experiment and record the data.<p/>",
-                        "Flying": "<p><p>When you conduct an experiment, you need to document what you observe and measure.</p>Rather than just jotting these down on a spare piece of paper, you should prepare a table or some sort of format for recording the information.</p><p>For example, if you were testing how water temperature affects how fast sugar dissolves, you could create a table that documents the <em>dependent variable</em> (time taken for sugar to dissolve) against the <em>independent variable</em> (temperature of water). But, you should repeat your experiment multiple times, so you may need columns or rows for each trial, and even have a space for the average times for each temperature. See these <a href='http://gobrad.wix.com/samples-science#!hypothesis/cvh5' target='_blank'>examples</a>.</p>Create a table or use some format to record your data. Once you have done this, conduct your experiment and record the data.<p/>"
-                    },
-                    "Response": "",
-                    "Hints": [
-                        {
-                            "event": "onComplete",
-                            "text": "You will need to draw up a table outside of Adekamie. We do not currently support this function.",
-                            "delay": "5000"
-                        }
-                    ],
-                    "Navigation": [
-                        {
-                            "Ref": "Writing",
-                            "Label": "Writing it down"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "Reference": "Processing data",
-            "Title": "Processing data",
-            "Type": "Container",
-            "Tasks": [
-                {
-                    "Reference": "Observation",
-                    "Type": "Writing",
-                    "Title": "Observation",
-                    "Instruction": {
-                        "Newbie": "<p>Once you have finished your experiment and recorded your results, check your table and try to make sense of the information you have collected.</p><p>Try to identify patterns or trends in the results of the <em>dependent variable</em>. Depending on your experiment you could create a graph or chart of your results to help identify any patterns.</p><p>In a few sentences and using <em>science</em> words, describe the pattern or trend in your data.</p>",
-                        "Developing": "<p>Once you have conducted your experiment and recorded your results, you should check your table and try to make sense of the data/information you have collected.</p><p>A part of this process involves determining whether there is any pattern or trend in the data of the <em>dependent variable</em>. Depending on your experiment you could create a graph or chart of your results to help identify if there is a pattern or trend.</p><p>In the experiment testing <em>water temperature and the rate of sugar dissolution</em>, it was found that there was a relationship between the <em>independent variable</em> (water temperature) and the <em>dependent variable</em> (time taken for sugar to dissolve).</p>Specifically, over three trials it was found that <em>the colder the temperature of water, the longer it takes for sugar to disappear</em>. You should express this pattern in a scientific way, such as: <em>the duration of sugar dissolution increased as the temperature of the water decreased</em>.</p>In a few sentences and using <em>science</em> words, describe the pattern or trend your data reveals.</p>",
-                        "Flying": "<p>Once you have conducted your experiment and recorded your results, you should check your table and try to make sense of the data/information you have collected.</p><p>A part of this process involves determining whether there is any pattern or trend in the data of the <em>dependent variable</em>. Depending on your experiment you could create a graph or chart of your results to help identify if there is a pattern or trend.</p><p>In the experiment testing <em>water temperature and the rate of sugar dissolution</em>, it was found that there was a relationship between the <em>independent variable</em> (water temperature) and the <em>dependent variable</em> (time taken for sugar to dissolve).</p>Specifically, over three trials it was found that <em>the colder the temperature of water, the longer it takes for sugar to disappear</em>. You should express this pattern in a scientific way, such as: <em>the duration of sugar dissolution increased as the temperature of the water decreased</em>.</p><p>In this description, abstract noun words like <em>duration</em> and <em>dissolution</em> replace informal expressions like <em>the longer it takes</em>, and verbs like <em>disappear</em>.</p>In a few sentences and using <em>science</em> words, describe the pattern or trend your data reveals.</p>"
-                    },
-                    "Response": "OBSERVATION: The results show that... ",
-                    "Hints": [
-                        {
-                            "event": "onEdit",
-                            "text": "Using science words means those words used by scientists, words used in the lab, words used in science text books and words your science teacher has taught you. Science reports rarely use the word 'I', and they usually use abstract concepts to describe processes and phenomena.",
-                            "delay": "20000"
+            {
+                "Reference": "Variables",
+                "Type": "Container",
+                "Title": "Variables",
+                "Tasks": [
+                    {
+                        "Reference": "Variable1",
+                        "Type": "Reading",
+                        "Title": "What's a variable?",
+                        "Instruction": {
+                            "Newbie": "<p>What is a <em>variable</em>? According to the Oxford Dictionary, a <em>variable</em> is something that can <em>vary</em> or <em>change</em>.</p><p>For example, there are many <em>variables</em> that influence how well students learn in science. These include: how engaging the learning is; the quality of teaching; and the level of challenge. Changing these <em>variables</em> will change the learning of students.</p><p>In science experiments, <em>variables</em> are those things that can change or be changed. There are three types of variables.</p>",
+                            "Developing": "<p>What is a <em>variable</em>? According to the Oxford Dictionary, a <em>variable</em> is something that can <em>vary</em>, an element or factor that can <em>change</em>, or something that can be <em>modified</em> or <em>affected</em>.</p><p>In science experiments, variables are those things in an experiment that can change or be changed. You should be aware of and note these variables down. Altering these variables will change the results of the experiment.</p><p>For example, if you are testing how <em>the temperature of water affects the time taken for sugar to dissolve</em>, the variables that could affect the results include: <ul><li>the temperature added to the water;</li><li> the rate of stirring of the sugar;</li><li> the volume of water used;</li><li> the size and form of the sugar cube;</li><li> and the size of the container used.</ul></p><p>There are three types of variables.</p>",
+                            "Flying": "<p>What is a <em>variable</em>? According to the Oxford Dictionary, a <em>variable</em> is something that can 'vary', an element or factor that can 'change', or something that can be modified or affected.</p><p>For example, variables that influence students' learning include: how engaging lessons are; the quality of teaching; the extent learning challenges students; and the academic and social background of a student. These are some variables or factors that influence student learning. Altering these variables will change the learning of students.</p><p>In science experiments, variables are those things in an experiment that can change or be changed. You should be aware of and note these variables down.</p><p>For example, if you are testing how <em>the temperature of water affects the time taken for sugar to dissolve</em>, the variables that could affect the results include: <ul><li>the temperature added to the water;</li><li> the rate of stirring of the sugar;</li><li> the volume of water used;</li><li> the size and form of the sugar cube;</li><li> and the size of the container used.</ul></p><p>There are three types of variables.</p>"
                         },
-                        {
-                            "event": "onComplete",
-                            "text": "",
-                            "delay": "5000"
-                        }
-                    ],
-                    "Navigation": [
-                        {
-                            "Ref": "Conc1",
-                            "Label": "Writing your conclusion"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "Conc1",
-                    "Type": "Writing",
-                    "Title": "Conclusion",
-                    "Instruction": {
-                        "Newbie": "<p>Your conclusion is a short paragraph or two that clearly <em>explains</em> the results to your reader.</p><p>The conclusion should have two parts:<ul><li>begin by stating whether the experiment confirmed or challenged the experiment's <em>hypothesis</em>;</li><li>then <em>explain</em> why there was (or was not) a pattern or trend in the results by linking the effects found in the experiment with its causes.</ul>Click the blue or yellow star for some extra tips to help you write the conclusion.</p>",
-                        "Developing": "<p>Your conclusion answers this question: what can you conclude from your results? It is a short paragraph or two that clearly <em>explains</em> your results.</p>The conclusion should have two parts:<ul><li>begin your conclusion by stating whether the experiment confirmed or challenged the experiment's hypothesis;</li><li>then <em>explain</em> why the pattern or trend is evident/not evident in the results by linking the effects found in the experiment with its causes.</ul>Some tips for writing a science report conclusion are:<ul><li>indicate cause and effect with words like: <em>when, then, because, because of, as a result, leads to, makes, produces, creates, results in, due to, account for</em>;</li><li>draw conclusions with words like: <em>therefore, so, that means, consequently, it can be seen that, we can conclude, as a result</em>;</li><li>to make your report sound scientific and to give it authority, you should use impersonal verbs, abstract nouns and a passive voice.</ul></p>",
-                        "Flying": "<p>Your conclusion answers this question: what can you conclude from your results? It is a short paragraph or two that clearly <em>explains</em> your results.</p>The conclusion should have two parts:<ul><li>begin your conclusion by stating whether the experiment confirmed or challenged the experiment's hypothesis;</li><li>then <em>explain</em> why the pattern or trend is evident/not evident in the results. This requires you to <em>explain</em> the results (phenomena) using scientific words. Explaining requires you to link the effects found in the experiment with its causes.</ul>Some tips for writing a science report conclusion are:<ul><li>indicate cause and effect with words like: <em>when, then, because, because of, as a result, leads to, makes, produces, creates, results in, due to, account for</em>;</li><li>draw conclusions with words like: <em>therefore, so, that means, consequently, it can be seen that, we can conclude, as a result</em>;</li><li>to make your report sound scientific and to give it authority, you should use impersonal verbs, abstract nouns and a passive voice.</ul></p>"
+                        "Response": ""
                     },
-                    "Response": "CONCLUSION: The data supports/does not support the hypothesis that... The pattern presented in the data is due to..",
-                    "Hints": [
-                        {
-                            "event": "onComplete",
-                            "text": "Don't forget to check out the science report examples in the samples section.",
-                            "delay": "5000"
-                        }
-                    ],
-                    "Navigation": [
-                        {
-                            "Ref": "Evaluation",
-                            "Label": "Writing the evaluation"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "Evaluation",
-                    "Title": "Evaluation",
-                    "Type": "Container",
-                    "Tasks": [
-                        {
-                            "Reference": "Evaluation1",
-                            "Type": "Writing",
-                            "Title": "Evaluation",
-                            "Instruction": {
-                                "Newbie": "<p>Good scientists reflect on their experiments.</p>You should identify how well your experiment went, and whether there were any errors, problems or difficulties.</p>",
-                                "Developing": "<p>Good scientists reflect on their experiments.</p>Whenever you conduct an experiment, you should reflect upon the experiment to identify how well it went, and what errors, problems or difficulties you encountered.</p>Evaluation can also lead you to increase the accuracy of the experiment by changing aspects of it.</p>",
-                                "Flying": "<p>Good scientists reflect on their experiments.</p>Whenever you conduct an experiment, you should reflect upon the experiment to identify how well it went, and what errors, problems or difficulties you encountered.</p>Evaluation can also lead you to increase the accuracy of the experiment by changing aspects of it.</p>"
-                            },
-                            "Response": "EVALUATION: Our investigation went... Some difficulties or problems experienced in the experiment were..",
-                            "Hints": [
-                                {
-                                    "event": "onComplete",
-                                    "text": "",
-                                    "delay": "20000"
-                                }
-                            ],
-                            "Navigation": [
-                                {
-                                    "Ref": "Improve",
-                                    "Label": "How to improve"
-                                }
-                            ]
+                    {
+                        "Reference": "IndependVariable",
+                        "Type": "Writing",
+                        "Title": "Independent",
+                        "Instruction": {
+                            "Newbie": "<p>Most experiments have an independent variable, a dependent variable, and controlled variables.<p></p>An <em>independent variable</em> is the element or factor that a scientist deliberately changes or controls. So, if a scientist wanted to test <em>how water temperature affects how fast sugar dissolves or disappears</em>, then the independent variable is the temperature (heat) because this is what the scientist deliberately changes to see the effects of temperature of sugar dissolving.</p><p>What is the independent variable you will be changing in your experiment? Explain how you plan to change this variable.</p>",
+                            "Developing": "<p>Most experiments have three types of variables: an independent variable, a dependent variable, and controlled variables</p><p>An <em>independent variable</em> is the element, thing or factor that a scientist deliberately changes or controls to see its effect. So, if your experiment is to test how water temperature affects how fast sugar dissolves, then the <em>independent variable</em> or the thing deliberately changed by the scientist is the temperature (heat).</p><p>In your experiment and science report, you need to identify the independent variable, and clearly describe how you will change this variable.</p><p>What is the independent variable you will be changing in your experiment? Explain how you plan to change this variable.</p>",
+                            "Flying": "<p>Most experiments have three types of variables: an independent variable, a dependent variable, and controlled variables</p><p>An <em>independent variable</em> is the element, thing or factor that a scientist deliberately changes or controls to see its effect. So, if your experiment is to test how water temperature affects how fast sugar dissolves, then the <em>independent variable</em> or the thing deliberately changed by the scientist is the temperature (heat).</p><p>In your experiment and science report, you need to identify the independent variable, and clearly describe how you will change this variable.</p><p>What is the independent variable you will be changing in your experiment? Explain how you plan to change this variable.</p>"
                         },
-                        {
-                            "Reference": "Improve",
-                            "Type": "Writing",
-                            "Title": "Improve",
-                            "Instruction": {
-                                "Newbie": "<p>How could you improve the experiment?Think about the purpose of your experiment and whether it was the best way to achieve it.</p><p>Write a few sentences that answer questions like: How you could improve the accuracy of measurements and results? How could you make it fairer? How you would do it differently if you could do it again?</p>",
-                                "Developing": "<p>How could you improve the experiment?Think about the purpose of your experiment and whether it was the best way to achieve it. </p><p>Write a few sentences that answer questions like: How you could improve the accuracy of measurements and results? How could you make it fairer? How you would do it differently if you could do it again?</p>",
-                                "Flying": "<p>How could you improve the experiment? Think about the purpose of your experiment and whether it was the best way to achieve it.</p><p>Write a few sentences that answer questions like: How you could improve the accuracy of measurements and results? How could you make it fairer? How you would do it differently if you could do it again?</p>"
-                            },
-                            "Response": "",
-                            "Hints": [
-                                {
-                                    "event": "onComplete",
-                                    "text": "",
-                                    "delay": "300000"
-                                }
-                            ],
-                            "Navigation": [
-                                {
-                                    "Ref": "Errors",
-                                    "Label": "Identifying errors"
-                                }
-                            ]
+                        "Response": "INDEPENDENT VARIABLE: The independent variable is... This variable will be changed by.."
+                    },
+                    {
+                        "Reference": "DependentVariable",
+                        "Type": "Writing",
+                        "Title": "Dependent",
+                        "Instruction": {
+                            "Newbie": "<p>The <em>dependent variable</em> is the element or thing a scientist expects to change when the independent variable is changed.</p><p>So, if you are testing <em>how water temperature affects how fast sugar dissolves</em>, the dependent variable is the time taken for the sugar to dissolve. The <em>dependent variable</em> is the thing you observe or monitor as the independent variable is changed.</p><p>For your experiment, what is the dependent variable you are observing? Explain how you plan to measure and record this variable.</p>",
+                            "Developing": "<p>While an independent variable is the element or thing that a scientist manipulates, the dependent variable is the element or thing a scientist expects to be affected when the independent variable is changed.</p><p>It is called a dependent variable because what it does <em>depends</em> on how the independent variable is manipulated.</p><p>So, if you are testing how water temperature affects how fast sugar dissolves, the dependent variable is the time taken for the sugar to dissolve. The dependent variable is the thing you measure or observe as the independent variable is changed. In this case, you will be observing and measuring the time it takes the sugar to dissolve.</p><p>For your experiment, what is the dependent variable you are observing? Explain how you plan to measure and record this variable.</p>",
+                            "Flying": "<p>While an independent variable is the element or thing that a scientist manipulates, the dependent variable is the element or thing a scientist expects to be affected when the independent variable is changed.</p><p>So, if you are testing how water temperature affects how fast sugar dissolves, the dependent variable is the time taken for the sugar to dissolve. The dependent variable is the thing you measure or observe as the independent variable is changed. In this case, you will be observing and measuring the time it takes the sugar to dissolve.</p><p>It is called a dependent variable because what it does <em>depends</em> on how the independent variable is manipulated.</p><p>For your experiment, what is the dependent variable you are observing? Explain how you plan to measure and record this variable.</p>"
                         },
-                        {
-                            "Reference": "Errors",
-                            "Type": "Writing",
-                            "Title": "Errors",
-                            "Instruction": {
-                                "Newbie": "<p>What were some of the sources of error that could have caused inconsistencies in your results? Explain how they could be reduced.</p>",
-                                "Developing": "<p>What were some of the sources of error that could have caused inconsistencies in your results? Explain how they could be reduced.</p>",
-                                "Flying": "<p>What were some of the sources of error that could have caused inconsistencies in your results? Explain how they could be reduced.</p>"
+                        "Response": "DEPENDENT VARIABLES: The dependent variable is... This variable is measured by.."
+                    },
+                    {
+                        "Reference": "ControlVariables",
+                        "Type": "Writing",
+                        "Title": "Controlled",
+                        "Instruction": {
+                            "Newbie": "<p>The <em>control variables</em> are other elements in the experiment that could change. If these changed, then so might the results of the experiment.</p>Let's look at one example. If you are testing how water temperature affects how fast sugar dissolves, you would need to control such variables as:<ul><li>the amount of water you use;</li><li> the type of container you use;</li><li> and the size and shape of the sugar cubes.</ul>If any of these changed between your experiments or trials, then your results may be change too.</p>List the variables you need to <em>control</em> (or keep the same across your trials and experiments) to make your experiment is a fair test.</p>",
+                            "Developing": "<p>The third kind of variable is the <em>controlled variables</em>.</p><p>The <em>control variables</em> are those other factors or elements in the experiment that could change or vary, and therefore could affect the result of your experiments. Scientists need to be aware of these variables and to <em>control</em> them.</p>Let's have a look at some control variables. If you are testing how water temperature affects how fast sugar dissolves, you would need to control such variables as:<ul><li>the amount of water you use;</li><li> the type of container you use;</li><li> and the size and shape of the sugar cubes you use.</ul> If any of these changed between your experiments or trials, then your results may be affected.</p><p>For example, if you put a small cube of sugar in low temperature water, and then a large cube of sugar in high temperature water, then the time taken for the sugar to dissolve would probably be less in the low water temperature because it's a smaller cube of sugar. To accurately compare how sugar dissolves in cold and hot water, you should use the same sized sugar cubes.</p><p>List the variables you need to control (or keep the same) to make your experiment a fair test.</p>",
+                            "Flying": "<p>The third kind of variable is the <em>controlled variables</em>.</p><p>The <em>control variables</em> are those other factors or elements in the experiment that could change or vary, and therefore could affect the result of your experiments. Scientists need to be aware of these variables and to <em>control</em> them.</p>Let's have a look at some control variables. If you are testing how water temperature affects how fast sugar dissolves, you would need to control such variables as:<ul><li>the amount of water you use;</li><li> the type of container you use;</li><li> and the size and shape of the sugar cubes you use.</ul>If any of these changed between your experiments or trials, then your results may be affected.</p><p>For example, if you put a small cube of sugar in low temperature water, and then a large cube of sugar in high temperature water, then the time taken for the sugar to dissolve would probably be less in the low water temperature because it's a smaller cube of sugar. To accurately compare how sugar dissolves in cold and hot water, you should use the same sized sugar cubes.</p><p>List the variables you need to control (or keep the same) to make your experiment a fair test.</p>"
+                        },
+                        "Response": "CONTROLLED VARIABLE: The controlled variables are:"
+                    }
+                ]
+            },
+            {
+                "Reference": "Conducting",
+                "Type": "Container",
+                "Title": "Conducting",
+                "Tasks": [
+                    {
+                        "Reference": "Materials1",
+                        "Type": "Writing",
+                        "Title": "Materials",
+                        "Instruction": {
+                            "Newbie": "<p>Scientists use equipment to conduct their experiments, and to observe and measure the effects of their experiment.</p><p>Like the instructions of a <em>recipe</em>, you must clearly document what equipment you have used in your experiment. You can read example science reports <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>here</a>.</p><p>List the equipment you will use, and add a diagram of these if possible.</p>",
+                            "Developing": "<p>Scientists use instruments to conduct their experiments, and to observe and measure the effects of their experiment.</p><p>Like the instructions of a <em>recipe</em>, you must clearly document what equipment you have used to conduct your experiment. This will enable other scientists to <em>evaluate</em> your experiment and replicate it to verify your results.</p><p>Read example science reports <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>here</a>.</p><p>List the equipment you will use, and add a diagram of these if possible.</p>",
+                            "Flying": "<p>Every experiment requires equipment. Scientists use instruments to conduct their experiments, and to observe and measure the effects of their experiment.</p><p>Like the instructions of a <em>recipe</em>, you must clearly document what equipment you have used to conduct your experiment. This will enable other scientists to <em>evaluate</em> your experiment and replicate it to verify your results.</p><p>Read example science reports <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>here</a>.</p><p>List the equipment you will use, and add a diagram of these if possible.</p>"
+                        },
+                        "Response": "MATERIALS:",
+                        "Hints": [
+                            {
+                                "event": "onEdit",
+                                "text": "",
+                                "delay": "100000"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "Procedure1",
+                        "Type": "Writing",
+                        "Title": "Procedure",
+                        "Instruction": {
+                            "Newbie": "<p>The <em>procedure</em> describes each step of your experiment, explaining how the scientist uses the equipment to carry out their investigation.</p><p>It is like that part of a recipe that describes the steps that a cook should follow. Here are some <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>examples</a>.</p>Click on the blue or yellow star for some tips for writing your procedure.</p>Write your procedure and then have someone review it.</p>",
+                            "Developing": "<p>In your report, the procedure is a description of the steps you followed to do your experiment.</p>It is like that part of a recipe that precisely describes the steps that a cook should follow. It explains how the scientist uses the equipment to carry out their investigation. Here are some <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>examples</a>.</p>Some tips for writing your procedure include:<ul><li>use numbers for each step of the procedure;</li><li>do not use 'I' in your descriptions. You should keep it <em>impersonal</em>;</li><li>write in present tense</li><li>try to have the first word of each step a verb, like: place, boil, stop, stir, record, etc.</li><li>use words that indicate time, such as then, next, after, finally, repeat;</li><li>use the scientific names for what you are describing;</li><li>provide enough detail for someone to copy your experiment;</li><li>evaluate whether your procedure is fair or whether parts of the procedure negatively affect the result?</ul>Write your procedure and then have someone review it.</p>",
+                            "Flying": "<p>In a science report, the procedure is a description of the steps used by the scientist to conduct their experiment.</p>The procedure is like that part of a recipe that precisely describes the steps that a cook should follow. The procedure explains how the scientist uses the equipment to carry out their investigation. Here are some <a href='http://gobrad.wix.com/samples-science#!home/mainPage' target='_blank'>examples</a>.</p>Some tips for writing your procedure include:<ul><li>use numbers for each step of the procedure;</li><li>do not use 'I' in your descriptions. You should keep it <em>impersonal</em>;</li><li>write in present tense</li><li>try to have a verb for the first word of each step, like: place, boil, stop, stir, record, etc.</li><li>use words that indicate time, such as then, next, after, finally, repeat;</li><li>use the scientific names for what you are describing;</li><li>provide enough detail for someone to duplicate your experiment;</li><li>evaluate whether your procedure is fair or whether parts of the procedure negatively affect the result?</ul>Write your procedure and then have someone review it.</p>"
+                        },
+                        "Response": "PROCEDURE: 1.",
+                        "Hints": [
+                            {
+                                "event": "onEdit",
+                                "text": "'Shoot for the moon. Even if you miss it you will land among the stars' - Les Brown",
+                                "delay": "5000"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "RecordData",
+                        "Type": "Reading",
+                        "Title": "Recording data",
+                        "Instruction": {
+                            "Newbie": "<p>When you do an experiment, you need to record your observations. You should create a table or some sort of format to record the information. A table or chart will help focus your observations.</p>Create a table or use some format to record your data. Once you have done this, begin your experiment and record the data.</p>",
+                            "Developing": "<p>When you conduct an experiment, you need to document what you observe and measure.</p>Rather than just jotting these down on a spare piece of paper, you should prepare a table or some sort of format for recording the information.</p><p>For example, if you were testing how water temperature affects how fast sugar dissolves, you could create a table that documents the <em>dependent variable</em> (time taken for sugar to dissolve) against the <em>independent variable</em> (temperature of water). But, you should repeat your experiment multiple times, so you may need columns or rows for each trial, and even have a space for the average times for each temperature. See these <a href='http://gobrad.wix.com/samples-science#!hypothesis/cvh5' target='_blank'>examples</a>.</p>Create a table or use some format to record your data. Once you have done this, conduct your experiment and record the data.<p/>",
+                            "Flying": "<p><p>When you conduct an experiment, you need to document what you observe and measure.</p>Rather than just jotting these down on a spare piece of paper, you should prepare a table or some sort of format for recording the information.</p><p>For example, if you were testing how water temperature affects how fast sugar dissolves, you could create a table that documents the <em>dependent variable</em> (time taken for sugar to dissolve) against the <em>independent variable</em> (temperature of water). But, you should repeat your experiment multiple times, so you may need columns or rows for each trial, and even have a space for the average times for each temperature. See these <a href='http://gobrad.wix.com/samples-science#!hypothesis/cvh5' target='_blank'>examples</a>.</p>Create a table or use some format to record your data. Once you have done this, conduct your experiment and record the data.<p/>"
+                        },
+                        "Response": "",
+                        "Hints": [
+                            {
+                                "event": "onComplete",
+                                "text": "You will need to draw up a table outside of Adekamie. We do not currently support this function.",
+                                "delay": "5000"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Reference": "Processing data",
+                "Title": "Processing data",
+                "Type": "Container",
+                "Tasks": [
+                    {
+                        "Reference": "Observation",
+                        "Type": "Writing",
+                        "Title": "Observation",
+                        "Instruction": {
+                            "Newbie": "<p>Once you have finished your experiment and recorded your results, check your table and try to make sense of the information you have collected.</p><p>Try to identify patterns or trends in the results of the <em>dependent variable</em>. Depending on your experiment you could create a graph or chart of your results to help identify any patterns.</p><p>In a few sentences and using <em>science</em> words, describe the pattern or trend in your data.</p>",
+                            "Developing": "<p>Once you have conducted your experiment and recorded your results, you should check your table and try to make sense of the data/information you have collected.</p><p>A part of this process involves determining whether there is any pattern or trend in the data of the <em>dependent variable</em>. Depending on your experiment you could create a graph or chart of your results to help identify if there is a pattern or trend.</p><p>In the experiment testing <em>water temperature and the rate of sugar dissolution</em>, it was found that there was a relationship between the <em>independent variable</em> (water temperature) and the <em>dependent variable</em> (time taken for sugar to dissolve).</p>Specifically, over three trials it was found that <em>the colder the temperature of water, the longer it takes for sugar to disappear</em>. You should express this pattern in a scientific way, such as: <em>the duration of sugar dissolution increased as the temperature of the water decreased</em>.</p>In a few sentences and using <em>science</em> words, describe the pattern or trend your data reveals.</p>",
+                            "Flying": "<p>Once you have conducted your experiment and recorded your results, you should check your table and try to make sense of the data/information you have collected.</p><p>A part of this process involves determining whether there is any pattern or trend in the data of the <em>dependent variable</em>. Depending on your experiment you could create a graph or chart of your results to help identify if there is a pattern or trend.</p><p>In the experiment testing <em>water temperature and the rate of sugar dissolution</em>, it was found that there was a relationship between the <em>independent variable</em> (water temperature) and the <em>dependent variable</em> (time taken for sugar to dissolve).</p>Specifically, over three trials it was found that <em>the colder the temperature of water, the longer it takes for sugar to disappear</em>. You should express this pattern in a scientific way, such as: <em>the duration of sugar dissolution increased as the temperature of the water decreased</em>.</p><p>In this description, abstract noun words like <em>duration</em> and <em>dissolution</em> replace informal expressions like <em>the longer it takes</em>, and verbs like <em>disappear</em>.</p>In a few sentences and using <em>science</em> words, describe the pattern or trend your data reveals.</p>"
+                        },
+                        "Response": "OBSERVATION: The results show that... ",
+                        "Hints": [
+                            {
+                                "event": "onEdit",
+                                "text": "Using science words means those words used by scientists, words used in the lab, words used in science text books and words your science teacher has taught you. Science reports rarely use the word 'I', and they usually use abstract concepts to describe processes and phenomena.",
+                                "delay": "20000"
                             },
-                            "Response": "",
-                            "Navigation": [
-                                {
-                                    "Ref": "Review",
-                                    "Label": "Review your report"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "Reference": "Review",
-            "Type": "Review",
-            "Title": "Review your report",
-            "ReviewList": [
-                "Hypothesis",
-                "IndependVariable",
-                "DependentVariable",
-                "ControlVariables",
-                "Materials1",
-                "Procedure1",
-                "RecordData",
-                "Observation",
-                "Conc1",
-                "Evaluation1",
-                "Improve",
-                "Errors"
-            ],
-            "Navigation": [
-                {
-                    "Ref": "Hypothesis",
-                    "Label": "Edit the hypothesis"
-                },
-                {
-                    "Ref": "IndependVariable",
-                    "Label": "Edit the independent variables"
-                },
-                {
-                    "Ref": "DependentVariable",
-                    "Label": "Edit the dependent variables"
-                },
-                {
-                    "Ref": "ControlVariables",
-                    "Label": "Edit the control variables"
-                },
-                {
-                    "Ref": "Procedures1",
-                    "Label": "Edit the procedure"
-                },
-                {
-                    "Ref": "RecordData",
-                    "Label": "Edit the data"
-                },
-                {
-                    "Ref": "Observation",
-                    "Label": "Edit the observations"
-                },
-                {
-                    "Ref": "Conc1",
-                    "Label": "Edit the conclusion"
-                },
-                {
-                    "Ref": "Evaluation1",
-                    "Label": "Edit the evaluation"
-                },
-                {
-                    "Ref": "Improve",
-                    "Label": "Edit the improvements"
-                },
-                {
-                    "Ref": "Errors",
-                    "Label": "Edit the errors"
-                },
-                {
-                    "Ref": "Submit",
-                    "Label": "Submit your report"
-                }
-            ]
-        },
-        {
-            "Reference": "Submit",
-            "Type": "Submit",
-            "Title": "Submit your report",
-            "Destination": "email to teacher@myschool.com.au"
-        }
-    ],
+                            {
+                                "event": "onComplete",
+                                "text": "",
+                                "delay": "5000"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "Conc1",
+                        "Type": "Writing",
+                        "Title": "Conclusion",
+                        "Instruction": {
+                            "Newbie": "<p>Your conclusion is a short paragraph or two that clearly <em>explains</em> the results to your reader.</p><p>The conclusion should have two parts:<ul><li>begin by stating whether the experiment confirmed or challenged the experiment's <em>hypothesis</em>;</li><li>then <em>explain</em> why there was (or was not) a pattern or trend in the results by linking the effects found in the experiment with its causes.</ul>Click the blue or yellow star for some extra tips to help you write the conclusion.</p>",
+                            "Developing": "<p>Your conclusion answers this question: what can you conclude from your results? It is a short paragraph or two that clearly <em>explains</em> your results.</p>The conclusion should have two parts:<ul><li>begin your conclusion by stating whether the experiment confirmed or challenged the experiment's hypothesis;</li><li>then <em>explain</em> why the pattern or trend is evident/not evident in the results by linking the effects found in the experiment with its causes.</ul>Some tips for writing a science report conclusion are:<ul><li>indicate cause and effect with words like: <em>when, then, because, because of, as a result, leads to, makes, produces, creates, results in, due to, account for</em>;</li><li>draw conclusions with words like: <em>therefore, so, that means, consequently, it can be seen that, we can conclude, as a result</em>;</li><li>to make your report sound scientific and to give it authority, you should use impersonal verbs, abstract nouns and a passive voice.</ul></p>",
+                            "Flying": "<p>Your conclusion answers this question: what can you conclude from your results? It is a short paragraph or two that clearly <em>explains</em> your results.</p>The conclusion should have two parts:<ul><li>begin your conclusion by stating whether the experiment confirmed or challenged the experiment's hypothesis;</li><li>then <em>explain</em> why the pattern or trend is evident/not evident in the results. This requires you to <em>explain</em> the results (phenomena) using scientific words. Explaining requires you to link the effects found in the experiment with its causes.</ul>Some tips for writing a science report conclusion are:<ul><li>indicate cause and effect with words like: <em>when, then, because, because of, as a result, leads to, makes, produces, creates, results in, due to, account for</em>;</li><li>draw conclusions with words like: <em>therefore, so, that means, consequently, it can be seen that, we can conclude, as a result</em>;</li><li>to make your report sound scientific and to give it authority, you should use impersonal verbs, abstract nouns and a passive voice.</ul></p>"
+                        },
+                        "Response": "CONCLUSION: The data supports/does not support the hypothesis that... The pattern presented in the data is due to..",
+                        "Hints": [
+                            {
+                                "event": "onComplete",
+                                "text": "Don't forget to check out the science report examples in the samples section.",
+                                "delay": "5000"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "Evaluation",
+                        "Title": "Evaluation",
+                        "Type": "Container",
+                        "Tasks": [
+                            {
+                                "Reference": "Evaluation1",
+                                "Type": "Writing",
+                                "Title": "Evaluation",
+                                "Instruction": {
+                                    "Newbie": "<p>Good scientists reflect on their experiments.</p>You should identify how well your experiment went, and whether there were any errors, problems or difficulties.</p>",
+                                    "Developing": "<p>Good scientists reflect on their experiments.</p>Whenever you conduct an experiment, you should reflect upon the experiment to identify how well it went, and what errors, problems or difficulties you encountered.</p>Evaluation can also lead you to increase the accuracy of the experiment by changing aspects of it.</p>",
+                                    "Flying": "<p>Good scientists reflect on their experiments.</p>Whenever you conduct an experiment, you should reflect upon the experiment to identify how well it went, and what errors, problems or difficulties you encountered.</p>Evaluation can also lead you to increase the accuracy of the experiment by changing aspects of it.</p>"
+                                },
+                                "Response": "EVALUATION: Our investigation went... Some difficulties or problems experienced in the experiment were..",
+                                "Hints": [
+                                    {
+                                        "event": "onComplete",
+                                        "text": "",
+                                        "delay": "20000"
+                                    }
+                                ]
+                            },
+                            {
+                                "Reference": "Improve",
+                                "Type": "Writing",
+                                "Title": "Improve",
+                                "Instruction": {
+                                    "Newbie": "<p>How could you improve the experiment?Think about the purpose of your experiment and whether it was the best way to achieve it.</p><p>Write a few sentences that answer questions like: How you could improve the accuracy of measurements and results? How could you make it fairer? How you would do it differently if you could do it again?</p>",
+                                    "Developing": "<p>How could you improve the experiment?Think about the purpose of your experiment and whether it was the best way to achieve it. </p><p>Write a few sentences that answer questions like: How you could improve the accuracy of measurements and results? How could you make it fairer? How you would do it differently if you could do it again?</p>",
+                                    "Flying": "<p>How could you improve the experiment? Think about the purpose of your experiment and whether it was the best way to achieve it.</p><p>Write a few sentences that answer questions like: How you could improve the accuracy of measurements and results? How could you make it fairer? How you would do it differently if you could do it again?</p>"
+                                },
+                                "Response": "",
+                                "Hints": [
+                                    {
+                                        "event": "onComplete",
+                                        "text": "",
+                                        "delay": "300000"
+                                    }
+                                ]
+                            },
+                            {
+                                "Reference": "Errors",
+                                "Type": "Writing",
+                                "Title": "Errors",
+                                "Instruction": {
+                                    "Newbie": "<p>What were some of the sources of error that could have caused inconsistencies in your results? Explain how they could be reduced.</p>",
+                                    "Developing": "<p>What were some of the sources of error that could have caused inconsistencies in your results? Explain how they could be reduced.</p>",
+                                    "Flying": "<p>What were some of the sources of error that could have caused inconsistencies in your results? Explain how they could be reduced.</p>"
+                                },
+                                "Response": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Reference": "Review",
+                "Type": "Review",
+                "Title": "Review your report",
+                "ReviewList": [
+                    "Hypothesis",
+                    "IndependVariable",
+                    "DependentVariable",
+                    "ControlVariables",
+                    "Materials1",
+                    "Procedure1",
+                    "RecordData",
+                    "Observation",
+                    "Conc1",
+                    "Evaluation1",
+                    "Improve",
+                    "Errors"
+                ]
+            },
+            {
+                "Reference": "Submit",
+                "Type": "Submit",
+                "Title": "Submit your report",
+                "Destination": "email to teacher@myschool.com.au"
+            }
+        ]
+    },
     "References": [
         {
             "Name": "",

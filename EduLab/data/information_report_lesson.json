@@ -1,449 +1,337 @@
 {
-    "Reference": "Root",
-    "Type": "Container",
-    "Title": "Information Report",
+    "Lesson":"Information Report",
+    "MetaData":{
+        "Description":"An assignment to create an informational report on a subject.",
+        "Author":"Brad Gobby",
+        "Author Contact":"email:Brad.Gobby@BrightSparksLabs.com",
+        "Copyright":"Bright Sparks Labs 2012",
+        "Licence":"Open",
+        "Target Audience":"12-15 English students"
+    },
     "SamplesFile":"essay_samples",
     "SkillLevels": [
         {
             "Name": "Newbie",
+            "Description":"Younger or less confident students who will respond better to less text",
             "Image": "./data/skilled_newbie.png"
         },
         {
             "Name": "Developing",
+            "Description":"Older or more advanced students who will cope with large text volumes",
             "Image": "./data/skilled_developing.png"
         },
         {
             "Name": "Flying",
+            "Description":"Students who will thrive on the challenge of fully-mature advanced text",
             "Image": "./data/skilled_advanced.png"
         }
     ],
-    "Tasks": [
-        {
-            "Reference": "Intro1",
-            "Type": "Reading",
-            "Title": "Reports",
-            "Instruction": {
-                "Newbie": "<p>An information report <em>informs</em> readers about a topic, object, process or issue.</p><p>Reports give readers facts and information so that a reader can better understand the topic, object or issue, or to better understand the topic, object or issue from the writer's point of view.</p>",
-                "Developing": "<p>An information report <em>informs</em> readers about a topic, object, process or issue.</p><p>Its purpose is to give readers facts and information so that a reader can better understand a topic, object or issue. Sometimes information reports are written so that a reader can understand a topic or issue from the writer's point of view.</p><p>For example, an information report on volcanoes might contain information such as: a definition of a volcano, how volcanos form and how they work, how long volcanos take to form, what they are made of, and a diagram or image.</p>",
-                "Flying": "<p>An information report <em>informs</em> readers about a topic, object, process or issue.</p><p>Its purpose is to give readers facts and information so that a reader can better understand a topic, object or issue. Sometimes information reports are written so that a reader can understand a topic or issue from the writer's point of view.</p><p>For example, an information report on volcanoes might contain information such as: a definition of a volcano, how volcanos form and how they work, how long volcanos take to form, what they are made of, and a diagram or image.</p><p>An information report on marsupials, such as a kangaroo, might include information on: what defines a marsupial, where marsupials live, what marsupials eat and how marsupials breed.</p>"
+    "TaskTree":{
+        "Reference": "Root",
+        "Type": "Container",
+        "Title": "Information Report",
+        "Tasks": [
+            {
+                "Reference": "Intro1",
+                "Type": "Reading",
+                "Title": "Reports",
+                "Instruction": {
+                    "Newbie": "<p>An information report <em>informs</em> readers about a topic, object, process or issue.</p><p>Reports give readers facts and information so that a reader can better understand the topic, object or issue, or to better understand the topic, object or issue from the writer's point of view.</p>",
+                    "Developing": "<p>An information report <em>informs</em> readers about a topic, object, process or issue.</p><p>Its purpose is to give readers facts and information so that a reader can better understand a topic, object or issue. Sometimes information reports are written so that a reader can understand a topic or issue from the writer's point of view.</p><p>For example, an information report on volcanoes might contain information such as: a definition of a volcano, how volcanos form and how they work, how long volcanos take to form, what they are made of, and a diagram or image.</p>",
+                    "Flying": "<p>An information report <em>informs</em> readers about a topic, object, process or issue.</p><p>Its purpose is to give readers facts and information so that a reader can better understand a topic, object or issue. Sometimes information reports are written so that a reader can understand a topic or issue from the writer's point of view.</p><p>For example, an information report on volcanoes might contain information such as: a definition of a volcano, how volcanos form and how they work, how long volcanos take to form, what they are made of, and a diagram or image.</p><p>An information report on marsupials, such as a kangaroo, might include information on: what defines a marsupial, where marsupials live, what marsupials eat and how marsupials breed.</p>"
+                }
             },
-            "Navigation": [
-                {
-                    "Ref": "Intro2",
-                    "Label": "Elements"
+            {
+                "Reference": "Intro2",
+                "Type": "Reading",
+                "Title": "Elements",
+                "Instruction": {
+                    "Newbie": "<p>Information reports have a number of key features.</p><p> Information reports:<ul><li>contain an introduction paragraph, body paragraphs and a conclusion</li><li>contain a description or definition of the topic or object</li><li>are usually organised into key parts with subheadings for each key idea, feature or description</li><li>are usually written from the 3rd person point of view and are not casual.</ul></p>",
+                    "Developing": "<p>What do information reports look like? What do they contain?</p><p>Information reports vary depending on the report's subject matter and its audience. However, there are key features that many information reports share. Information reports:<ul><li>contain an introduction paragraph, body paragraphs and a conclusion</li><li>contain a description or definition of the topic or object</li><li>are usually organised into key parts with subheadings for each key idea, feature or description</li><li>are usually written from the 3rd person point of view and are not casual.</ul></p>",
+                    "Flying": "<p><p>What are the key generic features of information reports?</p><p>Although information reports vary depending on each report's subject matter and audience,information reports usually:<ul><li>contain an introduction paragraph, body paragraphs and a conclusion</li><li>contain a description or definition of the topic or object</li><li>are usually organised into key parts with subheadings for each key idea, feature or description</li><li>are usually written from the 3rd person point of view and are not casual.</ul></p>"
                 }
-            ]
-        },
-        {
-            "Reference": "Intro2",
-            "Type": "Reading",
-            "Title": "Elements",
-            "Instruction": {
-                "Newbie": "<p>Information reports have a number of key features.</p><p> Information reports:<ul><li>contain an introduction paragraph, body paragraphs and a conclusion</li><li>contain a description or definition of the topic or object</li><li>are usually organised into key parts with subheadings for each key idea, feature or description</li><li>are usually written from the 3rd person point of view and are not casual.</ul></p>",
-                "Developing": "<p>What do information reports look like? What do they contain?</p><p>Information reports vary depending on the report's subject matter and its audience. However, there are key features that many information reports share. Information reports:<ul><li>contain an introduction paragraph, body paragraphs and a conclusion</li><li>contain a description or definition of the topic or object</li><li>are usually organised into key parts with subheadings for each key idea, feature or description</li><li>are usually written from the 3rd person point of view and are not casual.</ul></p>",
-                "Flying": "<p><p>What are the key generic features of information reports?</p><p>Although information reports vary depending on each report's subject matter and audience,information reports usually:<ul><li>contain an introduction paragraph, body paragraphs and a conclusion</li><li>contain a description or definition of the topic or object</li><li>are usually organised into key parts with subheadings for each key idea, feature or description</li><li>are usually written from the 3rd person point of view and are not casual.</ul></p>"
             },
-            "Navigation": [
-                {
-                    "Ref": "Topic",
-                    "Label": "Your topic"
-                }
-            ]
-        },
-        {
-            "Reference": "Topic",
-            "Type": "flyOutSelection",
-            "Title": "Your topic",
-            "Instruction": {
-                "Newbie": "<p>Choose or type the topic, object or issue of your information report.</p>",
-                "Developing": "<p>Choose or type the topic, object or issue of your information report.</p>",
-                "Flying": "<p>Choose or type the topic, object or issue of your information report.</p>"
+            {
+                "Reference": "Topic",
+                "Type": "flyOutSelection",
+                "Title": "Your topic",
+                "Instruction": {
+                    "Newbie": "<p>Choose or type the topic, object or issue of your information report.</p>",
+                    "Developing": "<p>Choose or type the topic, object or issue of your information report.</p>",
+                    "Flying": "<p>Choose or type the topic, object or issue of your information report.</p>"
+                },
+                "Choices": [
+                    "Volcanoes",
+                    "Cyclones",
+                    "Vacuum flasks",
+                    "Spiders",
+                    "Flowers",
+                    "Light bulbs",
+                    "China",
+                    "The sun",
+                    "Greenhouse effect",
+                    "Clouds",
+                    "Crustaceans",
+                    "The causes of crime",
+                    "Civil rights movement",
+                    "The French revolution",
+                    "Dinosaurs",
+                    "Photosynthesis",
+                    "Sharks",
+                    "Motors",
+                    "World War Two"
+                ],
+                "Response": "",
+                "Hints": [
+                    {
+                        "event": "onEdit",
+                        "text": "Hello, I am your messages. I will give you hints and msgs as you write. My icon will change when you have a message. Also, use the star icons at the top to choose your level of difficulty as you work through each step. Okay, time to get started",
+                        "delay": "0"
+                    }
+                ]
             },
-            "Choices": [
-                "Volcanoes",
-                "Cyclones",
-                "Vacuum flasks",
-                "Spiders",
-                "Flowers",
-                "Light bulbs",
-                "China",
-                "The sun",
-                "Greenhouse effect",
-                "Clouds",
-                "Crustaceans",
-                "The causes of crime",
-                "Civil rights movement",
-                "The French revolution",
-                "Dinosaurs",
-                "Photosynthesis",
-                "Sharks",
-                "Motors",
-                "World War Two"
-            ],
-            "Response": "",
-            "Hints": [
-                {
-                    "event": "onEdit",
-                    "text": "Hello, I am your messages. I will give you hints and msgs as you write. My icon will change when you have a message. Also, use the star icons at the top to choose your level of difficulty as you work through each step. Okay, time to get started",
-                    "delay": "0"
-                }
-            ],
-            "Navigation": [
-                {
-                    "Ref": "Purpose",
-                    "Label": "Purpose of report"
-                }
-            ]
-        },
-        {
-            "Reference": "Purpose",
-            "Type": "Writing",
-            "Title": "Purpose",
-            "Instruction": {
-                "Newbie": "<p>Your report must have a purpose, usually to <em>inform</em>. Is it to: <em>describe</em> the key features of an object or process? <em>Explain</em> the causes for a process?</p><p>Write down the purpose of your report.</p>",
-                "Developing": "<p>Your report must have a purpose, usually to <em>inform</em>.</p><p>A report may:<ul><li><em>describe</em> the main features of the topic/object, such as a flower</li><li><em>explain</em> how something works, like a volcano or motor</li><li><em>explain</em> the causes or origins of something, like hurricanes</li><li><em>describe</em> the effects, benefits or disadvantages of the topic, such as poverty</li><li>and much more.</ul></p><p>Write down the purpose of your report.</p>",
-                "Flying": "<p>Your report must have a purpose, usually to <em>inform</em>.</p><p>A report may:<ul><li><em>describe</em> the main features of the topic/object, such as a flower</li><li><em>explain</em> how something works, like a volcano or motor</li><li><em>explain</em> the causes or origins of something, like hurricanes</li><li><em>describe</em> the effects, benefits or disadvantages of the topic, such as poverty</li><li>and much more.</ul><p/><p>Write down the purpose of your report.</p>"
+            {
+                "Reference": "Purpose",
+                "Type": "Writing",
+                "Title": "Purpose",
+                "Instruction": {
+                    "Newbie": "<p>Your report must have a purpose, usually to <em>inform</em>. Is it to: <em>describe</em> the key features of an object or process? <em>Explain</em> the causes for a process?</p><p>Write down the purpose of your report.</p>",
+                    "Developing": "<p>Your report must have a purpose, usually to <em>inform</em>.</p><p>A report may:<ul><li><em>describe</em> the main features of the topic/object, such as a flower</li><li><em>explain</em> how something works, like a volcano or motor</li><li><em>explain</em> the causes or origins of something, like hurricanes</li><li><em>describe</em> the effects, benefits or disadvantages of the topic, such as poverty</li><li>and much more.</ul></p><p>Write down the purpose of your report.</p>",
+                    "Flying": "<p>Your report must have a purpose, usually to <em>inform</em>.</p><p>A report may:<ul><li><em>describe</em> the main features of the topic/object, such as a flower</li><li><em>explain</em> how something works, like a volcano or motor</li><li><em>explain</em> the causes or origins of something, like hurricanes</li><li><em>describe</em> the effects, benefits or disadvantages of the topic, such as poverty</li><li>and much more.</ul><p/><p>Write down the purpose of your report.</p>"
+                },
+                "Response": "My purpose of my report is to...",
+                "Hints": [
+                    {
+                        "event": "onComplete",
+                        "text": "",
+                        "delay": "5000"
+                    }
+                ]
             },
-            "Response": "My purpose of my report is to...",
-            "Hints": [
-                {
-                    "event": "onComplete",
-                    "text": "",
-                    "delay": "5000"
-                }
-            ],
-            "Navigation": [
-                {
-                    "Ref": "Brainstorm",
-                    "Label": "Brainstorm your report"
-                }
-            ]
-        },
-        {
-            "Reference": "Brainstorm",
-            "Type": "Container",
-            "Title": "Brainstorm",
-            "Tasks": [
-                {
-                    "Reference": "Brainstorm1",
-                    "Type": "Writing",
-                    "Title": "Know",
-                    "Instruction": {
-                        "Newbie": "<p>Brainstorm your topic by asking these questions:</p><ul><li>What do I know for sure about the topic?</li><li>What do I sort of know about the topic?</li><li>What do I not know about the topic?</li></ul></p><p>Begin by typing below what you know or sort of know about the topic you have chosen.</p>",
-                        "Developing": "<p>Think about the purpose of your report and what information you need so that you can write it.</p><p>Begin brainstorming your topic by asking these questions:</p><ul><li>What do I know for sure about the topic?</li><li>What do I sort of know about the topic?</li><li>What do I not know about the topic?</li></ul></p><p>Begin by typing below what you know or sort of know about the topic you have chosen.</p>",
-                        "Flying": "<p>Think about the purpose of your report and what information you need so that you can write it.</p>To begin brainstorming your topic, ask these questions:</p><ul><li>What do I know for sure about the topic?</li><li>What do I sort of know about the topic?</li><li>What do I not know about the topic?</li></ul></p><p>Begin by typing below what you know or sort of know about the topic you have chosen.</p>"
-                    },
-                    "Response": "What I already know is...",
-                    "Navigation": [
-                        {
-                            "Ref": "Brainstorm2",
-                            "Label": "Not know"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "Brainstorm2",
-                    "Type": "Writing",
-                    "Title": "Not know",
-                    "Instruction": {
-                        "Newbie": "<p>Next, type below what you do not know about the topic, and what you need to find out about the topic.</p>",
-                        "Developing": "<p>Next, type below what you do not know about the topic, and what you need to find out about the topic.</p>",
-                        "Flying": "<p>Next, type below what you do not know about the topic, and what you need to find out about the topic.</p>"
-                    },
-                    "Response": "What I'm not sure about is...",
-                    "Navigation": [
-                        {
-                            "Ref": "Brainstorm3",
-                            "Label": "Categories"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "Brainstorm3",
-                    "Type": "Writing",
-                    "Title": "Categories",
-                    "Instruction": {
-                        "Newbie": "<p>You need to collect information for your report.</p><p>Thinking back to the purpose of your report, do you need to collect information about: the features of something? The causes or effects of something? The stages in a process? You could write things such as: key features, causes, effects, applications, habits, food, events.</p><p>View this website to see what <em>categories</em> you can use to help organise your research.</p><p>Write down the key categories that you should conduct your research on.</p>",
-                        "Developing": "<p>You need to collect information for your report. But what information should you collect?</p><p>Thinking back to the purpose of your report, do you need to collect information about: the features of something? The causes or effects of something? The stages in a process? You could write things such as: key features, causes, effects, applications, habits, food, events.</p><p>View this website to see what categories you can use to help organise your research.</p><p>Write down the key <em>categories</em> that you should conduct your research on.</p>",
-                        "Flying": "<p>You need to collect information for your report. But what information should you collect?</p><p>Thinking back to the purpose of your report, do you need to collect information about: the features of something? The causes or effects of something? The stages in a process? You could write things such as: key features, causes, effects, applications, habits, food, events.</p><p>View this website to see what categories you can use to organise your information?</p><p>Write down the key <em>categories</em> that you should conduct your research on.</p>"
-                    },
-                    "Response": "The key categories for my research are:",
-                    "Navigation": [
-                        {
-                            "Ref": "Opinions",
-                            "Label": "Expressing your opinions"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "Reference": "Research",
-            "Type": "Container",
-            "Title": "Research",
-            "Tasks": [
-                {
-                    "Reference": "Research1",
-                    "Type": "Writing",
-                    "Title": "Notes",
-                    "Instruction": {
-                        "Newbie": "<p>You now need to collect information using the categories you have identified in the previous step.</p><p>Use the text box below to collect and note key pieces of information from your research.</p>",
-                        "Developing": "<p>You now need to collect information using the categories you have identified in the previous step.</p><p>Use the text box below to collect and note key pieces of information from your research.</p>",
-                        "Flying": "<p>You now need to collect information using the categories you have identified int he previous step.</p><p>Use the text box below to collect and note key pieces of information from your research.</p>"
-                    },
-                    "Response": "",
-                    "Navigation": [
-                        {
-                            "Ref": "Research2",
-                            "Label": "Research2"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "Research2",
-                    "Type": "Writing",
-                    "Title": "Notes",
-                    "Instruction": {
-                        "Newbie": "<p>Use the text box below to collect and note key pieces of information from your research.</p>",
-                        "Developing": "<p>Use the text box below to collect and note key pieces of information from your research.</p>",
-                        "Flying": "<p>Use the text box below to collect and note key pieces of information from your research.</p>"
-                    },
-                    "Response": "",
-                    "Navigation": [
-                        {
-                            "Ref": "Research3",
-                            "Label": "Research3"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "Research3",
-                    "Type": "Writing",
-                    "Title": "Notes",
-                    "Instruction": {
-                        "Newbie": "<p>Use the text box below to collect and note key pieces of information from your research.</p>",
-                        "Developing": "<p>Use the text box below to collect and note key pieces of information from your research.</p>",
-                        "Flying": "<p>Use the text box below to collect and note key pieces of information from your research.</p>"
-                    },
-                    "Response": "",
-                    "Navigation": [
-                        {
-                            "Ref": "Writing",
-                            "Label": "Writing it down"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "Reference": "Writing",
-            "Title": "Writing it down",
-            "Type": "Container",
-            "Tasks": [
-                {
-                    "Reference": "Introduction",
-                    "Type": "Writing",
-                    "Title": "Writing the introduction",
-                    "Instruction": {
-                        "Newbie": "<p>You now need to put your research into your report. This is your first go, so you can change it at any time.</p><p>You will draft your report using:</p><ul><li>Introduction (introduce your topic)</li><li>Main paragraphs</li><li>Conclusion</li</ul></p><p>A report's introduction is the first paragraph of the report. Your introduction should tell the reader your <em>topic</em> and the <em>main points</em> you will describe.</p>",
-                        "Developing": "<p>You now need to put your research into your report. This is your first go, so you can change it at any time.</p><p>You will draft your report using:</p><ul><li>Introduction (introduce your topic)</li><li>Main paragraphs</li><li>Conclusion</li</ul></p><p>A report's introduction is the first paragraph of the report. Your introduction tells the reader what your essay is about.</p><p>What do you put in your introduction? You should tell the reader your <em>topic</em> and the <em>main points</em> you will describe. It should be brief.</p><p>After you have written your introduction, read it and ask yourself whether a reader would know what your essay is about and what your main ideas are. To help you, you can select the samples icon on the top right corner of the screen.</p>",
-                        "Flying": "<p>You now need to put your research into your report. This is your first go, so you can change it at any time.</p><p>You will draft your report using:</p><ul><li>Introduction (introduce your topic)</li><li>Main paragraphs</li><li>Conclusion</li</ul></p><p>A report's introduction is the first paragraph of the report. Your introduction tells the reader what your essay is about.</p><p>What do you put in your introduction? You should tell the reader your <em>topic</em> and the <em>main points</em> you will describe. It should be brief.</p><p>After you have written your introduction, read it and ask yourself whether a reader would know what your essay is about and what your main ideas are. To help you, you can select the samples icon on the top right corner of the screen.</p>"
-                    },
-                    "Response": "The topic/object of this report is… The main points to be covered are... ",
-                    "Hints": [
-                        {
-                            "event": "onEdit",
-                            "text": "Watch your language! By that I mean make your sentences clear.",
-                            "delay": "20000"
+            {
+                "Reference": "Brainstorm",
+                "Type": "Container",
+                "Title": "Brainstorm",
+                "Tasks": [
+                    {
+                        "Reference": "Brainstorm1",
+                        "Type": "Writing",
+                        "Title": "Know",
+                        "Instruction": {
+                            "Newbie": "<p>Brainstorm your topic by asking these questions:</p><ul><li>What do I know for sure about the topic?</li><li>What do I sort of know about the topic?</li><li>What do I not know about the topic?</li></ul></p><p>Begin by typing below what you know or sort of know about the topic you have chosen.</p>",
+                            "Developing": "<p>Think about the purpose of your report and what information you need so that you can write it.</p><p>Begin brainstorming your topic by asking these questions:</p><ul><li>What do I know for sure about the topic?</li><li>What do I sort of know about the topic?</li><li>What do I not know about the topic?</li></ul></p><p>Begin by typing below what you know or sort of know about the topic you have chosen.</p>",
+                            "Flying": "<p>Think about the purpose of your report and what information you need so that you can write it.</p>To begin brainstorming your topic, ask these questions:</p><ul><li>What do I know for sure about the topic?</li><li>What do I sort of know about the topic?</li><li>What do I not know about the topic?</li></ul></p><p>Begin by typing below what you know or sort of know about the topic you have chosen.</p>"
                         },
-                        {
-                            "event": "onComplete",
-                            "text": "",
-                            "delay": "5000"
-                        }
-                    ],
-                    "Navigation": [
-                        {
-                            "Ref": "Para1",
-                            "Label": "Writing the first paragraph"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "Para1",
-                    "Type": "Writing",
-                    "Title": "Paragraph 1",
-                    "Instruction": {
-                        "Newbie": "<p>The introduction is followed by <em>body</em> paragraphs.</p><p>Each paragraph of your report provides certain kinds of information. It may have a sub-heading.</p><p>Begin writing your paragraph with a <em>topic sentence</em>. This is a short sentence that tells your reader the topic of your paragraph. The sentences that follow explain your topic in more detail.</p>",
-                        "Developing": "<p>The introduction is followed by <em>body</em> paragraphs - this is the body of your essay. Each paragraph of your report provides certain kinds of information. It may have a sub-heading.</p><p>Begin writing your paragraph with a <em>topic sentence</em>.  This is a short sentence that tells your reader the topic of your paragraph. The sentences that follow explain your topic in more detail.</p>",
-                        "Flying": "<p>The introduction is followed by <em>body</em> paragraphs - this is the body of your essay. Each paragraph of your report provides certain kinds of information. It may have a sub-heading.</p><p>Begin writing your paragraph with a <em>topic sentence</em>.  This is a short sentence that tells your reader the topic of your paragraph. The sentences that follow explain your topic in more detail.</p>"
+                        "Response": "What I already know is..."
                     },
-                    "Response": "SUBHEADING",
-                    "Hints": [
-                        {
-                            "event": "onComplete",
-                            "text": "",
-                            "delay": "5000"
-                        }
-                    ],
-                    "Navigation": [
-                        {
-                            "Ref": "Para2",
-                            "Label": "Writing the second paragraph"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "Para2",
-                    "Type": "Writing",
-                    "Title": "Paragraph 2",
-                    "Instruction": {
-                        "Newbie": "<p>Put information related to your next research category into your next paragraph.</p>",
-                        "Developing": "<p>Put information related to your next research category into your next paragraph.</p>",
-                        "Flying": "<p>Put information related to your next research category into your next paragraph.</p>"
-                    },
-                    "Response": "SUBHEADING",
-                    "Hints": [
-                        {
-                            "event": "onComplete",
-                            "text": "",
-                            "delay": "20000"
-                        }
-                    ],
-                    "Navigation": [
-                        {
-                            "Ref": "Para3",
-                            "Label": "Writing the third paragraph"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "Para3",
-                    "Type": "Writing",
-                    "Title": "Paragraph 3",
-                    "Instruction": {
-                        "Newbie": "<p>Put information related to your next research category into your next paragraph.</p>",
-                        "Developing": "<p>Put information related to your next research category into your next paragraph.</p>",
-                        "Flying": "<p>Put information related to your next research category into your next paragraph.</p>"
-                    },
-                    "Response": "SUBHEADING",
-                    "Hints": [
-                        {
-                            "event": "onComplete",
-                            "text": "",
-                            "delay": "300000"
-                        }
-                    ],
-                    "Navigation": [
-                        {
-                            "Ref": "Para4",
-                            "Label": "Writing the fourth paragraph"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "Para4",
-                    "Type": "Writing",
-                    "Title": "Paragraph 4",
-                    "Instruction": {
-                        "Newbie": "<p>Put information related to your next research category into your next paragraph.</p>",
-                        "Developing": "<p>Put information related to your next research category into your next paragraph.</p>",
-                        "Flying": "<p>Put information related to your next research category into your next paragraph.</p>"
-                    },
-                    "Response": "SUBHEADING",
-                    "Navigation": [
-                        {
-                            "Ref": "Conclusion",
-                            "Label": "Writing the conclusion"
-                        }
-                    ]
-                },
-                {
-                    "Reference": "Conclusion",
-                    "Type": "Writing",
-                    "Title": "Writing the conclusion",
-                    "Instruction": {
-                        "Newbie": "<p>Your report should finish with a <em>conclusion</em>.</p><p>The conclusion is a paragraph that tells the reader the points you have made. To write your conclusion, you should look over the main points you have made in your report and re-write them in 2 or 3 sentences.</p>",
-                        "Developing": "<p>Your report should finish with a <em>conclusion</em>.</p><p>The conclusion is a paragraph that tells the reader the points you have made. To write your conclusion, you should look over the main points you have made in your report and re-write them in 2 or 3 sentences.</p>",
-                        "Flying": "<p>Your report should finish with a <em>conclusion</em>.</p><p>The conclusion is a paragraph that tells the reader the points you have made. To write your conclusion, you should look over the main points you have made in your report and re-write them in 2 or 3 sentences.</p>"
-                    },
-                    "Response": "In this report I have explained/described...",
-                    "Hints": [
-                        {
-                            "event": "onEdit",
-                            "text": "",
-                            "delay": "2000"
+                    {
+                        "Reference": "Brainstorm2",
+                        "Type": "Writing",
+                        "Title": "Not know",
+                        "Instruction": {
+                            "Newbie": "<p>Next, type below what you do not know about the topic, and what you need to find out about the topic.</p>",
+                            "Developing": "<p>Next, type below what you do not know about the topic, and what you need to find out about the topic.</p>",
+                            "Flying": "<p>Next, type below what you do not know about the topic, and what you need to find out about the topic.</p>"
                         },
-                        {
-                            "event": "onComplete",
-                            "text": "",
-                            "delay": "500000"
+                        "Response": "What I'm not sure about is..."
+                    },
+                    {
+                        "Reference": "Brainstorm3",
+                        "Type": "Writing",
+                        "Title": "Categories",
+                        "Instruction": {
+                            "Newbie": "<p>You need to collect information for your report.</p><p>Thinking back to the purpose of your report, do you need to collect information about: the features of something? The causes or effects of something? The stages in a process? You could write things such as: key features, causes, effects, applications, habits, food, events.</p><p>View this website to see what <em>categories</em> you can use to help organise your research.</p><p>Write down the key categories that you should conduct your research on.</p>",
+                            "Developing": "<p>You need to collect information for your report. But what information should you collect?</p><p>Thinking back to the purpose of your report, do you need to collect information about: the features of something? The causes or effects of something? The stages in a process? You could write things such as: key features, causes, effects, applications, habits, food, events.</p><p>View this website to see what categories you can use to help organise your research.</p><p>Write down the key <em>categories</em> that you should conduct your research on.</p>",
+                            "Flying": "<p>You need to collect information for your report. But what information should you collect?</p><p>Thinking back to the purpose of your report, do you need to collect information about: the features of something? The causes or effects of something? The stages in a process? You could write things such as: key features, causes, effects, applications, habits, food, events.</p><p>View this website to see what categories you can use to organise your information?</p><p>Write down the key <em>categories</em> that you should conduct your research on.</p>"
                         },
-                        {
-                            "event": "onComplete",
-                            "text": "Now it's time to review your report. I'll tell you my secret to a great report. I read my reports slowly. So read your report to yourself and listen to how it sounds. Does it make sense? Does each paragraph have a main idea? Have you put full stops and commas in the correct places?",
-                            "delay": "10"
-                        }
-                    ],
-                    "Navigation": [
-                        {
-                            "Ref": "Review",
-                            "Label": "Review your completed essay"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "Reference": "Review",
-            "Type": "Review",
-            "Title": "Review",
-            "ReviewList": [
-                "Introduction",
-                "Para1",
-                "Para2",
-                "Para3",
-                "Para4",
-                "Conclusion"
-            ],
-            "Navigation": [
-                {
-                    "Ref": "Introduction",
-                    "Label": "Edit the Introduction"
-                },
-                {
-                    "Ref": "Para1",
-                    "Label": "Edit the first paragraph"
-                },
-                {
-                    "Ref": "Para2",
-                    "Label": "Edit the second paragraph"
-                },
-                {
-                    "Ref": "Para3",
-                    "Label": "Edit the third paragraph"
-                },
-                {
-                    "Ref": "Para4",
-                    "Label": "Edit the counter-point"
-                },
-                {
-                    "Ref": "Conclusion",
-                    "Label": "Edit the conclusion"
-                },
-                {
-                    "Ref": "Submit",
-                    "Label": "Submit your essay"
-                }
-            ]
-        },
-        {
-            "Reference": "Submit",
-            "Type": "Submit",
-            "Title": "Submit your essay",
-            "Destination": "email to teacher@myschool.com.au"
-        }
-    ],
+                        "Response": "The key categories for my research are:"
+                    }
+                ]
+            },
+            {
+                "Reference": "Research",
+                "Type": "Container",
+                "Title": "Research",
+                "Tasks": [
+                    {
+                        "Reference": "Research1",
+                        "Type": "Writing",
+                        "Title": "Notes",
+                        "Instruction": {
+                            "Newbie": "<p>You now need to collect information using the categories you have identified in the previous step.</p><p>Use the text box below to collect and note key pieces of information from your research.</p>",
+                            "Developing": "<p>You now need to collect information using the categories you have identified in the previous step.</p><p>Use the text box below to collect and note key pieces of information from your research.</p>",
+                            "Flying": "<p>You now need to collect information using the categories you have identified int he previous step.</p><p>Use the text box below to collect and note key pieces of information from your research.</p>"
+                        },
+                        "Response": ""
+                    },
+                    {
+                        "Reference": "Research2",
+                        "Type": "Writing",
+                        "Title": "Notes",
+                        "Instruction": {
+                            "Newbie": "<p>Use the text box below to collect and note key pieces of information from your research.</p>",
+                            "Developing": "<p>Use the text box below to collect and note key pieces of information from your research.</p>",
+                            "Flying": "<p>Use the text box below to collect and note key pieces of information from your research.</p>"
+                        },
+                        "Response": ""
+                    },
+                    {
+                        "Reference": "Research3",
+                        "Type": "Writing",
+                        "Title": "Notes",
+                        "Instruction": {
+                            "Newbie": "<p>Use the text box below to collect and note key pieces of information from your research.</p>",
+                            "Developing": "<p>Use the text box below to collect and note key pieces of information from your research.</p>",
+                            "Flying": "<p>Use the text box below to collect and note key pieces of information from your research.</p>"
+                        },
+                        "Response": ""
+                    }
+                ]
+            },
+            {
+                "Reference": "Writing",
+                "Title": "Writing it down",
+                "Type": "Container",
+                "Tasks": [
+                    {
+                        "Reference": "Introduction",
+                        "Type": "Writing",
+                        "Title": "Writing the introduction",
+                        "Instruction": {
+                            "Newbie": "<p>You now need to put your research into your report. This is your first go, so you can change it at any time.</p><p>You will draft your report using:</p><ul><li>Introduction (introduce your topic)</li><li>Main paragraphs</li><li>Conclusion</li</ul></p><p>A report's introduction is the first paragraph of the report. Your introduction should tell the reader your <em>topic</em> and the <em>main points</em> you will describe.</p>",
+                            "Developing": "<p>You now need to put your research into your report. This is your first go, so you can change it at any time.</p><p>You will draft your report using:</p><ul><li>Introduction (introduce your topic)</li><li>Main paragraphs</li><li>Conclusion</li</ul></p><p>A report's introduction is the first paragraph of the report. Your introduction tells the reader what your essay is about.</p><p>What do you put in your introduction? You should tell the reader your <em>topic</em> and the <em>main points</em> you will describe. It should be brief.</p><p>After you have written your introduction, read it and ask yourself whether a reader would know what your essay is about and what your main ideas are. To help you, you can select the samples icon on the top right corner of the screen.</p>",
+                            "Flying": "<p>You now need to put your research into your report. This is your first go, so you can change it at any time.</p><p>You will draft your report using:</p><ul><li>Introduction (introduce your topic)</li><li>Main paragraphs</li><li>Conclusion</li</ul></p><p>A report's introduction is the first paragraph of the report. Your introduction tells the reader what your essay is about.</p><p>What do you put in your introduction? You should tell the reader your <em>topic</em> and the <em>main points</em> you will describe. It should be brief.</p><p>After you have written your introduction, read it and ask yourself whether a reader would know what your essay is about and what your main ideas are. To help you, you can select the samples icon on the top right corner of the screen.</p>"
+                        },
+                        "Response": "The topic/object of this report is… The main points to be covered are... ",
+                        "Hints": [
+                            {
+                                "event": "onEdit",
+                                "text": "Watch your language! By that I mean make your sentences clear.",
+                                "delay": "20000"
+                            },
+                            {
+                                "event": "onComplete",
+                                "text": "",
+                                "delay": "5000"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "Para1",
+                        "Type": "Writing",
+                        "Title": "Paragraph 1",
+                        "Instruction": {
+                            "Newbie": "<p>The introduction is followed by <em>body</em> paragraphs.</p><p>Each paragraph of your report provides certain kinds of information. It may have a sub-heading.</p><p>Begin writing your paragraph with a <em>topic sentence</em>. This is a short sentence that tells your reader the topic of your paragraph. The sentences that follow explain your topic in more detail.</p>",
+                            "Developing": "<p>The introduction is followed by <em>body</em> paragraphs - this is the body of your essay. Each paragraph of your report provides certain kinds of information. It may have a sub-heading.</p><p>Begin writing your paragraph with a <em>topic sentence</em>.  This is a short sentence that tells your reader the topic of your paragraph. The sentences that follow explain your topic in more detail.</p>",
+                            "Flying": "<p>The introduction is followed by <em>body</em> paragraphs - this is the body of your essay. Each paragraph of your report provides certain kinds of information. It may have a sub-heading.</p><p>Begin writing your paragraph with a <em>topic sentence</em>.  This is a short sentence that tells your reader the topic of your paragraph. The sentences that follow explain your topic in more detail.</p>"
+                        },
+                        "Response": "SUBHEADING",
+                        "Hints": [
+                            {
+                                "event": "onComplete",
+                                "text": "",
+                                "delay": "5000"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "Para2",
+                        "Type": "Writing",
+                        "Title": "Paragraph 2",
+                        "Instruction": {
+                            "Newbie": "<p>Put information related to your next research category into your next paragraph.</p>",
+                            "Developing": "<p>Put information related to your next research category into your next paragraph.</p>",
+                            "Flying": "<p>Put information related to your next research category into your next paragraph.</p>"
+                        },
+                        "Response": "SUBHEADING",
+                        "Hints": [
+                            {
+                                "event": "onComplete",
+                                "text": "",
+                                "delay": "20000"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "Para3",
+                        "Type": "Writing",
+                        "Title": "Paragraph 3",
+                        "Instruction": {
+                            "Newbie": "<p>Put information related to your next research category into your next paragraph.</p>",
+                            "Developing": "<p>Put information related to your next research category into your next paragraph.</p>",
+                            "Flying": "<p>Put information related to your next research category into your next paragraph.</p>"
+                        },
+                        "Response": "SUBHEADING",
+                        "Hints": [
+                            {
+                                "event": "onComplete",
+                                "text": "",
+                                "delay": "300000"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "Para4",
+                        "Type": "Writing",
+                        "Title": "Paragraph 4",
+                        "Instruction": {
+                            "Newbie": "<p>Put information related to your next research category into your next paragraph.</p>",
+                            "Developing": "<p>Put information related to your next research category into your next paragraph.</p>",
+                            "Flying": "<p>Put information related to your next research category into your next paragraph.</p>"
+                        },
+                        "Response": "SUBHEADING"
+                    },
+                    {
+                        "Reference": "Conclusion",
+                        "Type": "Writing",
+                        "Title": "Writing the conclusion",
+                        "Instruction": {
+                            "Newbie": "<p>Your report should finish with a <em>conclusion</em>.</p><p>The conclusion is a paragraph that tells the reader the points you have made. To write your conclusion, you should look over the main points you have made in your report and re-write them in 2 or 3 sentences.</p>",
+                            "Developing": "<p>Your report should finish with a <em>conclusion</em>.</p><p>The conclusion is a paragraph that tells the reader the points you have made. To write your conclusion, you should look over the main points you have made in your report and re-write them in 2 or 3 sentences.</p>",
+                            "Flying": "<p>Your report should finish with a <em>conclusion</em>.</p><p>The conclusion is a paragraph that tells the reader the points you have made. To write your conclusion, you should look over the main points you have made in your report and re-write them in 2 or 3 sentences.</p>"
+                        },
+                        "Response": "In this report I have explained/described...",
+                        "Hints": [
+                            {
+                                "event": "onEdit",
+                                "text": "",
+                                "delay": "2000"
+                            },
+                            {
+                                "event": "onComplete",
+                                "text": "",
+                                "delay": "500000"
+                            },
+                            {
+                                "event": "onComplete",
+                                "text": "Now it's time to review your report. I'll tell you my secret to a great report. I read my reports slowly. So read your report to yourself and listen to how it sounds. Does it make sense? Does each paragraph have a main idea? Have you put full stops and commas in the correct places?",
+                                "delay": "10"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Reference": "Review",
+                "Type": "Review",
+                "Title": "Review",
+                "ReviewList": [
+                    "Introduction",
+                    "Para1",
+                    "Para2",
+                    "Para3",
+                    "Para4",
+                    "Conclusion"
+                ]
+            },
+            {
+                "Reference": "Submit",
+                "Type": "Submit",
+                "Title": "Submit your essay",
+                "Destination": "email to teacher@myschool.com.au"
+            }
+        ]
+    },
     "References": [
         {
             "Name": "",

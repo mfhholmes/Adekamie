@@ -10,13 +10,23 @@ function start(){
 	
 	//load the lesson data and pass it to the viewmodel
 	lesson = new lesson_view_model();
-	// need a switch to work out if we're local or server-based
-	$.getJSON(src,function(data){parseData(data);}).error(function(jq,status,errorThrown){alert("bad thing happened to the JSON from file: "+src+" reported as " + status + " : " + errorThrown);});
-	//parseData(lesson_data);
-	
+
+        var loaded = false;
+        
+        if(window.Modernizr.localstorage){
+            local = localStorage.getItem(src);
+            if(local != null){
+                parseData(local);
+                loaded = true;
+            }
+        }     
+	if(!loaded)
+            $.getJSON(src,function(data){parseData(data);})
+                .error(function(jq,status,errorThrown){alert("bad thing happened to the JSON from file: "+src+" reported as " + status + " : " + errorThrown);});
+                    
 }
 function parseData(data){
-	lesson.loadData(data);
+    lesson.loadData(data);
     addSamples(lesson.samplesFile);
     addReferenceText();
     try{
@@ -167,7 +177,15 @@ function clickSettings()
 }
 function clickSave()
 {
-    alert("Save");
+    if(Modernizr.localstorage)
+        {
+            localStorage.setItem(src,lesson.toJSON());
+            alert('lesson progress saved to local storage');
+        }
+    else
+        {
+            alert('your browser does not enable local storage of lesson data, unfortunately')
+        }
 }
 function clickExit()
 {

@@ -1,0 +1,28 @@
+{
+    "samplesList":[
+        {
+            "name":"Dulce et Decorum Est",
+            "title":"Dulce et Decorum Est video",
+            "link":"http://www.youtube.com/watch?v=c49tRplMh-Y",
+            "icon":"data/Samples.png"
+        },
+        {
+            "name":"The Letter",
+            "title":"The Letter video",
+            "link":"http://www.youtube.com/watch?v=uP_0DkpFOKs",
+            "icon":"data/Samples.png"
+        },
+        {
+            "name":"The Soldier",
+            "title":"The Soldier video",
+            "link":"http://youtu.be/BcDQZTJU_aA",
+            "icon":"data/Samples.png"
+        },
+        {
+            "name":"In Memoriam",
+            "title":"In Memoriam video",
+            "link":"http://www.youtube.com/watch?v=de4c7iruayw",
+            "icon":"data/Samples.png"
+        }
+    ]
+}

@@ -1,0 +1,645 @@
+{
+    "Lesson":"Topic-Based Essay",
+    "MetaData":{
+        "Description":"An assignment that breaks down the tasks involved in writing a topic-based essay.",
+        "Author":"Brad Gobby",
+        "Author Contact":"email:Brad.Gobby@BrightSparksLabs.com",
+        "Copyright":"Bright Sparks Labs 2012",
+        "Licence":"Open",
+        "Target Audience":"12-15 English students"
+    },
+    "SamplesFile": "essay_samples",
+    "SkillLevels": [
+        {
+            "Name": "Newbie",
+            "Description":"Younger or less confident students who will respond better to less text",
+            "Image": "./data/skilled_newbie.png"
+        },
+        {
+            "Name": "Developing",
+            "Description":"Older or more advanced students who will cope with large text volumes",
+            "Image": "./data/skilled_developing.png"
+        },
+        {
+            "Name": "Flying",
+            "Description":"Students who will thrive on the challenge of fully-mature advanced text",
+            "Image": "./data/skilled_advanced.png"
+        }
+    ],
+    "TaskTree":{
+        "Reference": "Root",
+        "Type": "Container",
+        "Title": "Topic-based Essay",
+        "Tasks": [
+            {
+                "Reference": "Intro",
+                "Type": "Reading",
+                "Title": "Introduction",
+                "Instruction": {
+                    "Newbie": "<p> What is an essay? An essay is a non-fiction type of writing. It is about a single topic or issue and it tries to make a point in an interesting way.</p><p>An essay is made up of more than one paragraph. Each paragraph has a main idea. An essay does not tell a story. It describes, argues, or analyses a topic.</p><p>Writing essays helps students to improve how they think and write. Essays can also show teachers what a student knows about a topic or issue.</p><p><em>You can read sample essays <a href='http://gobrad.wix.com/samplesmag-edition1#!home/mainPage' target='_blank'>here</a>, or watch a short video <a href='http://youtu.be/nNmGf5NOeb4' target='_blank'>here</a></em>.</p><p>You are going to plan and write a short essay on a topic. This will require you to <a href='http://gobrad.wix.com/adekamie-support#!essay-process/c1dw' target='_blank'>brainstorm</a> your essay question and ideas about the topic.</p>",
+                    "Developing": "<p> What is an essay? An essay is a non-fiction type of writing. It is about a single topic or issue and it tries to make a point in an interesting way.</p><p>An essay is made up of more than one paragraph. Each paragraph has a main idea. An essay is not like a short story - it doesn't tell a story. It describes, argues, or analyses a topic.</p><p>Why do teachers ask students to write essays? Essay writing helps students to improve their thinking and writing skills. Students can use essays to show their teacher what they know about a topic or how well they write to argue an idea or to inform or persuade a reader.</p><p>When you write an essay, you usually have a question that you must answer. You should read the question carefully. The question tells you what to write your essay about and how to write it. Let's look at some examples. A question like 'Do you think homework should be banned on weekends?' is telling you to agree or disagree, and then give some ideas or points to back up why you agree or disagree. A question like 'Why do some people agree with smacking children?' is telling you to describe the points some people make in support of smacking children.</p><p>So, an essay is short piece of writing about a topic or issue. Essays try to answer a question. Essays express ideas and support these with examples or evidence. Each main idea has a paragraph - have three main ideas and you have an essay!</p><p><em>Read sample essays <a href='http://gobrad.wix.com/samplesmag-edition1#!home/mainPage' target='_blank'>here</a>, or watch a short video <a href='http://youtu.be/nNmGf5NOeb4' target='_blank'>here</a></em>.</p><p>You must now plan and begin writing a short essay on a topic. This will require you to <a href='http://gobrad.wix.com/adekamie-support#!essay-process/c1dw' target='_blank'>brainstorm</a> your essay question and ideas about the topic.</p>",
+                    "Flying": "<p>What is an essay? An essay is usually a short piece of writing about a single topic or issue. It is usually made up of several paragraphs.</p><p>Why might someone write an essay? Essays are often written in schools and universities by students who try to demonstrate to their teachers or markers what they know about a topic or their ability to argue an idea, or to inform or persuade a reader.</p><p>When essays are written in schools, there is often a question that students must respond to. It is the question that tells the student the purpose of the essay. For example, students may be asked to argue for an idea (Q: Argue for why cars should be banned on city streets), to explain why something exists (Q: Why does carbon pollution exist?), or to examine many sides of a problem or argument (Q: Compare the ideas of those who support smacking children and those who do not).</p><p>An essay is a long response to the question, and each main idea has a paragraph. When the paragraphs are put together, you have an essay!</p><p>So, now we know that essays are short pieces of writing about a topic or issue, that essays can be written for a range of purposes, that essays often seek to answer a question, and that essays are often written by students who need to demonstrate to their teachers what they know about a topic or how effectively they use language to communicate. <em></p><p>Read sample essays <a href='http://gobrad.wix.com/samplesmag-edition1#!home/mainPage' target='_blank'>here</a>, or watch a short video <a href='http://youtu.be/nNmGf5NOeb4' target='_blank'>here</a></em>.</p><p>You must now plan and begin writing a short essay on a topic. This will require you to <a href='http://gobrad.wix.com/adekamie-support#!essay-process/c1dw' target='_blank'>brainstorm</a> your essay question and ideas about the topic.</p>"
+                },
+                "Hints": [
+                    {
+                        "event": "onEdit",
+                        "text": "Hello, I am your messages. I will give you hints and msgs as you write. My icon will change when you have a message. Also, use the star icons at the top to choose your level of difficulty as you work through each step. Okay, time to get started",
+                        "delay": "0"
+                    }
+                ],
+                "Navigation": [
+                    {
+                        "Ref": "Topic1",
+                        "Label": "The Question"
+                    },
+                    {
+                        "Ref": "Topic2",
+                        "Label": "Your own topic"
+                    }
+                ]
+            },
+            {
+                "Reference": "Topic",
+                "Type": "flyOutSelection",
+                "Title": "Your question",
+                "Instruction": {
+                    "Newbie": "<p>If you have been given a question, or you have created your own question, write it in the space below.<p><p>If you need some ideas for questions or can't think of one, open the sample question list using the button below.</p>",
+                    "Developing": "<p>If you have been given a question, or you have created your own question, write it in the space below.<p><p>If you need some ideas for questions or can't think of one, open the sample question list using the button below.</p>",
+                    "Flying": "<p>If you have been given a question, or you have created your own question, write it in the space below.<p><p>If you need some ideas for questions or can't think of one, open the sample question list using the button below.</p>"
+                },
+                "Choices": [
+                    "Compare the arguments for and against using cars in the city.",
+                    "What is normal anyway?",
+                    "Should Human Rights come with human responsibilities?",
+                    "Should people make better use of public transport?",
+                    "Choose an interest or hobby you have and argue why it should be studied at school.",
+                    "Video games are good for learning. Do you agree or disagree?",
+                    "Should all homework be banned?",
+                    "Children should not have computers in their bedrooms. Do you agree or disagree?",
+                    "Why are Year 9s the naughtiest group in school?",
+                    "In a hundred years, will any of it matter?",
+                    "Should magazines be banned from having unrealistic models in them?",
+                    "Science will save the world. Argue for or against this statement.",
+                    "Parents should be strict on their children.",
+                    "Young people do not understand older people.",
+                    "Every students needs a computer. Argue",
+                    "What are the factors that make students successful in school?",
+                    "Older people do not understand younger people.",
+                    "Fame is bad. Do you agree or disagree?",
+                    "The goal of equality is no longer valued.",
+                    "No school will ever eradicate bullying. Do you agree or disagree?",
+                    "What factors influence people to bully?",
+                    "Life is wonderful. No, really, it is!",
+                    "Essay writing is a good skill to learn. Argue for this statement.",
+                    "The arts is under-valued in our society.",
+                    "An essay needs solid evidence to be effective.",
+                    "Where would humanity be without reason?",
+                    "Who we are at age 10 is not the same as who we are at 20. Argue.",
+                    "Is capital punishment fair?",
+                    "Should animals be used for research?",
+                    "Should governments have a say on our diets?",
+                    "Why is Facebook so popular with teenagers?",
+                    "Compare the positives and negatives of social media.",
+                    "Should children who commit violent crimes be tried as adults?",
+                    "Children should have to go to school to learn. Argue for or against this idea.",
+                    "Different is the new normal.",
+                    "Why do so many people want to be famous?",
+                    "The media have a great influence in shaping people's ideas. To what extent do you agree or disagree?",
+                    "Modern technology makes life easier and better, or was it better when technology was simpler?"
+                ],
+                "Response": "",
+                "Navigation": [
+                    {
+                        "Ref": "Decode1",
+                        "Label": "Decode the question"
+                    }
+                ]
+            },
+            {
+                "Reference": "Decode",
+                "Type": "Container",
+                "Title": "Decode the question",
+                "Tasks": [
+                    {
+                        "Reference": "Decode1",
+                        "Type": "Writing",
+                        "Title": "Topic words",
+                        "Instruction": {
+                            "Newbie": "<p>Your question tells you what to write about and how to write about it.</p><p>Most essay questions have two kinds of key words. Questions have <em>topic words</em>. These words tell you the topic you are to write about.</p>",
+                            "Developing": "<p>Your question tells you what to write about and how to write about it. Most essay questions have two kinds of key words. These are <em>topic words</em> and <em>task words</em>.</p><p><em>Topic words</em> tell you the topic or issue that you are to write about. There are almost as many topic words in the world as there are words in the dictionary. That's a lot!</p><p>In the question, 'Explain why celebrity magazines are so popular?', the topic words are <em>why celebrity magazines are popular</em>. These words are the things you would write your essay about. 'Explain' is not a topic word because it doesn't tell you the topic - it tells you what to do with the topic - explain.</p>",
+                            "Flying": "<p>Your question is very important because it tells you what to write about and how to write about it. Therefore, you should spend some time thinking about the question and what it is asking you to do.</p><p>To help you understand your question, carefully look at its key words. Most essay questions have two types of key words. These are <em>topic (or issue) words</em> and <em>task (or command) words</em>. Let's first look at topic words.</p><p><em>Topic words</em> tell you the topic, issue or subject matter that you are to write about. There are almost as many topic words in the world as there are words in the dictionary. Imagine that your essay question is, 'Celebrity magazines are very popular in our culture. Describe their history and explain what makes them so appealing.'</p><p>The topic words in the question are <em>celebrity magazines are very popular in our culture</em> and <em>their history and what makes them appealing</em>. These topic words tell you the things you should write your essay about - the history of celebrity magazines and their appeal to people. 'Describe' and 'explain' are not topic words because these don't tell you the what the topic is - it tells you what to do with the topic - describe and explain.</p>"
+                        },
+                        "Response": "The topic words of my question are...",
+                        "Navigation": [
+                            {
+                                "Ref": "TaskWords1",
+                                "Label": "Finding the task words"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "TaskWords1",
+                        "Type": "Writing",
+                        "Title": "Task words",
+                        "Instruction": {
+                            "Newbie": "<p>While topic words tell you what to write about, <em>task words</em> are words in the question that tell you how you should write about the topic.</p><p>The <em>task words</em> in a question tell you what your essay should do. Often used task words are: describe, explain, argue and compare.</p>",
+                            "Developing": "<p>While topic words tell you what to write about, task words tell you how you should write about the topic or issue.</p><p> The <em>task words</em> in a question tell you what your essay should do. Often used task words are: describe, explain, discuss, argue, compare and analyse.</p><p>For the question,<em>'Explain why celebrity magazines are so popular?</em>,' the task word is <em>explain</em>. This task word tells you that you must explain the reasons why celebrity magazines are read by many people.</p>",
+                            "Flying": "<p>While topic words tell you what to write about, <em>task words</em> tell you how you should write about the topic, issue or subject matter. In other words, the <em>task words</em> in a question tell you what your essay should do.</p><p>Think about the task words in the question <em>'Celebrity magazines are very popular in our culture. Describe their history and explain what makes them so appealing'</em>. In this question, the task words are <em>describe</em> and <em>explain</em>. These task words tell you that you must describe the history of celebrity magazines and then explain some reasons they appeal to so many people. The task word in the question <em>'Describe what made the dinosaurs extinct'</em> is <em>describe</em>. This tells you that you should list and <em>describe</em> the factors or reasons that made dinosaurs extinct.</p><p>Often used task words are: describe, explain, discuss, argue, compare and analyse. If a question does not contain a task word, like 'What made dinosaurs extinct?', then it is <em>implied</em> that your task is to <em>describe</em> the main reasons that dinosaurs became extinct.</p>"
+                        },
+                        "Response": "The task word/s of my question is/are...",
+                        "Navigation": [
+                            {
+                                "Ref": "RestateQuestion",
+                                "Label": "Restating the Question"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "RestateQuestion",
+                        "Type": "Writing",
+                        "Title": "Re-write your question",
+                        "Instruction": {
+                            "Newbie": "<p>Now that you have thought about your question, it's time to write down what your question is asking you to do.</p>",
+                            "Developing": "<p>Now that you have thought about your question, it's time to write down what your question is asking you to do. Try using different words.</p>",
+                            "Flying": "<p>Now that you have thought about the topic and task words, it's time to think carefully about just what exactly your question is asking you to do. Try using different words.</p>"
+                        },
+                        "Response": "This question is asking me to...",
+                        "Navigation": [
+                            {
+                                "Ref": "Opinions",
+                                "Label": "Expressing your opinions"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Reference": "Ideas",
+                "Type": "Writing",
+                "Title": "Brainstorm",
+                "Instruction": {
+                    "Newbie": "<p>Before many writers begin writing, they create a <em>brainstorm</em> of ideas they have about the topic they are going to write about.</p><p>Begin brainstorming your question and topic by answering these questions:</p><ul><li>What is my opinion or thought about the topic?</li><li>What do I know for sure about the topic?</li><li>What do I sort of know about the topic?</li><li>What do I not know about the topic?</li><li>What is or what could be other people's opinions of the topic?</li><li>What is my opinion of the topic?</li><li>What is not known about the topic?</li></ul>Use these questions to write down a list of thoughts that you have about the topic and essay question.</p>",
+                    "Developing": "<p>If you want to be a good writer, you need to learn what good writers do. Before they write, many writers create a <em>brainstorm</em> of ideas they have about the topic they are going to write about.</p><p>Brainstorms can help writers to think clearly about the topic, to think up some strong ideas, to think about how strong their ideas are and to then decide what their main ideas will be.</p><p>You can begin to brainstorm your question and topic by asking yourself questions like:</p><ul><li>What is my opinion or thought about the topic?</li><li>What do I know for sure about the topic?</li><li>What do I sort of know about the topic?</li><li>What do I not know about the topic?</li><li>What is or what could be other people's opinions of the topic?</li><li>What is my opinion of the topic?</li><li>What is not known about the topic?</li></ul>Write down a list of thoughts that you have about the topic and essay question. You can use the above questions to help you.</p>",
+                    "Flying": "<p>Before they write, many effective writers create a <em>brainstorm</em> of ideas they have about the topic of their writing.</p><p>Brainstorms can help writers to think clearly about the topic, to think up some strong ideas, to evaluate how strong their ideas are, to decide what supporting examples and evidence they may need to create a convincing essay, and to organise the order their ideas will appear in the essay.</p><p>You can begin to brainstorm the question and topic by asking yourself questions like:</p><ul><li>What is my opinion or thought about the topic?</li><li>What do I know for sure about the topic?</li><li>What do I sort of know about the topic?</li><li>What do I not know about the topic?</li><li>What is or what could be other people's opinions of the topic?</li><li>What is my opinion of the topic?</li><li>What is not known about the topic?</li></ul>Write down a list of thoughts that you have about the topic and essay question. You can use the above questions to help you.</p>"
+                },
+                "Response": "My thoughts about the topic/question are...",
+                "Hints": [
+                    {
+                        "event": "onEdit",
+                        "text": "Hey, do you need ideas? Talk to your friends or your teacher to get some ideas. You don't have to do this one your own.",
+                        "delay": "100000"
+                    }
+                ],
+                "Navigation": [
+                    {
+                        "Ref": "Thoughts",
+                        "Label": "Writing your thoughts down"
+                    }
+                ]
+            },
+            {
+                "Reference": "Thoughts",
+                "Type": "Writing",
+                "Title": "My big idea",
+                "Instruction": {
+                    "Newbie": "<p>Now you need to <a href='javascript: void(0)' onclick='window.open(http: //gobrad.wix.com/adekamie-support#!big-idea/c1a73,bigidea,width=300,height=280);returnfalse;'>put your ideas</a> into your essay. Where do you start?</p><p>One place to start is to write the <em>big idea</em> that your essay says to the reader. If you could write a one sentence answer to your essay question, what would it be? Put this big idea at the beginning (introduction) of your essay. Every other point you have would link to this <em>big idea</em>.</p><p>In essay writing, this big idea is called the <em>thesis statement</em>.</p>",
+                    "Developing": "<p>Now that you have brainstormed your ideas, you need to <a href='http://gobrad.wix.com/adekamie-support#!big-idea/c1a73' target='_blank'>put your ideas</a> into your essay. Where do you begin? One place to start is to write down the <em>big idea</em> that you want your essay to say, or what you want to prove.</p><p>There is one way that you can you come up with your big idea. If you could write a short one sentence answer to your essay question, what would it be? Think about it carefully! Here's an example to help you.</p><p>If your essay question is <em>'Explain why celebrity magazines are so popular'</em>, your big idea could be <em>'Celebrity magazines are popular because they enable people to escape their boring lives'</em>. Your essay would then make points that support this big idea.</p><p>In essay writing, this big idea is called the <em>thesis statement</em>. A <em>thesis statement</em> is the main point that your essay makes. Your thesis statement should be a clearly written sentence found in the first paragraph of your essay. It tells the reader the main point you want to make in answer to the question.</p><p>So, if you had to write an answer to your essay question in one sentence, and this sentence was your main idea, what would that sentence be? Remember, you can change this at any time.</p>",
+                    "Flying": "<p>Now that you have brainstormed your ideas, you need to <a href='http://gobrad.wix.com/adekamie-support#!big-idea/c1a73' target='_blank'>putting your ideas</a> into your essay because it is your ideas that will comprise the essay. One place to start is to write the <em>big idea</em> that you want your essay to argue. This is because every effective essay has a strong main idea that it argues or tries to prove.</p><p>There is one way to create your big idea - if you could write a one sentence answer to your essay question, what would it be? Think about it carefully! Here's an example to help you out. If your essay question is 'Explain why celebrity magazines are so popular', your big idea could be 'Celebrity magazines are popular because they enable people to escape their boring lives'.</p><p>In essay writing, we call this big idea a <em>thesis statement</em>. A <em>thesis statement</em> is the main point that your essay seeks to make. Usually your thesis statement is a clearly written sentence found in the first paragraph of an essay (its introduction). It clearly tells the reader from the outset the main point you want to make in your essay, and all of the other ideas you put into the essay support this thesis statement.</p><p>So, if you had to write an answer to your essay question in one sentence, and this sentence was your main idea, what would that sentence be? Remember, you can change this at any time.</p>"
+                },
+                "Response": "My big idea for this essay is...",
+                "Hints": [
+                    {
+                        "event": "onEdit",
+                        "text": "'Shoot for the moon. even if you miss it you will land among the stars' - Les Brown",
+                        "delay": "5000"
+                    }
+                ],
+                "Navigation": [
+                    {
+                        "Ref": "Ideas1",
+                        "Label": "Organise my essay"
+                    }
+                ]
+            },
+            {
+                "Reference": "Ideas1",
+                "Type": "Writing",
+                "Title": "Organising my ideas",
+                "Instruction": {
+                    "Newbie": "<p>Too often people have opinions and ideas but they can't give points to back them up. The key to a good essay is to have points that support your big idea.</p><p>In this section, you need to type 3 good points to support your big idea. Each point will have a paragraph each. Check your brainstorm for ideas. Don't forget to share your ideas with a partner or your teacher. <em>You can watch this short <a href='http://youtu.be/72rAfA3hnvU' target='_blank'>video</a> on essay planning to help you.</em></p>",
+                    "Developing": "<p>Too often people have opinions and ideas but they cannot give powerful points to support them. To write a good essay, you need to have a main idea (your big idea) and then <a href='http://gobrad.wix.com/adekamie-support#!essay-plan/c8gg' target='_blank'>points</a> or evidence that support or prove your main idea.</p><p>As an example, if you had to prove that <em>'Celebrity magazines are popular because they allow people to escape their boring lives'</em>, you would need 3 good points or evidence to support or prove that idea.</p><p>In this section, you need to think of, or find through researching, at least three good points to support your big idea (thesis statement). You may have already written these down in your brainstorm. Your main points or evidence need sound convincing. Each of these points should have a paragraph in your essay. Don't forget to share your ideas with a partner or your teacher. <em>You can watch this short <a href='http://youtu.be/72rAfA3hnvU' target='_blank'>video</a> on essay planning to help you.</em><p/>",
+                    "Flying": "<p>Too often people have opinions and ideas but they cannot explain why they have them, or they cannot give powerful points to support them. To write an effective essay, you need to have a main idea (your thesis statement) and then <a href='http://gobrad.wix.com/adekamie-support#!essay-plan/c8gg' target='_blank'>points</a> or evidence that support that main idea.</p><p>For example, if you had to convince your readers that <em>'Celebrity magazines as popular because they enable people to escape their boring lives'</em> you would need 3 good points, or find facts, examples or evidence to support or prove this opinion. Sometimes you may be able to think of 3 strong ideas. Sometimes you may need to ask others. Sometimes you may need to do research to get your ideas, examples and evidence.</p><p>In this section, you need to think of, or find through researching, at least three good points to support your big idea. You may have already written these down in your brainstorm, or maybe you need to find facts and example to prove or support your ideas. Your main points and evidence need to be strong. They need to sound convincing. They should also be supported with examples or with reason. Each of these points should have a paragraph in your essay. If you are unsure whether your points are good, share it with a partner or your teacher. <em>You can watch this short <a href='http://youtu.be/72rAfA3hnvU' target='_blank'>video</a> on essay planning to help you.</em><p/>"
+                },
+                "Response": "My first main point to support my big ideas is...  My second main point is...  My third main point is...",
+                "Hints": [
+                    {
+                        "event": "onComplete",
+                        "text": "Hey remember that you should try to support your ideas with examples, facts or evidence. If you don't have these you should try to use words that will influence your reader to agree with you. Give it a go.",
+                        "delay": "5000"
+                    }
+                ],
+                "Navigation": [
+                    {
+                        "Ref": "Writing",
+                        "Label": "Writing it down"
+                    }
+                ]
+            },
+            {
+                "Reference": "Writing",
+                "Title": "Writing it down",
+                "Type": "Container",
+                "Tasks": [
+                    {
+                        "Reference": "Introduction",
+                        "Type": "Writing",
+                        "Title": "Introduction",
+                        "Instruction": {
+                            "Newbie": "<p>You now need to put your ideas and points into an essay for others to read. An essay's introduction is the first paragraph of the essay.</p><p>Your introduction tells the reader what your essay is about. It is like an answer to the question in about 6 sentences.</p><p>Your introduction should have an interesting first sentence. You should then tell the reader your <em>big idea</em> and the <em>main points</em> that support your big idea. Make it brief.</p><p>After you have had a go at writing it, read it and ask yourself whether it tells the reader what your essay is about and what your main idea is. To help you, you can watch this <a href='http://youtu.be/Kzl9U79vxeA' target='_blank'>video</a> on introductions, and read some example essays <a href='http://'gobrad.wix.com/samplesmag-edition1#!naughty-nines/cvrh' target='_blank'>here</a>.</p>",
+                            "Developing": "<p>You now need to put your ideas and supporting points into an essay for others to read. This is your first go, so you can change and review your draft at any time.</p><p>You will draft your essay using the following 6 parts:</p><ul><li>Introduction (introduce your main idea)</li><li>Paragraph 1 (supporting point)</li><li>Paragraph 2 (supporting point)</li><li>Paragraph 3 (supporting point)</li><li>Paragraph 4 (other ideas optional)</li><li>Conclusion (sum up your ideas)</li></ul>An essay's introduction is the opening paragraph of the essay. Your introduction should be a clear and short answer to the question. It should tell the reader what your <em>big idea</em> and what your <em>main ideas</em> are. It should be about 6 sentences. Try to make your introduction engaging for your reader, although make sure it contains your big idea - your reader will want to know what your essay is arguing or or trying to prove.</p><p>After you have written your introduction, read it and ask yourself whether a reader would know what your essay is about and what your main ideas are. To help you, you can watch this <a href='http://youtu.be/Kzl9U79vxeA' target='_blank'>video</a> on introductions, and read some example essays <a href='http://gobrad.wix.com/samplesmag-edition1#!naughty-nines/cvrh' target='_blank'>here</a> or by selecting the samples icon on the top right corner of the screen.</p>",
+                            "Flying": "<p>You now need to organise your ideas, opinions and supporting points into an essay for others to read. This is only a draft and you can change and review your writing at any time.</p><p>You will draft your essay using the following 6 parts:</p><ul><li>Introduction (introduce your main idea)</li><li>Paragraph 1 (supporting point/evidence)</li><li>Paragraph 2 (supporting point/evidence)</li><li>Paragraph 3 (supporting point/evidence)</li><li>Paragraph 4 (other ideas optional)</li><li>Conclusion (sum up your ideas)</li></ul>An essay's introduction is the opening paragraph of the essay. Your introduction should be a clear but short answer to the question. It should tell the reader your <em>big idea</em> (thesis statement) and briefly mention the <em>main ideas</em> you will raise to support your big idea. It should be about 6 sentences. Try to make your introduction engaging for your reader, although make sure it contains your big idea - your reader will want to know what your essay is arguing or trying to prove and how it will prove this.</p><p>After you have written your introduction, read it aloud and ask yourself whether a reader would know what your essay topic is and what you are arguing.</p><p>Watch a <a href='http://youtu.be/Kzl9U79vxeA' target='_blank'>video</a> on introductions here, and read some example essays <a href='http://gobrad.wix.com/samplesmag-edition1#!home/mainPage' target='_blank'>here</a> or by selecting the samples icon in the top right corner of the screen.</p>"
+                        },
+                        "Response": "Write your introduction here... I believe... The main ideas to support this are... ",
+                        "Hints": [
+                            {
+                                "event": "onEdit",
+                                "text": "Watch your language! By that I mean make your sentences clear.",
+                                "delay": "20000"
+                            },
+                            {
+                                "event": "onComplete",
+                                "text": "Hey, I learnt to think about paragraphs as TIEE - Topic sentence, then Introduce your example, then give your Examples or evidence, and then Explain your example - why have you used it? (TIEE). Of course, this is not the tie you wear around your neck.",
+                                "delay": "5000"
+                            }
+                        ],
+                        "Navigation": [
+                            {
+                                "Ref": "Para1",
+                                "Label": "Writing the first paragraph"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "Para1",
+                        "Type": "Writing",
+                        "Title": "Paragraph 1",
+                        "Instruction": {
+                            "Newbie": "<p>The introduction is followed by <em>body</em> three or more paragraphs, with each paragraph making a different point.</p><p>Choose one of the ideas you wrote earlier at <em>Organising my ideas</em> to write your first paragraph about.</p><p>Your <a href='http://gobrad.wix.com/adekamie-support#!paragraphs/c1f8q' target='_blank'>paragraph</a> should begin with a <em>topic sentence</em>. This short sentence tells your reader the point you are going to make in your paragraph.</p><p>Follow your <em>topic sentence</em> with sentences that explain your point in more detail, or provide examples that support your point.</p><p>Watch a short video on paragraph writing <a href='http://youtu.be/72rAfA3hnvU' target='_blank'>here</a>.</p>",
+                            "Developing": "<p>The introduction is followed by three or more <em>body <a href='http://gobrad.wix.com/adekamie-support#!paragraphs/c1f8q' target='_blank'>paragraphs</a></em>. Each paragraph in your essay makes a different point, but each point supports your <em>big idea</em>.</p><p>Look at the ideas you wrote down earlier at <em>Organising my ideas</em> and choose one to write your first paragraph about. Often the strongest point goes into the first body paragraph.</p><p>Begin writing your paragraph with a <em>topic sentence</em>. This is a short sentence that tells your reader the point you are going to make and therefore what your paragraph is about. Following your <em>topic sentence</em>, add more sentences. These can explain your point in more detail, or provide examples and evidence that support your point.</p><p>Watch a short video on paragraphs <a href='http://youtu.be/72rAfA3hnvU' target='_blank'>here</a>.</p>",
+                            "Flying": "<p>The introduction is followed by 'body' paragraphs - this is referred to as the body of your essay. Each paragraph in your essay makes a different point in support of your <em>big idea</em> or opinion.</p><p>Look at the ideas you wrote down earlier (at <em>Organising my ideas</em>) and choose one to write your first <a href='http://gobrad.wix.com/adekamie-support#!paragraphs/c1f8q' target='_blank'>paragraph</a> about.</p><p>Once you have selected your first point, begin writing your paragraph with a <em>topic sentence</em>. This is a short sentence that tells your reader the point you are going to make, and therefore what your paragraph is about. Sometimes a <em>topic sentence</em> can follow the first sentence. Following your topic sentence, you then add sentences that explain your point in greater detail, or provide examples and evidence to support your point.</p><p>Watch a short video on paragraphs <a href='http://youtu.be/72rAfA3hnvU' target='_blank'>here</a>.</p>"
+                        },
+                        "Response": "The first point I would like to make is...",
+                        "Hints": [
+                            {
+                                "event": "onComplete",
+                                "text": "Hey, don't forget to support your main ideas by describing examples, observations, facts, reports or statistics. If you don't have these, or you don't want to use these, think about how your writing will influence and convince your reader. Also, remember you can read example essays using the samples icon above.",
+                                "delay": "5000"
+                            }
+                        ],
+                        "Navigation": [
+                            {
+                                "Ref": "Para2",
+                                "Label": "Writing the second paragraph"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "Para2",
+                        "Type": "Writing",
+                        "Title": "Paragraph 2",
+                        "Instruction": {
+                            "Newbie": "<p>Your second paragraph raises the next main point that supports your <em>big idea</em>.</p><p>This contains more than four sentences. It should have a topic sentence and make a point not made in your first paragraph.</p>",
+                            "Developing": "<p>Your second paragraph raises the next main point that supports your <em>big idea</em>.</p><p>Your second paragraph should contain more than four sentences. It should begin with a <em>topic sentence</em> that tells your reader the point you are going to make and therefore what your paragraph is about. Following your <em>topic sentence</em>, you add more sentences. These can explain your point in more detail, or provide examples and evidence that support your point. It should make a point not covered in your first paragraph. Look at your workspace to find other points and examples you wrote down earlier that you could use.</p>",
+                            "Flying": "<p>Your second paragraph raises the next main point that supports your <em>big idea</em>.</p><p>Your second paragraph should contain more than four sentences. It should begin with a <em>topic sentence</em> that tells your reader the point you are going to make and therefore what your paragraph is about. Following your <em>topic sentence</em>, you add more sentences. These can explain your point in more detail, or provide examples and evidence that support your point. It should make a point not made in your first paragraph. Look at your workspace to find other points and examples you wrote down earlier than you could use.</p>"
+                        },
+                        "Response": "The second point I would like to make is... I believe this to be true because...",
+                        "Hints": [
+                            {
+                                "event": "onComplete",
+                                "text": "Hey, don't forget to use capital letters and full stops. Also make sure you use full sentences. I like to read sentences to myself to make sure they make sense. But I only do it when no one is around :)",
+                                "delay": "20000"
+                            }
+                        ],
+                        "Navigation": [
+                            {
+                                "Ref": "Para3",
+                                "Label": "Writing the third paragraph"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "Para3",
+                        "Type": "Writing",
+                        "Title": "Paragraph 3",
+                        "Instruction": {
+                            "Newbie": "<p>Your third paragraph should make another point in support of your big idea.</p><p>As you write, think about the words you are using to make your point. Do they sound convincing? Are they persuasive? Do they appeal to your reader's heart or mind?</p>",
+                            "Developing": "<p>Your third paragraph should make another point in support of your big idea.</p><p>As you write, think about the words you are using to make your point. Do they sound convincing? Are they persuasive? Do they appeal to your reader's heart or mind?</p>",
+                            "Flying": "<p>Your third paragraph should make another point in support of your big idea.</p><p>As you write, think about the words you are using to make your point. Do they sound convincing? Are they persuasive? Do they appeal to your reader's heart or mind?</p>"
+                        },
+                        "Response": "Write your next point in about 6 sentences...",
+                        "Hints": [
+                            {
+                                "event": "onComplete",
+                                "text": "Don't worry about making your essay perfect just yet. It is still your first draft. You can change it anytime. I'm looking forward to reading it.",
+                                "delay": "300000"
+                            }
+                        ],
+                        "Navigation": [
+                            {
+                                "Ref": "Para4",
+                                "Label": "Writing the counter point"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "Para4",
+                        "Type": "Writing",
+                        "Title": "The counter-point",
+                        "Instruction": {
+                            "Newbie": "<p>You can write another paragraph in support of your <em>big idea</em>, or you can write an idea that goes against your main idea. This is called a <em>counter-idea</em>.</p><p>While you describe the <a href='http://gobrad.wix.com/adekamie-support#!counter-point/c1azd' target='_blank'>counter-idea</a>, you also explain why it is not a powerful, correct or valid point.</p>",
+                            "Developing": "<p>Some essays are good because they recognise ideas or points that challenge the essay's main idea. These are called <em>counter-arguments</em> or <em>counter-points</em> because they <a href='http://gobrad.wix.com/adekamie-support#!counter-point/c1azd' target='_blank'>counter</a>, or go against, an idea.</p><p>In this paragraph you describe a point against your opinion, but you also <em>explain</em> why it is not a powerful or correct point. If you are unsure of a counter-point to your essay, you could ask a partner what points can be made against your main idea. You don't need to have a counter-point.</p>",
+                            "Flying": "<p>Some essay are effective because they recognise and anticipate other ideas or points that challenge the essay's main idea. These are called <em>counter-arguments</em> or <em>counter-points</em> because they <a href='http://gobrad.wix.com/adekamie-support#!counter-point/c1azd' target='_blank'>counter</a>, or go against, the ideas raised in your essay.</p><p>The counter idea paragraph comes near the end of the essay and it is optional. In the counter-idea paragraph you describe a point against your opinion, but you also <em>explain</em> why it is not a powerful, correct or valid point or opinion. If you are unsure of a counter-point to your essay, you can ask a partner what counter-argument could be made against your opinion.</p>"
+                        },
+                        "Response": "Some people disagree with the idea being made by this essay. Some people argue... . However, this is not a strong point because...",
+                        "Navigation": [
+                            {
+                                "Ref": "Conclusion",
+                                "Label": "Writing the conclusion"
+                            }
+                        ]
+                    },
+                    {
+                        "Reference": "Conclusion",
+                        "Type": "Writing",
+                        "Title": "Conclusion",
+                        "Instruction": {
+                            "Newbie": "<p>Your essay should finish with a <em>conclusion</em>.</p><p>This is a paragraph that <em>re-tells</em> the reader your <em>big idea</em> and the points you have made. It should make clear how your points support the big idea you have been trying to make (your argument). Your final sentence should be interesting.</p>",
+                            "Developing": "<p>Your essay should finish with a <em>conclusion</em>.</p><p>The conclusion is a paragraph that tells the reader one last time your <em>big idea</em> and the points you have made. It should sum up your ideas and explain how your points support the big idea you have been trying to make (your argument). You should leave your reader thinking that you have made some very strong points. Your final sentence should be interesting.</p>",
+                            "Flying": "<p>Every essay should finish with a <em>conclusion</em>.</p><p>The conclusion is a paragraph that sums up your main ideas and leaves your reader thinking that you have made some very strong points. To do this, you should look over the main points you have made in your essay and re-state them in a few sentences. You should make clear <em>how</em> the points you have made support your thesis statement. You may even mention the counter-argument and explain why that point is not compelling. Your final sentence should be thought-provoking and interesting, convincing the reader of your ideas.</p>"
+                        },
+                        "Response": "In this essay I have argued that...",
+                        "Hints": [
+                            {
+                                "event": "onEdit",
+                                "text": "Well done! You are up to the conclusion. Not long to go now! Keep focused. Remember what your essay question was and what your essays is about.",
+                                "delay": "2000"
+                            },
+                            {
+                                "event": "onComplete",
+                                "text": "You're near the end. Don't tell anyone, but you're my favourite student.",
+                                "delay": "500000"
+                            },
+                            {
+                                "event": "onComplete",
+                                "text": "Now it's time to review your essay. I'll tell you my secret to a great essay. I read my essays slowly to make sure it answers the question. And yes, I do write essays. So read your essay to yourself and listen to how it sounds. Does it make sense? Does it sound believable? Does each paragraph have a main idea? Have you put full stops and commas in the correct places.",
+                                "delay": "6000"
+                            }
+                        ],
+                        "Navigation": [
+                            {
+                                "Ref": "Review",
+                                "Label": "Review your completed essay"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Reference": "Review",
+                "Type": "Review",
+                "Title": "Review your essay",
+                "ReviewList": [
+                    "Introduction",
+                    "Para1",
+                    "Para2",
+                    "Para3",
+                    "Para4",
+                    "Conclusion"
+                ],
+                "Navigation": [
+                    {
+                        "Ref": "Introduction",
+                        "Label": "Edit the Introduction"
+                    },
+                    {
+                        "Ref": "Para1",
+                        "Label": "Edit the first paragraph"
+                    },
+                    {
+                        "Ref": "Para2",
+                        "Label": "Edit the second paragraph"
+                    },
+                    {
+                        "Ref": "Para3",
+                        "Label": "Edit the third paragraph"
+                    },
+                    {
+                        "Ref": "Para4",
+                        "Label": "Edit the counter-point"
+                    },
+                    {
+                        "Ref": "Conclusion",
+                        "Label": "Edit the conclusion"
+                    },
+                    {
+                        "Ref": "Submit",
+                        "Label": "Submit your essay"
+                    }
+                ]
+            },
+            {
+                "Reference": "Submit",
+                "Type": "Submit",
+                "Title": "Submit your essay",
+                "Destination": "email to teacher@myschool.com.au"
+            }
+        ]
+    },
+    "References": [
+        {
+            "Name": "EssayDef",
+            "Label": "Essay",
+            "Icons": [
+                "./img/video.png"
+            ],
+            "SearchWords": [
+                "planning",
+                "essay",
+                "writing",
+                "persuade",
+                "thesis"
+            ],
+            "Content": "An essay is a form of writing. There are many types of essays, including essays on topics, essays that analyse something and history essays.</p><p>Essay usually are written to argue a point, influence a reader, inform a reader, entertain a reader or analyse a text, event or person.</p><p>Essays usually have - an introduction, which is a paragraph that introduces the writer's main ideas in response to the question, body paragraphs where each paragraph contains a main idea, examples and evidence that writers use to support their main ideas, and a conclusion, which sums up he essay's main points.</p><p>Many people prefer that essays are formal, which means it is not conversational, informal or written in 1st person point of view. All essays should sound convincing to their reader.</p><p>This <a href='http://youtu.be/nNmGf5NOeb4' target='_blank'>video</a> and this <a href='http://youtu.be/1wPtLWk46qI' target='_blank'>video</a> look at essay writing."
+        },
+        {
+            "Name": "FormalLanguage",
+            "Label": "Formal",
+            "Icons": [
+                "./img/text.png"
+            ],
+            "SearchWords": [
+                "formal",
+                "words",
+                "writing",
+                "language",
+                "informal",
+                "casual"
+            ],
+            "Content": "Think of formal language as the difference between speaking or writing a job resume and speaking and writing to your close friends. We use formal language and informal language for different reasons and with different audiences. Some differences include: formal language does not contract or shorten words; formal language does not use 'I' or first person point of view; formal language applies the rules of English strictly."
+        },
+        {
+            "Name": "Introduction",
+            "Label": "Introduction",
+            "Icons": [
+                "./img/text.png"
+            ],
+            "SearchWords": [
+                "begin",
+                "introduction",
+                "words",
+                "essay",
+                "element",
+                "part"
+            ],
+            "Content": "<p class='refText'>Most stories, essays and articles have introductions (noun). An introduction is the beginning part of a text. Introductions introduce and begin the piece of writing.</p><p>In an essay, the introduction introduces the topic and main ideas the essay will cover. In a story, the introduction usually sets the scene and introduces the reader to the setting, characters and circumstances.</p><p>In a news article, the introduction tells the reader the most important details related to the event described in the article. Introductions should interest and engage the reader.</p>"
+        },
+        {
+            "Name": "Paragraph1",
+            "Label": "Paragraph",
+            "Icons": [
+                "./img/text.png"
+            ],
+            "SearchWords": [
+                "paragraph",
+                "words",
+                "writing",
+                "skills"
+            ],
+            "Content": "A paragraph is one or more sentences that form a section of writing and that express a main idea. A <a href='http://gobrad.wix.com/adekamie-support#!paragraphs/c1f8q' target='_blank'>paragraph</a> usually begins after a blank line, or with an indent. Stories, novels, essays and articles are all made up of many paragraphs.</p><p>Paragraphs in essays can be organised using TIEE - a Topic sentence, sentences that explains your topic sentence or Introduces your example, your Example or evidence, and an Explanation of your example or evidence, like how it relates to your topic.</p><p>Here is an example of a paragraph: <em>'Year nines are the naughtiest group of students because they are not near the end of their schooling. When students in year 11 and 12 are at school they are starting to think about and plan their future. For many of these students, they want to get the best grades they can because this will help them get good jobs or help them get into TAFE or university. Year nines do not have that pressure on them yet, so many of them muck about.'</em></p><p>This <a href='http://youtu.be/72rAfA3hnvU' target='_blank'>video</a> explains how to write paragraphs for essays."
+        },
+        {
+            "Name": "Paragraph2",
+            "Label": "Paragraph 2",
+            "Icons": [
+                "./img/video.png"
+            ],
+            "SearchWords": [
+                "paragraph",
+                "gobby",
+                "brad",
+                "words",
+                "writing",
+                "skills"
+            ],
+            "Content": "<em>This <a href='http://youtu.be/LO5XONDxK6I' target='_blank'>video</a> explains how to write paragraphs for essays.</em>"
+        },
+        {
+            "Name": "Persuasion",
+            "Label": "Persuasion",
+            "Icons": [
+                "./img/text.png"
+            ],
+            "SearchWords": [
+                "persuasion",
+                "persuade",
+                "writing",
+                "essay"
+            ],
+            "Content": "Persuasion means to influence, persuade or convince others of your ideas <em>(noun)</em>. Many techniques can be used to achieve this. You can use emotive or descriptive language - that which targets your heart and emotions; you can appeal to people's sense of justice; you can appeal to people's prejudice by stereotyping; you can appeal to history by referring to historical events; you can appeal to people's reason by providing facts and statistics."
+        },
+        {
+            "Name": "PlanningEssay",
+            "Label": "Planning an Essay",
+            "Icons": [
+                "./img/video.png"
+            ],
+            "SearchWords": [
+                "planning",
+                "essay",
+                "gobby",
+                "brad",
+                "writing",
+                "skills"
+            ],
+            "Content": "When planning an essay you should - work out what the question is asking you to do; brainstorm possible answers to the question; decide on the best ideas and organise these into paragraphs; draft your introduction and paragraphs with a topic sentence for each; draft your essay. This <a href='http://youtu.be/72rAfA3hnvU' target='_blank'>video</a> explains how to write paragraphs for essays. "
+        },
+        {
+            "Name": "Sentence",
+            "Label": "Sentence",
+            "Icons": [
+                "./img/text.png"
+            ],
+            "SearchWords": [
+                "sentence",
+                "clause",
+                "writing"
+            ],
+            "Content": "A sentence is a set of words that when connected convey a statement or meaning. A sentence should have a subject (participant), a process (a doing word), and a circumstance. For example, <em>'Jane ran inside'</em> is a sentence that contains all three. 'Jane' is the person or object <em>(the subject)</em>, 'ran' is what Jane is doing <em>(the process)</em>, and 'inside' is where she is running <em>(the circumstance)</em>. A sentence can be a clause or it can be made up of more than one clause."
+        },
+        {
+            "Name": "TaskWords",
+            "Label": "Task Words",
+            "Icons": [
+                "./img/text.png"
+            ],
+            "SearchWords": [
+                "topic",
+                "task",
+                "words",
+                "essay",
+                "question",
+                "analyse",
+                "analysis"
+            ],
+            "Content": "These keywords in a question tell the reader how the topic of the question should be written about. For example, the task word in the question <em>'Explain why Facebook is so popular with teenagers'</em>, is <em>explain</em>. This task word tells you to explain the reasons Facebook is popular."
+        },
+        {
+            "Name": "TopicSentence",
+            "Label": "Topic sentence",
+            "Icons": [
+                "./img/text.png"
+            ],
+            "SearchWords": [
+                "paragraph",
+                "topic",
+                "sentence",
+                "essay",
+                "writing"
+            ],
+            "Content": "A topic sentence is the first sentence of a paragraph in an essay or article. It tells the reader the topic or main idea of the paragraph. The other sentences in the paragraph relate to the topic sentence. Topic sentences do not have to always be the first sentence of a paragraph."
+        },
+        {
+            "Name": "TopicWords",
+            "Label": "Topic Words",
+            "Icons": [
+                "./img/text.png"
+            ],
+            "SearchWords": [
+                "topic",
+                "task",
+                "words",
+                "essay",
+                "question",
+                "analyse",
+                "analysis"
+            ],
+            "Content": "These keywords in a question tell the reader the topic or issue they are to write about. For example, the topic words in the question 'Explain how clouds form' are 'how clouds form'. These topic words tell you that you must write about clouds and how the form."
+        },
+        {
+            "Name": "ThesisStatement",
+            "Label": "Thesis Statement",
+            "Icons": [
+                "./img/text.png"
+            ],
+            "SearchWords": [
+                "thesis",
+                "big",
+                "statement",
+                "idea",
+                "question",
+                "essay"
+            ],
+            "Content": "A thesis statement is a sentence in an essay that describes your essay's main idea. It is usually the thing the essay is arguing or explaining and it is usually in response to a question.</p><p>A thesis is a statement or theory put forward and supported by argument. A thesis statement is one of two sentences that express this main idea. For example, to the essay question <em>'Why is Facebook so popular with teenagers'</em>, a thesis statement could be <em>'Facebook is popular with teenagers because it enables them to be in constant contact with their friends'</em>. If this were a thesis statement my essay would be arguing, then all the ideas in the essay would link to this thesis. "
+        }
+    ]
+}
