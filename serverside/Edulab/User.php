@@ -6,66 +6,86 @@ namespace BrightSparksLabs\Adekamie;
  *
  * @author Marcus
  */
-class User {
-    private $Name = "";
-    private $ID = "";
-    private $Enabled = "";
-    
-    function __construct($name = "", $id =""){
-        $mysqli = DataConnection::getConnection();
-        $safeName = $mysqli->escape_string($name);
-        $safeId = $mysqli->escape_string($id);
-        //have they specified an ID?
-        if($id != ""){
-            // yes -> does it exist on the db?
-            $query = "CALL edulab.spGetUserById('$safeId')";
-            $result = $mysqli->query($query);
-            if($result){
-                // yes -> populate
-                
-            } else {
-                // no -> no such user, keep it blank
-                return;
-            }
+function createNewUser($pdo,$userId,$userName,$enabled){
+    $query = "CALL spCreateNewUser('$userId','$userName',$enabled)";
+    try{
+        $rowsAffected = $pdo->exec($query);
+    }
+    catch(Exception $e)
+    {
+        return $e->getMessage();
+    }
+    return ($rowsAffected==1) ;
+}
+function getUserById($pdo,$userId){
+    $query = "CALL spGetUserById('$userId')";
+    try
+    {
+        $result = $pdo->query($query);
+        if($result){
+            return $result->fetch(\PDO::FETCH_ASSOC);
         }
-        else {
-            // no -> have they specified a name?
-            if($name != ""){
-                // yes -> does it exist on the db?
-                $query = "CALL edulab.spGetUserByName('$safeName')";
-                $result = $mysqli->query($query);
-                if($result){
-                    // yes -> populate
-                    $row = $result->fetch_assoc();
-                    $this->Id = $row["UserId"];
-                    $this->Name = $row["UserName"];
-                    $this->Enabled = $row["Enabled"];
-                } else {
-                    // no -> new User with this name
-                    $this->Id = Utility::createGuid();
-                    $this->Name = $name;
-                }
-            } else {
-                //no -> new blank user
-                $this->ID = Utility::createGuid();
-            }
+        else{
+            return false;
         }
     }
-    
-    function save(){
-        
+    catch(Exception $e){
+        return 'exception: '.$e->getMessage();
     }
-    function checkUserAuthorisationForUser($thisUser, $targetUser){
-        //TODO: check what rights the logged-in user has for the property of the target user
-        return true;
+}
+function getUserByName($pdo,$userName){
+    $query = "CALL spGetUserByName('$userName')";
+    try
+    {
+        $result = $pdo->query($query);
+        if($result){
+            return $result->fetch(\PDO::FETCH_ASSOC);
+        }
+        else{
+            return null;
+        }
     }
-
-    function getLessonFilesByUser($lessonName, $user){
-        //TODO: get the file history from the database
-        $query = "SELECT * FROM LessonFiles WHERE UserName = '$user' ORDER BY FileDate";
-
+    catch(Exception $e){
+        return 'exception: '.$e->getMessage();
+    }    
+}
+function updateUser($pdo,$userId,$userName,$enabled){
+    $query = "CALL spUpdateUser('$userId','$userName',$enabled)";
+    try{
+        $rowsAffected = $pdo->exec($query);
     }
-
+    catch(Exception $e)
+    {
+        return $e->getMessage();
+    }
+    return ($rowsAffected==1);    
+}
+function deleteUser($pdo,$userId){
+    $query = "CALL spDeleteUser('$userId')";
+    try{
+        $rowsAffected = $pdo->exec($query);
+    }
+    catch(Exception $e)
+    {
+        return $e->getMessage();
+    }
+    return ($rowsAffected==1);        
+}
+function getUserIndex($pdo){
+    $query = "CALL spGetUsers()";
+    try
+    {
+        $result = $pdo->query($query);
+        if($result){
+            return $result->fetchAll(\PDO::FETCH_ASSOC);
+        }
+        else{
+            return false;
+        }
+    }
+    catch(Exception $e){
+        return 'exception: '.$e->getMessage();
+    }
 }
 
 ?>
