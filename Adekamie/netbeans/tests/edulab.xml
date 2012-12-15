@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="edulab">
+	<table_structure name="files">
+		<field Field="FileId" Type="varchar(36)" Null="NO" Key="PRI" Extra="" Comment="" />
+		<field Field="UserId" Type="varchar(36)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="LessonId" Type="varchar(36)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="Version" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="files" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="FileId" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="files" Non_unique="1" Key_name="UserId" Seq_in_index="1" Column_name="UserId" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="files" Non_unique="1" Key_name="UserId" Seq_in_index="2" Column_name="LessonId" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="files" Non_unique="1" Key_name="LessonId" Seq_in_index="1" Column_name="LessonId" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="files" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="6291456" Create_time="2012-12-06 10:54:51" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="files">
+	</table_data>
+	<table_structure name="lessoninstances">
+		<field Field="LessonId" Type="varchar(36)" Null="NO" Key="PRI" Extra="" Comment="" />
+		<field Field="TemplateId" Type="varchar(36)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="TeacherId" Type="varchar(36)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="Available" Type="tinyint(1)" Null="NO" Key="" Default="1" Extra="" Comment="" />
+		<key Table="lessoninstances" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="LessonId" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="lessoninstances" Non_unique="1" Key_name="TemplateId" Seq_in_index="1" Column_name="TemplateId" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="lessoninstances" Non_unique="1" Key_name="TeacherId" Seq_in_index="1" Column_name="TeacherId" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="lessoninstances" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="6291456" Create_time="2012-12-06 10:57:37" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="lessoninstances">
+	</table_data>
+	<table_structure name="lessontemplatefiles">
+		<field Field="TemplateFileId" Type="varchar(36)" Null="NO" Key="PRI" Extra="" Comment="" />
+		<field Field="TemplateId" Type="varchar(36)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="Version" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="Filename" Type="varchar(100)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="lessontemplatefiles" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="TemplateFileId" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="lessontemplatefiles" Non_unique="1" Key_name="TemplateId" Seq_in_index="1" Column_name="TemplateId" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="lessontemplatefiles" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="6291456" Create_time="2012-12-06 11:02:27" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="lessontemplatefiles">
+	</table_data>
+	<table_structure name="lessontemplates">
+		<field Field="TemplateId" Type="varchar(36)" Null="NO" Key="PRI" Extra="" Comment="" />
+		<field Field="LessonName" Type="varchar(100)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="Enabled" Type="tinyint(1)" Null="NO" Key="" Default="1" Extra="" Comment="" />
+		<key Table="lessontemplates" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="TemplateId" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="lessontemplates" Non_unique="1" Key_name="LessonName" Seq_in_index="1" Column_name="LessonName" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="lessontemplates" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="6291456" Create_time="2012-12-06 11:01:19" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="lessontemplates">
+	</table_data>
+	<table_structure name="sessions">
+		<field Field="SessionId" Type="varchar(36)" Null="NO" Key="PRI" Extra="" Comment="" />
+		<field Field="UserId" Type="varchar(36)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="SessionIP" Type="varchar(50)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="Start" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="LastRequest" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="Active" Type="tinyint(1)" Null="NO" Key="" Default="1" Extra="" Comment="" />
+		<key Table="sessions" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="SessionId" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="sessions" Non_unique="1" Key_name="UserId" Seq_in_index="1" Column_name="UserId" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="sessions" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="6291456" Create_time="2012-12-06 10:50:23" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="sessions">
+	</table_data>
+	<table_structure name="users">
+		<field Field="UserId" Type="varchar(36)" Null="NO" Key="PRI" Extra="" Comment="" />
+		<field Field="UserName" Type="varchar(50)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="Enabled" Type="tinyint(1)" Null="NO" Key="" Default="1" Extra="" Comment="" />
+		<key Table="users" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="UserId" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="users" Non_unique="1" Key_name="UserName" Seq_in_index="1" Column_name="UserName" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="users" Engine="InnoDB" Version="10" Row_format="Compact" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="6291456" Create_time="2012-12-06 10:37:05" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_data name="users">
+	</table_data>
+</database>
+</mysqldump>

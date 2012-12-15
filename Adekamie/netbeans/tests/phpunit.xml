@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit>
+    <php>
+        <var name="DB_DSN" value="mysql:dbname=edulab;host=localhost" />
+        <var name="DB_USER" value="testuser" />
+        <var name="DB_PASSWORD" value="testpassword" />
+        <var name="DB_DBNAME" value="edulab" /> 
+        <var name="DB_SERVER" value="localhost" />
+        <var name="DB_OPTIONS" value=""/>
+    </php>
+</phpunit>
