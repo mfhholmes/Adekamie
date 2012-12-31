@@ -148,6 +148,10 @@ function classifyTask(lesson, task, taskArray, indent){
                         newtask = new task_submit(lesson,index,task);
                         break;
                     }
+                    case "richtext":{
+                        newtask = new task_richText(lesson, index, task);
+                        break;
+                    }
                     default:{
                         newtask = new task_unknown(lesson, index,task);
                         break;

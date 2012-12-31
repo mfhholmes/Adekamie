@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adekamie Development Site</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="EduLab/js/vendor/jquery-1.8.1.min.js"></script>
+        <script type="text/javascript">
+            function test(){
+                $("body").append("<div>testing php info...</div>");
+                testresult = $.get("serverside/Test/testhost.php/testpage", function(data){
+                    $("body").append(data);
+                }).error(function(){
+                    $("body").append("<div>bad thing happened</div>")
+                });                
+            }
+        </script>
+    </head>
+    <body>
+        <div>Well done, you got here!</div>
+        <a href="Edulab/index.html">Adekamie Client</a><br/>
+        <a href="serverside/Test/servertest.html">Adekamie Server</a><br/>
+        <input type="button" value="test PHP and SLIM" onclick="test();"/>
+    </body>
+</html>

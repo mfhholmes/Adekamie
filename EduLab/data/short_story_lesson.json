@@ -375,7 +375,7 @@
                     },
                     {
                         "Reference": "Para3",
-                        "Type": "Writing",
+                        "Type": "RichText",
                         "Title": "Paragraph 3",
                         "Instruction": {
                             "Newbie": "<p>Use paragraph 3 to end your story. Does your character overcome their problem? Does your story end happily every after?</p><p>There is an extra paragraph if you need it.</p>",
@@ -425,26 +425,26 @@
     },
     "References": [
         {
-            "Name": "",
-            "Label": "",
+            "Name": "Ref1",
+            "Label": "Ref1",
             "Icons": [
                 "./img/video.png"
             ],
             "SearchWords": [
-                ""
+                "Ref"
             ],
-            "Content": ""
+            "Content": "This is the first reference"
         },
         {
-            "Name": "",
-            "Label": "",
+            "Name": "Ref2",
+            "Label": "Ref2",
             "Icons": [
                 "./img/text.png"
             ],
             "SearchWords": [
-                ""
+                "ref2"
             ],
-            "Content": ""
+            "Content": "This is the second reference"
         }
     ]
 }
