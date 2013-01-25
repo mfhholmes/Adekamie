@@ -30,11 +30,13 @@
         "Reference": "Root",
         "Type": "Container",
         "Title": "Short Short Story",
+        "Notepad": "No",
         "Tasks": [
             {
                 "Reference": "Intro",
                 "Type": "Reading",
                 "Title": "Introduction",
+                "Notepad": "No",
                 "Instruction": {
                     "Newbie": "<p>A story recounts events that occur to a character, person or thing.</p><p>Stories come in many lengths – from short stories to long novels. You can also write <em>short short</em> stories – these are very short stories. Your challenge is to plan a short short story of three or four short paragraphs.</p><p>Let's begin by generating some ideas.</ul>",
                     "Developing": "<p>A story recounts events that occur to a character, person or thing.</p><p>Stories come in many lengths – from short stories to long novels. You can also write <em>short short</em> stories – these are very short stories. Your challenge is to plan a short short story of three or four short paragraphs.</p><p>Let's begin by generating some ideas.</ul></p>",
@@ -52,6 +54,7 @@
                 "Reference": "Idea",
                 "Title": "The idea",
                 "Type": "Container",
+                "Notepad": "No",
                 "Tasks": [
                     {
                         "Reference": "Adjectives",
@@ -111,6 +114,7 @@
                         "Reference": "Noun",
                         "Type": "flyOutSelection",
                         "Title": "Noun",
+                        "Notepad": "No",
                         "Instruction": {
                             "Newbie": "<p>Nouns are words that name a person, animal, place or thing.</p><p>Write 5 nouns from the list or write your own.</p>",
                             "Developing": "<p>Nouns are words that name a person, animal, place or thing.</p><p>Write 5 nouns from the list or write your own.</p>",
@@ -162,6 +166,7 @@
                         "Reference": "Combine",
                         "Type": "Writing",
                         "Title": "Combine",
+                        "Notepad": "No",
                         "Instruction": {
                             "Newbie": "<p>Adjectives change nouns when adjectives are combined with them.</p><p>For example, it can make a <em>sore</em> foot, a <em>mean</em> teacher, or a cupboard <em>empty</em>. In these examples, an adjective describes the noun, changing it in some way.</p><p>Now, combine some of your nouns with some of your adjectives, separating each combination with a comma.</p>",
                             "Developing": "<p>Adjectives change nouns when adjectives are combined with them.</p><p>For example, it can make a <em>sore</em> foot, a <em>mean</em> teacher, or a cupboard <em>empty</em>. In these examples, an adjective describes the noun, changing it in some way.</p>Combine some of your nouns with some of your adjectives to create interesting combinations, separating each combination with a comma.</p>",
@@ -173,12 +178,13 @@
                         "Reference": "Title",
                         "Type": "Writing",
                         "Title": "Title",
+                        "Notepad": "Yes",
                         "Instruction": {
                             "Newbie": "<p>Choose one of your most interesting combinations as a title for a story.</p>",
                             "Developing": "<p>Choose one of your most interesting combinations as a title for a story.</p>",
                             "Flying": "<p>Choose one of your most interesting combinations as a title for a story.</p>"
                         },
-                        "Response": "The title of my story is The..."
+                        "Response": "The Title"
                     }
                 ]
             },
@@ -186,6 +192,7 @@
                 "Reference": "Brainstorm",
                 "Type": "Writing",
                 "Title": "Brainstorm",
+                "Notepad": "No",
                 "Instruction": {
                     "Newbie": "<p>Usually the title of a story provides a clue about what the story is about. It may also raise a lot of questions about what the story's plot, characters and events could be.</p><p>Think about the title of your story and write a list of possible story lines, or what your story could be about. Click the blue star above to get some more tips.</p>",
                     "Developing": "<p>Often the title of a story gives us a clue about what the story is about.</p><p>For example, <em>The Electric Teacher</em> may be a story about a teacher who is electric in some way. This raises some interesting questions, like:<ul><li>In what way is the teacher electric?</li><li>Why is the teacher electric?</li><li>Was the teacher always electric?</li><li>Does the teacher need to be plugged into a socket to charge?</li><li>What happens if he or she is not plugged in?</li><li>Is this a problem that needs to be fixed?</li><li>What would happen if the teacher forgot to pay his or her electricity bill?</li></ul>Think about the title of your story and write a list of possible story lines, or what your story could be about.</p>",
@@ -197,11 +204,13 @@
                 "Reference": "Plannotes",
                 "Type": "Container",
                 "Title": "Plan the story",
+                "Notepad": "No",
                 "Tasks": [
                     {
                         "Reference": "PlanStory",
                         "Type": "Reading",
                         "Title": "Plan a story",
+                        "Notepad": "No",
                         "Instruction": {
                             "Newbie": "<p>Your challenge now is to plan a short short story of three or four short paragraphs. To do this, you should think about:<ul><li>who is in your story;</li><li>what happens in your story;</li><li>why things happen in your story;</li><li>where your story is set;</li><li>when your story happens;</li><li>having a beginning, a middle and an ending.</ul>You will now be asked 6 questions about the key elements of your story, so get your thinking caps on!</p>",
                             "Developing": "<p>A story recounts a <em>sequence</em> of events that occur to a character, person or thing.</p><p>Your challenge is to plan a short short story of three or four short paragraphs. To do this, you should think about:<ul><li>who is in your story;</li><li>what happens in your story;</li><li>why things happen in your story;</li><li>where your story is set;</li><li>when your story happens;</li><li>having a beginning, a middle and an ending.</ul>You will now be asked 6 questions about the elements of your story, so get your thinking caps on!</p>",
@@ -213,6 +222,7 @@
                         "Reference": "Whoandwhat",
                         "Type": "Writing",
                         "Title": "Who and what",
+                        "Notepad": "No",
                         "Instruction": {
                             "Newbie": "<p>Stories usually have a main character that the story is about.</p><p>Think of a <em>main character</em> for your story - this may be a person, an animal or an object – and give this character a name. Think about what this name says about the character and the type of character it is. It may be easiest to have a human character.</p>",
                             "Developing": "<p>Stories usually have a main character that the story is about.</p><p>Think about the main characters in stories you have read or films you have watched. Was this character a person, an animal or a machine? What were their main features?</p><p>Now think of a <em>main character</em> for your story - this may be a person, an animal or an object – and give this character a name. Think about what this name says about the character and the type of character it/he/she is. It may be easiest to have a human character.</p>",
@@ -224,6 +234,7 @@
                         "Reference": "Character",
                         "Type": "Writing",
                         "Title": "Character",
+                        "Notepad": "No",
                         "Instruction": {
                             "Newbie": "<p>Characters are more than names. They have features or characteristics – I guess that’s why they’re called characters!</p><p>Now, imagine the characters in your story: What do they look like? How do they move? What do they do? How do they speak? What is their personality like? What do they sound like? Now, write a description of your characters.</p>",
                             "Developing": "<p>Characters are more than names. They have features or characteristics – I guess that’s why they’re called characters!</p><p>Now, imagine the characters in your story: What do they look like? How do they move? What do they do? How do they speak? What is their personality like? What do they sound like? Now, write a description of your characters.</p>",
@@ -242,6 +253,7 @@
                         "Reference": "What",
                         "Type": "Writing",
                         "Title": "What",
+                        "Notepad": "No",
                         "Instruction": {
                             "Newbie": "<p>Now, let’s think about what happens to your main character in the story.</p><p>Stories are about things that happen – these may be things that happen to characters, or things that character do.</p><p>Think about the title of your story and your main character and decide what is the major thing that happens in your story, and then describe it.</p>",
                             "Developing": "<p>Now, let’s think about what happens to your main character in the story.</p><p>Stories are about things that happen – these may be things that happen to characters, or things that character do.</p><p>Think about the title of your story and your main character and decide what is the major thing that happens in your story, and then describe it.</p>",
@@ -260,6 +272,7 @@
                         "Reference": "Why",
                         "Type": "Writing",
                         "Title": "Why",
+                        "Notepad": "No",
                         "Instruction": {
                             "Newbie": "<p>When things happen in stories, they happen for a reason.</p><p>Sometimes readers know why things happen, and sometimes they don’t. Sometimes readers have to imagine and sometimes they are only told in the end.</p><p>Why does the main event happen in your story?</p>",
                             "Developing": "<p>When things happen in stories, they happen for a reason.</p><p>Sometimes readers know why things happen, and sometimes they don’t. Sometimes readers have to imagine and sometimes they are only told in the end.</p><p>Why does the main event happen in your story?</p>",
@@ -278,6 +291,7 @@
                         "Reference": "Where",
                         "Type": "Writing",
                         "Title": "Where and when",
+                        "Notepad": "No",
                         "Instruction": {
                             "Newbie": "<p>Setting is the place where a story takes place. Is it in a house? In a classroom? At the beach? In someone’s body? In a fantasy universe?</p><p>Stories also occur at a place in time – today, yesterday, or in the future.</p><p>Describe where and when your story takes place.</p>",
                             "Developing": "<p>Setting is the place where a story takes place. Is it in a house? In a classroom? At the beach? In someone’s body? In a fantasy universe?</p><p>Stories also occur at a place in time – today, yesterday, or in the future.</p><p>Describe where and when your story takes place.</p>",
@@ -303,11 +317,13 @@
                 "Reference": "Write1",
                 "Type": "Container",
                 "Title": "Write the story",
+                "Notepad": "No",
                 "Tasks": [
                     {
                         "Reference": "Write",
                         "Type": "Reading",
                         "Title": "Write",
+                        "Notepad": "No",
                         "Instruction": {
                             "Newbie": "<p>Now that you have thought about the key elements of your story, begin writing your story in three or four short paragraphs. Try for 3 - 5 sentences for each paragraph.</p>",
                             "Developing": "<p>Now that you have thought about the key elements of your story, begin writing your story in three or four short paragraphs. Try for 3 - 5 sentences for each paragraph.</p>",
@@ -325,6 +341,7 @@
                         "Reference": "Para1",
                         "Type": "flyOutSelection",
                         "Title": "Paragraph 1",
+                        "Notepad": "Yes",
                         "Instruction": {
                             "Newbie": "<p>Use paragraph 1 to create an interesting and engaging beginning to your story, letting your reader know about your character and setting.</p><p>Perhaps your character wakes up and everything is normal, until they look in the mirror! Whatever your choose to write, try to paint a picture in your readers’ minds.</p><Click no the blue star for more tips.</p>",
                             "Developing": "<p>Use paragraph 1 to create an interesting and engaging beginning to your story, letting your reader know about your character and setting.</p><p>Perhaps your character wakes up and everything is normal, until they look in the mirror! Whatever your choose to write, try to paint a picture in your readers’ minds.</p><p>Not sure how to begin? Try using the sentences provided if you need to get started. Remember to use capital letters at the beginning of your sentences, and full stops at the end of your sentences.</p>",
@@ -350,6 +367,7 @@
                         "Reference": "Para2",
                         "Type": "flyOutSelection",
                         "Title": "Paragraph 2",
+                        "Notepad": "Yes",
                         "Instruction": {
                             "Newbie": "<p>Use paragraph 2 to describe something interesting that happens to your main character or object.</p><p>Whatever you choose to write, describe how your character deals with an issue or event that creates drama. We have provided some helpful sentences and there are more tips if you click the blue star.</p>",
                             "Developing": "<p>Use paragraph 2 to describe something interesting that happens to your main character or object.</p><p> Perhaps your character must get through school without anyone realising she has no teeth, or perhaps your character only now realises that they have an ear growing where their nose should be, and a nose growing where their mouth should to be!</p><p>Whatever you choose to write, describe how your character deals with an issue or event that creates drama. We have provided some sentences that may help get you started.</p>",
@@ -377,6 +395,7 @@
                         "Reference": "Para3",
                         "Type": "RichText",
                         "Title": "Paragraph 3",
+                        "Notepad": "Yes",
                         "Instruction": {
                             "Newbie": "<p>Use paragraph 3 to end your story. Does your character overcome their problem? Does your story end happily every after?</p><p>There is an extra paragraph if you need it.</p>",
                             "Developing": "<p>Use paragraph 3 to end your story. Does your character overcome their problem? Does your story end happily every after?</p><p>There is an extra paragraph if you need it.</p>",
@@ -395,6 +414,7 @@
                         "Reference": "Para4",
                         "Type": "Writing",
                         "Title": "Extra",
+                        "Notepad": "Yes",
                         "Instruction": {
                             "Newbie": "<p>Do you need another paragraph to finish your story? Use the box below for your final paragraph.</p>",
                             "Developing": "<p>Do you need another paragraph to finish your story? USe the box below for your final paragraph.</p>",
@@ -405,20 +425,15 @@
                 ]
             },
             {
-                "Reference": "Review",
-                "Type": "Review",
-                "Title": "Review your story",
-                "ReviewList": [
-                    "Para1",
-                    "Para2",
-                    "Para3",
-                    "Para4"
-                ]
-            },
-            {
                 "Reference": "Submit",
                 "Type": "Submit",
                 "Title": "Submit your story",
+                "Instruction": {
+                    "Newbie": "<p>Review your story in the Notepad to the right, then click on the Submit button to submit this story as your final work.</p>",
+                    "Developing": "<p>Review your story in the Notepad to the right, then click on the Submit button to submit this story as your final work.</p>",
+                    "Flying": "<p>Review your story in the Notepad to the right, then click on the Submit button to submit this story as your final work.</p>"
+                },
+                "Notepad":"No",
                 "Destination": "email to teacher@myschool.com.au"
             }
         ]

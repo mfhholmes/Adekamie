@@ -163,7 +163,7 @@ body{
 	width:100%;
 	margin:0;
 	padding:0;
-	background-image:url('../img/warpoem/background.jpg');
+	background-image:url('../img/newstyle/infoback.jpeg');
 	background-size:cover;
 }
 .headerLogo{
@@ -174,7 +174,7 @@ body{
 	width:220px;
 	margin:0;
 	padding:0;
-	background-image:url('../img/warpoem/LogoHeader.png');
+	background-image:url('../img/newstyle/LogoHeader.png');
 	background-repeat:no-repeat;
 	font-size: 0px;
 }
@@ -202,7 +202,7 @@ body{
 #header{
 	width:100%;
 	height:75px;
-	background-image:url('../img/warpoem/HeaderBackground.png');
+	background-image:url('../img/newstyle/HeaderBackground.png');
 	background-repeat:repeat-x;
 	margin:0;
 	padding:0;
@@ -231,37 +231,38 @@ body{
 	background-size:contain;
 }
 #Exit{
-	content:url('../img/warpoem/IconExit.png');
-	background-image:url('../img/warpoem/IconExit.png');
+	content:url('../img/newstyle/IconExit.png');
+	background-image:url('../img/newstyle/IconExit.png');
 }
 #Save{
-	content:url('../img/warpoem/IconSave.png');
-	background-image:url('../img/warpoem/IconSave.png');
+	content:url('../img/newstyle/IconSave.png');
+	background-image:url('../img/newstyle/IconSave.png');
 }
 #Samples{
-	content:url('../img/warpoem/IconSamples.png');
-	background-image:url('../img/warpoem/IconSamples.png');
+	content:url('../img/newstyle/IconSamples.png');
+	background-image:url('../img/newstyle/IconSamples.png');
 }
 #Settings{
-	content:url('../img/warpoem/IconSetting.png');
-	background-image:url('../img/warpoem/IconSetting.png');
+	content:url('../img/newstyle/IconSetting.png');
+	background-image:url('../img/newstyle/IconSetting.png');
 }
 .MessageNotLit{
-	content:url('../img/warpoem/IconMessage.png');
-	background-image:url('../img/warpoem/IconMessage.png');
+	content:url('../img/newstyle/IconMessage.png');
+	background-image:url('../img/newstyle/IconMessage.png');
 }
 .MessageLit{
-	content:url('../img/warpoem/IconMessageLit.png');
-	background-image:url('../img/warpoem/IconMessageLit.png');	
+	content:url('../img/newstyle/IconMessageLit.png');
+	background-image:url('../img/newstyle/IconMessageLit.png');	
 }
 #Reference{
-	content:url('../img/warpoem/IconRef.png');
-	background-image:url('../img/warpoem/IconRef.png');
+	content:url('../img/newstyle/IconRef.png');
+	background-image:url('../img/newstyle/IconRef.png');
 }
 #Notepad{
-    content:url('../img/warpoem/IconActivity.png');
-    background-image:url('../img/warpoem/IconActivity.png');
+    content:url('../img/newstyle/IconActivity.png');
+    background-image:url('../img/newstyle/IconActivity.png');
 }
+
 /********** left menu *******/
 #leftmenu{
 	position:absolute;
@@ -275,16 +276,16 @@ body{
 	border:0;
 }
 #Lesson{
-	content:url('../img/warpoem/SidebarArrow.png');
-	background-image:url('../img/warpoem/SidebarArrow.png');
+	content:url('../img/newstyle/SidebarArrow.png');
+	background-image:url('../img/newstyle/SidebarArrow.png');
 	background-size:contain;
 	width:32px;
 	height:28px;
 	box-sizing:border-box;
 }
 #Activity{
-	content:url('../img/warpoem/IconActivity.png');
-	background-image:url('../img/warpoem/IconActivity.png');
+	content:url('../img/newstyle/IconActivity.png');
+	background-image:url('../img/newstyle/IconActivity.png');
 	background-size:contain;
 	width:32px;
 	height:32px;
@@ -328,12 +329,12 @@ body{
 	cursor:pointer;
 }
 .taskListItem+.taskListItem:hover{
-	background-image:url('../img/warpoem/taskfirsthighlight.png');
+	background-image:url('../img/newstyle/taskfirsthighlight.png');
 	background-position:right;
 	background-repeat:no-repeat;
 }
 .taskListItem:first-child{
-	background-image:url('../img/warpoem/taskfirstbackground.png');
+	background-image:url('../img/newstyle/taskfirstbackground.png');
 	left:0px;
 	font-family: 'PT Sans', sans-serif;
 	font-size:1.1em;
@@ -422,8 +423,8 @@ body{
 	top:4px;
 	width:15px;
 	height:15px;
-	content:url('../img/warpoem/taskpanelclose.png');
-	background-image:url('../img/warpoem/taskpanelclose.png');
+	content:url('../img/newstyle/taskpanelclose.png');
+	background-image:url('../img/newstyle/taskpanelclose.png');
 	display: block;
 	background-size:contain;
 	cursor:pointer;
@@ -442,21 +443,21 @@ body{
 	left:20%;
 	top:75px;
 	position:absolute;
+	box-shadow: 5px 5px 10px #A0A0A0;
 	z-index:200;
 	display:none;
-	font-family: 'Courier New', sans-serif;
-	background-image:url('../img/warpoem/Parchment.png');
-        background-size: 100% 100%;
-	opacity:1;
+	font-family: 'PT Sans', sans-serif;
+	background-color:White;
+	opacity:0.90;
 }
 .taskPanelWide{
-	width:65%;
+	width:60%;
 }
 .taskPanelNormal{
-	width:55%;
+	width:35%;
 }
 .taskPanelThin{
-	width:30%;
+	width:20%;
 }
 .taskPanelExitIcon{
 	position:absolute;
@@ -464,8 +465,8 @@ body{
 	width:16px;
 	top:5px;
 	right:5px;
-	content:url('../img/warpoem/taskpanelclose.png');
-	background-image:url('../img/warpoem/taskpanelclose.png');
+	content:url('../img/newstyle/taskpanelclose.png');
+	background-image:url('../img/newstyle/taskpanelclose.png');
 	background-size:cover;
 	background-repeat:no-repeat;
 	cursor:pointer;
@@ -479,16 +480,17 @@ body{
 	border:none;
 }
 .taskPanelTitle{
-	font-family: 'Courier New', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size:1.6em;
-	text-align:center;
-	color:black;
+	text-align:left;
+	background-color:White;
+	color:#00A8DC;
 }
 .taskPanelInstruction{
 	position:relative;
 	width:100%;
 	padding-bottom:5px;
-	color:black;
+	color:#404040;
 	line-height: 1.2em;
 	font-size:0.9em;
 }
@@ -496,25 +498,8 @@ body{
 	margin-bottom:0.5em;
 }
 .taskPanelInstruction p:first-child{
-	color:black;
+	color:DarkOrange;
 	font-size:1em;
-}
-.poem{
-    margin-left:10%;
-    margin-right:10%;
-    width:80%;
-}
-.poemTitle{
-    font-size:1.2em;
-    font-weight:bolder;
-    text-align:left;
-}
-.poemVerse{
-    margin-top:0.5em;
-    margin-bottom:0.5em;
-}
-.poemLine{
-    display:block;
 }
 .instructionImage{
 	position:relative;
@@ -527,50 +512,32 @@ body{
 	display:block;
 	width:100%;
 	height:5em;
-	font-family: 'Courier New', sans-serif;
-	font-size:1em;
-        font-weight:bold;
+	font-family: 'PT Sans', sans-serif;
+	color:Gray;
+	font-size:1.1em;
 	box-sizing:border-box;
 	margin:0px;
 	padding:0px;
-        background-color:antiquewhite;
-        color:gray;
-        border-color:beige;
 }
 .taskPanelEntry:focus{
-	color:black;
+	color:Black;
 }
 .taskPanelAccept{
 	float:right;
 	display:block;
-	font-family: 'Courier New', sans-serif;
-	font-size:1.3em;
-	margin-top:5px;
-	background-color:beige;
-	color:black;
-        font-weight:bolder;
+	font-family: 'PT Sans', sans-serif;
+	font-size:1em;
+	margin-top:10px;
+	background-color:#00A8DC;
+	color:white;
 	border:0;
-	/*box-shadow:2px 2px 5px #404040; */
+	box-shadow:2px 2px 5px #404040; 
+	height:25px;
 	vertical-align:middle;
 	cursor:pointer;
 	padding-left:1em;
 	padding-right:1em;
-	margin-bottom:50px;
-        box-sizing:border-box;
-}
-.taskPanelReviewItem{
-	position:relative;
-	width:90%;
-	left:5%;
-	top:5px;
-	font-family: 'PT Sans', sans-serif;
-}
-.taskPanelReviewEdit{
-	position:relative;
-	width:90%;
-	left:5%;
-	top:5px;
-	font-family: 'PT Sans', sans-serif;
+	margin-bottom:1em;
 }
 .writingTaskInstruction{
 }
@@ -631,17 +598,18 @@ body{
 	width:25%;
 	display:block;
 }
+
 /***********Notepad**********/
 #notepad{
     position:absolute;
     top:75px;
-    width:25%;
+    width:40%;
     bottom:0;
     right:0;
     border:solid 1px black;
     overflow-y:scroll;
     background-color:white;
-    opacity:0.65;
+    opacity:0.75;
 }
 #notepadContainer{
     position:absolute;
@@ -705,7 +673,6 @@ body{
     padding-right:1em;
     margin-right:1em;
     margin-bottom:1em;
-    opacity:1;
 }
 /***********Reference********/
 #reference{
@@ -771,7 +738,7 @@ body{
 }
 .refLabel{
 	position:relative;
-	background-image:url('../img/warpoem/buttonback.png');
+	background-image:url('../img/newstyle/buttonback.png');
 	background-size:contain;
 	font-family: 'PT Sans', sans-serif;
 	font-size:1.1em;
@@ -856,7 +823,7 @@ body{
 	font-size:1.1em;
 	line-height:2.5em;
 	width:100%;
-	background-image:url('../img/warpoem/buttonback.png');
+	background-image:url('../img/newstyle/buttonback.png');
 	background-size:contain;
 	color:#00A8DC;
 	cursor:pointer;

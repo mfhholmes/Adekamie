@@ -65,6 +65,7 @@ function addEventHandlers()
     $("#search").on("click",doSearch);
     $("#searchValue").on("click",searchClick);
     $("#Message").on("click",clickMessage);
+    $("#Notepad").on("click",clickNotepad);
 }
 
 function getTaskByRef(ref){
@@ -103,6 +104,7 @@ function clickRef()
             openRef(function(){$("#reference").addClass("reference-open").width("");});
     }
 }
+
 function openRef(afterwards)
 {
     reference = $("#reference");
@@ -132,6 +134,38 @@ function closeRef(afterwards)
     reference.data("status","closed");
     
 }
+function clickNotepad()
+{
+    notepad = $("#notepad");
+    vis = notepad.css("visibility");
+    if(vis == "visible")
+        vis = "hidden";
+    else
+        vis = "visible";
+    notepad.css("visibility",vis);
+}
+
+function openNotepad(afterwards){
+    notepad = $("#notepad");
+    targetWidth = $("body").innerWidth() *0.4;
+    $("#notepadContainer").width(targetWidth).show();
+    notepad.show();
+    if(typeof(afterwards) == "undefined")
+        notepad.animate({width:targetWidth + "px"},250,"linear");
+    else
+        notepad.animate({width:targetWidth + "px"},250,"linear",afterwards);
+    notepad.data("status","open");
+    lesson.hintsVisible(false);
+    
+}
+function closeNotepad(afterwards){
+    notepad = $("#notepad");
+    if(typeof(afterwards) == "undefined")
+        notepad.animate({width:"0"},250,"linear",function(){$("#notepad").removeClass("notepad-open").hide();});
+    else
+        notepad.animate({width:"0"},250,"linear",afterwards);
+    notepad.data("status","closed");
+}
 function clickSamples()
 {
     samples = $("#samples");
@@ -145,6 +179,11 @@ function clickSamples()
             closeRef(openSamples(function(){$("#reference").hide();$("#samples").width("").addClass("samples-open");$("#samplesContainer").width("100%");}));
         else
             openSamples(function(){$("#samples").css("width","").addClass("samples-open");$("#samplesContainer").width("100%");});
+        if($("#notepad").data("status")=="open")
+            closeRef(openSamples(function(){$("#notepad").hide();$("#samples").width("").addClass("samples-open");$("#samplesContainer").width("100%");}));
+        else
+            openSamples(function(){$("#samples").css("width","").addClass("samples-open");$("#samplesContainer").width("100%");});
+
     }
 
 }
@@ -231,3 +270,6 @@ function checkForHints(task,evnt){
     }
 }
 
+function exportText(){
+    alert("Exporting the text into a document will be implemented soon. In the meantime, you can select the text in the Notepad and copy and paste it into a blank document to achieve the same effect.");
+}

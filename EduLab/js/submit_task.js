@@ -10,8 +10,21 @@ function task_submit(lesson, ind, task){
     self.lesson = lesson;
     self.index = ind;
     self.reference = task.Reference;
+    self.destination = task.Destination;
     self.title = task.Title; 
-    self.instruction = "submit task";
+    self.skillText = task.Instruction;
+    self.instruction = ko.computed(function(){
+        var curLevel = lesson.selectedSkillLevel();
+        var name = lesson.skillLevels()[curLevel].Name;
+        var text = self.skillText[name];
+        if((text == null ) || (typeof(text) == 'undefined')){
+            return self.skillText[0];
+        }
+        else
+        {
+            return text;
+        }
+    });
     self.response=task.Response;
     self.complete = ko.observable((task.Complete=="true")?true:false);
     self.taskListVisible= ko.observable((task.TaskListVisible=="false")?false:true);
@@ -21,24 +34,23 @@ function task_submit(lesson, ind, task){
     self.accept = function (){
             // always completes
             self.complete(true);
-            if(self.parentTask != null) self.parentTask.accept();
+            lesson.complete = true;
             self.taskPanelClose();
-            self.taskBoxVisible(true);
+            alert("Congratulations on completing this demo assignment, this text will now be submitted by " + self.destination);
     };
     self.taskListClick = function(){
-            self.taskBoxVisible(!self.taskBoxVisible());
+            lesson.setCurrentTask(self.index);
     };
     self.taskPanelOpen = function(){
         //find the task panel
         panel = $("#taskPanel");
         container = $("#taskPanelContainer").empty();
-        self.oldresponse = self.response();
+        self.oldresponse="";
         //add elements
         container.append("<div class='taskPanelTitle' data-bind='text:title'></div>");
         container.append("<img class='taskPanelExitIcon' onclick='function(){lesson.clearCurrentTask();}'/>");
         container.append("<div class='taskPanelInstruction' data-bind='html:instruction'></div>");
-        container.append("<textarea class='taskPanelEntry' data-bind='value:response'></textare>");
-        container.append("<input type='button' value='Post' class='taskPanelAccept' data-bind='click:accept'/>");
+        container.append("<input type='button' value='Submit' class='taskPanelAccept' data-bind='click:accept'/>");
         panel.removeClass("taskPanelWide").addClass("taskPanelNormal").removeClass("taskPanelThin");
         container.css("width:"+panel.css("width"));
         //set the bindings to this task
@@ -46,10 +58,9 @@ function task_submit(lesson, ind, task){
         panel.show("slide",250);
     };
     self.taskPanelClose = function(){
-    self.response(self.oldresponse);
-    panel = $("#taskPanel");
-    panel.hide("slide",250);
-    };
+        panel = $("#taskPanel");
+        panel.hide("slide",250);
+        };
     self.taskBoxClick = function(){
         
     };

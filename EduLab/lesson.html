@@ -76,77 +76,93 @@
 </head>
 
 <body>
-		<div id="header">
-			<div class="headerLogo">Adekamie</div>
-			<div class="lessonHeader" data-bind="text:getTask(0).title"></div>
-		</div>
-		<div id="leftmenu">
-			<img id="Lesson" class="menuIcon"/>
-			<img id="Activity" class="menuIcon"/>
-		</div>
-	
-		<div id="skillsLevelList" data-bind="foreach: skillLevels">
-			<img class='skillLevelIcon' data-bind="click:switchSkillLevel,attr:{src:Image, alt:Name, title:Name}"/>
-		</div>	
-		<div id="tasklist" data-bind="foreach: tasks, visible:lessonVisible" >
-			
-				<li class="taskListItem" data-bind="attr:{id:'task'+index}, css:{indent0:indent==0,indent1:indent==1,indent2:indent==2,indent3:indent==3,indent4:indent==4}, click:taskListClick, visible:taskListVisible">
-					<img data-bind="visible:complete" src="./img/complete.png" class="taskListComplete"/>
-					<span data-bind='text:title'></span>
-				</li>
-		</div>
-		<div id="container" data-bind="foreach: tasks">
-			<div class="task draggable resizable" data-bind="attr:{id:'taskMain'+ index},visible:taskBoxVisible">
-				<p class='taskboxTitle' data-bind="text:title"></p>
-				<p class='taskboxContent' data-bind="text:response,attr:{id:'taskBox'+index},click:taskBoxClick, visible:!editing()"></p>
-				<textarea class='taskboxEdit' data-bind="value:response, attr:{id:'taskBoxEdit'+index}, visible:editing, hasfocus:editing"></textarea>
-				<img class='taskBoxExitIcon' data-bind="click:taskBoxClose"/>
-			</div>
-		</div>
-		<div id='taskPanel' class="taskPanel">
-			<div id="taskPanelContainer">
-			</div>
-		</div>
-		<div id="mainMenu">
-			<img id="Exit" class="menuIcon" title="Exit"/>
-			<img id="Settings" class="menuIcon" title="Settings"/>
-			<img id="Save" class="menuIcon" title="Save"/>
-			<img id="Message" class="menuIcon MessageNotLit" title="Message"/>
-			<img id="Reference" class="menuIcon" title="Reference"/>
-			<img id="Samples" class="menuIcon" title="Samples"/>
-		</div>
-		<div id="hintList" data-bind="visible:hintsVisible">
-			<h2>Messages</h2>
-		</div>
-		<div id="reference">
-			<div id="refContainer">
-			<div id="refHeader">
-				<h2>Reference</h2>
-				<input type="text" id="searchValue" class="searchBox" value="Search..."/>
-				<img class="searchIcon" id="search" src="./img/search.png" />
-			</div>
-			<!-- ko foreach: RefItems-->
-				<div class="refItem" data-bind="attr:{id:Name}, visible:found">
-					<p class='refLabel' data-bind="text:Label, click:clickopen"/>
-						<div class="refIconContainer" data-bind="foreach:Icons">
-							<img class="refIcon" data-bind="attr:{src:$data}"/>
-						</div>
-					
-					<div class="refContent" data-bind="html:Content,visible:open"></div>
-				</div>
-			<!-- /ko -->
-			</div>
-		</div>
-		<div id="samples">
-			<div id="samplesContainer">
-				<h2>Samples</h2>
-				<!-- ko foreach: samplesList-->
-					<div class="sampleItem" data-bind="title:title, click:function(){window.open(link,'Adekamie samples magazine','width=960,height=640,location=no,menubar=no,toolbar=no,status=no');}" >
-						<img class="sampleIcon" data-bind="attr:{src:icon,title:title}"/>
-						<span class="sampleText" data-bind="text:name, attr:{title:title}"></span>
-					</div>
-				<!-- /ko -->
-			</div>
-		</div>
-	</body>
+    <div id="header">
+            <div class="headerLogo">Adekamie</div>
+            <div class="lessonHeader" data-bind="text:getTask(0).title"></div>
+    </div>
+    <div id="leftmenu">
+            <img id="Lesson" class="menuIcon"/>
+    </div>
+
+    <div id="skillsLevelList" data-bind="foreach: skillLevels">
+            <img class='skillLevelIcon' data-bind="click:switchSkillLevel,attr:{src:Image, alt:Name, title:Name}"/>
+    </div>	
+    <div id="tasklist" data-bind="foreach: tasks, visible:lessonVisible" >
+
+                    <li class="taskListItem" data-bind="attr:{id:'task'+index}, css:{indent0:indent==0,indent1:indent==1,indent2:indent==2,indent3:indent==3,indent4:indent==4}, click:taskListClick, visible:taskListVisible">
+                            <img data-bind="visible:complete" src="./img/complete.png" class="taskListComplete"/>
+                            <span data-bind='text:title'></span>
+                    </li>
+    </div>
+    <div id="container" data-bind="foreach: tasks">
+            <div class="task draggable resizable" data-bind="attr:{id:'taskMain'+ index},visible:taskBoxVisible">
+                    <p class='taskboxTitle' data-bind="text:title"></p>
+                    <p class='taskboxContent' data-bind="text:response,attr:{id:'taskBox'+index},click:taskBoxClick, visible:!editing()"></p>
+                    <textarea class='taskboxEdit' data-bind="value:response, attr:{id:'taskBoxEdit'+index}, visible:editing, hasfocus:editing"></textarea>
+                    <img class='taskBoxExitIcon' data-bind="click:taskBoxClose"/>
+            </div>
+    </div>
+    <div id='taskPanel' class="taskPanel">
+            <div id="taskPanelContainer">
+            </div>
+    </div>
+    <div id="mainMenu">
+            <img id="Exit" class="menuIcon" title="Exit"/>
+            <img id="Settings" class="menuIcon" title="Settings"/>
+            <img id="Save" class="menuIcon" title="Save"/>
+            <img id="Message" class="menuIcon MessageNotLit" title="Message"/>
+            <img id="Reference" class="menuIcon" title="Reference"/>
+            <img id="Samples" class="menuIcon" title="Samples"/>
+            <img id="Notepad" class="menuIcon" title="Notepad"/>
+    </div>
+    <div id="hintList" data-bind="visible:hintsVisible">
+            <h2>Messages</h2>
+    </div>
+    <div id="notepad">
+        <div id="notepadContainer">
+            <div id="notepadHeader">
+                <h2>Notepad</h2>
+            </div>
+            <div class="notepadItems" data-bind="foreach:tasks">
+                <div class="notepadItem" data-bind='if:notepad' >
+                    <p class='notepadText' data-bind='text:response,attr:{id:"taskBox"+index},click:reviewClick, visible:!reviewing()'></p>
+                    <textarea class='notepadEdit' data-bind='value:response, attr:{id:"taskBoxEdit"+index}, visible:reviewing, hasfocus:reviewing'></textarea>
+                </div>
+            </div>    
+        </div>
+        <div id="notepadExport">
+            <button class="notepadExportButton" onclick="exportText();">Export</button>
+        </div>
+    </div>
+    <div id="reference">
+            <div id="refContainer">
+            <div id="refHeader">
+                    <h2>Reference</h2>
+                    <input type="text" id="searchValue" class="searchBox" value="Search..."/>
+                    <img class="searchIcon" id="search" src="./img/search.png" />
+            </div>
+            <!-- ko foreach: RefItems-->
+                    <div class="refItem" data-bind="attr:{id:Name}, visible:found">
+                            <p class='refLabel' data-bind="text:Label, click:clickopen"/>
+                                    <div class="refIconContainer" data-bind="foreach:Icons">
+                                            <img class="refIcon" data-bind="attr:{src:$data}"/>
+                                    </div>
+
+                            <div class="refContent" data-bind="html:Content,visible:open"></div>
+                    </div>
+            <!-- /ko -->
+            </div>
+    </div>
+    <div id="samples">
+            <div id="samplesContainer">
+                    <h2>Samples</h2>
+                    <!-- ko foreach: samplesList-->
+                            <div class="sampleItem" data-bind="title:title, click:function(){window.open(link,'Adekamie samples magazine','width=960,height=640,location=no,menubar=no,toolbar=no,status=no');}" >
+                                    <img class="sampleIcon" data-bind="attr:{src:icon,title:title}"/>
+                                    <span class="sampleText" data-bind="text:name, attr:{title:title}"></span>
+                            </div>
+                    <!-- /ko -->
+            </div>
+    </div>
+</body>
 </html>

@@ -140,10 +140,6 @@ function classifyTask(lesson, task, taskArray, indent){
                         newtask =new task_flyOutSelection(lesson, index,task);
                         break;			    
                     }
-                    case "review":{
-                        newtask = new task_review(lesson, index,task);
-                        break;
-                    }
                     case "submit":{
                         newtask = new task_submit(lesson,index,task);
                         break;
@@ -160,6 +156,7 @@ function classifyTask(lesson, task, taskArray, indent){
     }
     newtask.Hints = task.Hints;
     newtask.indent = indent;
+    newtask.notepad = (task.Notepad=="Yes");
     newtask.parentTask = null;
     newtask.editing = new ko.observable(false);
     newtask.editing.subscribe(function(newvalue){

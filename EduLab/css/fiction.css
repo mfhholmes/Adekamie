@@ -258,7 +258,10 @@ body{
 	content:url('../img/fiction/IconRef.png');
 	background-image:url('../img/fiction/IconRef.png');
 }
-
+#Notepad{
+    content:url('../img/fiction/IconActivity.png');
+    background-image:url('../img/fiction/IconActivity.png');
+}
 /********** left menu *******/
 #leftmenu{
 	position:absolute;
@@ -337,7 +340,6 @@ body{
 	color:white;
 	list-style-type:none;
 	border:0;
-	height:25px;
 }
 .taskListItem{
 	padding-right:25px;
@@ -544,7 +546,6 @@ body{
 	color:white;
 	border:0;
 	box-shadow:2px 2px 5px #404040; 
-	height:25px;
 	vertical-align:middle;
 	cursor:pointer;
 	padding-left:1em;
@@ -623,6 +624,81 @@ body{
 .flyOutOpen{
 	width:25%;
 	display:block;
+}
+/***********Notepad**********/
+#notepad{
+    position:absolute;
+    top:75px;
+    width:40%;
+    bottom:0;
+    right:0;
+    border:solid 1px black;
+    overflow-y:scroll;
+    background-color:white;
+    opacity:0.75;
+}
+#notepadContainer{
+    position:absolute;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+#notepadHeader{
+    font-family: 'PT Sans', sans-serif;
+    font-size:1.6em;
+    text-align:left;
+    background-color:#00A8DC;
+    color:White;
+    width:100%;
+    padding-left:5%;
+    padding-right:10%;
+    border:0;
+    text-transform:capitalize;
+    margin:0;
+    box-sizing:border-box;
+}
+#notepadHeader h2{
+    margin:0;
+}
+.notepadItem{
+	position:relative;
+	width:90%;
+	left:5%;
+	top:5px;
+	font-family: 'PT Sans', sans-serif;
+}
+.notepadEdit{
+	position:relative;
+	width:90%;
+	top:5px;
+	font-family: 'PT Sans', sans-serif;
+}
+.notepadItems{
+    
+}
+.notepadText{
+    
+}
+#notepadExport{
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+.notepadExportButton{
+    float:right;
+    display:block;
+    font-family: 'PT Sans', sans-serif;
+    font-size:1em;
+    background-color:#00A8DC;
+    color:white;
+    border:0;
+    box-shadow:2px 2px 5px #404040; 
+    vertical-align:middle;
+    cursor:pointer;
+    padding-left:1em;
+    padding-right:1em;
+    margin-right:1em;
+    margin-bottom:1em;
 }
 /***********Reference********/
 #reference{

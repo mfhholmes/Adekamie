@@ -108,7 +108,7 @@ body{
 	padding:0px;
 	border:0;
 	box-sizing:border-box;
-	moz-box-sizing:border-box;
+	background-image:url('../img/introduction.jpeg');
 }
 .header{
 	position:relative;
