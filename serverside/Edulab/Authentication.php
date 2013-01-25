@@ -78,6 +78,21 @@ function addPasswordToUser($pdo, $userName,$password){
 }
 function checkPasswordForUser($pdo, $userName, $password){
     $hash = Utility::hashPassword($password);
+    $pwordTypeId = getAuthenticationTypeByName($pdo,'password');
+    $user = getUserByName($pdo,$userName);
+    $userId = $user['UserId'];
+    $query = "spGetAuthenticationForUser($userId,$pwordTypeId)";
+    $result = $pdo->query($query);
+    if($result){
+        if($row = $result->fetch(\PDO::FETCH_ASSOC)){
+            $pword = $row['value'];
+            return ($pword == $hash);
+        }
+        else
+            return false;
+    }
+    else
+        return false;
 }
 
 function getAuthenticationTypeByName($pdo, $typeName){

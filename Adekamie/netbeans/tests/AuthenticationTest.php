@@ -59,11 +59,18 @@ class AuthenticationTest extends \PHPUnit_Framework_TestCase
          
         /* action */
         $pdo->beginTransaction();
+        try{
             $userResult = createNewUser($pdo,$userId,$userName,$enabled);
             $typeResult = createNewAuthenticationType($pdo,$typeId, $typeName);
             $authResult = createNewAuth($pdo, $authId, $userId, $typeId, $value);
             $getResult = getAuthValueByUserAndType($pdo,$userName,$typeName);
+            
+        }
+        catch(Exception $err){
+            debug($err->message);
+        }
         $pdo->rollBack();
+
         
         /* assert */
         $this->assertEquals($value,$getResult["Value"],'Failed to get the correct Authentication');
@@ -81,10 +88,16 @@ class AuthenticationTest extends \PHPUnit_Framework_TestCase
          
         /* action */
         $pdo->beginTransaction();
+        try{
             $userResult = createNewUser($pdo,$userId,$userName,$enabled);
             $actionResult = addPasswordToUser($pdo, $userName,$password);
+            $authTypeId = getAuthenticationTypeByName($pdo, $password)
             $checkResult = checkPasswordForUser($pdo, $userName, $password);
             $failResult = checkPasswordForUser($pdo, $userName, "FailPassword");
+        }
+        catch(Exception $err){
+            debug($err->message);
+        }
         $pdo->rollBack();
         
         /* assert */
@@ -103,14 +116,28 @@ class AuthenticationTest extends \PHPUnit_Framework_TestCase
         
         /*Action*/
         $pdo->beginTransaction();
+        try{
             $result = createNewAuthenticationType($pdo, $typeId, $password);
             $result1 = getAuthenticationTypeByName($pdo, $password);
             $result2 = getAuthenticationTypeByName($pdo, 'notpassword');
+        }
+        catch(Exception $err){
+            debug($err->message);
+        }
         $pdo->rollBack();
         /*Assert*/
         $this->assertTrue($result,"Failed to create new authentication type");
         $this->assertEquals($typeId,$result1,'failed to return the correct type id for password');
         $this->assertNull($result2,"failed to return null from bad authentication type search");
+    }
+    
+    public function testLogIn(){
+        /*Assemble*/
+        
+        
+        /*Action*/
+        
+        /*Assert*/
     }
 }
 
