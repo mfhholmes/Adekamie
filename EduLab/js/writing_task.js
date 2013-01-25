@@ -93,6 +93,7 @@ function task_writing(lesson, ind, task){
         json += '"Response":"' + self.response() + '",';
         json += '"Instruction":' + JSON.stringify(self.skillText)+',';
         json += '"Complete":"' + (self.complete()?'true':'false') + '",';
+        json += '"Notepad":"' + (self.notepad?'Yes':'No') + '",';
         json += '"TaskListVisible":"' + (self.taskListVisible()?"true":"false'") + '",';
         json += '"TaskBoxVisible":"' + (self.taskBoxVisible()?'true':'false') + '"';
         if(typeof(self.Hints)!='undefined')

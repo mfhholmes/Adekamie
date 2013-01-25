@@ -30,7 +30,7 @@
         "Reference": "Root",
         "Type": "Container",
         "Title": "Topic-based Essay",
-        "Notepad":"No";
+        "Notepad":"No",
         "Tasks": [
             {
                 "Reference": "Intro",

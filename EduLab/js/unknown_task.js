@@ -62,6 +62,7 @@ function task_unknown(lesson, ind, task){
         json += "{";
         json += '"Reference":"' + self.reference + '",';
         json += '"Type":"Unknown",';
+        json += '"Notepad":"' + (self.notepad?'Yes':'No') + '",';
         json += '"Title": "'+ self.title + '",';
         //json += '"Response":"' + self.response() + '",';
         json +='"Instruction":"Unknown Task"';

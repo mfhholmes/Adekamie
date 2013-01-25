@@ -79,6 +79,7 @@ function task_container(lesson, ind,task){
         json += '"Type":"Container",';
         json += '"Title": "'+ self.title + '",';
         json += '"Complete":"' + (self.complete()?'true':'false') + '",';
+        json += '"Notepad":"' + (self.notepad?'Yes':'No') + '",';
         json += '"TaskListVisible":"' + (self.taskListVisible()?"true":"false'") + '",';
         if(typeof(self.skillLevels) != 'undefined'){
             json+=',"SkillLevels":' + JSON.stringify(self.skillLevels());

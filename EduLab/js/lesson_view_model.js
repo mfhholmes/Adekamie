@@ -156,6 +156,11 @@ function classifyTask(lesson, task, taskArray, indent){
     }
     newtask.Hints = task.Hints;
     newtask.indent = indent;
+    // need to default the task list to closed
+    taskvisible = task.TaskListVisible;
+    if(typeof(taskvisible)=="undefined"){
+        newtask.taskListVisible = new ko.observable((indent<2?true:false));
+    }
     newtask.notepad = (task.Notepad=="Yes");
     newtask.parentTask = null;
     newtask.editing = new ko.observable(false);
@@ -165,7 +170,7 @@ function classifyTask(lesson, task, taskArray, indent){
         } 
     });
     newtask.reviewing = new ko.observable(false);
-    var newkotask = new ko.observable(newtask)
+    var newkotask = new ko.observable(newtask);
     taskArray().push( newkotask);
     // check for child tasks
     if(task.Tasks){
@@ -185,5 +190,5 @@ function classifyTask(lesson, task, taskArray, indent){
         newtask.editing(false);
     };	    
     return newkotask;
-};
+}
 

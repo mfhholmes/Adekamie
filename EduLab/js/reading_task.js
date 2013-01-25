@@ -76,6 +76,7 @@ function task_reading(lesson,ind,task){
         json += '"Title": "'+ self.title + '",';
         json += '"Instruction":' + JSON.stringify(self.skillText)+',';
         json += '"Complete":"' + (self.complete()?'true':'false') + '",';
+        json += '"Notepad":"' + (self.notepad?'Yes':'No') + '",';
         json += '"TaskListVisible":"' + (self.taskListVisible()?"true":"false'") + '"';
         if(typeof(self.Hints)!='undefined')
             json +=',"Hints":' + JSON.stringify(self.Hints)+ '';

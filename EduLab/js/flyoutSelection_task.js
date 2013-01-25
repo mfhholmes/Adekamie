@@ -106,6 +106,7 @@ function task_flyOutSelection(lesson, ind, task){
         json += '"Response":"' + self.response() + '",';
         json += '"Choices":'+ JSON.stringify(self.choices()) + ",";
         json += '"Complete":"' + (self.complete()?'true':'false') + '",';
+        json += '"Notepad":"' + (self.notepad?'Yes':'No') + '",';
         json += '"TaskListVisible":"' + (self.taskListVisible()?"true":"false'") + '",';
         json += '"TaskBoxVisible":"' + (self.taskBoxVisible()?'true':'false') + '",';
         json +='"Instruction":' + JSON.stringify(self.skillText)+'';

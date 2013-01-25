@@ -76,6 +76,7 @@ function task_review(lesson, ind,task){
         json += '"Title": "'+ self.title + '",';
         json += '"ReviewList":'+ JSON.stringify(self.originalList) + ",";
         json += '"Complete":"' + (self.complete()?'true':'false') + '",';
+        json += '"Notepad":"' + (self.notepad?'Yes':'No') + '",';
         json += '"TaskListVisible":"' + (self.taskListVisible()?"true":"false'") + '"';
         if(typeof(self.Hints)!='undefined')
             json +=',"Hints":' + JSON.stringify(self.Hints)+ '';

@@ -97,6 +97,7 @@ function task_selection(lesson, ind, task){
         json += '"Choices":'+ JSON.stringify(self.choices()) + ",";
         json += '"Instruction":' + JSON.stringify(self.skillText)+',';
         json += '"Complete":"' + (self.complete()?'true':'false') + '",';
+        json += '"Notepad":"' + (self.notepad?'Yes':'No') + '",';
         json += '"TaskListVisible":"' + (self.taskListVisible()?"true":"false'") + '",';
         json += '"TaskBoxVisible":"' + (self.taskBoxVisible()?'true':'false') + '"';
         if(typeof(self.Hints)!='undefined')

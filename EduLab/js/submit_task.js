@@ -73,6 +73,7 @@ function task_submit(lesson, ind, task){
         json += "{";
         json += '"Reference":"' + self.reference + '",';
         json += '"Type":"Submit",';
+        json += '"Notepad":"' + (self.notepad?'Yes':'No') + '",';
         json += '"Title": "'+ self.title + '",';
         //json += '"Response":"' + self.response() + '",';
         json +='"Instruction":"Submit Task"';
