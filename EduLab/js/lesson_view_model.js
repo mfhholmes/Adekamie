@@ -140,6 +140,14 @@ function classifyTask(lesson, task, taskArray, indent){
                         newtask =new task_flyOutSelection(lesson, index,task);
                         break;			    
                     }
+                    case "flyoutmultiselection":{
+                        newtask =new task_flyOutMultiSelection(lesson, index,task);
+                        break;			    
+                    }
+                    case "multiselect":{
+                        newtask =new task_multiSelect(lesson, index,task);
+                        break;	    
+                    }
                     case "submit":{
                         newtask = new task_submit(lesson,index,task);
                         break;

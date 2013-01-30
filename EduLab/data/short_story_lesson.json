@@ -58,13 +58,14 @@
                 "Tasks": [
                     {
                         "Reference": "Adjectives",
-                        "Type": "flyOutSelection",
+                        "Type": "flyOutMultiSelection",
                         "Title": "Adjectives",
                         "Instruction": {
                             "Newbie": "<p>Adjectives are words that describe things, such as objects, people and ideas.</p><p>Adjectives are words that change these things, or add description to these things. They can make cars <em>wonderful</em>, or teachers <em>exciting</em>. </p><p>Select 5 adjectives from the list or write your own.</p>",
                             "Developing": "<p>Adjectives are words that describe things, such as objects, people and ideas.</p><p>Adjectives are words that change these things, add description to these things. They can make cars <em>wonderful</em>, or teachers <em>'exciting'</em>.</p><p>Select 5 adjectives from the list or write your own.</p>",
                             "Flying": "<p>Adjectives are words that describe things, such as objects, people and ideas.</p><p>Adjectives are words that change these things, add description to these things. They can make cars <em>wonderful</em>, or teachers <em>'exciting'</em>. </p><p>Select 5 adjectives from the list or write your own.</p>"
                         },
+                        "MaximumNumberOfChoices":"5",
                         "Choices": [
                             "Leaky",
                             "Confused",
@@ -112,7 +113,7 @@
                     },
                     {
                         "Reference": "Noun",
-                        "Type": "flyOutSelection",
+                        "Type": "flyOutMultiSelection",
                         "Title": "Noun",
                         "Notepad": "No",
                         "Instruction": {
@@ -120,6 +121,7 @@
                             "Developing": "<p>Nouns are words that name a person, animal, place or thing.</p><p>Write 5 nouns from the list or write your own.</p>",
                             "Flying": "<p>Nouns are words that name a person, animal, place or thing.</p><p>Write 5 nouns from the list or write your own.</p>"
                         },
+                        "MaximumNumberOfChoices":"5",
                         "Choices": [
                             "Teacher",
                             "Student",
