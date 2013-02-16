@@ -25,7 +25,7 @@ class UserTest extends \PHPUnit_Framework_TestCase
         $pdo->rollBack();
         
         /* assert */
-        $this->assertEquals(1,$result,'Failed to create new User');
+        $this->assertEquals(1,$result,"Failed to create new User: $result");
         $this->assertEquals($checkName["UserName"], $userName, 'user name not returned from new user id check');
         $this->assertEquals($checkId["UserId"], $userId, 'user Id not returned from new user name check');
     }

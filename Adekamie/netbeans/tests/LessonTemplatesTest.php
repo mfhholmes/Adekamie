@@ -108,17 +108,23 @@ class LessonTemplateTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($pdo,'database connection failed');
         
         /*Action*/
+        try{
         $pdo->beginTransaction();
+        $createresult=true;
         foreach($templates AS $template )
         {
             $result = createNewLessonTemplate($pdo, $template["LessonName"], $template["TemplateId"], $template["Enabled"]);
-            $this->assertTrue($result,"CreateNewLessonTemplate failed for lesson:". $template["LessonName"].":".$template["TemplateId"].":".$template["Enabled"]);
+            $createresult = $createresult && $result;
         }
         
         $indexResult = getLessonTemplateIndex($pdo);
         $pdo->rollBack();
-
+        }
+        catch(Exception $err){
+            $pdo->rollBack();
+        }
         /*Assert*/
+        $this->assertTrue($createresult,"CreateNewLessonTemplateFile failed for a lesson");
         $this->assertEquals(3,count($indexResult),"Returned wrong number of results");
         $this->assertEquals($templates[0],$indexResult[0],"First template wrong");
         $this->assertEquals($templates[1],$indexResult[1],"Second template wrong");

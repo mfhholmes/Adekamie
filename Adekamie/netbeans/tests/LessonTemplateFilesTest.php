@@ -128,7 +128,8 @@ class LessonTemplateFilesTest extends \PHPUnit_Framework_TestCase {
         $templateId1 = Utility::createGuid();
         $templateId2 = Utility::createGuid();
         $templateFiles = array();
-        $templateFiles[] = ["TemplateFileId"=>Utility::createGuid(),"TemplateId"=>$templateId1,"Version"=>"1","FileName"=>"test1.json"];
+        $item = ["TemplateFileId"=>Utility::createGuid(),"TemplateId"=>$templateId1,"Version"=>"1","FileName"=>"test1.json"];
+        $templateFiles[] = $item;
         $templateFiles[] = ["TemplateFileId"=>Utility::createGuid(),"TemplateId"=>$templateId1,"Version"=>"2","FileName"=>"test2.json"];
         $templateFiles[] = ["TemplateFileId"=>Utility::createGuid(),"TemplateId"=>$templateId2,"Version"=>"3","FileName"=>"test3.json"];
         $templateFiles[] = ["TemplateFileId"=>Utility::createGuid(),"TemplateId"=>$templateId1,"Version"=>"4","FileName"=>"test4.json"];
@@ -136,17 +137,24 @@ class LessonTemplateFilesTest extends \PHPUnit_Framework_TestCase {
         $this->assertNotNull($pdo,'database connection failed');
         
         /*Action*/
-        $pdo->beginTransaction();
+        try{
+            $pdo->beginTransaction();
+            $createresult = true;
             foreach($templateFiles AS $templateFile )
             {
                 $result = createNewLessonTemplateFile($pdo, $templateFile["TemplateFileId"],$templateFile["TemplateId"], $templateFile["Version"],$templateFile["FileName"]);
-                $this->assertTrue($result,"CreateNewLessonTemplateFile failed for lesson:". $templateFile["FileName"]);
+                $createresult = $createresult && $result;
             }
 
             $indexResult = getTemplateFilesForTemplate($pdo,$templateId1);
-        $pdo->rollBack();
-
+            $pdo->rollBack();
+        }
+        catch(Exception $err){
+            $pdo->rollBack();
+            throw $err;
+        }
         /*Assert*/
+        $this->assertTrue($createresult,"CreateNewLessonTemplateFile failed for a lesson");
         $this->assertEquals(3,count($indexResult),"Returned wrong number of results");
         $this->assertEquals($templateFiles[0],$indexResult[0],"First template wrong");
         $this->assertEquals($templateFiles[1],$indexResult[1],"Second template wrong");
@@ -165,19 +173,26 @@ class LessonTemplateFilesTest extends \PHPUnit_Framework_TestCase {
         $this->assertNotNull($pdo,'database connection failed');
         
         /*Action*/
+        try{
         $pdo->beginTransaction();
+            $createresult = true;
             foreach($templateFiles AS $templateFile )
             {
                 $result = createNewLessonTemplateFile($pdo, $templateFile["TemplateFileId"],$templateFile["TemplateId"], $templateFile["Version"],$templateFile["FileName"]);
-                $this->assertTrue($result,"CreateNewLessonTemplateFile failed for lesson:". $templateFile["FileName"]);
+                $createresult = $createresult && $result;
             }
 
             $result1 = getLatestFileForTemplate($pdo,$templateId1);
             $result2 = getLatestFileForTemplate($pdo,$templateId2);
             $result3 = getLatestFileForTemplate($pdo,Utility::createGuid());
         $pdo->rollBack();
-
+        }
+        catch(Exception $err){
+            $pdo->rollBack();
+            throw $err;
+        }
         /*Assert*/
+        $this->assertTrue($createresult,"CreateNewLessonTemplateFile failed for a lesson");
         $this->assertEquals($templateFiles[3],$result1,"First template file wrong");
         $this->assertEquals($templateFiles[2],$result2,"Second template file wrong");
         $this->assertFalse($result3,"Empty case template wrong");

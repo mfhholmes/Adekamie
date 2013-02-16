@@ -81,7 +81,7 @@ function checkPasswordForUser($pdo, $userName, $password){
     $pwordTypeId = getAuthenticationTypeByName($pdo,'password');
     $user = getUserByName($pdo,$userName);
     $userId = $user['UserId'];
-    $query = "spGetAuthenticationForUser($userId,$pwordTypeId)";
+    $query = "Call spGetAuthenticationForUser('$userId','$pwordTypeId')";
     $result = $pdo->query($query);
     if($result){
         if($row = $result->fetch(\PDO::FETCH_ASSOC)){
@@ -96,7 +96,7 @@ function checkPasswordForUser($pdo, $userName, $password){
 }
 
 function getAuthenticationTypeByName($pdo, $typeName){
-    $typeQuery = "spGetAuthTypeByName('$typeName')";
+    $typeQuery = "Call spGetAuthTypeByName('$typeName')";
     $result = $pdo->query($typeQuery);
     if($result)
         if($row = $result->fetch(\PDO::FETCH_ASSOC))

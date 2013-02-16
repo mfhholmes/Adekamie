@@ -91,7 +91,7 @@ class AuthenticationTest extends \PHPUnit_Framework_TestCase
         try{
             $userResult = createNewUser($pdo,$userId,$userName,$enabled);
             $actionResult = addPasswordToUser($pdo, $userName,$password);
-            $authTypeId = getAuthenticationTypeByName($pdo, $password)
+            $authTypeId = getAuthenticationTypeByName($pdo, 'password');
             $checkResult = checkPasswordForUser($pdo, $userName, $password);
             $failResult = checkPasswordForUser($pdo, $userName, "FailPassword");
         }
@@ -101,6 +101,7 @@ class AuthenticationTest extends \PHPUnit_Framework_TestCase
         $pdo->rollBack();
         
         /* assert */
+        $this->assertNotEmpty($authTypeId,"Failed to get the AuthenticationType. AddPassword returned $actionResult");
         $this->assertTrue($userResult,"Failed to create new user");
         $this->assertTrue($actionResult,'Failed to add a password to the user');
         $this->assertTrue($checkResult,'Failed to authenticate correct password');

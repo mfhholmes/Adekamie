@@ -8,7 +8,7 @@
         <script type="text/javascript">
             function addName(name){
                 codedName = encodeURIComponent(name);
-                $.post("./testhost.php/testpost/"+codedName, function(data){
+                $.post("./index.php/testpost/"+codedName, function(data){
                     // notify of success
                     $("body").append("<div><p>Post Name: success..."+data.toString()+"</p></div>");
                 }).error(function(data, textStatus, errorThrown){
@@ -18,10 +18,11 @@
             };
             function getNames(name){
                 codedName = encodeURIComponent(name);
-                result = $.get("./testhost.php/testpost/"+codedName, function(data){
+                call = "./index.php/testpost/"+codedName;
+                result = $.get(call, function(data){
                     $("body").append("<div><p>Get Name:</p>" + data+ "</div>");
                 }).error( function(data, textStatus, errorThrown){
-                    $("body").append("<div><p>Get Name: bad thing happened: "+textStatus+" : " + errorThrown + "</p></div>");
+                    $("body").append("<div><p>Get Name: <br/> call: <a href='"+call+"'>"+call+"</a> <br/> bad thing happened: "+textStatus+" : " + errorThrown + "</p></div>");
                 });
             };
         </script>

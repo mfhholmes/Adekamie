@@ -5,20 +5,28 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script type="text/javascript" src="EduLab/js/vendor/jquery-1.8.1.min.js"></script>
         <script type="text/javascript">
-            function test(){
-                $("body").append("<div>testing php info...</div>");
-                testresult = $.get("serverside/Test/testhost.php/testpage", function(data){
-                    $("body").append(data);
+            function test(useAlias){
+                $("#results").html("<div>testing php info...</div>");
+                if(useAlias){
+                    address="serverside/Testtestpage";
+                }else{
+                    address = "serverside/Test/index.php/testpage";
+                }
+                testresult = $.get(address, function(data){
+                    $("#results").append(data);
                 }).error(function(){
-                    $("body").append("<div>bad thing happened</div>")
+                    $("#results").append("<h1>bad thing happened</h1>")
                 });                
             }
         </script>
     </head>
-    <body>
-        <div>Well done, you got here!</div>
-        <a href="Edulab/index.html">Adekamie Client</a><br/>
-        <a href="serverside/Test/servertest.html">Adekamie Server</a><br/>
-        <input type="button" value="test PHP and SLIM" onclick="test();"/>
+    <body style="font-family: 'sans-serif';">
+        <div>Adekamie test page</div>
+        <p><a href="EduLab/index.html">Adekamie Client</a></p>
+        <p><a href="serverside/Test/servertest.html">Adekamie Server</a></p>
+        <p><input type="button" value="test PHP and SLIM no aliasing" onclick="test();"/></p>
+        <p><input type="button" value="test PHP and SLIM with aliasing" onclick="test(true);"/></p>
+        <p><a href="serverside/test.php">simple Php info</a></p>
+        <div id="results"></div>
     </body>
 </html>

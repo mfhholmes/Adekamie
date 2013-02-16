@@ -21,7 +21,8 @@ function getConnection($pdoDNS="",$pdoUsername="",$pdoPassword="", $pdoOptions =
         }
         catch(Exception $e)
         {
-            echo("database connection failed with: ".$e->getMessage());
+            error_log("database connection using values $pdoDNS, $pdoUsername, $pdoPassword, $pdoOptions failed with: ".$e->getMessage());
+            return false;
         }
     }
     return $pdo;

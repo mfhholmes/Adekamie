@@ -7,7 +7,7 @@ namespace BrightSparksLabs\Adekamie;
  * @author Marcus
  */
 function createNewUser($pdo,$userId,$userName,$enabled){
-    $query = "CALL spCreateNewUser('$userId','$userName',$enabled)";
+    $query = "CALL Edulab.spCreateNewUser('$userId','$userName',$enabled)";
     try{
         $rowsAffected = $pdo->exec($query);
     }
