@@ -2,7 +2,7 @@
  * @author Marcus Holmes
  * @copyright Bright Sparks Labs 2012
  */
-
+"use strict";
 function lesson_view_model() {
     var self = this;
     // Lesson properties
@@ -56,8 +56,8 @@ function lesson_view_model() {
       self.selectedSkillLevel(level);  
     };
     self.getTask = function(index){
-            test = self.tasks()[index];
-            return test();
+            var task = self.tasks()[index];
+            return task();
     };
     self.getTaskByRef = function(ref){
         for(var i in self.tasks()){
@@ -72,7 +72,7 @@ function lesson_view_model() {
             if(index <0 || index > self.tasks().length)
                     self.currentTask(null);
             else{
-                taskscheck = self.tasks();
+                var taskscheck = self.tasks();
                 self.currentTask(taskscheck[index]());
                 self.currentTask().taskPanelOpen();
             }
@@ -105,6 +105,12 @@ function lesson_view_model() {
     }
 };
 
+function object(o) {
+    function F() {}
+    F.prototype = o;
+    return new F();
+}
+
 function classifyTask(lesson, task, taskArray, indent){
     // TODO: convert this to a proper factory
     var newtask;
@@ -114,10 +120,15 @@ function classifyTask(lesson, task, taskArray, indent){
             return badtask;
     }
     else{
-            index = taskArray().length
+            var index = taskArray().length
             switch (task.Type.toLowerCase()){
                     case "reading":{
+                        
+                        //old way    
                         newtask = new task_reading(lesson, index,task);
+                        
+                        //new way:
+                        //newtask = makeReadingTask(object(taskTemplate));
                         break;
                     }
                     case "writing":{
@@ -165,7 +176,7 @@ function classifyTask(lesson, task, taskArray, indent){
     newtask.Hints = task.Hints;
     newtask.indent = indent;
     // need to default the task list to closed
-    taskvisible = task.TaskListVisible;
+    var taskvisible = task.TaskListVisible;
     if(typeof(taskvisible)=="undefined"){
         newtask.taskListVisible = new ko.observable((indent<2?true:false));
     }
