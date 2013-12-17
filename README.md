@@ -9,5 +9,7 @@ guided the user through the process of writing an essay (or lab report, journal 
 We created a halfway decent technical demo (this project) that was experimented with in some schools and got a mostly favourable response
 However we failed to discover a method for charging for it, and the team fell apart. Lessons were learned!
 
+The code base is incomplete (especially the server-side, as we got into a discussion about whether to use a CMS server or a standalone - now I'm coding servers in Go and this code looks a complete mess). The javascript client-side stuff is better but got kludged a bit.
+
 Feel free to use this code however you wish, but credit me with my contribution to your work, please.
 
